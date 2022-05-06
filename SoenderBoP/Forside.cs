@@ -24,6 +24,12 @@ namespace SoenderBoP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.manuPanel.Controls.Add(frm);
             frm.Show();
+
+            sloganPanel.Controls.Clear();
+            Slogan formme = new Slogan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formme.FormBorderStyle = FormBorderStyle.None;
+            this.sloganPanel.Controls.Add(formme);
+            formme.Show();
         }
     }
 }
