@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.reserveBtn = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.loebeNrBox = new System.Windows.Forms.MaskedTextBox();
+            this.rId = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,19 +47,19 @@
             this.reserveBtn.UseVisualStyleBackColor = true;
             this.reserveBtn.Click += new System.EventHandler(this.reserveBtn_Click);
             // 
-            // maskedTextBox1
+            // loebeNrBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(214, 62);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 1;
+            this.loebeNrBox.Location = new System.Drawing.Point(214, 62);
+            this.loebeNrBox.Name = "loebeNrBox";
+            this.loebeNrBox.Size = new System.Drawing.Size(100, 26);
+            this.loebeNrBox.TabIndex = 1;
             // 
-            // maskedTextBox2
+            // rId
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(214, 94);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox2.TabIndex = 2;
+            this.rId.Location = new System.Drawing.Point(214, 94);
+            this.rId.Name = "rId";
+            this.rId.Size = new System.Drawing.Size(100, 26);
+            this.rId.TabIndex = 2;
             // 
             // maskedTextBox3
             // 
@@ -104,8 +104,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.rId);
+            this.Controls.Add(this.loebeNrBox);
             this.Controls.Add(this.reserveBtn);
             this.Name = "Reservation";
             this.Text = "Reservation";
@@ -117,8 +117,8 @@
         #endregion
 
         private System.Windows.Forms.Button reserveBtn;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox loebeNrBox;
+        private System.Windows.Forms.MaskedTextBox rId;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
