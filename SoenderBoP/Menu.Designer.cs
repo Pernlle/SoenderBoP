@@ -29,60 +29,60 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.loginBtn = new System.Windows.Forms.Button();
+            this.reserveBtn = new System.Windows.Forms.Button();
+            this.readBtn = new System.Windows.Forms.Button();
+            this.createBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.loginBtn);
+            this.panel1.Controls.Add(this.reserveBtn);
+            this.panel1.Controls.Add(this.readBtn);
+            this.panel1.Controls.Add(this.createBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // loginBtn
             // 
-            this.button1.Location = new System.Drawing.Point(39, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret medlem";
-            this.button1.UseVisualStyleBackColor = true;
+            this.loginBtn.Location = new System.Drawing.Point(39, 365);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(87, 32);
+            this.loginBtn.TabIndex = 3;
+            this.loginBtn.Text = "Log ind";
+            this.loginBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // reserveBtn
             // 
-            this.button2.Location = new System.Drawing.Point(39, 73);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Se medlem";
-            this.button2.UseVisualStyleBackColor = true;
+            this.reserveBtn.Location = new System.Drawing.Point(39, 115);
+            this.reserveBtn.Name = "reserveBtn";
+            this.reserveBtn.Size = new System.Drawing.Size(146, 36);
+            this.reserveBtn.TabIndex = 2;
+            this.reserveBtn.Text = "Reservere ressourcer";
+            this.reserveBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // readBtn
             // 
-            this.button3.Location = new System.Drawing.Point(39, 115);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Reservere ressourcer";
-            this.button3.UseVisualStyleBackColor = true;
+            this.readBtn.Location = new System.Drawing.Point(39, 73);
+            this.readBtn.Name = "readBtn";
+            this.readBtn.Size = new System.Drawing.Size(146, 36);
+            this.readBtn.TabIndex = 1;
+            this.readBtn.Text = "Se medlem";
+            this.readBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // createBtn
             // 
-            this.button4.Location = new System.Drawing.Point(39, 365);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 32);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Log ind";
-            this.button4.UseVisualStyleBackColor = true;
+            this.createBtn.Location = new System.Drawing.Point(39, 31);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(146, 36);
+            this.createBtn.TabIndex = 0;
+            this.createBtn.Text = "Opret medlem";
+            this.createBtn.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -100,9 +100,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button reserveBtn;
+        private System.Windows.Forms.Button readBtn;
+        private System.Windows.Forms.Button createBtn;
     }
 }
