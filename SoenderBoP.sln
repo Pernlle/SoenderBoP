@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoenderBoP", "SoenderBoP\SoenderBoP.csproj", "{EED72CFA-6896-47DA-9DEB-D86C9BE545D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{DC163678-F10A-4CAE-93DD-3536509D7C6F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EED72CFA-6896-47DA-9DEB-D86C9BE545D8} = {EED72CFA-6896-47DA-9DEB-D86C9BE545D8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
