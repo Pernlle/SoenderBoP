@@ -121,6 +121,9 @@
     <Compile Include="WaitList.Designer.cs">
       <DependentUpon>WaitList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AMenu.resx">
+      <DependentUpon>AMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forside.resx">
       <DependentUpon>Forside.cs</DependentUpon>
     </EmbeddedResource>
