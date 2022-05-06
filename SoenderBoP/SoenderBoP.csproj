@@ -124,6 +124,9 @@
     <EmbeddedResource Include="AMenu.resx">
       <DependentUpon>AMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forside.resx">
       <DependentUpon>Forside.cs</DependentUpon>
     </EmbeddedResource>
