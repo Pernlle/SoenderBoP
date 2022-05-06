@@ -28,12 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.reserveBtn = new System.Windows.Forms.Button();
+            this.loebeNrBox = new System.Windows.Forms.MaskedTextBox();
+            this.rId = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // reserveBtn
+            // 
+            this.reserveBtn.Location = new System.Drawing.Point(99, 192);
+            this.reserveBtn.Name = "reserveBtn";
+            this.reserveBtn.Size = new System.Drawing.Size(215, 32);
+            this.reserveBtn.TabIndex = 0;
+            this.reserveBtn.Text = "Reserver";
+            this.reserveBtn.UseVisualStyleBackColor = true;
+            this.reserveBtn.Click += new System.EventHandler(this.reserveBtn_Click);
+            // 
+            // loebeNrBox
+            // 
+            this.loebeNrBox.Location = new System.Drawing.Point(214, 62);
+            this.loebeNrBox.Name = "loebeNrBox";
+            this.loebeNrBox.Size = new System.Drawing.Size(100, 26);
+            this.loebeNrBox.TabIndex = 1;
+            // 
+            // rId
+            // 
+            this.rId.Location = new System.Drawing.Point(214, 94);
+            this.rId.Name = "rId";
+            this.rId.Size = new System.Drawing.Size(100, 26);
+            this.rId.TabIndex = 2;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(213, 136);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(91, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Løbe Nr.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(91, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Ressource ID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(91, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Dato";
+            // 
+            // Reservation
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.rId);
+            this.Controls.Add(this.loebeNrBox);
+            this.Controls.Add(this.reserveBtn);
+            this.Name = "Reservation";
             this.Text = "Reservation";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button reserveBtn;
+        private System.Windows.Forms.MaskedTextBox loebeNrBox;
+        private System.Windows.Forms.MaskedTextBox rId;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
