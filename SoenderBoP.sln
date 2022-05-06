@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoenderBoP", "SoenderBoP\SoenderBoP.csproj", "{EED72CFA-6896-47DA-9DEB-D86C9BE545D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{DC163678-F10A-4CAE-93DD-3536509D7C6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EED72CFA-6896-47DA-9DEB-D86C9BE545D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED72CFA-6896-47DA-9DEB-D86C9BE545D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED72CFA-6896-47DA-9DEB-D86C9BE545D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC163678-F10A-4CAE-93DD-3536509D7C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC163678-F10A-4CAE-93DD-3536509D7C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC163678-F10A-4CAE-93DD-3536509D7C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC163678-F10A-4CAE-93DD-3536509D7C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
