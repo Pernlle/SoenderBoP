@@ -16,5 +16,10 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+
+        private void Slogan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

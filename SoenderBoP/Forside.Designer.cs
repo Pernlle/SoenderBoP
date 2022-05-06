@@ -60,7 +60,7 @@
             this.manuPanel.Location = new System.Drawing.Point(0, 0);
             this.manuPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.manuPanel.Name = "manuPanel";
-            this.manuPanel.Size = new System.Drawing.Size(225, 562);
+            this.manuPanel.Size = new System.Drawing.Size(225, 477);
             this.manuPanel.TabIndex = 0;
             // 
             // searchBtn
@@ -99,7 +99,7 @@
             // loginBtn
             // 
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loginBtn.Location = new System.Drawing.Point(0, 513);
+            this.loginBtn.Location = new System.Drawing.Point(0, 428);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(225, 49);
             this.loginBtn.TabIndex = 5;
@@ -170,7 +170,7 @@
             this.BackgroundPanel.Location = new System.Drawing.Point(225, 0);
             this.BackgroundPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BackgroundPanel.Name = "BackgroundPanel";
-            this.BackgroundPanel.Size = new System.Drawing.Size(675, 562);
+            this.BackgroundPanel.Size = new System.Drawing.Size(675, 477);
             this.BackgroundPanel.TabIndex = 1;
             // 
             // panel1
@@ -179,23 +179,22 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 437);
+            this.panel1.Size = new System.Drawing.Size(675, 477);
             this.panel1.TabIndex = 1;
             // 
             // sloganPanel
             // 
-            this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sloganPanel.Location = new System.Drawing.Point(0, 437);
+            this.sloganPanel.Location = new System.Drawing.Point(0, 397);
             this.sloganPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sloganPanel.Name = "sloganPanel";
-            this.sloganPanel.Size = new System.Drawing.Size(675, 125);
+            this.sloganPanel.Size = new System.Drawing.Size(675, 80);
             this.sloganPanel.TabIndex = 0;
             // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(900, 477);
             this.Controls.Add(this.BackgroundPanel);
             this.Controls.Add(this.manuPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
