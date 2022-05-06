@@ -44,52 +44,59 @@
             this.panel1.Controls.Add(this.createBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(900, 562);
             this.panel1.TabIndex = 0;
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(39, 365);
+            this.loginBtn.Location = new System.Drawing.Point(44, 456);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(87, 32);
+            this.loginBtn.Size = new System.Drawing.Size(98, 40);
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "Log ind";
             this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // reserveBtn
             // 
-            this.reserveBtn.Location = new System.Drawing.Point(39, 115);
+            this.reserveBtn.Location = new System.Drawing.Point(44, 144);
+            this.reserveBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reserveBtn.Name = "reserveBtn";
-            this.reserveBtn.Size = new System.Drawing.Size(146, 36);
+            this.reserveBtn.Size = new System.Drawing.Size(164, 45);
             this.reserveBtn.TabIndex = 2;
             this.reserveBtn.Text = "Reservere ressourcer";
             this.reserveBtn.UseVisualStyleBackColor = true;
             // 
             // readBtn
             // 
-            this.readBtn.Location = new System.Drawing.Point(39, 73);
+            this.readBtn.Location = new System.Drawing.Point(44, 91);
+            this.readBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.readBtn.Name = "readBtn";
-            this.readBtn.Size = new System.Drawing.Size(146, 36);
+            this.readBtn.Size = new System.Drawing.Size(164, 45);
             this.readBtn.TabIndex = 1;
             this.readBtn.Text = "Se medlem";
             this.readBtn.UseVisualStyleBackColor = true;
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(39, 31);
+            this.createBtn.Location = new System.Drawing.Point(44, 39);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(146, 36);
+            this.createBtn.Size = new System.Drawing.Size(164, 45);
             this.createBtn.TabIndex = 0;
             this.createBtn.Text = "Opret medlem";
             this.createBtn.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
