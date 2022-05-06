@@ -16,5 +16,14 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+
+        private void Forside_Load(object sender, EventArgs e)
+        {
+            manuPanel.Controls.Clear();
+            Menu frm = new Menu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.manuPanel.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }
