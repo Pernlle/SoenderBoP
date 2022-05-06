@@ -36,37 +36,36 @@
             this.idBox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.loginBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.passLabel);
             this.panel1.Controls.Add(this.loginBox);
+            this.panel1.Controls.Add(this.idLabel);
+            this.panel1.Controls.Add(this.passBox);
+            this.panel1.Controls.Add(this.loginBtn);
+            this.panel1.Controls.Add(this.idBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(362, 338);
             this.panel1.TabIndex = 0;
             // 
             // loginBox
             // 
             this.loginBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.loginBox.Controls.Add(this.passLabel);
-            this.loginBox.Controls.Add(this.idLabel);
-            this.loginBox.Controls.Add(this.passBox);
-            this.loginBox.Controls.Add(this.idBox);
-            this.loginBox.Controls.Add(this.loginBtn);
-            this.loginBox.Location = new System.Drawing.Point(199, 69);
+            this.loginBox.Location = new System.Drawing.Point(769, 413);
             this.loginBox.Name = "loginBox";
-            this.loginBox.Size = new System.Drawing.Size(330, 262);
+            this.loginBox.Size = new System.Drawing.Size(10, 10);
             this.loginBox.TabIndex = 0;
             this.loginBox.TabStop = false;
             // 
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(39, 132);
+            this.passLabel.Location = new System.Drawing.Point(32, 141);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(78, 20);
             this.passLabel.TabIndex = 4;
@@ -75,7 +74,7 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(35, 62);
+            this.idLabel.Location = new System.Drawing.Point(32, 71);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(26, 20);
             this.idLabel.TabIndex = 3;
@@ -83,23 +82,23 @@
             // 
             // passBox
             // 
-            this.passBox.Location = new System.Drawing.Point(132, 129);
+            this.passBox.Location = new System.Drawing.Point(125, 138);
             this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(139, 26);
+            this.passBox.Size = new System.Drawing.Size(149, 26);
             this.passBox.TabIndex = 2;
             // 
             // idBox
             // 
-            this.idBox.Location = new System.Drawing.Point(132, 56);
+            this.idBox.Location = new System.Drawing.Point(125, 65);
             this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(139, 26);
+            this.idBox.Size = new System.Drawing.Size(149, 26);
             this.idBox.TabIndex = 1;
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(132, 208);
+            this.loginBtn.Location = new System.Drawing.Point(125, 216);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 30);
+            this.loginBtn.Size = new System.Drawing.Size(149, 42);
             this.loginBtn.TabIndex = 0;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -109,13 +108,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(362, 338);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
-            this.loginBox.ResumeLayout(false);
-            this.loginBox.PerformLayout();
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
