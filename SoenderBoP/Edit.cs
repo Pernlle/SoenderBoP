@@ -55,5 +55,16 @@ namespace SoenderBoP
             this.medlemTableAdapter.Fill(this.soenderbodbDataSet.Medlem);
 
         }
+
+        private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = medlemDGV.Rows[e.RowIndex];
+                navnTxt.Text = dgvRow.Cells[1].Value.ToString() + " " + dgvRow.Cells[2].Value.ToString();
+                tlfMTxt.Text = dgvRow.Cells[3].Value.ToString();
+                emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
+            }
+        }
     }
 }
