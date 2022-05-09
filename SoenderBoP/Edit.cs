@@ -22,9 +22,36 @@ namespace SoenderBoP
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Medlem";
             // valgte medlem som skal slettes - valgt via dgv
-            string delete = ""; // dgv choice
 
-            CRUD.Delete(insertInto, delete);
+            int selectedRowIndex = medlemDGV.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = medlemDGV.Rows[selectedRowIndex];
+            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+
+            // Call metoden 'Yes_No'
+            Yes_no(cellValue, insertInto);
+        }
+        public void Yes_no(string cellValue, string insertInto)
+        {
+            string box_msg = $"Er du sikker på at du vil slette {insertInto}";
+            string box_title = "Tryk ja eller nej";
+
+            // Viser en messagebox med to valg - yes, no
+            var selectedOption = MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo);
+            //Hvis du trykker ja til at slette kunde
+            if (selectedOption == DialogResult.Yes)
+            {
+                if (cellValue != "" || cellValue == "0")
+                {
+                    string delete = cellValue;
+                    CRUD.Delete(insertInto, delete);
+                }
+                else
+                {
+                    MessageBox.Show("Vælg noget at slette");
+                }
+            }
+            // Hvis du trykker nej til at slette kunde
+            else if (selectedOption == DialogResult.No) { MessageBox.Show("Godt valg "); }
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
