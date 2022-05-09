@@ -39,10 +39,10 @@
             this.readBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
             this.BackgroundPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sloganPanel = new System.Windows.Forms.Panel();
-            this.sloganLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sloganLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.sloganPanel.SuspendLayout();
@@ -65,9 +65,8 @@
             this.manuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.manuPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.manuPanel.Location = new System.Drawing.Point(0, 0);
-            this.manuPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.manuPanel.Name = "manuPanel";
-            this.manuPanel.Size = new System.Drawing.Size(225, 680);
+            this.manuPanel.Size = new System.Drawing.Size(200, 544);
             this.manuPanel.TabIndex = 0;
             // 
             // searchBtn
@@ -75,9 +74,10 @@
             this.searchBtn.BackColor = System.Drawing.Color.IndianRed;
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchBtn.Location = new System.Drawing.Point(0, 314);
+            this.searchBtn.Location = new System.Drawing.Point(0, 252);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(221, 42);
+            this.searchBtn.Size = new System.Drawing.Size(196, 34);
             this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "Søg boliger";
             this.searchBtn.UseVisualStyleBackColor = false;
@@ -88,9 +88,10 @@
             this.leaseBtn.BackColor = System.Drawing.Color.IndianRed;
             this.leaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leaseBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.leaseBtn.Location = new System.Drawing.Point(0, 274);
+            this.leaseBtn.Location = new System.Drawing.Point(0, 220);
+            this.leaseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseBtn.Name = "leaseBtn";
-            this.leaseBtn.Size = new System.Drawing.Size(221, 40);
+            this.leaseBtn.Size = new System.Drawing.Size(196, 32);
             this.leaseBtn.TabIndex = 4;
             this.leaseBtn.Text = "Lejekontrakt";
             this.leaseBtn.UseVisualStyleBackColor = false;
@@ -101,9 +102,10 @@
             this.waitListBtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitListBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.waitListBtn.Location = new System.Drawing.Point(0, 232);
+            this.waitListBtn.Location = new System.Drawing.Point(0, 186);
+            this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
-            this.waitListBtn.Size = new System.Drawing.Size(221, 42);
+            this.waitListBtn.Size = new System.Drawing.Size(196, 34);
             this.waitListBtn.TabIndex = 6;
             this.waitListBtn.Text = "Venteliste";
             this.waitListBtn.UseVisualStyleBackColor = false;
@@ -114,9 +116,10 @@
             this.loginBtn.BackColor = System.Drawing.Color.IndianRed;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loginBtn.Location = new System.Drawing.Point(0, 627);
+            this.loginBtn.Location = new System.Drawing.Point(0, 501);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(221, 49);
+            this.loginBtn.Size = new System.Drawing.Size(196, 39);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Log på";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -127,9 +130,10 @@
             this.reservationBtn.BackColor = System.Drawing.Color.IndianRed;
             this.reservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reservationBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reservationBtn.Location = new System.Drawing.Point(0, 187);
+            this.reservationBtn.Location = new System.Drawing.Point(0, 150);
+            this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
-            this.reservationBtn.Size = new System.Drawing.Size(221, 45);
+            this.reservationBtn.Size = new System.Drawing.Size(196, 36);
             this.reservationBtn.TabIndex = 4;
             this.reservationBtn.Text = "Reserver ressource";
             this.reservationBtn.UseVisualStyleBackColor = false;
@@ -140,9 +144,10 @@
             this.statsBtn.BackColor = System.Drawing.Color.IndianRed;
             this.statsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statsBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statsBtn.Location = new System.Drawing.Point(0, 141);
+            this.statsBtn.Location = new System.Drawing.Point(0, 113);
+            this.statsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statsBtn.Name = "statsBtn";
-            this.statsBtn.Size = new System.Drawing.Size(221, 46);
+            this.statsBtn.Size = new System.Drawing.Size(196, 37);
             this.statsBtn.TabIndex = 3;
             this.statsBtn.Text = "Udtræk statistik";
             this.statsBtn.UseVisualStyleBackColor = false;
@@ -153,9 +158,10 @@
             this.editBtn.BackColor = System.Drawing.Color.IndianRed;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editBtn.Location = new System.Drawing.Point(0, 94);
+            this.editBtn.Location = new System.Drawing.Point(0, 75);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(221, 47);
+            this.editBtn.Size = new System.Drawing.Size(196, 38);
             this.editBtn.TabIndex = 2;
             this.editBtn.Text = "Rediger medlem";
             this.editBtn.UseVisualStyleBackColor = false;
@@ -166,9 +172,10 @@
             this.readBtn.BackColor = System.Drawing.Color.IndianRed;
             this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.readBtn.Location = new System.Drawing.Point(0, 48);
+            this.readBtn.Location = new System.Drawing.Point(0, 38);
+            this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readBtn.Name = "readBtn";
-            this.readBtn.Size = new System.Drawing.Size(221, 46);
+            this.readBtn.Size = new System.Drawing.Size(196, 37);
             this.readBtn.TabIndex = 2;
             this.readBtn.Text = "Se medlemmer";
             this.readBtn.UseVisualStyleBackColor = false;
@@ -180,8 +187,9 @@
             this.createBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.createBtn.Location = new System.Drawing.Point(0, 0);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(221, 48);
+            this.createBtn.Size = new System.Drawing.Size(196, 38);
             this.createBtn.TabIndex = 1;
             this.createBtn.Text = "Opret medlem";
             this.createBtn.UseVisualStyleBackColor = false;
@@ -192,31 +200,30 @@
             this.BackgroundPanel.Controls.Add(this.sloganPanel);
             this.BackgroundPanel.Controls.Add(this.panel1);
             this.BackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BackgroundPanel.Location = new System.Drawing.Point(225, 0);
-            this.BackgroundPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BackgroundPanel.Location = new System.Drawing.Point(200, 0);
             this.BackgroundPanel.Name = "BackgroundPanel";
-            this.BackgroundPanel.Size = new System.Drawing.Size(724, 680);
+            this.BackgroundPanel.Size = new System.Drawing.Size(644, 544);
             this.BackgroundPanel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(724, 680);
-            this.panel1.TabIndex = 1;
             // 
             // sloganPanel
             // 
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sloganPanel.Location = new System.Drawing.Point(0, 600);
-            this.sloganPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sloganPanel.Location = new System.Drawing.Point(0, 480);
             this.sloganPanel.Name = "sloganPanel";
-            this.sloganPanel.Size = new System.Drawing.Size(724, 80);
+            this.sloganPanel.Size = new System.Drawing.Size(644, 64);
             this.sloganPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Location = new System.Drawing.Point(539, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 64);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // sloganLabel
             // 
@@ -224,31 +231,30 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sloganLabel.AutoSize = true;
-            this.sloganLabel.Location = new System.Drawing.Point(19, 31);
+            this.sloganLabel.Location = new System.Drawing.Point(17, 25);
             this.sloganLabel.Name = "sloganLabel";
-            this.sloganLabel.Size = new System.Drawing.Size(85, 20);
+            this.sloganLabel.Size = new System.Drawing.Size(72, 16);
             this.sloganLabel.TabIndex = 0;
             this.sloganLabel.Text = "SloganHer";
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(606, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 80);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(644, 544);
+            this.panel1.TabIndex = 1;
             // 
             // Forside
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 680);
+            this.ClientSize = new System.Drawing.Size(844, 544);
             this.Controls.Add(this.BackgroundPanel);
             this.Controls.Add(this.manuPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Forside";
             this.Text = "Forside";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Forside_Load);
             this.manuPanel.ResumeLayout(false);
             this.BackgroundPanel.ResumeLayout(false);

@@ -115,6 +115,11 @@
     <Compile Include="Slogan.Designer.cs">
       <DependentUpon>Slogan.cs</DependentUpon>
     </Compile>
+    <Compile Include="soenderbodbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WaitList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +174,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="soenderbodbDataSet.xsc">
+      <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="soenderbodbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>soenderbodbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="soenderbodbDataSet.xss">
+      <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

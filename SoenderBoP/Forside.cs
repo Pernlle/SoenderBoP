@@ -56,6 +56,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Edit frm = new Edit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState= FormWindowState.Maximized;
 
             this.panel1.Controls.Add(frm);
 
