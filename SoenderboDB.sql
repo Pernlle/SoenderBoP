@@ -60,7 +60,7 @@ CREATE TABLE Bolig(
 CREATE TABLE Venteliste(
 	medlemId INT FOREIGN KEY REFERENCES Medlem(mId),
 	boligType INT FOREIGN KEY REFERENCES BoligType(id),
-	opskrevet DATE,
+	opskrevet VARCHAR(50),
 );
 
 
