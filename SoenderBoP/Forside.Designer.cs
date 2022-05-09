@@ -210,18 +210,20 @@
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sloganPanel.Location = new System.Drawing.Point(0, 480);
+            this.sloganPanel.Location = new System.Drawing.Point(0, 427);
             this.sloganPanel.Name = "sloganPanel";
-            this.sloganPanel.Size = new System.Drawing.Size(644, 64);
+            this.sloganPanel.Size = new System.Drawing.Size(644, 117);
             this.sloganPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(539, 0);
+            this.pictureBox1.Image = global::SoenderBoP.Properties.Resources.Boligforeningen;
+            this.pictureBox1.Location = new System.Drawing.Point(524, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
