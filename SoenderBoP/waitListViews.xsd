@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="waitListViews" targetNamespace="http://tempuri.org/waitListViews.xsd" xmlns:mstns="http://tempuri.org/waitListViews.xsd" xmlns="http://tempuri.org/waitListViews.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="soenderbodbConnStr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="soenderbodbConnStr (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SoenderBoP.Properties.Settings.GlobalReference.Default.soenderbodbConnStr" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LejlighedTableAdapter" GeneratorDataComponentClassName="LejlighedTableAdapter" Name="Lejlighed" UserDataComponentName="LejlighedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soenderbodbConnStr (Settings)" DbObjectName="soenderbodb.dbo.Lejlighed" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT opskrevet, fNavn, eNavn, medlemId FROM dbo.Lejlighed</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="opskrevet" DataSetColumn="opskrevet" />
+              <Mapping SourceColumn="fNavn" DataSetColumn="fNavn" />
+              <Mapping SourceColumn="eNavn" DataSetColumn="eNavn" />
+              <Mapping SourceColumn="medlemId" DataSetColumn="medlemId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SeniorboligTableAdapter" GeneratorDataComponentClassName="SeniorboligTableAdapter" Name="Seniorbolig" UserDataComponentName="SeniorboligTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soenderbodbConnStr (Settings)" DbObjectName="soenderbodb.dbo.Seniorbolig" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT opskrevet, fNavn, eNavn, medlemId FROM dbo.Seniorbolig</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="opskrevet" DataSetColumn="opskrevet" />
+              <Mapping SourceColumn="fNavn" DataSetColumn="fNavn" />
+              <Mapping SourceColumn="eNavn" DataSetColumn="eNavn" />
+              <Mapping SourceColumn="medlemId" DataSetColumn="medlemId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UngdomsboligTableAdapter" GeneratorDataComponentClassName="UngdomsboligTableAdapter" Name="Ungdomsbolig" UserDataComponentName="UngdomsboligTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soenderbodbConnStr (Settings)" DbObjectName="soenderbodb.dbo.Ungdomsbolig" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT opskrevet, fNavn, eNavn, medlemId FROM dbo.Ungdomsbolig</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="opskrevet" DataSetColumn="opskrevet" />
+              <Mapping SourceColumn="fNavn" DataSetColumn="fNavn" />
+              <Mapping SourceColumn="eNavn" DataSetColumn="eNavn" />
+              <Mapping SourceColumn="medlemId" DataSetColumn="medlemId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="waitListViews" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="waitListViews" msprop:Generator_DataSetName="waitListViews">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lejlighed" msprop:Generator_RowEvHandlerName="LejlighedRowChangeEventHandler" msprop:Generator_RowDeletedName="LejlighedRowDeleted" msprop:Generator_RowDeletingName="LejlighedRowDeleting" msprop:Generator_RowEvArgName="LejlighedRowChangeEvent" msprop:Generator_TablePropName="Lejlighed" msprop:Generator_RowChangedName="LejlighedRowChanged" msprop:Generator_RowChangingName="LejlighedRowChanging" msprop:Generator_TableClassName="LejlighedDataTable" msprop:Generator_RowClassName="LejlighedRow" msprop:Generator_TableVarName="tableLejlighed" msprop:Generator_UserTableName="Lejlighed">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="opskrevet" msprop:Generator_ColumnPropNameInRow="opskrevet" msprop:Generator_ColumnPropNameInTable="opskrevetColumn" msprop:Generator_ColumnVarNameInTable="columnopskrevet" msprop:Generator_UserColumnName="opskrevet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fNavn" msprop:Generator_ColumnPropNameInRow="fNavn" msprop:Generator_ColumnPropNameInTable="fNavnColumn" msprop:Generator_ColumnVarNameInTable="columnfNavn" msprop:Generator_UserColumnName="fNavn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eNavn" msprop:Generator_ColumnPropNameInRow="eNavn" msprop:Generator_ColumnPropNameInTable="eNavnColumn" msprop:Generator_ColumnVarNameInTable="columneNavn" msprop:Generator_UserColumnName="eNavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medlemId" msprop:Generator_ColumnPropNameInRow="medlemId" msprop:Generator_ColumnPropNameInTable="medlemIdColumn" msprop:Generator_ColumnVarNameInTable="columnmedlemId" msprop:Generator_UserColumnName="medlemId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Seniorbolig" msprop:Generator_RowEvHandlerName="SeniorboligRowChangeEventHandler" msprop:Generator_RowDeletedName="SeniorboligRowDeleted" msprop:Generator_RowDeletingName="SeniorboligRowDeleting" msprop:Generator_RowEvArgName="SeniorboligRowChangeEvent" msprop:Generator_TablePropName="Seniorbolig" msprop:Generator_RowChangedName="SeniorboligRowChanged" msprop:Generator_RowChangingName="SeniorboligRowChanging" msprop:Generator_TableClassName="SeniorboligDataTable" msprop:Generator_RowClassName="SeniorboligRow" msprop:Generator_TableVarName="tableSeniorbolig" msprop:Generator_UserTableName="Seniorbolig">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="opskrevet" msprop:Generator_ColumnPropNameInRow="opskrevet" msprop:Generator_ColumnPropNameInTable="opskrevetColumn" msprop:Generator_ColumnVarNameInTable="columnopskrevet" msprop:Generator_UserColumnName="opskrevet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fNavn" msprop:Generator_ColumnPropNameInRow="fNavn" msprop:Generator_ColumnPropNameInTable="fNavnColumn" msprop:Generator_ColumnVarNameInTable="columnfNavn" msprop:Generator_UserColumnName="fNavn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eNavn" msprop:Generator_ColumnPropNameInRow="eNavn" msprop:Generator_ColumnPropNameInTable="eNavnColumn" msprop:Generator_ColumnVarNameInTable="columneNavn" msprop:Generator_UserColumnName="eNavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medlemId" msprop:Generator_ColumnPropNameInRow="medlemId" msprop:Generator_ColumnPropNameInTable="medlemIdColumn" msprop:Generator_ColumnVarNameInTable="columnmedlemId" msprop:Generator_UserColumnName="medlemId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ungdomsbolig" msprop:Generator_RowEvHandlerName="UngdomsboligRowChangeEventHandler" msprop:Generator_RowDeletedName="UngdomsboligRowDeleted" msprop:Generator_RowDeletingName="UngdomsboligRowDeleting" msprop:Generator_RowEvArgName="UngdomsboligRowChangeEvent" msprop:Generator_TablePropName="Ungdomsbolig" msprop:Generator_RowChangedName="UngdomsboligRowChanged" msprop:Generator_RowChangingName="UngdomsboligRowChanging" msprop:Generator_TableClassName="UngdomsboligDataTable" msprop:Generator_RowClassName="UngdomsboligRow" msprop:Generator_TableVarName="tableUngdomsbolig" msprop:Generator_UserTableName="Ungdomsbolig">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="opskrevet" msprop:Generator_ColumnPropNameInRow="opskrevet" msprop:Generator_ColumnPropNameInTable="opskrevetColumn" msprop:Generator_ColumnVarNameInTable="columnopskrevet" msprop:Generator_UserColumnName="opskrevet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fNavn" msprop:Generator_ColumnPropNameInRow="fNavn" msprop:Generator_ColumnPropNameInTable="fNavnColumn" msprop:Generator_ColumnVarNameInTable="columnfNavn" msprop:Generator_UserColumnName="fNavn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="eNavn" msprop:Generator_ColumnPropNameInRow="eNavn" msprop:Generator_ColumnPropNameInTable="eNavnColumn" msprop:Generator_ColumnVarNameInTable="columneNavn" msprop:Generator_UserColumnName="eNavn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medlemId" msprop:Generator_ColumnPropNameInRow="medlemId" msprop:Generator_ColumnPropNameInTable="medlemIdColumn" msprop:Generator_ColumnVarNameInTable="columnmedlemId" msprop:Generator_UserColumnName="medlemId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

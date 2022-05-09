@@ -16,5 +16,16 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+
+        private void WaitList_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'waitListViews.Seniorbolig' table. You can move, or remove it, as needed.
+            this.seniorboligTableAdapter.Fill(this.waitListViews.Seniorbolig);
+            // TODO: This line of code loads data into the 'waitListViews.Ungdomsbolig' table. You can move, or remove it, as needed.
+            this.ungdomsboligTableAdapter.Fill(this.waitListViews.Ungdomsbolig);
+            // TODO: This line of code loads data into the 'waitListViews.Lejlighed' table. You can move, or remove it, as needed.
+            this.lejlighedTableAdapter.Fill(this.waitListViews.Lejlighed);
+
+        }
     }
 }

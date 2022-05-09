@@ -120,11 +120,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
     <Compile Include="WaitList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WaitList.Designer.cs">
       <DependentUpon>WaitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="waitListViews.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>waitListViews.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AMenu.resx">
       <DependentUpon>AMenu.cs</DependentUpon>
@@ -166,6 +177,9 @@
     <EmbeddedResource Include="Slogan.resx">
       <DependentUpon>Slogan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WaitList.resx">
       <DependentUpon>WaitList.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +202,17 @@
     </None>
     <None Include="soenderbodbDataSet.xss">
       <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="waitListViews.xsc">
+      <DependentUpon>waitListViews.xsd</DependentUpon>
+    </None>
+    <None Include="waitListViews.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>waitListViews.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="waitListViews.xss">
+      <DependentUpon>waitListViews.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

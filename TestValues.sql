@@ -13,6 +13,7 @@ INSERT INTO Venteliste (medlemId, boligType, opskrevet) VALUES
 (3, 1, '2022-04-01'),
 (3, 3, '2022-04-01'),
 
+
 (1, 1, '2022-02-01'),
 (1, 2, '2022-02-01')
 

@@ -86,13 +86,13 @@ namespace SoenderBoP
 
         private void statsBtn_Click(object sender, EventArgs e)
         {
-            //panel1.Controls.Clear();
-            //Stats frm = new Stats() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //frm.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Clear();
+            Stats frm = new Stats() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
 
-            //this.panel1.Controls.Add(frm);
+            this.panel1.Controls.Add(frm);
 
-            //frm.Show();
+            frm.Show();
         }
 
         private void reservationBtn_Click(object sender, EventArgs e)
