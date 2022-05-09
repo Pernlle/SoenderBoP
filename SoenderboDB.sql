@@ -58,8 +58,8 @@ CREATE TABLE Bolig(
 /*Potentielle ufleksible elementer i SQL: Man kan ikke bestemme bolig og hvis man registreres samme dato får man samme nr.*/
 
 CREATE TABLE Venteliste(
-	mId INT FOREIGN KEY REFERENCES Medlem(mId),
-	bType INT FOREIGN KEY REFERENCES BoligType(id),
+	medlemId INT FOREIGN KEY REFERENCES Medlem(mId),
+	boligType INT FOREIGN KEY REFERENCES BoligType(id),
 	opskrevet DATE,
 );
 
@@ -73,8 +73,9 @@ CREATE TABLE Ressource(
 CREATE TABLE Reserveret(
 	rId INT FOREIGN KEY REFERENCES Ressource(rId),
 	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr),
-	dStart DATE,
-	dSlut DATE
+	dStart VARCHAR(50),
+	dSlut VARCHAR(50)
+	/*Problemet med DATE skal fixes i c#. En string skal convertes til et DATE format. I will find out*/
 );
 
 INSERT INTO Ressource (rId, rType, rNr) VALUES
