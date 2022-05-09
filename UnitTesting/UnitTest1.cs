@@ -11,7 +11,7 @@ namespace UnitTesting
         public void Test1CRUDConnection()
         {
             Create s = new Create();
-            s=
+            //s=
             ////Assert.Pass(); //skal være rigtigt (pass=gør intet?)
             //Assert.AreEqual(1000, kunde.Getpostnummer);
         }
