@@ -7,16 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SoenderBoP
 {
     public partial class Forside : Form
     {
+        private readonly Random _rnd = new Random();
+        private readonly List<string> _slogans = new List<string> { "SønderBo er søndme god", "Er det sønder god, er det Sønderbo", "Din tryghed kan vi bære i SønderBo kan du være", "Mangler du en bolig? I Sønderbo kan du tage det helt rolig’", "Vores ventelister er helt tomme! Vent…", "Kan du ikke komme? I Sønderbo vil det være helt omme!", "Foreningen SønderBo, forener vi forenet i forening", "Det sønder, sønder fedt, jeg melder mig om lidt" };
+        private readonly Thread _thread;
         public Forside()
         {
             InitializeComponent();
+            _thread = new Thread(UpdateSlogan);
+            
+            _thread.Start();
         }
 
+        private void UpdateSlogan()
+        {
+            while (true)
+            {
+                if (this.IsHandleCreated)
+                {
+                    var slogan = _slogans[_rnd.Next(_slogans.Count)];
+                    sloganLabel.BeginInvoke(new Action(() => sloganLabel.Text = slogan));
+                }
+
+
+                Thread.Sleep(TimeSpan.FromSeconds(3));
+            }
+        }
         private void Forside_Load(object sender, EventArgs e)
         {
             
