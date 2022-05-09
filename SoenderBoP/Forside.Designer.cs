@@ -41,8 +41,14 @@
             this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sloganPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sloganLabel = new System.Windows.Forms.Label();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // manuPanel
@@ -175,6 +181,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -190,6 +197,38 @@
             this.sloganPanel.Size = new System.Drawing.Size(675, 80);
             this.sloganPanel.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.sloganLabel);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 390);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(675, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Location = new System.Drawing.Point(565, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 87);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // sloganLabel
+            // 
+            this.sloganLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sloganLabel.AutoSize = true;
+            this.sloganLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sloganLabel.Location = new System.Drawing.Point(7, 23);
+            this.sloganLabel.Name = "sloganLabel";
+            this.sloganLabel.Size = new System.Drawing.Size(140, 29);
+            this.sloganLabel.TabIndex = 1;
+            this.sloganLabel.Text = "SlogansHer";
+            // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -203,6 +242,10 @@
             this.Load += new System.EventHandler(this.Forside_Load);
             this.manuPanel.ResumeLayout(false);
             this.BackgroundPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,6 +264,9 @@
         private System.Windows.Forms.Button waitListBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button leaseBtn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label sloganLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
