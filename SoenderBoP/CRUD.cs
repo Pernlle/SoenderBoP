@@ -14,7 +14,12 @@ namespace SoenderBoP
 {
     internal class CRUD
     {
-        public string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+        private string strconn;
+        public void Connection(string strconn)
+        {
+            this.strconn = strconn;
+        }
+        public string GetSetStrConn { get { return strconn; } set { strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_"; } }
 
         public static void Create(string insertInto, string add, string values, object[] data)
         {
