@@ -233,11 +233,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sloganLabel.AutoSize = true;
+            this.sloganLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sloganLabel.Location = new System.Drawing.Point(17, 25);
             this.sloganLabel.Name = "sloganLabel";
-            this.sloganLabel.Size = new System.Drawing.Size(72, 16);
+            this.sloganLabel.Size = new System.Drawing.Size(355, 36);
             this.sloganLabel.TabIndex = 0;
-            this.sloganLabel.Text = "SloganHer";
+            this.sloganLabel.Text = "SønderBo er søndme god";
             // 
             // panel1
             // 
