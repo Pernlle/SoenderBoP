@@ -14,7 +14,7 @@ namespace SoenderBoP
 {
     internal class CRUD
     {
-       
+       // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.
         public static void Create(string insertInto, string add, string values, object[] data)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
@@ -68,10 +68,10 @@ namespace SoenderBoP
 
             for (int i = 0; i < valuess.Length; i++)
             {
+                // Tilføj til string set [ += ]
                 set += adds[i] + "=" + valuess[i] + ",";
-                //cmd.Parameters.AddWithValue(valuess[i], data[i]);
             }
-
+            //Fjerner det sidste komma, fra sætningen. Da det er illegal SQL.
             set = set.Remove(set.Length - 1, 1);
             
             SqlConnection conn = new SqlConnection(strconn);
