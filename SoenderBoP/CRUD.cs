@@ -14,13 +14,7 @@ namespace SoenderBoP
 {
     internal class CRUD
     {
-        private string strconn;
-        public void Connection(string strconn)
-        {
-            this.strconn = strconn;
-        }
-        public string GetSetStrConn { get { return strconn; } set { strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_"; } }
-
+       
         public static void Create(string insertInto, string add, string values, object[] data)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
@@ -62,18 +56,32 @@ namespace SoenderBoP
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
         }
-        public static void Update(string insertInto, string set, string where, string phone, string values, object[] data)
+        public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
 
+
+            string[] valuess = values.Split(',');
+            string[] adds = add.Split(',');
+
+            string set = "";
+
+            for (int i = 0; i < valuess.Length; i++)
+            {
+                set += adds[i] + "=" + valuess[i] + ",";
+                //cmd.Parameters.AddWithValue(valuess[i], data[i]);
+            }
+
+            set = set.Remove(set.Length - 1, 1);
+            
             SqlConnection conn = new SqlConnection(strconn);
             string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where};";
+            MessageBox.Show(sqlCom);
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
-            string[] valuess = values.Split(',');
-
+           
             //add parametre til sql commanden (for hver value i valuess lav en parameter.Add
             //Parametrene finder selv ud af hvilken [string, int, mm.] som skal bruges
             for (int i = 0; i < valuess.Length; i++)
@@ -96,7 +104,7 @@ namespace SoenderBoP
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
 
             SqlConnection conn = new SqlConnection(strconn);
-            string sqlCom = $"DELETE {insertInto} WHERE {delete};";
+            string sqlCom = $"DELETE {insertInto} WHERE {delete}; DELETE venteliste medlem WHERE Venteliste = mId"; //HAHA IKKE FÆRDIG
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 

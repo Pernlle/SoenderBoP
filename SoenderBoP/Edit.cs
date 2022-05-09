@@ -22,7 +22,6 @@ namespace SoenderBoP
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Medlem";
             // valgte medlem som skal slettes - valgt via dgv
-
             int selectedRowIndex = medlemDGV.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = medlemDGV.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
@@ -42,7 +41,7 @@ namespace SoenderBoP
             {
                 if (cellValue != "" || cellValue == "0")
                 {
-                    string delete = cellValue;
+                    string delete = "mId = " + cellValue;
                     CRUD.Delete(insertInto, delete);
                 }
                 else
@@ -57,7 +56,7 @@ namespace SoenderBoP
         private void updateBtn_Click(object sender, EventArgs e)
         {
             //disse text vil blive udfyldt når man trykker på dgv og kan herefter kunne ændres, hvis man ønsker at opdatere dem (UPDATE KNAP)
-            int phone = Convert.ToInt32(emailMTxt.Text);
+            int phone = Convert.ToInt32(tlfMTxt.Text);
             string email = emailMTxt.Text;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
@@ -71,9 +70,14 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@tlf,@email";
 
-            string set = "tlf=@tlf, email=@email";
-            string where = "mId=@mId";
-            CRUD.Update(insertInto, add, set, where, values, data);
+            // valgte medlem i DGV, som skal opdateres (nuværende data vises i tekstboksene, og kan herefter ændres på.)
+            int selectedRowIndex = medlemDGV.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = medlemDGV.Rows[selectedRowIndex];
+            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+
+            //Opdater det medlem som er corresponding til den valgte celle i DGV
+            string where = $"mId={cellValue}"; 
+            CRUD.Update(insertInto, add, where, values, data);
         }
 
         private void Edit_Load(object sender, EventArgs e)
