@@ -21,20 +21,20 @@ namespace SoenderBoP
         private void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
-            string loebeNr = this.loebeNr.Text;
-            string rId = this.rId.Text;
+            string loebeNr = this.loebe1Nr.Text;
+            string rId = this.rId1.Text;
 
-            string daStartDag = dStartDag.Text;
-            string daStartMaaned = dStartMaaned.Text;
-            string daStartAar = dStartAar.Text;
-            string daStartTime = dStartTime.Text;
-            string daStartMinut = dStartMinut.Text;
+            string daStartDag = dStartDag1.Text;
+            string daStartMaaned = dStartMaaned1.Text;
+            string daStartAar = dStartAar1.Text;
+            string daStartTime = dS1tartTime.Text;
+            string daStartMinut = ff.Text;
 
-            string daSlutDag = dStartDag.Text;
-            string daSlutMaaned = dStartMaaned.Text;
-            string daSlutAar = dStartAar.Text;
-            string daSlutTime = dStartTime.Text;
-            string daSlutMinut = dStartMinut.Text;
+            string daSlutDag = dStartDag1.Text;
+            string daSlutMaaned = dStartMaaned1.Text;
+            string daSlutAar = dStartAar1.Text;
+            string daSlutTime = dS1tartTime.Text;
+            string daSlutMinut = ff.Text;
 
             string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + "-" + daStartTime + ":" + daStartMinut;
             string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + "-" + daSlutTime + ":" + daSlutMinut;
