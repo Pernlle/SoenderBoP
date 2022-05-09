@@ -35,7 +35,7 @@ namespace SoenderBoP
                 }
 
 
-                Thread.Sleep(TimeSpan.FromSeconds(3));
+                Thread.Sleep(TimeSpan.FromMinutes(3));
             }
         }
         private void Forside_Load(object sender, EventArgs e)
