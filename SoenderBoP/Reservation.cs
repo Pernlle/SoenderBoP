@@ -21,10 +21,23 @@ namespace SoenderBoP
         private void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
-            string loebeNr = loebeNrMTxt.Text;
-            string rId = rIdMTxt.Text;
-            string dStart = Convert.ToString(datoStartMTxt.Text);
-            string dSlut = Convert.ToString(datoSlutMTxt.Text);
+            string loebeNr = this.loebeNr.Text;
+            string rId = this.rId.Text;
+
+            string daStartDag = dStartDag.Text;
+            string daStartMaaned = dStartMaaned.Text;
+            string daStartAar = dStartAar.Text;
+            string daStartTime = dStartTime.Text;
+            string daStartMinut = dStartMinut.Text;
+
+            string daSlutDag = dStartDag.Text;
+            string daSlutMaaned = dStartMaaned.Text;
+            string daSlutAar = dStartAar.Text;
+            string daSlutTime = dStartTime.Text;
+            string daSlutMinut = dStartMinut.Text;
+
+            string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + "-" + daStartTime + ":" + daStartMinut;
+            string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + "-" + daSlutTime + ":" + daSlutMinut;
 
             SqlConnection conn = new SqlConnection(strconn);
 
@@ -34,9 +47,9 @@ namespace SoenderBoP
             cmd.Parameters["@loebeNr"].Value = Convert.ToString(loebeNr);
             cmd.Parameters.Add("@rId", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@rId"].Value = Convert.ToString(rId);
-            cmd.Parameters.Add("@dStart", System.Data.SqlDbType.Date);
+            cmd.Parameters.Add("@dStart", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@dStart"].Value = Convert.ToString(dStart);
-            cmd.Parameters.Add("@dSlut", System.Data.SqlDbType.Date);
+            cmd.Parameters.Add("@dSlut", System.Data.SqlDbType.VarChar);
             cmd.Parameters["@dSlut"].Value = Convert.ToString(dSlut);
 
             try
