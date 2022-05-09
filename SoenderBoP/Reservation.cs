@@ -20,35 +20,31 @@ namespace SoenderBoP
 
         private void reserveBtn_Click(object sender, EventArgs e)
         {
-            
-
-            //hvilken tabel i db som skal arbejdes med
-            string insertInto = "Reserveret";
-            // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "loebeNr,rId,datoStart,datoSlut";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@loebeNr,@rId,@,@dStart, @dSlut";
-
-            //Values fra tekstboxe:
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
             string loebeNr = loebeNrMTxt.Text;
             string rId = rIdMTxt.Text;
-            string datoStart = Convert.ToString(datoStartMTxt.Text);
-            string datoSlut = Convert.ToString(datoStartMTxt.Text);
+            string dStart = Convert.ToString(datoStartMTxt.Text);
+            string dSlut = Convert.ToString(datoSlutMTxt.Text);
 
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
-            //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
-            string sqlCom = $"INSERT INTO {insertInto}({add}) VALUES ({values});";
-            //Sql Command
+
+            string sqlCom = "INSERT INTO Reserveret(loebeNr,rId,dStart,dSlut) VALUES (@loebeNr, @rId, @dStart, @dSlut);";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.Parameters.Add("@loebeNr", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@loebeNr"].Value = Convert.ToString(loebeNr);
+            cmd.Parameters.Add("@rId", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@rId"].Value = Convert.ToString(rId);
+            cmd.Parameters.Add("@dStart", System.Data.SqlDbType.Date);
+            cmd.Parameters["@dStart"].Value = Convert.ToString(dStart);
+            cmd.Parameters.Add("@dSlut", System.Data.SqlDbType.Date);
+            cmd.Parameters["@dSlut"].Value = Convert.ToString(dSlut);
 
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show($"{insertInto} oprettet");
+                MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
