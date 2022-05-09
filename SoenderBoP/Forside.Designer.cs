@@ -41,8 +41,12 @@
             this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sloganPanel = new System.Windows.Forms.Panel();
+            this.sloganLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
+            this.sloganPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // manuPanel
@@ -164,8 +168,8 @@
             // 
             // BackgroundPanel
             // 
-            this.BackgroundPanel.Controls.Add(this.panel1);
             this.BackgroundPanel.Controls.Add(this.sloganPanel);
+            this.BackgroundPanel.Controls.Add(this.panel1);
             this.BackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BackgroundPanel.Location = new System.Drawing.Point(225, 0);
             this.BackgroundPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -184,11 +188,31 @@
             // 
             // sloganPanel
             // 
+            this.sloganPanel.Controls.Add(this.pictureBox1);
+            this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Location = new System.Drawing.Point(0, 397);
             this.sloganPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sloganPanel.Name = "sloganPanel";
             this.sloganPanel.Size = new System.Drawing.Size(675, 80);
             this.sloganPanel.TabIndex = 0;
+            // 
+            // sloganLabel
+            // 
+            this.sloganLabel.AutoSize = true;
+            this.sloganLabel.Location = new System.Drawing.Point(19, 31);
+            this.sloganLabel.Name = "sloganLabel";
+            this.sloganLabel.Size = new System.Drawing.Size(85, 20);
+            this.sloganLabel.TabIndex = 0;
+            this.sloganLabel.Text = "SloganHer";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Location = new System.Drawing.Point(557, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 80);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Forside
             // 
@@ -203,6 +227,9 @@
             this.Load += new System.EventHandler(this.Forside_Load);
             this.manuPanel.ResumeLayout(false);
             this.BackgroundPanel.ResumeLayout(false);
+            this.sloganPanel.ResumeLayout(false);
+            this.sloganPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,6 +248,8 @@
         private System.Windows.Forms.Button waitListBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button leaseBtn;
+        private System.Windows.Forms.Label sloganLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

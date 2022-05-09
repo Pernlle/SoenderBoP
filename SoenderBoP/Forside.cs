@@ -21,11 +21,11 @@ namespace SoenderBoP
         {
             
 
-            sloganPanel.Controls.Clear();
-            Slogan formme = new Slogan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formme.FormBorderStyle = FormBorderStyle.None;
-            this.sloganPanel.Controls.Add(formme);
-            formme.Show();
+            //sloganPanel.Controls.Clear();
+            //Slogan formme = new Slogan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //formme.FormBorderStyle = FormBorderStyle.None;
+            //this.sloganPanel.Controls.Add(formme);
+            //formme.Show();
         }
 
         private void createBtn_Click(object sender, EventArgs e)
