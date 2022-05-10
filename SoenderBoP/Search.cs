@@ -27,7 +27,6 @@ namespace SoenderBoP
             if (minKvm > maxKvm)
             {
                 // vis de boligere fra minKvm til maxKvm
-
             }
 
             if (minPris > maxPris)
@@ -35,13 +34,6 @@ namespace SoenderBoP
                 // vis de boligere fra minPris til maxPris
 
             }
-
-        }
-
-        private void Search_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'soenderbodbDataSet.Bolig' table. You can move, or remove it, as needed.
-            this.boligTableAdapter.Fill(this.soenderbodbDataSet.Bolig);
 
         }
     }
