@@ -48,11 +48,13 @@
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // medlemDGV
@@ -68,7 +70,7 @@
             this.tlfDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.loebeNrDataGridViewTextBoxColumn});
-            this.medlemDGV.DataSource = this.medlemBindingSource;
+            this.medlemDGV.DataSource = this.medlemBindingSource1;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,6 +222,11 @@
             this.panel2.Size = new System.Drawing.Size(527, 425);
             this.panel2.TabIndex = 7;
             // 
+            // medlemBindingSource1
+            // 
+            this.medlemBindingSource1.DataMember = "Medlem";
+            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,6 +246,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,5 +270,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn loebeNrDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.BindingSource medlemBindingSource1;
     }
 }

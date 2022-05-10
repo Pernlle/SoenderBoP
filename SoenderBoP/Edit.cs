@@ -42,7 +42,7 @@ namespace SoenderBoP
                 if (cellValue != "" || cellValue == "0")
                 {
                     string delete = "mId = " + cellValue;
-                    CRUD.Delete(insertInto, delete);
+                    CRUD.Delete(insertInto, delete, cellValue);
                 }
                 else
                 {
