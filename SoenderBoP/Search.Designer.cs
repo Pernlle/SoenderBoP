@@ -39,11 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.minPrisBox = new System.Windows.Forms.MaskedTextBox();
             this.maxPrisBox = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(532, 151);
+            this.searchBtn.Location = new System.Drawing.Point(373, 241);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(110, 54);
             this.searchBtn.TabIndex = 0;
@@ -53,14 +54,14 @@
             // 
             // minKvmBox
             // 
-            this.minKvmBox.Location = new System.Drawing.Point(123, 297);
+            this.minKvmBox.Location = new System.Drawing.Point(170, 328);
             this.minKvmBox.Name = "minKvmBox";
             this.minKvmBox.Size = new System.Drawing.Size(100, 26);
             this.minKvmBox.TabIndex = 1;
             // 
             // maxKvmBox
             // 
-            this.maxKvmBox.Location = new System.Drawing.Point(123, 350);
+            this.maxKvmBox.Location = new System.Drawing.Point(170, 384);
             this.maxKvmBox.Name = "maxKvmBox";
             this.maxKvmBox.Size = new System.Drawing.Size(100, 26);
             this.maxKvmBox.TabIndex = 2;
@@ -68,7 +69,7 @@
             // Kvm
             // 
             this.Kvm.AutoSize = true;
-            this.Kvm.Location = new System.Drawing.Point(123, 235);
+            this.Kvm.Location = new System.Drawing.Point(130, 275);
             this.Kvm.Name = "Kvm";
             this.Kvm.Size = new System.Drawing.Size(39, 20);
             this.Kvm.TabIndex = 3;
@@ -77,7 +78,7 @@
             // minKvmLabel
             // 
             this.minKvmLabel.AutoSize = true;
-            this.minKvmLabel.Location = new System.Drawing.Point(42, 297);
+            this.minKvmLabel.Location = new System.Drawing.Point(130, 328);
             this.minKvmLabel.Name = "minKvmLabel";
             this.minKvmLabel.Size = new System.Drawing.Size(34, 20);
             this.minKvmLabel.TabIndex = 4;
@@ -86,7 +87,7 @@
             // maxKvmLabel
             // 
             this.maxKvmLabel.AutoSize = true;
-            this.maxKvmLabel.Location = new System.Drawing.Point(46, 350);
+            this.maxKvmLabel.Location = new System.Drawing.Point(130, 390);
             this.maxKvmLabel.Name = "maxKvmLabel";
             this.maxKvmLabel.Size = new System.Drawing.Size(38, 20);
             this.maxKvmLabel.TabIndex = 5;
@@ -95,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 151);
+            this.label1.Location = new System.Drawing.Point(131, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 20);
             this.label1.TabIndex = 6;
@@ -104,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 82);
+            this.label2.Location = new System.Drawing.Point(131, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 7;
@@ -113,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 23);
+            this.label3.Location = new System.Drawing.Point(130, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 8;
@@ -121,23 +122,33 @@
             // 
             // minPrisBox
             // 
-            this.minPrisBox.Location = new System.Drawing.Point(123, 75);
+            this.minPrisBox.Location = new System.Drawing.Point(170, 116);
             this.minPrisBox.Name = "minPrisBox";
             this.minPrisBox.Size = new System.Drawing.Size(100, 26);
             this.minPrisBox.TabIndex = 9;
             // 
             // maxPrisBox
             // 
-            this.maxPrisBox.Location = new System.Drawing.Point(123, 144);
+            this.maxPrisBox.Location = new System.Drawing.Point(170, 185);
             this.maxPrisBox.Name = "maxPrisBox";
             this.maxPrisBox.Size = new System.Drawing.Size(100, 26);
             this.maxPrisBox.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(636, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "SØG BOLIG";
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.maxPrisBox);
             this.Controls.Add(this.minPrisBox);
             this.Controls.Add(this.label3);
@@ -169,5 +180,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox minPrisBox;
         private System.Windows.Forms.MaskedTextBox maxPrisBox;
+        private System.Windows.Forms.Label label4;
     }
 }
