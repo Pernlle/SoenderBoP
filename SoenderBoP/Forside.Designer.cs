@@ -72,7 +72,7 @@
             // 
             // searchBtn
             // 
-            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchBtn.Location = new System.Drawing.Point(0, 252);
@@ -86,7 +86,7 @@
             // 
             // leaseBtn
             // 
-            this.leaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.leaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.leaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leaseBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.leaseBtn.Location = new System.Drawing.Point(0, 220);
@@ -100,7 +100,7 @@
             // 
             // waitListBtn
             // 
-            this.waitListBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.waitListBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.waitListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitListBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.waitListBtn.Location = new System.Drawing.Point(0, 186);
@@ -114,7 +114,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loginBtn.Location = new System.Drawing.Point(0, 501);
@@ -128,7 +128,7 @@
             // 
             // reservationBtn
             // 
-            this.reservationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.reservationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.reservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reservationBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.reservationBtn.Location = new System.Drawing.Point(0, 150);
@@ -142,7 +142,7 @@
             // 
             // statsBtn
             // 
-            this.statsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.statsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.statsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.statsBtn.Location = new System.Drawing.Point(0, 113);
@@ -156,7 +156,7 @@
             // 
             // editBtn
             // 
-            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.editBtn.Location = new System.Drawing.Point(0, 75);
@@ -170,7 +170,7 @@
             // 
             // readBtn
             // 
-            this.readBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.readBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.readBtn.Location = new System.Drawing.Point(0, 38);
@@ -184,7 +184,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
             this.createBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.createBtn.Location = new System.Drawing.Point(0, 0);
