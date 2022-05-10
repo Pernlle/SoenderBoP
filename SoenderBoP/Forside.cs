@@ -40,7 +40,8 @@ namespace SoenderBoP
         }
         private void Forside_Load(object sender, EventArgs e)
         {
-            
+           
+
 
             //sloganPanel.Controls.Clear();
             //Slogan formme = new Slogan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };

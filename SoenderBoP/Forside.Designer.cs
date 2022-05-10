@@ -43,6 +43,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sloganLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.sloganPanel.SuspendLayout();
@@ -248,6 +249,10 @@
             this.panel1.Size = new System.Drawing.Size(644, 544);
             this.panel1.TabIndex = 1;
             // 
+            // medlemTableAdapter
+            // 
+            this.medlemTableAdapter.ClearBeforeFill = true;
+            // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,6 +289,7 @@
         private System.Windows.Forms.Button leaseBtn;
         private System.Windows.Forms.Label sloganLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
     }
 }
 
