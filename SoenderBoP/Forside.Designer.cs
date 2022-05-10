@@ -52,7 +52,7 @@
             // 
             // manuPanel
             // 
-            this.manuPanel.BackColor = System.Drawing.Color.PeachPuff;
+            this.manuPanel.BackColor = System.Drawing.Color.SeaShell;
             this.manuPanel.Controls.Add(this.searchBtn);
             this.manuPanel.Controls.Add(this.leaseBtn);
             this.manuPanel.Controls.Add(this.waitListBtn);
@@ -75,6 +75,7 @@
             this.searchBtn.BackColor = System.Drawing.Color.IndianRed;
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchBtn.FlatAppearance.BorderSize = 0;
             this.searchBtn.Location = new System.Drawing.Point(0, 315);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
@@ -89,6 +90,7 @@
             this.leaseBtn.BackColor = System.Drawing.Color.IndianRed;
             this.leaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leaseBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.leaseBtn.FlatAppearance.BorderSize = 0;
             this.leaseBtn.Location = new System.Drawing.Point(0, 275);
             this.leaseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseBtn.Name = "leaseBtn";
@@ -103,6 +105,7 @@
             this.waitListBtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitListBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.waitListBtn.FlatAppearance.BorderSize = 0;
             this.waitListBtn.Location = new System.Drawing.Point(0, 233);
             this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
@@ -117,6 +120,7 @@
             this.loginBtn.BackColor = System.Drawing.Color.DarkSalmon;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
             this.loginBtn.Location = new System.Drawing.Point(0, 631);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
@@ -131,6 +135,7 @@
             this.reservationBtn.BackColor = System.Drawing.Color.IndianRed;
             this.reservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reservationBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reservationBtn.FlatAppearance.BorderSize = 0;
             this.reservationBtn.Location = new System.Drawing.Point(0, 188);
             this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
@@ -145,6 +150,7 @@
             this.statsBtn.BackColor = System.Drawing.Color.IndianRed;
             this.statsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statsBtn.FlatAppearance.BorderSize = 0;
             this.statsBtn.Location = new System.Drawing.Point(0, 142);
             this.statsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statsBtn.Name = "statsBtn";
@@ -159,6 +165,7 @@
             this.editBtn.BackColor = System.Drawing.Color.IndianRed;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.editBtn.FlatAppearance.BorderSize = 0;
             this.editBtn.Location = new System.Drawing.Point(0, 94);
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
@@ -173,6 +180,7 @@
             this.readBtn.BackColor = System.Drawing.Color.IndianRed;
             this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.readBtn.FlatAppearance.BorderSize = 0;
             this.readBtn.Location = new System.Drawing.Point(0, 48);
             this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readBtn.Name = "readBtn";
@@ -187,6 +195,7 @@
             this.createBtn.BackColor = System.Drawing.Color.IndianRed;
             this.createBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.createBtn.FlatAppearance.BorderSize = 0;
             this.createBtn.Location = new System.Drawing.Point(0, 0);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
@@ -209,7 +218,7 @@
             // 
             // sloganPanel
             // 
-            this.sloganPanel.BackColor = System.Drawing.Color.PeachPuff;
+            this.sloganPanel.BackColor = System.Drawing.Color.SeaShell;
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
