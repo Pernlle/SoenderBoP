@@ -153,6 +153,9 @@ namespace SoenderBoP
             frm.Show();
         }
 
-
+        private void Forside_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _thread.Abort();
+        }
     }
 }
