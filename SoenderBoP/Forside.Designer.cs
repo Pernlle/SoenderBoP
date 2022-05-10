@@ -52,8 +52,7 @@
             // 
             // manuPanel
             // 
-            this.manuPanel.BackColor = System.Drawing.Color.White;
-            this.manuPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.manuPanel.BackColor = System.Drawing.Color.PeachPuff;
             this.manuPanel.Controls.Add(this.searchBtn);
             this.manuPanel.Controls.Add(this.leaseBtn);
             this.manuPanel.Controls.Add(this.waitListBtn);
@@ -66,19 +65,20 @@
             this.manuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.manuPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.manuPanel.Location = new System.Drawing.Point(0, 0);
+            this.manuPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.manuPanel.Name = "manuPanel";
-            this.manuPanel.Size = new System.Drawing.Size(200, 544);
+            this.manuPanel.Size = new System.Drawing.Size(224, 680);
             this.manuPanel.TabIndex = 0;
             // 
             // searchBtn
             // 
-            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.searchBtn.BackColor = System.Drawing.Color.IndianRed;
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchBtn.Location = new System.Drawing.Point(0, 252);
+            this.searchBtn.Location = new System.Drawing.Point(0, 315);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(196, 34);
+            this.searchBtn.Size = new System.Drawing.Size(224, 42);
             this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "Søg boliger";
             this.searchBtn.UseVisualStyleBackColor = false;
@@ -86,13 +86,13 @@
             // 
             // leaseBtn
             // 
-            this.leaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.leaseBtn.BackColor = System.Drawing.Color.IndianRed;
             this.leaseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leaseBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.leaseBtn.Location = new System.Drawing.Point(0, 220);
+            this.leaseBtn.Location = new System.Drawing.Point(0, 275);
             this.leaseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseBtn.Name = "leaseBtn";
-            this.leaseBtn.Size = new System.Drawing.Size(196, 32);
+            this.leaseBtn.Size = new System.Drawing.Size(224, 40);
             this.leaseBtn.TabIndex = 4;
             this.leaseBtn.Text = "Lejekontrakt";
             this.leaseBtn.UseVisualStyleBackColor = false;
@@ -100,13 +100,13 @@
             // 
             // waitListBtn
             // 
-            this.waitListBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.waitListBtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitListBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.waitListBtn.Location = new System.Drawing.Point(0, 186);
+            this.waitListBtn.Location = new System.Drawing.Point(0, 233);
             this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
-            this.waitListBtn.Size = new System.Drawing.Size(196, 34);
+            this.waitListBtn.Size = new System.Drawing.Size(224, 42);
             this.waitListBtn.TabIndex = 6;
             this.waitListBtn.Text = "Venteliste";
             this.waitListBtn.UseVisualStyleBackColor = false;
@@ -114,13 +114,13 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(91)))), ((int)(((byte)(45)))));
+            this.loginBtn.BackColor = System.Drawing.Color.DarkSalmon;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loginBtn.Location = new System.Drawing.Point(0, 501);
+            this.loginBtn.Location = new System.Drawing.Point(0, 631);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(196, 39);
+            this.loginBtn.Size = new System.Drawing.Size(224, 49);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Log på";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -128,13 +128,13 @@
             // 
             // reservationBtn
             // 
-            this.reservationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.reservationBtn.BackColor = System.Drawing.Color.IndianRed;
             this.reservationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reservationBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reservationBtn.Location = new System.Drawing.Point(0, 150);
+            this.reservationBtn.Location = new System.Drawing.Point(0, 188);
             this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
-            this.reservationBtn.Size = new System.Drawing.Size(196, 36);
+            this.reservationBtn.Size = new System.Drawing.Size(224, 45);
             this.reservationBtn.TabIndex = 4;
             this.reservationBtn.Text = "Reserver ressource";
             this.reservationBtn.UseVisualStyleBackColor = false;
@@ -142,13 +142,13 @@
             // 
             // statsBtn
             // 
-            this.statsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.statsBtn.BackColor = System.Drawing.Color.IndianRed;
             this.statsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statsBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statsBtn.Location = new System.Drawing.Point(0, 113);
+            this.statsBtn.Location = new System.Drawing.Point(0, 142);
             this.statsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statsBtn.Name = "statsBtn";
-            this.statsBtn.Size = new System.Drawing.Size(196, 37);
+            this.statsBtn.Size = new System.Drawing.Size(224, 46);
             this.statsBtn.TabIndex = 3;
             this.statsBtn.Text = "Udtræk statistik";
             this.statsBtn.UseVisualStyleBackColor = false;
@@ -156,13 +156,13 @@
             // 
             // editBtn
             // 
-            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.editBtn.BackColor = System.Drawing.Color.IndianRed;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editBtn.Location = new System.Drawing.Point(0, 75);
+            this.editBtn.Location = new System.Drawing.Point(0, 94);
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(196, 38);
+            this.editBtn.Size = new System.Drawing.Size(224, 48);
             this.editBtn.TabIndex = 2;
             this.editBtn.Text = "Rediger medlem";
             this.editBtn.UseVisualStyleBackColor = false;
@@ -170,13 +170,13 @@
             // 
             // readBtn
             // 
-            this.readBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.readBtn.BackColor = System.Drawing.Color.IndianRed;
             this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.readBtn.Location = new System.Drawing.Point(0, 38);
+            this.readBtn.Location = new System.Drawing.Point(0, 48);
             this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readBtn.Name = "readBtn";
-            this.readBtn.Size = new System.Drawing.Size(196, 37);
+            this.readBtn.Size = new System.Drawing.Size(224, 46);
             this.readBtn.TabIndex = 2;
             this.readBtn.Text = "Se medlemmer";
             this.readBtn.UseVisualStyleBackColor = false;
@@ -184,13 +184,13 @@
             // 
             // createBtn
             // 
-            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(163)))), ((int)(((byte)(168)))));
+            this.createBtn.BackColor = System.Drawing.Color.IndianRed;
             this.createBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.createBtn.Location = new System.Drawing.Point(0, 0);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(196, 38);
+            this.createBtn.Size = new System.Drawing.Size(224, 48);
             this.createBtn.TabIndex = 1;
             this.createBtn.Text = "Opret medlem";
             this.createBtn.UseVisualStyleBackColor = false;
@@ -201,29 +201,32 @@
             this.BackgroundPanel.Controls.Add(this.sloganPanel);
             this.BackgroundPanel.Controls.Add(this.panel1);
             this.BackgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BackgroundPanel.Location = new System.Drawing.Point(200, 0);
+            this.BackgroundPanel.Location = new System.Drawing.Point(224, 0);
+            this.BackgroundPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BackgroundPanel.Name = "BackgroundPanel";
-            this.BackgroundPanel.Size = new System.Drawing.Size(644, 544);
+            this.BackgroundPanel.Size = new System.Drawing.Size(726, 680);
             this.BackgroundPanel.TabIndex = 1;
             // 
             // sloganPanel
             // 
+            this.sloganPanel.BackColor = System.Drawing.Color.PeachPuff;
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sloganPanel.Location = new System.Drawing.Point(0, 427);
+            this.sloganPanel.Location = new System.Drawing.Point(0, 534);
+            this.sloganPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sloganPanel.Name = "sloganPanel";
-            this.sloganPanel.Size = new System.Drawing.Size(644, 117);
+            this.sloganPanel.Size = new System.Drawing.Size(726, 146);
             this.sloganPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::SoenderBoP.Properties.Resources.Boligforeningen;
-            this.pictureBox1.Location = new System.Drawing.Point(524, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(576, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -235,9 +238,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sloganLabel.AutoSize = true;
             this.sloganLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sloganLabel.Location = new System.Drawing.Point(17, 25);
+            this.sloganLabel.Location = new System.Drawing.Point(21, 55);
             this.sloganLabel.Name = "sloganLabel";
-            this.sloganLabel.Size = new System.Drawing.Size(355, 36);
+            this.sloganLabel.Size = new System.Drawing.Size(427, 40);
             this.sloganLabel.TabIndex = 0;
             this.sloganLabel.Text = "SønderBo er søndme god";
             // 
@@ -245,8 +248,9 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(644, 544);
+            this.panel1.Size = new System.Drawing.Size(726, 680);
             this.panel1.TabIndex = 1;
             // 
             // medlemTableAdapter
@@ -255,11 +259,12 @@
             // 
             // Forside
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 544);
+            this.ClientSize = new System.Drawing.Size(950, 680);
             this.Controls.Add(this.BackgroundPanel);
             this.Controls.Add(this.manuPanel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Forside";
             this.Text = "Forside";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
