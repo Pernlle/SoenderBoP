@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.medlemDGV = new System.Windows.Forms.DataGridView();
             this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,8 +38,9 @@
             this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
+            this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.tlfMTxt = new System.Windows.Forms.MaskedTextBox();
@@ -48,13 +49,13 @@
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // medlemDGV
@@ -71,26 +72,26 @@
             this.emailDataGridViewTextBoxColumn,
             this.loebeNrDataGridViewTextBoxColumn});
             this.medlemDGV.DataSource = this.medlemBindingSource1;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medlemDGV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.medlemDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.medlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.medlemDGV.Location = new System.Drawing.Point(0, 0);
             this.medlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medlemDGV.Name = "medlemDGV";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.medlemDGV.RowHeadersWidth = 62;
             this.medlemDGV.Size = new System.Drawing.Size(527, 425);
             this.medlemDGV.TabIndex = 0;
@@ -141,15 +142,20 @@
             this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
             // 
-            // medlemBindingSource
+            // medlemBindingSource1
             // 
-            this.medlemBindingSource.DataMember = "Medlem";
-            this.medlemBindingSource.DataSource = this.soenderbodbDataSet;
+            this.medlemBindingSource1.DataMember = "Medlem";
+            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet;
             // 
             // soenderbodbDataSet
             // 
             this.soenderbodbDataSet.DataSetName = "soenderbodbDataSet";
             this.soenderbodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // medlemBindingSource
+            // 
+            this.medlemBindingSource.DataMember = "Medlem";
+            this.medlemBindingSource.DataSource = this.soenderbodbDataSet;
             // 
             // deleteBtn
             // 
@@ -202,6 +208,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.navnTxt);
             this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Controls.Add(this.emailMTxt);
@@ -222,10 +229,15 @@
             this.panel2.Size = new System.Drawing.Size(527, 425);
             this.panel2.TabIndex = 7;
             // 
-            // medlemBindingSource1
+            // label1
             // 
-            this.medlemBindingSource1.DataMember = "Medlem";
-            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 36);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Rediger";
             // 
             // Edit
             // 
@@ -241,12 +253,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Edit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +283,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.BindingSource medlemBindingSource1;
+        private System.Windows.Forms.Label label1;
     }
 }
