@@ -99,12 +99,12 @@ namespace SoenderBoP
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
         }
-        public static void Delete(string insertInto, string delete)
+        public static void Delete(string insertInto, string delete, string cellValue)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
 
             SqlConnection conn = new SqlConnection(strconn);
-            string sqlCom = $"DELETE {insertInto} WHERE {delete}; DELETE venteliste medlem WHERE Venteliste = mId"; //HAHA IKKE FÆRDIG
+            string sqlCom = $"DELETE Venteliste WHERE medlemId = {cellValue}; DELETE {insertInto} WHERE {delete};";
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
