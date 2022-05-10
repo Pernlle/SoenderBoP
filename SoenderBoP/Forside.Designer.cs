@@ -52,7 +52,7 @@
             // 
             // manuPanel
             // 
-            this.manuPanel.BackColor = System.Drawing.Color.SeaShell;
+            this.manuPanel.BackColor = System.Drawing.Color.AntiqueWhite;
             this.manuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.manuPanel.Controls.Add(this.searchBtn);
             this.manuPanel.Controls.Add(this.leaseBtn);
@@ -130,19 +130,20 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.loginBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loginBtn.FlatAppearance.BorderSize = 0;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.loginBtn.Location = new System.Drawing.Point(0, 629);
+            this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.loginBtn.Location = new System.Drawing.Point(0, 639);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(222, 49);
+            this.loginBtn.Size = new System.Drawing.Size(222, 39);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "LOG PÅ";
+            this.loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
@@ -253,8 +254,7 @@
             // 
             // sloganPanel
             // 
-            this.sloganPanel.BackColor = System.Drawing.Color.SeaShell;
-            this.sloganPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sloganPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -268,10 +268,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::SoenderBoP.Properties.Resources.Boligforeningen;
-            this.pictureBox1.Location = new System.Drawing.Point(616, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(618, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -282,11 +282,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sloganLabel.AutoSize = true;
-            this.sloganLabel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sloganLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.sloganLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sloganLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sloganLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.sloganLabel.Location = new System.Drawing.Point(22, 36);
             this.sloganLabel.Name = "sloganLabel";
-            this.sloganLabel.Size = new System.Drawing.Size(354, 36);
+            this.sloganLabel.Size = new System.Drawing.Size(362, 35);
             this.sloganLabel.TabIndex = 0;
             this.sloganLabel.Text = "SønderBo er søndme god";
             // 
