@@ -29,15 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.medlemDGV = new System.Windows.Forms.DataGridView();
-            this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,8 +42,14 @@
             this.navnTxt = new System.Windows.Forms.TextBox();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
@@ -72,75 +72,30 @@
             this.emailDataGridViewTextBoxColumn,
             this.loebeNrDataGridViewTextBoxColumn});
             this.medlemDGV.DataSource = this.medlemBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medlemDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.medlemDGV.DefaultCellStyle = dataGridViewCellStyle1;
             this.medlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.medlemDGV.Location = new System.Drawing.Point(0, 0);
             this.medlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medlemDGV.Name = "medlemDGV";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.medlemDGV.RowHeadersWidth = 62;
             this.medlemDGV.Size = new System.Drawing.Size(527, 425);
             this.medlemDGV.TabIndex = 0;
             this.medlemDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medlemDGV_CellClick);
-            // 
-            // mIdDataGridViewTextBoxColumn
-            // 
-            this.mIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.mIdDataGridViewTextBoxColumn.DataPropertyName = "mId";
-            this.mIdDataGridViewTextBoxColumn.HeaderText = "mId";
-            this.mIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mIdDataGridViewTextBoxColumn.Name = "mIdDataGridViewTextBoxColumn";
-            this.mIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mIdDataGridViewTextBoxColumn.Width = 58;
-            // 
-            // fNavnDataGridViewTextBoxColumn
-            // 
-            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn.HeaderText = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
-            // 
-            // eNavnDataGridViewTextBoxColumn
-            // 
-            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn.HeaderText = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
-            // 
-            // tlfDataGridViewTextBoxColumn
-            // 
-            this.tlfDataGridViewTextBoxColumn.DataPropertyName = "tlf";
-            this.tlfDataGridViewTextBoxColumn.HeaderText = "tlf";
-            this.tlfDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tlfDataGridViewTextBoxColumn.Name = "tlfDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // loebeNrDataGridViewTextBoxColumn
-            // 
-            this.loebeNrDataGridViewTextBoxColumn.DataPropertyName = "loebeNr";
-            this.loebeNrDataGridViewTextBoxColumn.HeaderText = "loebeNr";
-            this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
             // 
             // medlemBindingSource1
             // 
@@ -220,15 +175,6 @@
             this.panel1.Size = new System.Drawing.Size(225, 425);
             this.panel1.TabIndex = 6;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.medlemDGV);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(527, 425);
-            this.panel2.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -238,6 +184,60 @@
             this.label1.Size = new System.Drawing.Size(120, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Rediger";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.medlemDGV);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(527, 425);
+            this.panel2.TabIndex = 7;
+            // 
+            // mIdDataGridViewTextBoxColumn
+            // 
+            this.mIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.mIdDataGridViewTextBoxColumn.DataPropertyName = "mId";
+            this.mIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.mIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mIdDataGridViewTextBoxColumn.Name = "mIdDataGridViewTextBoxColumn";
+            this.mIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mIdDataGridViewTextBoxColumn.Width = 47;
+            // 
+            // fNavnDataGridViewTextBoxColumn
+            // 
+            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn.HeaderText = "Fornavn";
+            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
+            // 
+            // eNavnDataGridViewTextBoxColumn
+            // 
+            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn.HeaderText = "Efternavn";
+            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
+            // 
+            // tlfDataGridViewTextBoxColumn
+            // 
+            this.tlfDataGridViewTextBoxColumn.DataPropertyName = "tlf";
+            this.tlfDataGridViewTextBoxColumn.HeaderText = "Tlf";
+            this.tlfDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tlfDataGridViewTextBoxColumn.Name = "tlfDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // loebeNrDataGridViewTextBoxColumn
+            // 
+            this.loebeNrDataGridViewTextBoxColumn.DataPropertyName = "loebeNr";
+            this.loebeNrDataGridViewTextBoxColumn.HeaderText = "Løbenummer";
+            this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
             // 
             // Edit
             // 
@@ -274,15 +274,15 @@
         private soenderbodbDataSet soenderbodbDataSet;
         private System.Windows.Forms.BindingSource medlemBindingSource;
         private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.BindingSource medlemBindingSource1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tlfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loebeNrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.BindingSource medlemBindingSource1;
-        private System.Windows.Forms.Label label1;
     }
 }
