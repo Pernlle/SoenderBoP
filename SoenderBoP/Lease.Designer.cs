@@ -101,12 +101,13 @@
             // 
             // CreateLease
             // 
-            this.CreateLease.Location = new System.Drawing.Point(52, 322);
+            this.CreateLease.Location = new System.Drawing.Point(55, 329);
             this.CreateLease.Name = "CreateLease";
             this.CreateLease.Size = new System.Drawing.Size(127, 32);
             this.CreateLease.TabIndex = 3;
             this.CreateLease.Text = "Opret";
             this.CreateLease.UseVisualStyleBackColor = true;
+            this.CreateLease.Click += new System.EventHandler(this.CreateLease_Click);
             // 
             // Lease
             // 
