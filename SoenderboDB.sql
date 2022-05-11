@@ -7,10 +7,32 @@ INSERT INTO Adminstrator(aid, pass) VALUES ('1', 'root')
 
 /*Lejekontrakt forbinder Medlem og Bolig, den bliver kaldet i begge tabeller, men kalder ikke nogle af tabellerne*/
 /*SQL tager ikke højde for hvornår lejer underskriver kontrakt og kommer af venteliste, kun hvornår lejer indflytter*/
+CREATE TABLE Lejekontrakt(
+	loebeNr INT IDENTITY (1,1) PRIMARY KEY,
+	indflytter VARCHAR(10),
+);
 
-CREATE TABLE Lejekontrakt (
-	loebeNr INT PRIMARY KEY,
-	indflytter DATE,
+
+/*BoligType bliver fastsat så bruger ikke laver stavefejl i forbindelse med registrering. Kan evt. vælges gennem dropdown menu*/
+CREATE TABLE BoligType(
+	id INT PRIMARY KEY NOT NULL,
+	navn VARCHAR(12)
+);
+
+INSERT INTO BoligType(id, navn) VALUES 
+('1','Lejlighed'),
+('2','Ungdomsbolig'),
+('3','Seniorbolig')
+
+/*PK skrives med Identity for at undgå dubletter i systemet. Bolig har FK løbeNr. og bolig type. LøbeNr. kan være NULL.*/
+
+CREATE TABLE Bolig(
+	bId INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
+	mndPris DECIMAL,
+	adr VARCHAR(60),
+	kvm INT,
+	bType INT FOREIGN KEY REFERENCES BoligType(id),
+	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
 );
 
 /*FM - LøbeNr fra Lejekontrakt - Kan være NULL uden lejekontrakt.
@@ -27,33 +49,6 @@ CREATE TABLE Medlem(
 	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
 );
 
-
-
-/*BoligType bliver fastsat så bruger ikke laver stavefejl i forbindelse med registrering. Kan evt. vælges gennem dropdown menu*/
-
-CREATE TABLE BoligType(
-	id INT PRIMARY KEY NOT NULL,
-	navn VARCHAR(12)
-);
-
-INSERT INTO BoligType(id, navn) VALUES 
-('1','Lejlighed'),
-('2','Ungdomsbolig'),
-('3','Seniorbolig')
-
-
-/*PK skrives med Identity for at undgå dubletter i systemet. Bolig har FK løbeNr. og bolig type. LøbeNr. kan være NULL.*/
-
-CREATE TABLE Bolig(
-	bId INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
-	mndPris DECIMAL,
-	adr VARCHAR(60),
-	kvm INT,
-	bType INT FOREIGN KEY REFERENCES BoligType(id),
-	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
-);
-
-
 /*Ventelisten 'generer' i databasen en dato, i koden bestemmes venteliste nr. efter dato. */ 
 /*Potentielle ufleksible elementer i SQL: Man kan ikke bestemme bolig og hvis man registreres samme dato får man samme nr.*/
 
@@ -62,7 +57,6 @@ CREATE TABLE Venteliste(
 	boligType INT FOREIGN KEY REFERENCES BoligType(id),
 	opskrevet VARCHAR(50),
 );
-
 
 CREATE TABLE Ressource(
 	rId INT PRIMARY KEY NOT NULL,
@@ -75,7 +69,10 @@ CREATE TABLE Reserveret(
 	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr),
 	dStart VARCHAR(50),
 	dSlut VARCHAR(50)
-	/*Problemet med DATE skal fixes i c#. En string skal convertes til et DATE format. I will find out*/
+	/*
+		Problemet med DATE skal fixes i c#. En string skal convertes til et DATE format. I will find out 
+		Update: I found out. Stop med at bruge DATE. C# kan ikke håndtere dig :(
+	*/
 );
 
 INSERT INTO Ressource (rId, rType, rNr) VALUES
