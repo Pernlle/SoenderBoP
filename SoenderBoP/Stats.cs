@@ -21,6 +21,16 @@ namespace SoenderBoP
 
         private void Stats_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             //connect to the database
             string str = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
             SqlConnection con = new SqlConnection(str);
@@ -61,7 +71,12 @@ namespace SoenderBoP
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

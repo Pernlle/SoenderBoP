@@ -26,20 +26,24 @@ namespace SoenderBoP
         {
             int minKvm = Convert.ToInt32(minKvmBox.Text);
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
-            int minPris = Convert.ToInt32(minPrisBox.Text);
-            int maxPris = Convert.ToInt32(maxPrisBox.Text);
+            double minPris = Convert.ToDouble(minPrisBox.Text);
+            double maxPris = Convert.ToDouble(maxPrisBox.Text);
+
+            MessageBox.Show(Convert.ToString(minKvm));
 
             if (minKvm > maxKvm)
             {
                 SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
 
             }
+            else MessageBox.Show("pris fejl");
 
             if (minPris > maxPris)
             {
                 SearchDGV.DataSource = this.PopulateDataGridViewPris(strconn, minPris, maxPris);
 
             }
+            else MessageBox.Show("kvm fejl");
 
         }
 
@@ -92,7 +96,7 @@ namespace SoenderBoP
                 }
             }
         }
-        private DataTable PopulateDataGridViewPris(string strconn, int minPris, int maxPris)
+        private DataTable PopulateDataGridViewPris(string strconn, double minPris, double maxPris)
         {
 
             string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig" +
