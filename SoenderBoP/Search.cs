@@ -15,10 +15,8 @@ namespace SoenderBoP
     {
         string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
 
-        private Panel buttonPanel = new Panel();
         private DataGridView SearchDGV = new DataGridView();
-        private Button addNewRowButton = new Button();
-        private Button deleteRowButton = new Button();
+
         public Search()
         {
             InitializeComponent();
@@ -33,13 +31,13 @@ namespace SoenderBoP
 
             if (minKvm > maxKvm)
             {
-                // vis de boligere fra minKvm til maxKvm
-                
+                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
+
             }
 
             if (minPris > maxPris)
             {
-                // vis de boligere fra minPris til maxPris
+                SearchDGV.DataSource = this.PopulateDataGridViewPris(strconn, minPris, maxPris);
 
             }
 
@@ -94,5 +92,43 @@ namespace SoenderBoP
                 }
             }
         }
+        private DataTable PopulateDataGridViewPris(string strconn, int minPris, int maxPris)
+        {
+
+            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig" +
+                $"Where mndPris > {minPris} AND mndPris < {maxPris} ";
+            using (SqlConnection con = new SqlConnection(strconn))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
+        private DataTable PopulateDataGridViewKvm(string strconn, int minKvm, int maxKvm)
+        {
+
+            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig" +
+                $"Where kvm > {minKvm} AND kvm < {maxKvm}";
+            using (SqlConnection con = new SqlConnection(strconn))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
     }
 }
