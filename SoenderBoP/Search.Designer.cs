@@ -43,13 +43,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
+            this.searchKvmBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(267, 210);
+            this.searchBtn.Location = new System.Drawing.Point(208, 119);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(98, 43);
@@ -164,6 +165,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.searchKvmBtn);
             this.panel2.Controls.Add(this.minPrisBox);
             this.panel2.Controls.Add(this.searchBtn);
             this.panel2.Controls.Add(this.maxKvmBox);
@@ -188,6 +190,17 @@
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(780, 483);
             this.searchPanel.TabIndex = 16;
+            // 
+            // searchKvmBtn
+            // 
+            this.searchKvmBtn.Location = new System.Drawing.Point(208, 288);
+            this.searchKvmBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchKvmBtn.Name = "searchKvmBtn";
+            this.searchKvmBtn.Size = new System.Drawing.Size(98, 43);
+            this.searchKvmBtn.TabIndex = 14;
+            this.searchKvmBtn.Text = "Søg";
+            this.searchKvmBtn.UseVisualStyleBackColor = true;
+            this.searchKvmBtn.Click += new System.EventHandler(this.searchKvmBtn_Click);
             // 
             // Search
             // 
@@ -226,5 +239,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel searchPanel;
+        private System.Windows.Forms.Button searchKvmBtn;
     }
 }

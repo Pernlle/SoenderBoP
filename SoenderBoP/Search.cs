@@ -24,22 +24,13 @@ namespace SoenderBoP
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            int minKvm = Convert.ToInt32(minKvmBox.Text);
-            int maxKvm = Convert.ToInt32(maxKvmBox.Text);
-            double minPris = Convert.ToDouble(minPrisBox.Text);
-            double maxPris = Convert.ToDouble(maxPrisBox.Text);
+            int minPris = Convert.ToInt32(minPrisBox.Text);
+            int maxPris = Convert.ToInt32(maxPrisBox.Text);
 
-            MessageBox.Show(Convert.ToString(minKvm));
 
-            if (minKvm > maxKvm)
+            if (minPris < maxPris)
             {
-                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
-
-            }
-            else MessageBox.Show("pris fejl");
-
-            if (minPris > maxPris)
-            {
+                SearchDGV.Controls.Clear();
                 SearchDGV.DataSource = this.PopulateDataGridViewPris(strconn, minPris, maxPris);
 
             }
@@ -96,19 +87,19 @@ namespace SoenderBoP
                 }
             }
         }
-        private DataTable PopulateDataGridViewPris(string strconn, double minPris, double maxPris)
+        private DataTable PopulateDataGridViewPris(string strconn, int minPris, int maxPris)
         {
 
-            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig" +
-                $"Where mndPris > {minPris} AND mndPris < {maxPris} ";
+            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
             using (SqlConnection con = new SqlConnection(strconn))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    using (SqlDataAdapter sdad  = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
-                        sda.Fill(dt);
+                        sdad.Fill(dt);
                         return dt;
                     }
                 }
@@ -118,21 +109,37 @@ namespace SoenderBoP
         private DataTable PopulateDataGridViewKvm(string strconn, int minKvm, int maxKvm)
         {
 
-            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig" +
-                $"Where kvm > {minKvm} AND kvm < {maxKvm}";
+            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
             using (SqlConnection con = new SqlConnection(strconn))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    using (SqlDataAdapter sdae = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
-                        sda.Fill(dt);
+                        sdae.Fill(dt);
                         return dt;
                     }
                 }
             }
         }
 
+        private void searchKvmBtn_Click(object sender, EventArgs e)
+        {
+            int minKvm = Convert.ToInt32(minKvmBox.Text);
+            int maxKvm = Convert.ToInt32(maxKvmBox.Text);
+            
+            MessageBox.Show(Convert.ToString(minKvm));
+
+            if (minKvm < maxKvm)
+            {
+                SearchDGV.Controls.Clear();
+                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
+
+            }
+            else MessageBox.Show("pris fejl");
+
+        }
     }
 }
