@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CreateLease = new System.Windows.Forms.Button();
+            this.leaseDate = new System.Windows.Forms.DateTimePicker();
+            this.MedlemNavn = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -42,6 +44,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.MedlemNavn);
+            this.panel1.Controls.Add(this.leaseDate);
             this.panel1.Controls.Add(this.CreateLease);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -109,6 +113,21 @@
             this.CreateLease.UseVisualStyleBackColor = true;
             this.CreateLease.Click += new System.EventHandler(this.CreateLease_Click);
             // 
+            // leaseDate
+            // 
+            this.leaseDate.Location = new System.Drawing.Point(15, 205);
+            this.leaseDate.Name = "leaseDate";
+            this.leaseDate.Size = new System.Drawing.Size(179, 26);
+            this.leaseDate.TabIndex = 4;
+            // 
+            // MedlemNavn
+            // 
+            this.MedlemNavn.FormattingEnabled = true;
+            this.MedlemNavn.Location = new System.Drawing.Point(11, 99);
+            this.MedlemNavn.Name = "MedlemNavn";
+            this.MedlemNavn.Size = new System.Drawing.Size(183, 28);
+            this.MedlemNavn.TabIndex = 5;
+            // 
             // Lease
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -135,5 +154,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox MedlemNavn;
+        private System.Windows.Forms.DateTimePicker leaseDate;
     }
 }
