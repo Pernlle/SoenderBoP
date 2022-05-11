@@ -55,12 +55,14 @@ namespace SoenderBoP
         {
             searchPanel.Controls.Add(SearchDGV);
 
-            //SearchDGV.ColumnCount = 6;
+            //Color.FromKnownColor(KnownColor.IndianRed)
+
+            SearchDGV.BackgroundColor = Color.FromKnownColor(KnownColor.IndianRed); // baggrunden bag ved dgv
+            SearchDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed); //celle farve :)
 
             SearchDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
-            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            SearchDGV.ColumnHeadersDefaultCellStyle.Font = new Font(SearchDGV.Font, FontStyle.Bold);
-
+            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.IndianRed);
+            SearchDGV.ColumnHeadersDefaultCellStyle.Font = new Font(SearchDGV.Font, FontStyle.Regular);
             SearchDGV.Name = "SearchDGV";
             SearchDGV.Location = new Point(8, 8);
             SearchDGV.Size = new Size(500, 250);
@@ -69,16 +71,6 @@ namespace SoenderBoP
             SearchDGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             SearchDGV.GridColor = Color.Black;
             SearchDGV.RowHeadersVisible = false;
-
-
-
-            //SearchDGV.Columns[0].Name = "Id";
-            //SearchDGV.Columns[1].Name = "Pris pr måned";
-            //SearchDGV.Columns[2].Name = "Adresse";
-            //SearchDGV.Columns[3].Name = "Kvm";
-            //SearchDGV.Columns[4].Name = "Type af bolig";
-            //SearchDGV.Columns[5].Name = "Løbenummer";
-            //SearchDGV.Columns[5].DefaultCellStyle.Font = new Font(SearchDGV.DefaultCellStyle.Font, FontStyle.Italic);
 
             SearchDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             SearchDGV.MultiSelect = false;
@@ -89,8 +81,6 @@ namespace SoenderBoP
         {
 
             string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
-            //query += " WHERE ContactName LIKE '%' + @ContactName + '%'";
-            //query += " OR @ContactName = ''";
             using (SqlConnection con = new SqlConnection(strconn))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
@@ -103,8 +93,6 @@ namespace SoenderBoP
                     }
                 }
             }
-            //searchDGV.Rows.Add(row0);
-            //searchDGV.Columns[0].DisplayIndex = 3;
         }
     }
 }

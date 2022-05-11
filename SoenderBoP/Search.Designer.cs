@@ -175,8 +175,8 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.maxKvmLabel);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 67);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(780, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(408, 483);
             this.panel2.TabIndex = 15;
@@ -184,7 +184,7 @@
             // searchPanel
             // 
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchPanel.Location = new System.Drawing.Point(408, 67);
+            this.searchPanel.Location = new System.Drawing.Point(0, 67);
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(780, 483);
             this.searchPanel.TabIndex = 16;
