@@ -24,6 +24,8 @@ namespace SoenderBoP
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            //Pris søg klik
+
             int minPris = Convert.ToInt32(minPrisBox.Text);
             int maxPris = Convert.ToInt32(maxPrisBox.Text);
 
@@ -44,17 +46,33 @@ namespace SoenderBoP
             SearchDGV.DataSource = this.PopulateDataGridView(strconn);
         }
 
+        private void searchKvmBtn_Click(object sender, EventArgs e)
+        {
+            int minKvm = Convert.ToInt32(minKvmBox.Text);
+            int maxKvm = Convert.ToInt32(maxKvmBox.Text);
+            
+            MessageBox.Show(Convert.ToString(minKvm));
+
+            if (minKvm < maxKvm)
+            {
+                SearchDGV.Controls.Clear();
+                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
+
+            }
+            else MessageBox.Show("pris fejl");
+
+        }
         private void SetupDataGridView()
         {
             searchPanel.Controls.Add(SearchDGV);
 
             //Color.FromKnownColor(KnownColor.IndianRed)
 
-            SearchDGV.BackgroundColor = Color.FromKnownColor(KnownColor.IndianRed); // baggrunden bag ved dgv
-            SearchDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed); //celle farve :)
+            SearchDGV.BackgroundColor = Color.FromKnownColor(KnownColor.SeaShell); // baggrunden bag ved dgv
+            SearchDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.SeaShell); //celle farve :)
 
-            SearchDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
-            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.IndianRed);
+            SearchDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed);
+            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             SearchDGV.ColumnHeadersDefaultCellStyle.Font = new Font(SearchDGV.Font, FontStyle.Regular);
             SearchDGV.Name = "SearchDGV";
             SearchDGV.Location = new Point(8, 8);
@@ -69,7 +87,6 @@ namespace SoenderBoP
             SearchDGV.MultiSelect = false;
             SearchDGV.Dock = DockStyle.Fill;
         }
-
         private DataTable PopulateDataGridView(string strconn)
         {
 
@@ -96,7 +113,7 @@ namespace SoenderBoP
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    using (SqlDataAdapter sdad  = new SqlDataAdapter(cmd))
+                    using (SqlDataAdapter sdad = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
                         sdad.Fill(dt);
@@ -125,21 +142,5 @@ namespace SoenderBoP
             }
         }
 
-        private void searchKvmBtn_Click(object sender, EventArgs e)
-        {
-            int minKvm = Convert.ToInt32(minKvmBox.Text);
-            int maxKvm = Convert.ToInt32(maxKvmBox.Text);
-            
-            MessageBox.Show(Convert.ToString(minKvm));
-
-            if (minKvm < maxKvm)
-            {
-                SearchDGV.Controls.Clear();
-                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
-
-            }
-            else MessageBox.Show("pris fejl");
-
-        }
     }
 }
