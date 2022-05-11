@@ -16,5 +16,10 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+
+        private void CreateLease_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
