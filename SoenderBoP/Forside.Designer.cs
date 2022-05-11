@@ -264,7 +264,7 @@
             // 
             // sloganPanel
             // 
-            this.sloganPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.sloganPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.sloganPanel.Controls.Add(this.pictureBox1);
             this.sloganPanel.Controls.Add(this.sloganLabel);
             this.sloganPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
