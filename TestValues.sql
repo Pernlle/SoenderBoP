@@ -1,5 +1,7 @@
-INSERT INTO Lejekontrakt (loebeNr, indflytter) VALUES 
-	(1, '2022-04-01')
+INSERT INTO Lejekontrakt (indflytter) VALUES 
+	('04-01-2022')
+
+
 
 INSERT INTO Medlem (fNavn, eNavn, tlf, email, loebeNr) VALUES
 	('Seamus', 'Finnigan', '93337866', 'seamusfinnigan@gmail.com', NULL),
@@ -26,10 +28,9 @@ INSERT INTO Bolig (mndPris, adr, kvm, bType, loebeNr) VALUES
 ('3000', 'Ligustervænget 32', '45', '3', NULL)
 
 INSERT INTO Reserveret(rId, loebeNr, dStart, dSlut) VALUES 
-('1', '1', '2022-06-1', '2022-06-2'),
 ('1', '1', '2022-06-1', '2022-06-2')
 
-
+SELECT * FROM Lejekontrakt
 SELECT * FROM Reserveret
 SELECT * FROM Venteliste
 SELECT * FROM Medlem

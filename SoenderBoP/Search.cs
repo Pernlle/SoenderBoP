@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace SoenderBoP
 {
     public partial class Search : Form
     {
+        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+
         private Panel buttonPanel = new Panel();
         private DataGridView SearchDGV = new DataGridView();
         private Button addNewRowButton = new Button();
@@ -45,77 +48,51 @@ namespace SoenderBoP
         private void Search_Load(object sender, EventArgs e)
         {
             SetupDataGridView();
-            PopulateDataGridView();
+            SearchDGV.DataSource = this.PopulateDataGridView(strconn);
         }
 
         private void SetupDataGridView()
         {
             searchPanel.Controls.Add(SearchDGV);
 
+            //Color.FromKnownColor(KnownColor.IndianRed)
 
-            SearchDGV.ColumnCount = 5;
+            SearchDGV.BackgroundColor = Color.FromKnownColor(KnownColor.IndianRed); // baggrunden bag ved dgv
+            SearchDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed); //celle farve :)
 
             SearchDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
-            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            SearchDGV.ColumnHeadersDefaultCellStyle.Font =
-                new Font(SearchDGV.Font, FontStyle.Bold);
-
+            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.IndianRed);
+            SearchDGV.ColumnHeadersDefaultCellStyle.Font = new Font(SearchDGV.Font, FontStyle.Regular);
             SearchDGV.Name = "SearchDGV";
             SearchDGV.Location = new Point(8, 8);
             SearchDGV.Size = new Size(500, 250);
-            SearchDGV.AutoSizeRowsMode =
-                DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            SearchDGV.ColumnHeadersBorderStyle =
-                DataGridViewHeaderBorderStyle.Single;
+            SearchDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            SearchDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             SearchDGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             SearchDGV.GridColor = Color.Black;
             SearchDGV.RowHeadersVisible = false;
 
-            SearchDGV.Columns[0].Name = "Release Date";
-            SearchDGV.Columns[1].Name = "Track";
-            SearchDGV.Columns[2].Name = "Title";
-            SearchDGV.Columns[3].Name = "Artist";
-            SearchDGV.Columns[4].Name = "Album";
-            SearchDGV.Columns[4].DefaultCellStyle.Font =
-                new Font(SearchDGV.DefaultCellStyle.Font, FontStyle.Italic);
-
-            SearchDGV.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
+            SearchDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             SearchDGV.MultiSelect = false;
             SearchDGV.Dock = DockStyle.Fill;
         }
 
-        private void PopulateDataGridView()
+        private DataTable PopulateDataGridView(string strconn)
         {
 
-            string[] row0 = { "11/22/1968", "29", "Revolution 9",
-            "Beatles", "The Beatles [White Album]" };
-            string[] row1 = { "1960", "6", "Fools Rush In",
-            "Frank Sinatra", "Nice 'N' Easy" };
-            string[] row2 = { "11/11/1971", "1", "One of These Days",
-            "Pink Floyd", "Meddle" };
-            string[] row3 = { "1988", "7", "Where Is My Mind?",
-            "Pixies", "Surfer Rosa" };
-            string[] row4 = { "5/1981", "9", "Can't Find My Mind",
-            "Cramps", "Psychedelic Jungle" };
-            string[] row5 = { "6/10/2003", "13",
-            "Scatterbrain. (As Dead As Leaves.)",
-            "Radiohead", "Hail to the Thief" };
-            string[] row6 = { "6/30/1992", "3", "Dress", "P J Harvey", "Dry" };
-
-            SearchDGV.Rows.Add(row0);
-            SearchDGV.Rows.Add(row1);
-            SearchDGV.Rows.Add(row2);
-            SearchDGV.Rows.Add(row3);
-            SearchDGV.Rows.Add(row4);
-            SearchDGV.Rows.Add(row5);
-            SearchDGV.Rows.Add(row6);
-
-            SearchDGV.Columns[0].DisplayIndex = 3;
-            SearchDGV.Columns[1].DisplayIndex = 4;
-            SearchDGV.Columns[2].DisplayIndex = 0;
-            SearchDGV.Columns[3].DisplayIndex = 1;
-            SearchDGV.Columns[4].DisplayIndex = 2;
+            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
+            using (SqlConnection con = new SqlConnection(strconn))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
         }
     }
 }
