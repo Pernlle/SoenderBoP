@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Forside));
             this.manuPanel = new System.Windows.Forms.Panel();
             this.searchBtn = new System.Windows.Forms.Button();
             this.leaseBtn = new System.Windows.Forms.Button();
@@ -312,6 +313,7 @@
             this.Controls.Add(this.sloganPanel);
             this.Controls.Add(this.BackgroundPanel);
             this.Controls.Add(this.manuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Forside";
             this.Text = "Forside";
