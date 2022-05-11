@@ -21,7 +21,7 @@ namespace SoenderBoP
         private void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
-            string loebeNr = this.loebe1Nr.Text;
+            string loebeNr = this.loebeNr.Text;
             string rId = this.rId.Text;
 
             string daStartDag = dStartDag1.Text;
