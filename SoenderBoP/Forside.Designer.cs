@@ -316,7 +316,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Forside";
-            this.Text = "Forside";
+            this.Text = "Sønderbo Boligforening";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Forside_FormClosing);
             this.Load += new System.EventHandler(this.Forside_Load);
