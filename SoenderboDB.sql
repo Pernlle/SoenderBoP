@@ -28,7 +28,7 @@ INSERT INTO BoligType(id, navn) VALUES
 
 CREATE TABLE Bolig(
 	bId INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
-	mndPris DECIMAL,
+	mndPris INT,
 	adr VARCHAR(60),
 	kvm INT,
 	bType INT FOREIGN KEY REFERENCES BoligType(id),
