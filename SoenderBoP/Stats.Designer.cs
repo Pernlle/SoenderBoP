@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,13 +46,27 @@
             this.Festsal2 = new System.Windows.Forms.Label();
             this.Vaskemaskine1 = new System.Windows.Forms.Label();
             this.Vaskemaskine2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
+            this.reserveretBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reserveretTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.ReserveretTableAdapter();
+            this.ressourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ressourceTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.RessourceTableAdapter();
+            this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(378, 9);
+            this.label1.Location = new System.Drawing.Point(517, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 46);
             this.label1.TabIndex = 0;
@@ -77,7 +92,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 195);
+            this.button1.Location = new System.Drawing.Point(49, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 23);
             this.button1.TabIndex = 3;
@@ -203,11 +218,66 @@
             this.Vaskemaskine2.TabIndex = 16;
             this.Vaskemaskine2.Text = "label13";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(994, 612);
+            this.panel1.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.medlemBindingSource;
+            this.comboBox1.DisplayMember = "email";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(49, 179);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 24);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.ValueMember = "email";
+            // 
+            // soenderbodbDataSet
+            // 
+            this.soenderbodbDataSet.DataSetName = "soenderbodbDataSet";
+            this.soenderbodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reserveretBindingSource
+            // 
+            this.reserveretBindingSource.DataMember = "Reserveret";
+            this.reserveretBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // reserveretTableAdapter
+            // 
+            this.reserveretTableAdapter.ClearBeforeFill = true;
+            // 
+            // ressourceBindingSource
+            // 
+            this.ressourceBindingSource.DataMember = "Ressource";
+            this.ressourceBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // ressourceTableAdapter
+            // 
+            this.ressourceTableAdapter.ClearBeforeFill = true;
+            // 
+            // medlemBindingSource
+            // 
+            this.medlemBindingSource.DataMember = "Medlem";
+            this.medlemBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // medlemTableAdapter
+            // 
+            this.medlemTableAdapter.ClearBeforeFill = true;
+            // 
             // Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 612);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Vaskemaskine2);
             this.Controls.Add(this.Vaskemaskine1);
             this.Controls.Add(this.Festsal2);
@@ -221,14 +291,18 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Stats";
             this.Text = "Stats";
             this.Load += new System.EventHandler(this.Stats_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +327,14 @@
         private System.Windows.Forms.Label Festsal2;
         private System.Windows.Forms.Label Vaskemaskine1;
         private System.Windows.Forms.Label Vaskemaskine2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private soenderbodbDataSet soenderbodbDataSet;
+        private System.Windows.Forms.BindingSource reserveretBindingSource;
+        private soenderbodbDataSetTableAdapters.ReserveretTableAdapter reserveretTableAdapter;
+        private System.Windows.Forms.BindingSource ressourceBindingSource;
+        private soenderbodbDataSetTableAdapters.RessourceTableAdapter ressourceTableAdapter;
+        private System.Windows.Forms.BindingSource medlemBindingSource;
+        private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
     }
 }

@@ -21,7 +21,13 @@ namespace SoenderBoP
 
         private void Stats_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'soenderbodbDataSet.Medlem' table. You can move, or remove it, as needed.
+            this.medlemTableAdapter.Fill(this.soenderbodbDataSet.Medlem);
+            // TODO: This line of code loads data into the 'soenderbodbDataSet.Ressource' table. You can move, or remove it, as needed.
+            this.ressourceTableAdapter.Fill(this.soenderbodbDataSet.Ressource);
+            // TODO: This line of code loads data into the 'soenderbodbDataSet.Reserveret' table. You can move, or remove it, as needed.
+            this.reserveretTableAdapter.Fill(this.soenderbodbDataSet.Reserveret);
+
         }
 
         private void label2_Click(object sender, EventArgs e)
