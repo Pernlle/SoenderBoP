@@ -90,10 +90,10 @@ namespace SoenderBoP
         private DataTable PopulateDataGridView(string strconn)
         {
 
-            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
+            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
             using (SqlConnection con = new SqlConnection(strconn))
             {
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlCommand cmd = new SqlCommand(sqlcom, con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {

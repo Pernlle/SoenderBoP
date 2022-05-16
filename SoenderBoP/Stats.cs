@@ -38,26 +38,23 @@ namespace SoenderBoP
         private void button1_Click(object sender, EventArgs e)
         {
             //connect to the database
-            string str = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
-            SqlConnection con = new SqlConnection(str);
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+            SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd;
 
             //create a command
-            string query = "SELECT loebeNr FROM Reserveret";
+            string sqlcom = "SELECT loebeNr FROM Reserveret";
 
 
             try
             {
-                con.Open();
-                label2.ForeColor = Color.Green;
-                label2.Text = "Database Sucessfully Connected!!";
-
-                cmd = new SqlCommand(query, con);
+                conn.Open();
+                cmd = new SqlCommand(sqlcom, conn);
 
                 //read from db
                 Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
                 cmd.Dispose();
-                con.Close();
+                conn.Close();
 
                 //Display data on the page
                 label3.Text = "Antal af reserverert = " + rows_count.ToString();
@@ -70,9 +67,9 @@ namespace SoenderBoP
             }
             finally
             {
-                if (con.State == ConnectionState.Open)
+                if (conn.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    conn.Close();
                 }
             }
         }
