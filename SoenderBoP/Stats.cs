@@ -42,12 +42,12 @@ namespace SoenderBoP
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
             //connect to the database
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
             SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd;
 
             //create a command 
-            string sqlcom = "SELECT loebeNr FROM Reserveret";
+            string sqlcom = "SELECT rId, loebeNr, dStart, dSlut FROM Reserveret";
 
 
             try
@@ -62,7 +62,6 @@ namespace SoenderBoP
 
                 //Display data on the page
                 //label3.Text = "Antal af reserverert = ";
-
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
