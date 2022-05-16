@@ -59,7 +59,7 @@ namespace SoenderBoP
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
-
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); }}
         }
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
@@ -103,6 +103,7 @@ namespace SoenderBoP
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
         public static void Delete(string insertInto, string delete, string cellValue)
         {
@@ -122,6 +123,7 @@ namespace SoenderBoP
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
     }
 }
