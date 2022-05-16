@@ -51,27 +51,17 @@ namespace SoenderBoP
                 conn.Open();
                 cmd = new SqlCommand(sqlcom, conn);
 
-                //read from db
-                Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
-                cmd.Dispose();
+                cmd.ExecuteReader();
+
+                //cmd.Dispose(); //release both managed and unmanaged resources
                 conn.Close();
 
                 //Display data on the page
-                label3.Text = "Antal af reserverert = " + rows_count.ToString();
+                //label3.Text = "Antal af reserverert = ";
 
             }
-            catch (Exception ex)
-            {
-
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
+            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
 
         private void label1_Click(object sender, EventArgs e)
