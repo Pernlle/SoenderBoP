@@ -30,36 +30,39 @@
         {
             this.components = new System.ComponentModel.Container();
             this.readMedlemDGV = new System.Windows.Forms.DataGridView();
-            this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
-            this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.boligTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.BoligTableAdapter();
             this.bIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mndPrisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kvmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loebeNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boligTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.BoligTableAdapter();
+            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.readMedlemDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // readMedlemDGV
@@ -73,7 +76,7 @@
             this.tlfDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.loebeNrDataGridViewTextBoxColumn});
-            this.readMedlemDGV.DataSource = this.medlemBindingSource;
+            this.readMedlemDGV.DataSource = this.medlemBindingSource1;
             this.readMedlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.readMedlemDGV.Location = new System.Drawing.Point(3, 3);
             this.readMedlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -82,16 +85,6 @@
             this.readMedlemDGV.RowTemplate.Height = 28;
             this.readMedlemDGV.Size = new System.Drawing.Size(697, 325);
             this.readMedlemDGV.TabIndex = 0;
-            // 
-            // soenderbodbDataSet
-            // 
-            this.soenderbodbDataSet.DataSetName = "soenderbodbDataSet";
-            this.soenderbodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medlemBindingSource
-            // 
-            this.medlemBindingSource.DataMember = "Medlem";
-            this.medlemBindingSource.DataSource = this.soenderbodbDataSet;
             // 
             // mIdDataGridViewTextBoxColumn
             // 
@@ -141,6 +134,16 @@
             this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
             this.loebeNrDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // medlemBindingSource
+            // 
+            this.medlemBindingSource.DataMember = "Medlem";
+            this.medlemBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // soenderbodbDataSet
+            // 
+            this.soenderbodbDataSet.DataSetName = "soenderbodbDataSet";
+            this.soenderbodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -204,15 +207,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(697, 325);
             this.dataGridView1.TabIndex = 0;
             // 
-            // boligBindingSource
-            // 
-            this.boligBindingSource.DataMember = "Bolig";
-            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
-            // 
-            // boligTableAdapter
-            // 
-            this.boligTableAdapter.ClearBeforeFill = true;
-            // 
             // bIdDataGridViewTextBoxColumn
             // 
             this.bIdDataGridViewTextBoxColumn.DataPropertyName = "bId";
@@ -262,6 +256,24 @@
             this.loebeNrDataGridViewTextBoxColumn1.Name = "loebeNrDataGridViewTextBoxColumn1";
             this.loebeNrDataGridViewTextBoxColumn1.Width = 125;
             // 
+            // boligBindingSource
+            // 
+            this.boligBindingSource.DataMember = "Bolig";
+            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // boligTableAdapter
+            // 
+            this.boligTableAdapter.ClearBeforeFill = true;
+            // 
+            // medlemBindingSource1
+            // 
+            this.medlemBindingSource1.DataMember = "Medlem";
+            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet;
+            // 
+            // medlemTableAdapter
+            // 
+            this.medlemTableAdapter.ClearBeforeFill = true;
+            // 
             // Read
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,14 +285,15 @@
             this.Text = "Read";
             this.Load += new System.EventHandler(this.Read_Load);
             ((System.ComponentModel.ISupportInitialize)(this.readMedlemDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kvmDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loebeNrDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource medlemBindingSource1;
+        private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
     }
 }

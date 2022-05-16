@@ -15,14 +15,17 @@ namespace SoenderBoP
     internal class CRUD
     {
        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.
+       
         public static void Create(string insertInto, string add, string values, object[] data)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
+            //Sql sætning
             string sqlCom = $"INSERT INTO {insertInto}({add}, loebeNr) VALUES ({values}, @loebeNr);";
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
 
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
@@ -46,6 +49,7 @@ namespace SoenderBoP
             cmd.Parameters.Add("@loebeNr", System.Data.SqlDbType.Int);
             cmd.Parameters["@loebeNr"].Value = DBNull.Value;
 
+
             try
             {
                 conn.Open();
@@ -55,6 +59,7 @@ namespace SoenderBoP
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+
         }
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
@@ -76,7 +81,7 @@ namespace SoenderBoP
             
             SqlConnection conn = new SqlConnection(strconn);
             string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where};";
-            MessageBox.Show(sqlCom);
+            //MessageBox.Show(sqlCom);
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
