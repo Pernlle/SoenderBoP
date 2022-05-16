@@ -37,12 +37,16 @@ namespace SoenderBoP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // udtrækkes en statistik, der viser hvilke typer af ressourcer de enkelte beboere har reserveret på en bestemt dato.
+            // Der  skal være en opsummering, der viser hvor mange der i alt har reserveret på hver at de 10 muligheder for  reservering.
+            // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
+
             //connect to the database
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
             SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd;
 
-            //create a command
+            //create a command 
             string sqlcom = "SELECT loebeNr FROM Reserveret";
 
 
