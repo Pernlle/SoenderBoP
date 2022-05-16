@@ -18,7 +18,7 @@ namespace SoenderBoP
        
         public static void Create(string insertInto, string add, string values, object[] data)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
             //Sql sætning
@@ -63,7 +63,7 @@ namespace SoenderBoP
         }
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
 
 
             string[] valuess = values.Split(',');
@@ -107,7 +107,7 @@ namespace SoenderBoP
         }
         public static void Delete(string insertInto, string delete, string cellValue)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=Ju7XZj_8pI2_";
+            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
 
             SqlConnection conn = new SqlConnection(strconn);
             string sqlCom = $"DELETE Venteliste WHERE medlemId = {cellValue}; DELETE {insertInto} WHERE {delete};";

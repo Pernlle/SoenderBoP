@@ -120,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="soenderbodbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>soenderbodbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Stats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +210,17 @@
     </None>
     <None Include="soenderbodbDataSet.xss">
       <DependentUpon>soenderbodbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="soenderbodbDataSet1.xsc">
+      <DependentUpon>soenderbodbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="soenderbodbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>soenderbodbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="soenderbodbDataSet1.xss">
+      <DependentUpon>soenderbodbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="waitListViews.xsc">
       <DependentUpon>waitListViews.xsd</DependentUpon>
