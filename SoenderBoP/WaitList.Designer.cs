@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -42,10 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ungdomsbolig = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.opskrevetDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ungdomsboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,10 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.seniorbolig = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.opskrevetDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seniorboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,6 +58,14 @@
             this.lejlighedTableAdapter = new SoenderBoP.waitListViewsTableAdapters.LejlighedTableAdapter();
             this.ungdomsboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.UngdomsboligTableAdapter();
             this.seniorboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.SeniorboligTableAdapter();
+            this.opskrevetDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medlemIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opskrevetDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medlemIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opskrevetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +99,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 5);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(952, 455);
+            this.tabControl1.Size = new System.Drawing.Size(952, 575);
             this.tabControl1.TabIndex = 0;
             // 
             // lejlighed
@@ -108,7 +109,7 @@
             this.lejlighed.Location = new System.Drawing.Point(4, 38);
             this.lejlighed.Name = "lejlighed";
             this.lejlighed.Padding = new System.Windows.Forms.Padding(3);
-            this.lejlighed.Size = new System.Drawing.Size(944, 413);
+            this.lejlighed.Size = new System.Drawing.Size(944, 533);
             this.lejlighed.TabIndex = 0;
             this.lejlighed.Text = "Lejlighed";
             this.lejlighed.UseVisualStyleBackColor = true;
@@ -119,14 +120,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(601, 407);
+            this.panel4.Size = new System.Drawing.Size(601, 527);
             this.panel4.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Wheat;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -138,7 +139,7 @@
             this.medlemIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lejlighedBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Wheat;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -154,7 +155,7 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(601, 407);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 527);
             this.dataGridView1.TabIndex = 0;
             // 
             // lejlighedBindingSource
@@ -175,13 +176,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(604, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 407);
+            this.panel1.Size = new System.Drawing.Size(337, 527);
             this.panel1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 184);
+            this.label3.Location = new System.Drawing.Point(3, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 2;
@@ -190,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 79);
+            this.label2.Location = new System.Drawing.Point(6, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 1;
@@ -199,7 +200,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 23);
+            this.label1.Location = new System.Drawing.Point(6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 25);
             this.label1.TabIndex = 0;
@@ -212,7 +213,7 @@
             this.ungdomsbolig.Location = new System.Drawing.Point(4, 38);
             this.ungdomsbolig.Name = "ungdomsbolig";
             this.ungdomsbolig.Padding = new System.Windows.Forms.Padding(3);
-            this.ungdomsbolig.Size = new System.Drawing.Size(944, 413);
+            this.ungdomsbolig.Size = new System.Drawing.Size(944, 533);
             this.ungdomsbolig.TabIndex = 1;
             this.ungdomsbolig.Text = "Ungdomsbolig";
             this.ungdomsbolig.UseVisualStyleBackColor = true;
@@ -220,6 +221,9 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Linen;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -228,45 +232,21 @@
             this.eNavnDataGridViewTextBoxColumn1,
             this.medlemIdDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.ungdomsboligBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(738, 407);
+            this.dataGridView2.Size = new System.Drawing.Size(738, 527);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // opskrevetDataGridViewTextBoxColumn1
-            // 
-            this.opskrevetDataGridViewTextBoxColumn1.DataPropertyName = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn1.HeaderText = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.opskrevetDataGridViewTextBoxColumn1.Name = "opskrevetDataGridViewTextBoxColumn1";
-            this.opskrevetDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // fNavnDataGridViewTextBoxColumn1
-            // 
-            this.fNavnDataGridViewTextBoxColumn1.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn1.HeaderText = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.fNavnDataGridViewTextBoxColumn1.Name = "fNavnDataGridViewTextBoxColumn1";
-            this.fNavnDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // eNavnDataGridViewTextBoxColumn1
-            // 
-            this.eNavnDataGridViewTextBoxColumn1.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn1.HeaderText = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.eNavnDataGridViewTextBoxColumn1.Name = "eNavnDataGridViewTextBoxColumn1";
-            this.eNavnDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // medlemIdDataGridViewTextBoxColumn1
-            // 
-            this.medlemIdDataGridViewTextBoxColumn1.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn1.HeaderText = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.medlemIdDataGridViewTextBoxColumn1.Name = "medlemIdDataGridViewTextBoxColumn1";
-            this.medlemIdDataGridViewTextBoxColumn1.Width = 150;
             // 
             // ungdomsboligBindingSource
             // 
@@ -281,7 +261,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(741, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 407);
+            this.panel2.Size = new System.Drawing.Size(200, 527);
             this.panel2.TabIndex = 0;
             // 
             // label4
@@ -318,7 +298,7 @@
             this.seniorbolig.Location = new System.Drawing.Point(4, 38);
             this.seniorbolig.Name = "seniorbolig";
             this.seniorbolig.Padding = new System.Windows.Forms.Padding(3);
-            this.seniorbolig.Size = new System.Drawing.Size(944, 413);
+            this.seniorbolig.Size = new System.Drawing.Size(944, 533);
             this.seniorbolig.TabIndex = 2;
             this.seniorbolig.Text = "Seniorbolig";
             this.seniorbolig.UseVisualStyleBackColor = true;
@@ -326,6 +306,9 @@
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Linen;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -335,44 +318,13 @@
             this.medlemIdDataGridViewTextBoxColumn2});
             this.dataGridView3.DataSource = this.seniorboligBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.GridColor = System.Drawing.Color.Black;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(738, 407);
+            this.dataGridView3.Size = new System.Drawing.Size(738, 527);
             this.dataGridView3.TabIndex = 1;
-            // 
-            // opskrevetDataGridViewTextBoxColumn2
-            // 
-            this.opskrevetDataGridViewTextBoxColumn2.DataPropertyName = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn2.HeaderText = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.opskrevetDataGridViewTextBoxColumn2.Name = "opskrevetDataGridViewTextBoxColumn2";
-            this.opskrevetDataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // fNavnDataGridViewTextBoxColumn2
-            // 
-            this.fNavnDataGridViewTextBoxColumn2.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn2.HeaderText = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.fNavnDataGridViewTextBoxColumn2.Name = "fNavnDataGridViewTextBoxColumn2";
-            this.fNavnDataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // eNavnDataGridViewTextBoxColumn2
-            // 
-            this.eNavnDataGridViewTextBoxColumn2.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn2.HeaderText = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.eNavnDataGridViewTextBoxColumn2.Name = "eNavnDataGridViewTextBoxColumn2";
-            this.eNavnDataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // medlemIdDataGridViewTextBoxColumn2
-            // 
-            this.medlemIdDataGridViewTextBoxColumn2.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn2.HeaderText = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.medlemIdDataGridViewTextBoxColumn2.Name = "medlemIdDataGridViewTextBoxColumn2";
-            this.medlemIdDataGridViewTextBoxColumn2.Width = 150;
             // 
             // seniorboligBindingSource
             // 
@@ -387,7 +339,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(741, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 407);
+            this.panel3.Size = new System.Drawing.Size(200, 527);
             this.panel3.TabIndex = 0;
             // 
             // label7
@@ -429,6 +381,62 @@
             // 
             this.seniorboligTableAdapter.ClearBeforeFill = true;
             // 
+            // opskrevetDataGridViewTextBoxColumn1
+            // 
+            this.opskrevetDataGridViewTextBoxColumn1.DataPropertyName = "opskrevet";
+            this.opskrevetDataGridViewTextBoxColumn1.HeaderText = "Opskrevet";
+            this.opskrevetDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.opskrevetDataGridViewTextBoxColumn1.Name = "opskrevetDataGridViewTextBoxColumn1";
+            // 
+            // fNavnDataGridViewTextBoxColumn1
+            // 
+            this.fNavnDataGridViewTextBoxColumn1.DataPropertyName = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn1.HeaderText = "Fornavn";
+            this.fNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.fNavnDataGridViewTextBoxColumn1.Name = "fNavnDataGridViewTextBoxColumn1";
+            // 
+            // eNavnDataGridViewTextBoxColumn1
+            // 
+            this.eNavnDataGridViewTextBoxColumn1.DataPropertyName = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn1.HeaderText = "Efternavn";
+            this.eNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.eNavnDataGridViewTextBoxColumn1.Name = "eNavnDataGridViewTextBoxColumn1";
+            // 
+            // medlemIdDataGridViewTextBoxColumn1
+            // 
+            this.medlemIdDataGridViewTextBoxColumn1.DataPropertyName = "medlemId";
+            this.medlemIdDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.medlemIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.medlemIdDataGridViewTextBoxColumn1.Name = "medlemIdDataGridViewTextBoxColumn1";
+            // 
+            // opskrevetDataGridViewTextBoxColumn2
+            // 
+            this.opskrevetDataGridViewTextBoxColumn2.DataPropertyName = "opskrevet";
+            this.opskrevetDataGridViewTextBoxColumn2.HeaderText = "Opskrevet";
+            this.opskrevetDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.opskrevetDataGridViewTextBoxColumn2.Name = "opskrevetDataGridViewTextBoxColumn2";
+            // 
+            // fNavnDataGridViewTextBoxColumn2
+            // 
+            this.fNavnDataGridViewTextBoxColumn2.DataPropertyName = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn2.HeaderText = "Fornavn";
+            this.fNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.fNavnDataGridViewTextBoxColumn2.Name = "fNavnDataGridViewTextBoxColumn2";
+            // 
+            // eNavnDataGridViewTextBoxColumn2
+            // 
+            this.eNavnDataGridViewTextBoxColumn2.DataPropertyName = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn2.HeaderText = "Efternavn";
+            this.eNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.eNavnDataGridViewTextBoxColumn2.Name = "eNavnDataGridViewTextBoxColumn2";
+            // 
+            // medlemIdDataGridViewTextBoxColumn2
+            // 
+            this.medlemIdDataGridViewTextBoxColumn2.DataPropertyName = "medlemId";
+            this.medlemIdDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.medlemIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.medlemIdDataGridViewTextBoxColumn2.Name = "medlemIdDataGridViewTextBoxColumn2";
+            // 
             // NR
             // 
             this.NR.HeaderText = "Nr.";
@@ -463,7 +471,7 @@
             // medlemIdDataGridViewTextBoxColumn
             // 
             this.medlemIdDataGridViewTextBoxColumn.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn.HeaderText = "Medlem ID";
+            this.medlemIdDataGridViewTextBoxColumn.HeaderText = "ID";
             this.medlemIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.medlemIdDataGridViewTextBoxColumn.Name = "medlemIdDataGridViewTextBoxColumn";
             this.medlemIdDataGridViewTextBoxColumn.ReadOnly = true;
@@ -472,7 +480,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 455);
+            this.ClientSize = new System.Drawing.Size(952, 575);
             this.Controls.Add(this.tabControl1);
             this.Name = "WaitList";
             this.Text = "WaitList";
@@ -526,20 +534,20 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.BindingSource ungdomsboligBindingSource;
         private waitListViewsTableAdapters.UngdomsboligTableAdapter ungdomsboligTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource seniorboligBindingSource;
         private waitListViewsTableAdapters.SeniorboligTableAdapter seniorboligTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn NR;
         private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn2;
     }
 }
