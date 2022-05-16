@@ -32,6 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.medlemDGV = new System.Windows.Forms.DataGridView();
+            this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,18 +50,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
+            this.medlemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // medlemDGV
@@ -71,7 +76,7 @@
             this.tlfDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.loebeNrDataGridViewTextBoxColumn});
-            this.medlemDGV.DataSource = this.medlemBindingSource1;
+            this.medlemDGV.DataSource = this.medlemBindingSource2;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,6 +101,51 @@
             this.medlemDGV.Size = new System.Drawing.Size(527, 425);
             this.medlemDGV.TabIndex = 0;
             this.medlemDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medlemDGV_CellClick);
+            // 
+            // mIdDataGridViewTextBoxColumn
+            // 
+            this.mIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.mIdDataGridViewTextBoxColumn.DataPropertyName = "mId";
+            this.mIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.mIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mIdDataGridViewTextBoxColumn.Name = "mIdDataGridViewTextBoxColumn";
+            this.mIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mIdDataGridViewTextBoxColumn.Width = 47;
+            // 
+            // fNavnDataGridViewTextBoxColumn
+            // 
+            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
+            this.fNavnDataGridViewTextBoxColumn.HeaderText = "Fornavn";
+            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
+            // 
+            // eNavnDataGridViewTextBoxColumn
+            // 
+            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
+            this.eNavnDataGridViewTextBoxColumn.HeaderText = "Efternavn";
+            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
+            // 
+            // tlfDataGridViewTextBoxColumn
+            // 
+            this.tlfDataGridViewTextBoxColumn.DataPropertyName = "tlf";
+            this.tlfDataGridViewTextBoxColumn.HeaderText = "Tlf";
+            this.tlfDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tlfDataGridViewTextBoxColumn.Name = "tlfDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // loebeNrDataGridViewTextBoxColumn
+            // 
+            this.loebeNrDataGridViewTextBoxColumn.DataPropertyName = "loebeNr";
+            this.loebeNrDataGridViewTextBoxColumn.HeaderText = "Løbenummer";
+            this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
             // 
             // medlemBindingSource1
             // 
@@ -194,50 +244,19 @@
             this.panel2.Size = new System.Drawing.Size(527, 425);
             this.panel2.TabIndex = 7;
             // 
-            // mIdDataGridViewTextBoxColumn
+            // soenderbodbDataSet1
             // 
-            this.mIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.mIdDataGridViewTextBoxColumn.DataPropertyName = "mId";
-            this.mIdDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.mIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mIdDataGridViewTextBoxColumn.Name = "mIdDataGridViewTextBoxColumn";
-            this.mIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mIdDataGridViewTextBoxColumn.Width = 47;
+            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
+            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fNavnDataGridViewTextBoxColumn
+            // medlemBindingSource2
             // 
-            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn.HeaderText = "Fornavn";
-            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
+            this.medlemBindingSource2.DataMember = "Medlem";
+            this.medlemBindingSource2.DataSource = this.soenderbodbDataSet1;
             // 
-            // eNavnDataGridViewTextBoxColumn
+            // medlemTableAdapter1
             // 
-            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn.HeaderText = "Efternavn";
-            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
-            // 
-            // tlfDataGridViewTextBoxColumn
-            // 
-            this.tlfDataGridViewTextBoxColumn.DataPropertyName = "tlf";
-            this.tlfDataGridViewTextBoxColumn.HeaderText = "Tlf";
-            this.tlfDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tlfDataGridViewTextBoxColumn.Name = "tlfDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // loebeNrDataGridViewTextBoxColumn
-            // 
-            this.loebeNrDataGridViewTextBoxColumn.DataPropertyName = "loebeNr";
-            this.loebeNrDataGridViewTextBoxColumn.HeaderText = "Løbenummer";
-            this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
+            this.medlemTableAdapter1.ClearBeforeFill = true;
             // 
             // Edit
             // 
@@ -259,6 +278,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +305,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tlfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loebeNrDataGridViewTextBoxColumn;
+        private soenderbodbDataSet1 soenderbodbDataSet1;
+        private System.Windows.Forms.BindingSource medlemBindingSource2;
+        private soenderbodbDataSet1TableAdapters.MedlemTableAdapter medlemTableAdapter1;
     }
 }
