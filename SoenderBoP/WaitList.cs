@@ -27,5 +27,20 @@ namespace SoenderBoP
             this.lejlighedTableAdapter.Fill(this.waitListViews.Lejlighed);
 
         }
+
+        private void lejlighedDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+
+        }
+
+        private void ungdomsDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+
+        }
+
+        private void seniorDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.seniorDGV.Rows[e.RowIndex].Cells["rn"].Value=(e.RowIndex+1).ToString();
+        }
     }
 }
