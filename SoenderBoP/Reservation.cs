@@ -24,23 +24,26 @@ namespace SoenderBoP
             string loebeNr = this.loebeNr.Text;
             string rId = this.rId.Text;
 
-            string daStartDag = dStartDag1.Text;
-            string daStartMaaned = dStartMaaned1.Text;
-            string daStartAar = dStartAar1.Text;
-            string daStartTime = dS1tartTime.Text;
-            string daStartMinut = ff.Text;
+            string daStartDag = dStartDag.Text;
+            string daStartMaaned = dStartMaaned.Text;
+            string daStartAar = dStartAar.Text;
+            string daStartTime = dStartTime.Text;
+            string daStartMinut = dStartMinut.Text;
 
-            string daSlutDag = dStartDag1.Text;
-            string daSlutMaaned = dStartMaaned1.Text;
-            string daSlutAar = dStartAar1.Text;
-            string daSlutTime = dS1tartTime.Text;
-            string daSlutMinut = ff.Text;
+            string daSlutDag = dSlutDag.Text;
+            string daSlutMaaned = dSlutMaaned.Text;
+            string daSlutAar = dSlutAar.Text;
+            string daSlutTime = dSlutTime.Text;
+            string daSlutMinut = dSlutMinut.Text;
 
             if (daStartDag.Length == 2 && daStartMaaned.Length == 2 && daStartTime.Length == 2 && daStartMinut.Length == 2 && daSlutDag.Length == 2 && daSlutMaaned.Length == 2 && daSlutTime.Length == 2 && daSlutMinut.Length == 2 && daStartAar.Length == 4 && daSlutAar.Length == 4)
             {
 
-                string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + " " + daStartTime + ":" + daStartMinut;
-                string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + " " + daSlutTime + ":" + daSlutMinut;
+                string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + "-" + daStartTime + ":" + daStartMinut;
+                string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + "-" + daSlutTime + ":" + daSlutMinut;
+
+                MessageBox.Show(dStart + "+++" + dSlut);
+
 
                 SqlConnection conn = new SqlConnection(strconn);
 
@@ -65,6 +68,7 @@ namespace SoenderBoP
                 }
                 catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             }
+            else MessageBox.Show("Du skal udfylde skemaet korrekt :)");
         }
     }
 }
