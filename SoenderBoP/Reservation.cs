@@ -39,8 +39,8 @@ namespace SoenderBoP
             if (daStartDag.Length == 2 && daStartMaaned.Length == 2 && daStartTime.Length == 2 && daStartMinut.Length == 2 && daSlutDag.Length == 2 && daSlutMaaned.Length == 2 && daSlutTime.Length == 2 && daSlutMinut.Length == 2 && daStartAar.Length == 4 && daSlutAar.Length == 4)
             {
 
-                string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + "-" + daStartTime + ":" + daStartMinut;
-                string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + "-" + daSlutTime + ":" + daSlutMinut;
+                string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + " " + daStartTime + ":" + daStartMinut;
+                string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + " " + daSlutTime + ":" + daSlutMinut;
 
                 SqlConnection conn = new SqlConnection(strconn);
 
