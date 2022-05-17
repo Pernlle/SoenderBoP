@@ -49,14 +49,10 @@ namespace SoenderBoP
 
                 string sqlCom = "INSERT INTO Reserveret(loebeNr,rId,dStart,dSlut) VALUES (@loebeNr, @rId, @dStart, @dSlut);";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
-                cmd.Parameters.Add("@loebeNr", System.Data.SqlDbType.VarChar);
-                cmd.Parameters["@loebeNr"].Value = Convert.ToString(loebeNr);
-                cmd.Parameters.Add("@rId", System.Data.SqlDbType.VarChar);
-                cmd.Parameters["@rId"].Value = Convert.ToString(rId);
-                cmd.Parameters.Add("@dStart", System.Data.SqlDbType.VarChar);
-                cmd.Parameters["@dStart"].Value = Convert.ToString(dStart);
-                cmd.Parameters.Add("@dSlut", System.Data.SqlDbType.VarChar);
-                cmd.Parameters["@dSlut"].Value = Convert.ToString(dSlut);
+                cmd.Parameters.AddWithValue("@loebeNr", loebeNr);
+                cmd.Parameters.AddWithValue("@rId", rId);
+                cmd.Parameters.AddWithValue("@dStart", dStart);
+                cmd.Parameters.AddWithValue("@dSlut", dSlut);
 
                 try
                 {
