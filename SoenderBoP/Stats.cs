@@ -41,14 +41,18 @@ namespace SoenderBoP
             // Der  skal være en opsummering, der viser hvor mange der i alt har reserveret på hver at de 10 muligheder for  reservering.
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
+            string medlem = comboBox1.Text; 
+
+            //Få databasen til at omskrive emailen til loebenr så sql kan vise medlemets reservationer.. Eller
+            // Eller lav en select som viser både elementer fra medlem og reserveret.
+
             //connect to the database
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
             SqlConnection conn = new SqlConnection(strconn);
             SqlCommand cmd;
 
             //create a command 
-            string sqlcom = "SELECT rId, loebeNr, dStart, dSlut FROM Reserveret";
-
+            string sqlcom = $"SELECT rId, loebeNr, dStart, dSlut FROM Reserveret WHERE loebeNr = {medlem}";
 
             try
             {
@@ -58,10 +62,16 @@ namespace SoenderBoP
                 cmd.ExecuteReader();
 
                 //cmd.Dispose(); //release both managed and unmanaged resources
-                conn.Close();
 
+                using (SqlDataReader sqlReader = cmd.ExecuteReader())
+                {
+                    if (sqlReader.Read())
+                    {
+                        statsRichTextBox.Text = sqlReader.GetString(sqlReader.GetOrdinal("rId, loebeNr, dStart, dSlut"));
+                    }
+                }
                 //Display data on the page
-                //label3.Text = "Antal af reserverert = ";
+                
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }

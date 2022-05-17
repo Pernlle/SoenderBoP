@@ -34,10 +34,8 @@ namespace SoenderBoP
             {
                 SearchDGV.Controls.Clear();
                 SearchDGV.DataSource = this.PopulateDataGridViewPris(strconn, minPris, maxPris);
-
             }
             else MessageBox.Show("kvm fejl");
-
         }
 
         private void Search_Load(object sender, EventArgs e)
@@ -48,6 +46,7 @@ namespace SoenderBoP
 
         private void searchKvmBtn_Click(object sender, EventArgs e)
         {
+            // kvm søg klik
             int minKvm = Convert.ToInt32(minKvmBox.Text);
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
             
@@ -57,11 +56,10 @@ namespace SoenderBoP
             {
                 SearchDGV.Controls.Clear();
                 SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
-
             }
             else MessageBox.Show("pris fejl");
-
         }
+
         private void SetupDataGridView()
         {
             searchPanel.Controls.Add(SearchDGV);
@@ -89,7 +87,6 @@ namespace SoenderBoP
         }
         private DataTable PopulateDataGridView(string strconn)
         {
-
             string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
             using (SqlConnection con = new SqlConnection(strconn))
             {
@@ -106,7 +103,6 @@ namespace SoenderBoP
         }
         private DataTable PopulateDataGridViewPris(string strconn, int minPris, int maxPris)
         {
-
             string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
             using (SqlConnection con = new SqlConnection(strconn))
@@ -125,7 +121,6 @@ namespace SoenderBoP
 
         private DataTable PopulateDataGridViewKvm(string strconn, int minKvm, int maxKvm)
         {
-
             string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
             using (SqlConnection con = new SqlConnection(strconn))
@@ -141,6 +136,5 @@ namespace SoenderBoP
                 }
             }
         }
-
     }
 }
