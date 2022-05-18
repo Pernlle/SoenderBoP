@@ -15,6 +15,8 @@ namespace SoenderBoP
         public Lease()
         {
             InitializeComponent();
+            string sqlcom = "SELECT mId AS 'ID', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', loebeNr 'Løbenummer', indflytter AS 'Indflytter' FROM Medlem, Lejekontrakt WHERE loebeNr = lNr";
+
         }
 
         private void CreateLease_Click(object sender, EventArgs e)
