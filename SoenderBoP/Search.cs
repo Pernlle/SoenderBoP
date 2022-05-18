@@ -33,7 +33,10 @@ namespace SoenderBoP
             if (minPris < maxPris)
             {
                 SearchDGV.Controls.Clear();
-                SearchDGV.DataSource = this.PopulateDataGridViewPris(strconn, minPris, maxPris);
+
+                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
+                SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }
             else MessageBox.Show("kvm fejl");
         }
@@ -41,7 +44,9 @@ namespace SoenderBoP
         private void Search_Load(object sender, EventArgs e)
         {
             SetupDataGridView();
-            SearchDGV.DataSource = this.PopulateDataGridView(strconn);
+
+            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
+            SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
         private void searchKvmBtn_Click(object sender, EventArgs e)
@@ -55,7 +60,10 @@ namespace SoenderBoP
             if (minKvm < maxKvm)
             {
                 SearchDGV.Controls.Clear();
-                SearchDGV.DataSource = this.PopulateDataGridViewKvm(strconn, minKvm, maxKvm);
+
+                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
+                SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }
             else MessageBox.Show("pris fejl");
         }
@@ -84,57 +92,6 @@ namespace SoenderBoP
             SearchDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             SearchDGV.MultiSelect = false;
             SearchDGV.Dock = DockStyle.Fill;
-        }
-        private DataTable PopulateDataGridView(string strconn)
-        {
-            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlcom, con))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        return dt;
-                    }
-                }
-            }
-        }
-        private DataTable PopulateDataGridViewPris(string strconn, int minPris, int maxPris)
-        {
-            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
-                $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    using (SqlDataAdapter sdad = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        sdad.Fill(dt);
-                        return dt;
-                    }
-                }
-            }
-        }
-
-        private DataTable PopulateDataGridViewKvm(string strconn, int minKvm, int maxKvm)
-        {
-            string query = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
-                $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    using (SqlDataAdapter sdae = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        sdae.Fill(dt);
-                        return dt;
-                    }
-                }
-            }
         }
     }
 }
