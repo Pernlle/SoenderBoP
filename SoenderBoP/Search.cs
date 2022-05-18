@@ -13,8 +13,6 @@ namespace SoenderBoP
 {
     public partial class Search : Form
     {
-        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
         private DataGridView SearchDGV = new DataGridView();
 
         public Search()
