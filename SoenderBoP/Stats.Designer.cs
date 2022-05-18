@@ -327,6 +327,8 @@
             // 
             // showStatsDGV
             // 
+            this.showStatsDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.showStatsDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.showStatsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showStatsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showStatsDGV.Location = new System.Drawing.Point(0, 0);
