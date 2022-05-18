@@ -47,7 +47,8 @@
             this.Vaskemaskine1 = new System.Windows.Forms.Label();
             this.Vaskemaskine2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.statsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.statsCBX = new System.Windows.Forms.ComboBox();
             this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.reserveretBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,19 +56,29 @@
             this.ressourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ressourceTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.RessourceTableAdapter();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
-            this.statsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
+            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.showStatsDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(517, 28);
+            this.label1.Location = new System.Drawing.Point(93, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 46);
             this.label1.TabIndex = 0;
@@ -93,7 +104,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(41, 185);
+            this.button1.Location = new System.Drawing.Point(90, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 23);
             this.button1.TabIndex = 3;
@@ -221,26 +232,32 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.statsRichTextBox);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 612);
             this.panel1.TabIndex = 17;
             // 
-            // comboBox1
+            // statsRichTextBox
             // 
-            this.comboBox1.DataSource = this.medlemBindingSource;
-            this.comboBox1.DisplayMember = "email";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(41, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 24);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.ValueMember = "email";
+            this.statsRichTextBox.Location = new System.Drawing.Point(886, 195);
+            this.statsRichTextBox.Name = "statsRichTextBox";
+            this.statsRichTextBox.Size = new System.Drawing.Size(107, 43);
+            this.statsRichTextBox.TabIndex = 5;
+            this.statsRichTextBox.Text = "";
+            // 
+            // statsCBX
+            // 
+            this.statsCBX.DataSource = this.medlemBindingSource1;
+            this.statsCBX.DisplayMember = "email";
+            this.statsCBX.FormattingEnabled = true;
+            this.statsCBX.Location = new System.Drawing.Point(33, 111);
+            this.statsCBX.Name = "statsCBX";
+            this.statsCBX.Size = new System.Drawing.Size(240, 24);
+            this.statsCBX.TabIndex = 4;
+            this.statsCBX.ValueMember = "email";
             // 
             // medlemBindingSource
             // 
@@ -274,13 +291,51 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
-            // statsRichTextBox
+            // soenderbodbDataSet1
             // 
-            this.statsRichTextBox.Location = new System.Drawing.Point(405, 122);
-            this.statsRichTextBox.Name = "statsRichTextBox";
-            this.statsRichTextBox.Size = new System.Drawing.Size(322, 142);
-            this.statsRichTextBox.TabIndex = 5;
-            this.statsRichTextBox.Text = "";
+            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
+            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // medlemBindingSource1
+            // 
+            this.medlemBindingSource1.DataMember = "Medlem";
+            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet1;
+            // 
+            // medlemTableAdapter1
+            // 
+            this.medlemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.statsCBX);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(689, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(305, 612);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.showStatsDGV);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(689, 612);
+            this.panel3.TabIndex = 6;
+            // 
+            // showStatsDGV
+            // 
+            this.showStatsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.showStatsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showStatsDGV.Location = new System.Drawing.Point(0, 0);
+            this.showStatsDGV.Name = "showStatsDGV";
+            this.showStatsDGV.RowHeadersVisible = false;
+            this.showStatsDGV.RowHeadersWidth = 51;
+            this.showStatsDGV.RowTemplate.Height = 24;
+            this.showStatsDGV.Size = new System.Drawing.Size(689, 612);
+            this.showStatsDGV.TabIndex = 0;
             // 
             // Stats
             // 
@@ -290,6 +345,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Vaskemaskine2);
             this.Controls.Add(this.Vaskemaskine1);
+            this.Controls.Add(this.statsRichTextBox);
             this.Controls.Add(this.Festsal2);
             this.Controls.Add(this.Festsal1);
             this.Controls.Add(this.Parkering2);
@@ -308,11 +364,16 @@
             this.Text = "Stats";
             this.Load += new System.EventHandler(this.Stats_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +399,7 @@
         private System.Windows.Forms.Label Vaskemaskine1;
         private System.Windows.Forms.Label Vaskemaskine2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox statsCBX;
         private soenderbodbDataSet soenderbodbDataSet;
         private System.Windows.Forms.BindingSource reserveretBindingSource;
         private soenderbodbDataSetTableAdapters.ReserveretTableAdapter reserveretTableAdapter;
@@ -347,5 +408,11 @@
         private System.Windows.Forms.BindingSource medlemBindingSource;
         private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
         private System.Windows.Forms.RichTextBox statsRichTextBox;
+        private soenderbodbDataSet1 soenderbodbDataSet1;
+        private System.Windows.Forms.BindingSource medlemBindingSource1;
+        private soenderbodbDataSet1TableAdapters.MedlemTableAdapter medlemTableAdapter1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView showStatsDGV;
+        private System.Windows.Forms.Panel panel2;
     }
 }
