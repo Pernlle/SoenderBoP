@@ -65,6 +65,7 @@
     <Compile Include="Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FillDataSource.cs" />
     <Compile Include="Forside.cs">
       <SubType>Form</SubType>
     </Compile>

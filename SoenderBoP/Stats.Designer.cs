@@ -62,6 +62,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.showStatsDGV = new System.Windows.Forms.DataGridView();
+            this.printStatsBTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
@@ -307,6 +308,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.printStatsBTN);
             this.panel2.Controls.Add(this.statsCBX);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
@@ -338,6 +340,16 @@
             this.showStatsDGV.RowTemplate.Height = 24;
             this.showStatsDGV.Size = new System.Drawing.Size(689, 612);
             this.showStatsDGV.TabIndex = 0;
+            // 
+            // printStatsBTN
+            // 
+            this.printStatsBTN.Location = new System.Drawing.Point(90, 247);
+            this.printStatsBTN.Name = "printStatsBTN";
+            this.printStatsBTN.Size = new System.Drawing.Size(115, 23);
+            this.printStatsBTN.TabIndex = 5;
+            this.printStatsBTN.Text = "Print";
+            this.printStatsBTN.UseVisualStyleBackColor = true;
+            this.printStatsBTN.Click += new System.EventHandler(this.printStatsBTN_Click);
             // 
             // Stats
             // 
@@ -416,5 +428,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView showStatsDGV;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button printStatsBTN;
     }
 }

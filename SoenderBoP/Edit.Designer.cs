@@ -31,13 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.medlemDGV = new System.Windows.Forms.DataGridView();
-            this.mIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loebeNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editMedlemDGV = new System.Windows.Forms.DataGridView();
+            this.medlemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
             this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,33 +46,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
-            this.medlemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editMedlemDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
-            // medlemDGV
+            // editMedlemDGV
             // 
-            this.medlemDGV.AutoGenerateColumns = false;
-            this.medlemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.medlemDGV.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.medlemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.medlemDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mIdDataGridViewTextBoxColumn,
-            this.fNavnDataGridViewTextBoxColumn,
-            this.eNavnDataGridViewTextBoxColumn,
-            this.tlfDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.loebeNrDataGridViewTextBoxColumn});
-            this.medlemDGV.DataSource = this.medlemBindingSource2;
+            this.editMedlemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.editMedlemDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.editMedlemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,11 +69,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medlemDGV.DefaultCellStyle = dataGridViewCellStyle1;
-            this.medlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.medlemDGV.Location = new System.Drawing.Point(0, 0);
-            this.medlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.medlemDGV.Name = "medlemDGV";
+            this.editMedlemDGV.DefaultCellStyle = dataGridViewCellStyle1;
+            this.editMedlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editMedlemDGV.Location = new System.Drawing.Point(0, 0);
+            this.editMedlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editMedlemDGV.Name = "editMedlemDGV";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,56 +81,21 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.medlemDGV.RowHeadersWidth = 62;
-            this.medlemDGV.Size = new System.Drawing.Size(527, 425);
-            this.medlemDGV.TabIndex = 0;
-            this.medlemDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medlemDGV_CellClick);
+            this.editMedlemDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.editMedlemDGV.RowHeadersWidth = 62;
+            this.editMedlemDGV.Size = new System.Drawing.Size(527, 425);
+            this.editMedlemDGV.TabIndex = 0;
+            this.editMedlemDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medlemDGV_CellClick);
             // 
-            // mIdDataGridViewTextBoxColumn
+            // medlemBindingSource2
             // 
-            this.mIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.mIdDataGridViewTextBoxColumn.DataPropertyName = "mId";
-            this.mIdDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.mIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mIdDataGridViewTextBoxColumn.Name = "mIdDataGridViewTextBoxColumn";
-            this.mIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mIdDataGridViewTextBoxColumn.Width = 47;
+            this.medlemBindingSource2.DataMember = "Medlem";
+            this.medlemBindingSource2.DataSource = this.soenderbodbDataSet1;
             // 
-            // fNavnDataGridViewTextBoxColumn
+            // soenderbodbDataSet1
             // 
-            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn.HeaderText = "Fornavn";
-            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
-            // 
-            // eNavnDataGridViewTextBoxColumn
-            // 
-            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn.HeaderText = "Efternavn";
-            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
-            // 
-            // tlfDataGridViewTextBoxColumn
-            // 
-            this.tlfDataGridViewTextBoxColumn.DataPropertyName = "tlf";
-            this.tlfDataGridViewTextBoxColumn.HeaderText = "Tlf";
-            this.tlfDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tlfDataGridViewTextBoxColumn.Name = "tlfDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // loebeNrDataGridViewTextBoxColumn
-            // 
-            this.loebeNrDataGridViewTextBoxColumn.DataPropertyName = "loebeNr";
-            this.loebeNrDataGridViewTextBoxColumn.HeaderText = "Løbenummer";
-            this.loebeNrDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.loebeNrDataGridViewTextBoxColumn.Name = "loebeNrDataGridViewTextBoxColumn";
+            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
+            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // medlemBindingSource1
             // 
@@ -237,22 +187,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.medlemDGV);
+            this.panel2.Controls.Add(this.editMedlemDGV);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 425);
             this.panel2.TabIndex = 7;
-            // 
-            // soenderbodbDataSet1
-            // 
-            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
-            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medlemBindingSource2
-            // 
-            this.medlemBindingSource2.DataMember = "Medlem";
-            this.medlemBindingSource2.DataSource = this.soenderbodbDataSet1;
             // 
             // medlemTableAdapter1
             // 
@@ -271,22 +211,22 @@
             this.Text = "Edit";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Edit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.medlemDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editMedlemDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView medlemDGV;
+        private System.Windows.Forms.DataGridView editMedlemDGV;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.MaskedTextBox tlfMTxt;
@@ -299,12 +239,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.BindingSource medlemBindingSource1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tlfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loebeNrDataGridViewTextBoxColumn;
         private soenderbodbDataSet1 soenderbodbDataSet1;
         private System.Windows.Forms.BindingSource medlemBindingSource2;
         private soenderbodbDataSet1TableAdapters.MedlemTableAdapter medlemTableAdapter1;

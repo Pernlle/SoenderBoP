@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,24 +24,8 @@ namespace SoenderBoP
 
         private void Stats_Load(object sender, EventArgs e)
         {
-            statsCBX.DataSource = GetStats();
-
-        }
-        private DataTable GetStats()
-        {
             string sqlcom = "SELECT email FROM Medlem";
-            using (SqlConnection conn = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlcom, conn))
-                {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        return dt;
-                    }
-                }
-            }
+            statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -55,42 +40,12 @@ namespace SoenderBoP
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
             string medlem = statsCBX.Text;
-
-            showStatsDGV.DataSource = ShowStats(medlem);
-
-            //Få databasen til at omskrive emailen til loebenr så sql kan vise medlemets reservationer.. Eller
-            // Eller lav en select som viser både elementer fra medlem og reserveret.
-
-            //connect to the database
-
-            //create a command 
-
-
-
-        }
-        private DataTable ShowStats(string medlem)
-        {
             string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE email = '{medlem}';";
 
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(strconn))
-                {
-                    using (SqlCommand cmd = new SqlCommand(sqlcom, conn))
-                    {
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            DataTable dtShow = new DataTable();
-                            adapter.Fill(dtShow);
-                            return dtShow;
-                        }
-                    }
-                }
-            }
-            catch (Exception ecx) {  MessageBox.Show(ecx.ToString());}
-            return null;
-
+            // sqlcom bliver sendt over i GetDataSource, som ligger i FillDataSource, som så vises i DGV
+            showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom); 
         }
+        
 
             private void label1_Click(object sender, EventArgs e)
             {
@@ -101,5 +56,26 @@ namespace SoenderBoP
             {
 
             }
+
+        private void printStatsBTN_Click(object sender, EventArgs e)
+        {
+            string medlem = statsCBX.Text;
+
+            TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\Resourceforbrug_{medlem}.Txt");
+            for (int i = 0; i < showStatsDGV.Rows.Count - 1; i++) // rows
+            {
+                for (int j = 0; j < showStatsDGV.Columns.Count; j++) // columns
+                {
+                    if (j == showStatsDGV.Columns.Count - 1) // if last column
+                    {
+                        writer.WriteLine("\t" + showStatsDGV.Rows[i].Cells[j].Value.ToString());
+                    }
+                    else
+                        writer.Write("\t" + showStatsDGV.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                }
+            }
+            writer.Close();
+            MessageBox.Show("Exported");
         }
     }
+}

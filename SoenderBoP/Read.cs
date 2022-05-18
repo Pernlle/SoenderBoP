@@ -19,13 +19,17 @@ namespace SoenderBoP
 
         private void Read_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'soenderbodbDataSet1.Reserveret' table. You can move, or remove it, as needed.
-            this.reserveretTableAdapter.Fill(this.soenderbodbDataSet1.Reserveret);
-            // TODO: This line of code loads data into the 'soenderbodbDataSet.Medlem' table. You can move, or remove it, as needed.
-            this.medlemTableAdapter.Fill(this.soenderbodbDataSet.Medlem);
-            // TODO: This line of code loads data into the 'soenderbodbDataSet.Bolig' table. You can move, or remove it, as needed.
-            this.boligTableAdapter.Fill(this.soenderbodbDataSet.Bolig);
+            string sqlcom = "SELECT mId AS 'Medlem ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',lNr AS 'Løbenummer' FROM Medlem";
+            readMedlemDGV.DataSource= FillDataSource.GetDataSource(sqlcom);
+            readMedlemDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            sqlcom = "SELECT bId AS 'Bolig ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',loebeNr AS 'Løbenummer' FROM Bolig";
+            readBoligDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            readBoligDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            sqlcom = "SELECT * FROM Reserveret";
+            readReserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            readReserveDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

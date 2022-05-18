@@ -22,8 +22,8 @@ namespace SoenderBoP
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Medlem";
             // valgte medlem som skal slettes - valgt via dgv
-            int selectedRowIndex = medlemDGV.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = medlemDGV.Rows[selectedRowIndex];
+            int selectedRowIndex = editMedlemDGV.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = editMedlemDGV.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
             // Call metoden 'Yes_No'
@@ -71,8 +71,8 @@ namespace SoenderBoP
             string values = "@tlf,@email";
 
             // valgte medlem i DGV, som skal opdateres (nuværende data vises i tekstboksene, og kan herefter ændres på.)
-            int selectedRowIndex = medlemDGV.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = medlemDGV.Rows[selectedRowIndex];
+            int selectedRowIndex = editMedlemDGV.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = editMedlemDGV.Rows[selectedRowIndex];
             string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
 
             //Opdater det medlem som er corresponding til den valgte celle i DGV
@@ -82,18 +82,16 @@ namespace SoenderBoP
 
         private void Edit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'soenderbodbDataSet1.Medlem' table. You can move, or remove it, as needed.
-            this.medlemTableAdapter1.Fill(this.soenderbodbDataSet1.Medlem);
-            // TODO: This line of code loads data into the 'soenderbodbDataSet.Medlem' table. You can move, or remove it, as needed.
-            //this.medlemTableAdapter.Fill(this.soenderbodbDataSet.Medlem);
-
+            string sqlcom = "SELECT mId AS 'Medlem ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',lNr AS 'Løbenummer' FROM Medlem";
+            editMedlemDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            editMedlemDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
-                DataGridViewRow dgvRow = medlemDGV.Rows[e.RowIndex];
+                DataGridViewRow dgvRow = editMedlemDGV.Rows[e.RowIndex];
                 navnTxt.Text = dgvRow.Cells[1].Value.ToString() + " " + dgvRow.Cells[2].Value.ToString();
                 tlfMTxt.Text = dgvRow.Cells[3].Value.ToString();
                 emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
