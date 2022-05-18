@@ -10,14 +10,12 @@ INSERT INTO Medlem (fNavn, eNavn, tlf, email, lNr) VALUES
 
 
 INSERT INTO Venteliste (medlemId, boligType, opskrevet) VALUES
-(2, 1, '2022-03-01'),
-(2, 2, '2022-03-01'),
-(3, 1, '2022-04-01'),
-(3, 3, '2022-04-01'),
-
-
-(1, 1, '2022-02-01'),
-(1, 2, '2022-02-01')
+(2, 1, '3-1-2022'),
+(2, 2, '3-1-2022'),
+(3, 1, '1-4-2022'),
+(3, 3, '4-1-2022'),
+(1, 1, '1-4-2022'),
+(1, 2, '1-2-2022')
 
 INSERT INTO Bolig (mndPris, adr, kvm, bType, loebeNr) VALUES 
 ('6000', 'Ligustervænget 4', '72', '1', NULL),
