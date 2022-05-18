@@ -46,7 +46,7 @@ CREATE TABLE Medlem(
 	eNavn VARCHAR(50),
 	tlf INT,
 	email VARCHAR(50),
-	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
+	lNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
 );
 
 /*Ventelisten 'generer' i databasen en dato, i koden bestemmes venteliste nr. efter dato. */ 
@@ -66,7 +66,7 @@ CREATE TABLE Ressource(
 
 CREATE TABLE Reserveret(
 	rId INT FOREIGN KEY REFERENCES Ressource(rId),
-	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr),
+	lId INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr),
 	dStart VARCHAR(50),
 	dSlut VARCHAR(50)
 	/*
