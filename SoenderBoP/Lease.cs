@@ -15,7 +15,8 @@ namespace SoenderBoP
         public Lease()
         {
             InitializeComponent();
-            string sqlcom = "SELECT mId AS 'ID', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', loebeNr 'Løbenummer', indflytter AS 'Indflytter' FROM Medlem, Lejekontrakt WHERE loebeNr = lNr";
+            string sqlcom = "SELECT  loebeNr 'Løbenummer', indflytter AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Medlem, Lejekontrakt WHERE loebeNr = lNr";
+            leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
 
         }
 
