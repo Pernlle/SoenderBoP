@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.leasePrintbtn = new System.Windows.Forms.Button();
-            this.medlemEmail = new System.Windows.Forms.ComboBox();
+            this.emailCBX = new System.Windows.Forms.ComboBox();
             this.leaseDTP = new System.Windows.Forms.DateTimePicker();
             this.CreateLease = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.medlemEmail);
+            this.panel1.Controls.Add(this.emailCBX);
             this.panel1.Controls.Add(this.leaseDTP);
             this.panel1.Controls.Add(this.CreateLease);
             this.panel1.Controls.Add(this.label3);
@@ -81,15 +81,16 @@
             this.leasePrintbtn.Text = "Print";
             this.leasePrintbtn.UseVisualStyleBackColor = true;
             // 
-            // medlemEmail
+            // emailCBX
             // 
-            this.medlemEmail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.medlemEmail.FormattingEnabled = true;
-            this.medlemEmail.Location = new System.Drawing.Point(11, 99);
-            this.medlemEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.medlemEmail.Name = "medlemEmail";
-            this.medlemEmail.Size = new System.Drawing.Size(183, 28);
-            this.medlemEmail.TabIndex = 5;
+            this.emailCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.emailCBX.FormattingEnabled = true;
+            this.emailCBX.Location = new System.Drawing.Point(15, 97);
+            this.emailCBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailCBX.Name = "emailCBX";
+            this.emailCBX.Size = new System.Drawing.Size(180, 28);
+            this.emailCBX.TabIndex = 5;
+            this.emailCBX.Click += new System.EventHandler(this.emailCBX_Click);
             // 
             // leaseDTP
             // 
@@ -102,7 +103,7 @@
             // 
             // CreateLease
             // 
-            this.CreateLease.Location = new System.Drawing.Point(55, 329);
+            this.CreateLease.Location = new System.Drawing.Point(46, 329);
             this.CreateLease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateLease.Name = "CreateLease";
             this.CreateLease.Size = new System.Drawing.Size(127, 32);
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView leaseDGV;
-        private System.Windows.Forms.ComboBox medlemEmail;
+        private System.Windows.Forms.ComboBox emailCBX;
         private System.Windows.Forms.DateTimePicker leaseDTP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button leasePrintbtn;
