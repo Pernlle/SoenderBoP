@@ -14,8 +14,6 @@ namespace SoenderBoP
 {
     public partial class Stats : Form
     {
-        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
         public Stats()
         {
             InitializeComponent();
@@ -23,9 +21,9 @@ namespace SoenderBoP
         }
 
         private void Stats_Load(object sender, EventArgs e)
-        {
-            string sqlcom = "SELECT email FROM Medlem";
-            statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
+        {            
+            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret;";
+            showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -62,6 +60,7 @@ namespace SoenderBoP
             string medlem = statsCBX.Text;
 
             TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\Resourceforbrug_{medlem}.Txt");
+            writer.WriteLine("\t\t\tEmail \t\t   Res ID\t Løbenummer \t Startdato \t\t Slutdato");
             for (int i = 0; i < showStatsDGV.Rows.Count - 1; i++) // rows
             {
                 for (int j = 0; j < showStatsDGV.Columns.Count; j++) // columns
@@ -76,6 +75,12 @@ namespace SoenderBoP
             }
             writer.Close();
             MessageBox.Show("Exported");
+        }
+
+        private void statsCBX_Click(object sender, EventArgs e)
+        {
+            string sqlcom = "SELECT email FROM Medlem";
+            statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
     }
 }
