@@ -23,7 +23,7 @@ namespace SoenderBoP
             readMedlemDGV.DataSource= FillDataSource.GetDataSource(sqlcom);
             readMedlemDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            sqlcom = "SELECT bId AS 'Bolig ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',loebeNr AS 'Løbenummer' FROM Bolig";
+            sqlcom = "SELECT bId AS 'Bolig ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',loebeNummer AS 'Løbenummer' FROM Bolig";
             readBoligDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             readBoligDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
