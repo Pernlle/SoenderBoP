@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.leaseDGV = new System.Windows.Forms.DataGridView();
-            this.mId = new System.Windows.Forms.TextBox();
+            this.mIdTxt = new System.Windows.Forms.TextBox();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,7 +50,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.refreshBtn);
-            this.panel1.Controls.Add(this.mId);
+            this.panel1.Controls.Add(this.mIdTxt);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.emailCBX);
             this.panel1.Controls.Add(this.leaseDTP);
@@ -175,12 +175,12 @@
             this.leaseDGV.Size = new System.Drawing.Size(559, 518);
             this.leaseDGV.TabIndex = 0;
             // 
-            // mId
+            // mIdTxt
             // 
-            this.mId.Location = new System.Drawing.Point(149, 98);
-            this.mId.Name = "mId";
-            this.mId.Size = new System.Drawing.Size(61, 26);
-            this.mId.TabIndex = 7;
+            this.mIdTxt.Location = new System.Drawing.Point(149, 98);
+            this.mIdTxt.Name = "mIdTxt";
+            this.mIdTxt.Size = new System.Drawing.Size(61, 26);
+            this.mIdTxt.TabIndex = 7;
             // 
             // refreshBtn
             // 
@@ -224,7 +224,7 @@
         private System.Windows.Forms.DateTimePicker leaseDTP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button leasePrintbtn;
-        private System.Windows.Forms.TextBox mId;
+        private System.Windows.Forms.TextBox mIdTxt;
         private System.Windows.Forms.Button refreshBtn;
     }
 }

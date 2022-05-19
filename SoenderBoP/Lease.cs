@@ -24,27 +24,27 @@ namespace SoenderBoP
 
         private void CreateLease_Click(object sender, EventArgs e)
         {
-            string theDate = leaseDTP.Value.ToString("dd-MM-yyyy");
-
+            string mId = this.mIdTxt.Text;
+            string dato = leaseDTP.Value.ToString("dd-MM-yyyy");
             
+
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
+
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
+
             //Sql sætning
-            //string sqlCom = $"INSERT INTO Lejekontrakt VALUES ({theDate});";
-            ////Sql Command
-            //SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            string sqlCom = $"INSERT INTO Lejekontrakt VALUES ({dato});";
 
-            string sql = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
-            
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-             
-            var result = (Int32)cmd.ExecuteScalar();
-             
-            MessageBox.Show($"{result} og date: { theDate}");
-            
+            //Sql Command
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
+            //EFTER ny lejekontrakt oprettes henter vi seneste løbeNr.
+            sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
+            var loebeNr = (Int32)cmd.ExecuteScalar();
+
+            //Test om de rigtige værdier kan puttes i db
+            MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
             //try
             //{
