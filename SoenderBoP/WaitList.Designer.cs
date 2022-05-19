@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lejlighedDGV = new System.Windows.Forms.DataGridView();
             this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lejlighedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.waitListViews = new SoenderBoP.waitListViews();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.waitlistPrintbtn = new System.Windows.Forms.Button();
@@ -52,6 +50,7 @@
             this.eNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medlemIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ungdomsboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.waitListViews = new SoenderBoP.waitListViews();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,25 +67,28 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lejlighedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lejlighedTableAdapter = new SoenderBoP.waitListViewsTableAdapters.LejlighedTableAdapter();
             this.ungdomsboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.UngdomsboligTableAdapter();
             this.seniorboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.SeniorboligTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.lejlighed.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lejlighedBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitListViews)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.ungdomsbolig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsboligBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitListViews)).BeginInit();
             this.panel2.SuspendLayout();
             this.seniorbolig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorboligBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lejlighedBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -140,14 +142,14 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle8;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -169,16 +171,6 @@
             this.lejlighedNr.MinimumWidth = 8;
             this.lejlighedNr.Name = "lejlighedNr";
             this.lejlighedNr.ReadOnly = true;
-            // 
-            // lejlighedBindingSource
-            // 
-            this.lejlighedBindingSource.DataMember = "Lejlighed";
-            this.lejlighedBindingSource.DataSource = this.waitListViews;
-            // 
-            // waitListViews
-            // 
-            this.waitListViews.DataSetName = "waitListViews";
-            this.waitListViews.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -204,9 +196,10 @@
             // 
             // waitlistPrintbtn
             // 
-            this.waitlistPrintbtn.Location = new System.Drawing.Point(102, 39);
+            this.waitlistPrintbtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waitlistPrintbtn.Location = new System.Drawing.Point(0, 70);
             this.waitlistPrintbtn.Name = "waitlistPrintbtn";
-            this.waitlistPrintbtn.Size = new System.Drawing.Size(96, 30);
+            this.waitlistPrintbtn.Size = new System.Drawing.Size(300, 30);
             this.waitlistPrintbtn.TabIndex = 0;
             this.waitlistPrintbtn.Text = "Print";
             this.waitlistPrintbtn.UseVisualStyleBackColor = true;
@@ -271,14 +264,14 @@
             this.eNavnDataGridViewTextBoxColumn1,
             this.medlemIdDataGridViewTextBoxColumn1});
             this.ungdomsDGV.DataSource = this.ungdomsboligBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle7;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -335,8 +328,14 @@
             this.ungdomsboligBindingSource.DataMember = "Ungdomsbolig";
             this.ungdomsboligBindingSource.DataSource = this.waitListViews;
             // 
+            // waitListViews
+            // 
+            this.waitListViews.DataSetName = "waitListViews";
+            this.waitListViews.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
@@ -465,6 +464,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
@@ -503,6 +503,11 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Tilføj til venteliste";
             // 
+            // lejlighedBindingSource
+            // 
+            this.lejlighedBindingSource.DataMember = "Lejlighed";
+            this.lejlighedBindingSource.DataSource = this.waitListViews;
+            // 
             // lejlighedTableAdapter
             // 
             this.lejlighedTableAdapter.ClearBeforeFill = true;
@@ -514,6 +519,26 @@
             // seniorboligTableAdapter
             // 
             this.seniorboligTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Location = new System.Drawing.Point(0, 387);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Print";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.Location = new System.Drawing.Point(0, 387);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(299, 30);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Print";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // WaitList
             // 
@@ -529,14 +554,13 @@
             this.lejlighed.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lejlighedBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitListViews)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ungdomsbolig.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsboligBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitListViews)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.seniorbolig.ResumeLayout(false);
@@ -544,6 +568,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorboligBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lejlighedBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,5 +615,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lejlighedNr;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button waitlistPrintbtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
