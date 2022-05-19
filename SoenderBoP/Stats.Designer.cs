@@ -290,6 +290,7 @@
             // 
             this.statsCBX.DataSource = this.medlemBindingSource1;
             this.statsCBX.DisplayMember = "email";
+            this.statsCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statsCBX.FormattingEnabled = true;
             this.statsCBX.Location = new System.Drawing.Point(33, 111);
             this.statsCBX.Name = "statsCBX";
