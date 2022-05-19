@@ -36,10 +36,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lejlighedDGV = new System.Windows.Forms.DataGridView();
             this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opskrevetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lejlighedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.waitListViews = new SoenderBoP.waitListViews();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -137,19 +133,13 @@
             this.lejlighedDGV.AllowUserToDeleteRows = false;
             this.lejlighedDGV.AllowUserToResizeColumns = false;
             this.lejlighedDGV.AllowUserToResizeRows = false;
-            this.lejlighedDGV.AutoGenerateColumns = false;
             this.lejlighedDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.lejlighedDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.lejlighedDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lejlighedDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lejlighedNr,
-            this.opskrevetDataGridViewTextBoxColumn,
-            this.fNavnDataGridViewTextBoxColumn,
-            this.eNavnDataGridViewTextBoxColumn,
-            this.medlemIdDataGridViewTextBoxColumn});
-            this.lejlighedDGV.DataSource = this.lejlighedBindingSource;
+            this.lejlighedNr});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,38 +169,6 @@
             this.lejlighedNr.MinimumWidth = 8;
             this.lejlighedNr.Name = "lejlighedNr";
             this.lejlighedNr.ReadOnly = true;
-            // 
-            // opskrevetDataGridViewTextBoxColumn
-            // 
-            this.opskrevetDataGridViewTextBoxColumn.DataPropertyName = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn.HeaderText = "Opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.opskrevetDataGridViewTextBoxColumn.Name = "opskrevetDataGridViewTextBoxColumn";
-            this.opskrevetDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fNavnDataGridViewTextBoxColumn
-            // 
-            this.fNavnDataGridViewTextBoxColumn.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn.HeaderText = "Fornavn";
-            this.fNavnDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fNavnDataGridViewTextBoxColumn.Name = "fNavnDataGridViewTextBoxColumn";
-            this.fNavnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eNavnDataGridViewTextBoxColumn
-            // 
-            this.eNavnDataGridViewTextBoxColumn.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn.HeaderText = "Efternavn";
-            this.eNavnDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.eNavnDataGridViewTextBoxColumn.Name = "eNavnDataGridViewTextBoxColumn";
-            this.eNavnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // medlemIdDataGridViewTextBoxColumn
-            // 
-            this.medlemIdDataGridViewTextBoxColumn.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.medlemIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.medlemIdDataGridViewTextBoxColumn.Name = "medlemIdDataGridViewTextBoxColumn";
-            this.medlemIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lejlighedBindingSource
             // 
@@ -630,10 +588,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn lejlighedNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button waitlistPrintbtn;
     }
