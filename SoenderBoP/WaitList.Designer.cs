@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,10 +45,6 @@
             this.ungdomsbolig = new System.Windows.Forms.TabPage();
             this.ungdomsDGV = new System.Windows.Forms.DataGridView();
             this.ungdomsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opskrevetDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ungdomsboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.waitListViews = new SoenderBoP.waitListViews();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,10 +54,6 @@
             this.seniorbolig = new System.Windows.Forms.TabPage();
             this.seniorDGV = new System.Windows.Forms.DataGridView();
             this.seniorNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opskrevetDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNavnDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medlemIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seniorboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -142,14 +134,14 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle1;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -251,27 +243,21 @@
             this.ungdomsDGV.AllowUserToDeleteRows = false;
             this.ungdomsDGV.AllowUserToResizeColumns = false;
             this.ungdomsDGV.AllowUserToResizeRows = false;
-            this.ungdomsDGV.AutoGenerateColumns = false;
             this.ungdomsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ungdomsDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ungdomsDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.ungdomsDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ungdomsNr,
-            this.opskrevetDataGridViewTextBoxColumn1,
-            this.fNavnDataGridViewTextBoxColumn1,
-            this.eNavnDataGridViewTextBoxColumn1,
-            this.medlemIdDataGridViewTextBoxColumn1});
-            this.ungdomsDGV.DataSource = this.ungdomsboligBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ungdomsNr});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -290,38 +276,6 @@
             this.ungdomsNr.MinimumWidth = 8;
             this.ungdomsNr.Name = "ungdomsNr";
             this.ungdomsNr.ReadOnly = true;
-            // 
-            // opskrevetDataGridViewTextBoxColumn1
-            // 
-            this.opskrevetDataGridViewTextBoxColumn1.DataPropertyName = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn1.HeaderText = "Opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.opskrevetDataGridViewTextBoxColumn1.Name = "opskrevetDataGridViewTextBoxColumn1";
-            this.opskrevetDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fNavnDataGridViewTextBoxColumn1
-            // 
-            this.fNavnDataGridViewTextBoxColumn1.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn1.HeaderText = "Fornavn";
-            this.fNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.fNavnDataGridViewTextBoxColumn1.Name = "fNavnDataGridViewTextBoxColumn1";
-            this.fNavnDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // eNavnDataGridViewTextBoxColumn1
-            // 
-            this.eNavnDataGridViewTextBoxColumn1.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn1.HeaderText = "Efternavn";
-            this.eNavnDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.eNavnDataGridViewTextBoxColumn1.Name = "eNavnDataGridViewTextBoxColumn1";
-            this.eNavnDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // medlemIdDataGridViewTextBoxColumn1
-            // 
-            this.medlemIdDataGridViewTextBoxColumn1.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.medlemIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.medlemIdDataGridViewTextBoxColumn1.Name = "medlemIdDataGridViewTextBoxColumn1";
-            this.medlemIdDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // ungdomsboligBindingSource
             // 
@@ -393,19 +347,13 @@
             this.seniorDGV.AllowUserToDeleteRows = false;
             this.seniorDGV.AllowUserToResizeColumns = false;
             this.seniorDGV.AllowUserToResizeRows = false;
-            this.seniorDGV.AutoGenerateColumns = false;
             this.seniorDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.seniorDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.seniorDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.seniorDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.seniorDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.seniorDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.seniorNr,
-            this.opskrevetDataGridViewTextBoxColumn2,
-            this.fNavnDataGridViewTextBoxColumn2,
-            this.eNavnDataGridViewTextBoxColumn2,
-            this.medlemIdDataGridViewTextBoxColumn2});
-            this.seniorDGV.DataSource = this.seniorboligBindingSource;
+            this.seniorNr});
             this.seniorDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.seniorDGV.GridColor = System.Drawing.Color.Black;
             this.seniorDGV.Location = new System.Drawing.Point(3, 2);
@@ -424,38 +372,6 @@
             this.seniorNr.MinimumWidth = 8;
             this.seniorNr.Name = "seniorNr";
             this.seniorNr.ReadOnly = true;
-            // 
-            // opskrevetDataGridViewTextBoxColumn2
-            // 
-            this.opskrevetDataGridViewTextBoxColumn2.DataPropertyName = "opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn2.HeaderText = "Opskrevet";
-            this.opskrevetDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.opskrevetDataGridViewTextBoxColumn2.Name = "opskrevetDataGridViewTextBoxColumn2";
-            this.opskrevetDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // fNavnDataGridViewTextBoxColumn2
-            // 
-            this.fNavnDataGridViewTextBoxColumn2.DataPropertyName = "fNavn";
-            this.fNavnDataGridViewTextBoxColumn2.HeaderText = "Fornavn";
-            this.fNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.fNavnDataGridViewTextBoxColumn2.Name = "fNavnDataGridViewTextBoxColumn2";
-            this.fNavnDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // eNavnDataGridViewTextBoxColumn2
-            // 
-            this.eNavnDataGridViewTextBoxColumn2.DataPropertyName = "eNavn";
-            this.eNavnDataGridViewTextBoxColumn2.HeaderText = "Efternavn";
-            this.eNavnDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.eNavnDataGridViewTextBoxColumn2.Name = "eNavnDataGridViewTextBoxColumn2";
-            this.eNavnDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // medlemIdDataGridViewTextBoxColumn2
-            // 
-            this.medlemIdDataGridViewTextBoxColumn2.DataPropertyName = "medlemId";
-            this.medlemIdDataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.medlemIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.medlemIdDataGridViewTextBoxColumn2.Name = "medlemIdDataGridViewTextBoxColumn2";
-            this.medlemIdDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // seniorboligBindingSource
             // 
@@ -603,15 +519,7 @@
         private System.Windows.Forms.BindingSource seniorboligBindingSource;
         private waitListViewsTableAdapters.SeniorboligTableAdapter seniorboligTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ungdomsNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn seniorNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opskrevetDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNavnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eNavnDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medlemIdDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn lejlighedNr;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button waitlistPrintbtn;

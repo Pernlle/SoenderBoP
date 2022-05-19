@@ -22,9 +22,9 @@ namespace SoenderBoP
         {
             string sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Lejlighed ORDER BY opskrevet ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            sqlcom = "SELECT * FROM Ungdomsbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            sqlcom = "SELECT * FROM Seniorbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Seniorbolig ORDER BY opskrevet ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
 
         }
