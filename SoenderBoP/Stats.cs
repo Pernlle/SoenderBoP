@@ -14,8 +14,6 @@ namespace SoenderBoP
 {
     public partial class Stats : Form
     {
-        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
         public Stats()
         {
             InitializeComponent();
