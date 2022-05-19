@@ -22,61 +22,13 @@ namespace SoenderBoP
 
         private void WaitList_Load(object sender, EventArgs e)
         {
-            lejlighedDGV.DataSource = GetLejlighed();
-            ungdomsDGV.DataSource = GetUngdoms();
-            seniorDGV.DataSource = GetSenior();
-
-        }
-
-        private DataTable GetLejlighed()
-        {
             string sqlcom = "SELECT * FROM Lejlighed ORDER BY opskrevet ASC";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlcom, con))
-                {
-                    using (SqlDataAdapter sda1 = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dtLejlighed = new DataTable();
-                        sda1.Fill(dtLejlighed);
-                        return dtLejlighed;
-                    }
-                }
-            }
-        }
+            lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            sqlcom = "SELECT * FROM Ungdomsbolig ORDER BY opskrevet ASC";
+            ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            sqlcom = "SELECT * FROM Seniorbolig ORDER BY opskrevet ASC";
+            seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
 
-        private DataTable GetUngdoms()
-        {
-            string sqlcom = "SELECT * FROM Ungdomsbolig ORDER BY opskrevet ASC";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlcom, con))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dtUngdoms = new DataTable();
-                        sda.Fill(dtUngdoms);
-                        return dtUngdoms;
-                    }
-                }
-            }
-        }
-
-        private DataTable GetSenior()
-        {
-            string sqlcom = "SELECT * FROM Seniorbolig ORDER BY opskrevet ASC";
-            using (SqlConnection con = new SqlConnection(strconn))
-            {
-                using (SqlCommand cmd = new SqlCommand(sqlcom, con))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dtSenior = new DataTable();
-                        sda.Fill(dtSenior);
-                        return dtSenior;
-                    }
-                }
-            }
         }
 
         private void lejlighedDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
