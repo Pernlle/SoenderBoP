@@ -47,8 +47,14 @@
             this.Vaskemaskine1 = new System.Windows.Forms.Label();
             this.Vaskemaskine2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.showStatsDGV = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.printStatsBTN = new System.Windows.Forms.Button();
             this.statsCBX = new System.Windows.Forms.ComboBox();
+            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
+            this.statsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.medlemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet = new SoenderBoP.soenderbodbDataSet();
             this.reserveretBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,23 +62,17 @@
             this.ressourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ressourceTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.RessourceTableAdapter();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
-            this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
-            this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.showStatsDGV = new System.Windows.Forms.DataGridView();
-            this.printStatsBTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -241,13 +241,50 @@
             this.panel1.Size = new System.Drawing.Size(994, 612);
             this.panel1.TabIndex = 17;
             // 
-            // statsRichTextBox
+            // panel3
             // 
-            this.statsRichTextBox.Location = new System.Drawing.Point(886, 195);
-            this.statsRichTextBox.Name = "statsRichTextBox";
-            this.statsRichTextBox.Size = new System.Drawing.Size(107, 43);
-            this.statsRichTextBox.TabIndex = 5;
-            this.statsRichTextBox.Text = "";
+            this.panel3.Controls.Add(this.showStatsDGV);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(689, 612);
+            this.panel3.TabIndex = 6;
+            // 
+            // showStatsDGV
+            // 
+            this.showStatsDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.showStatsDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.showStatsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.showStatsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showStatsDGV.Location = new System.Drawing.Point(0, 0);
+            this.showStatsDGV.Name = "showStatsDGV";
+            this.showStatsDGV.RowHeadersVisible = false;
+            this.showStatsDGV.RowHeadersWidth = 51;
+            this.showStatsDGV.RowTemplate.Height = 24;
+            this.showStatsDGV.Size = new System.Drawing.Size(689, 612);
+            this.showStatsDGV.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.printStatsBTN);
+            this.panel2.Controls.Add(this.statsCBX);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(689, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(305, 612);
+            this.panel2.TabIndex = 5;
+            // 
+            // printStatsBTN
+            // 
+            this.printStatsBTN.Location = new System.Drawing.Point(90, 247);
+            this.printStatsBTN.Name = "printStatsBTN";
+            this.printStatsBTN.Size = new System.Drawing.Size(115, 23);
+            this.printStatsBTN.TabIndex = 5;
+            this.printStatsBTN.Text = "Print";
+            this.printStatsBTN.UseVisualStyleBackColor = true;
+            this.printStatsBTN.Click += new System.EventHandler(this.printStatsBTN_Click);
             // 
             // statsCBX
             // 
@@ -259,6 +296,25 @@
             this.statsCBX.Size = new System.Drawing.Size(240, 24);
             this.statsCBX.TabIndex = 4;
             this.statsCBX.ValueMember = "email";
+            this.statsCBX.Click += new System.EventHandler(this.statsCBX_Click);
+            // 
+            // medlemBindingSource1
+            // 
+            this.medlemBindingSource1.DataMember = "Medlem";
+            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet1;
+            // 
+            // soenderbodbDataSet1
+            // 
+            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
+            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statsRichTextBox
+            // 
+            this.statsRichTextBox.Location = new System.Drawing.Point(886, 195);
+            this.statsRichTextBox.Name = "statsRichTextBox";
+            this.statsRichTextBox.Size = new System.Drawing.Size(107, 43);
+            this.statsRichTextBox.TabIndex = 5;
+            this.statsRichTextBox.Text = "";
             // 
             // medlemBindingSource
             // 
@@ -292,64 +348,9 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
-            // soenderbodbDataSet1
-            // 
-            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
-            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medlemBindingSource1
-            // 
-            this.medlemBindingSource1.DataMember = "Medlem";
-            this.medlemBindingSource1.DataSource = this.soenderbodbDataSet1;
-            // 
             // medlemTableAdapter1
             // 
             this.medlemTableAdapter1.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.printStatsBTN);
-            this.panel2.Controls.Add(this.statsCBX);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(689, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 612);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.showStatsDGV);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(689, 612);
-            this.panel3.TabIndex = 6;
-            // 
-            // showStatsDGV
-            // 
-            this.showStatsDGV.BackgroundColor = System.Drawing.Color.Linen;
-            this.showStatsDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.showStatsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showStatsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showStatsDGV.Location = new System.Drawing.Point(0, 0);
-            this.showStatsDGV.Name = "showStatsDGV";
-            this.showStatsDGV.RowHeadersVisible = false;
-            this.showStatsDGV.RowHeadersWidth = 51;
-            this.showStatsDGV.RowTemplate.Height = 24;
-            this.showStatsDGV.Size = new System.Drawing.Size(689, 612);
-            this.showStatsDGV.TabIndex = 0;
-            // 
-            // printStatsBTN
-            // 
-            this.printStatsBTN.Location = new System.Drawing.Point(90, 247);
-            this.printStatsBTN.Name = "printStatsBTN";
-            this.printStatsBTN.Size = new System.Drawing.Size(115, 23);
-            this.printStatsBTN.TabIndex = 5;
-            this.printStatsBTN.Text = "Print";
-            this.printStatsBTN.UseVisualStyleBackColor = true;
-            this.printStatsBTN.Click += new System.EventHandler(this.printStatsBTN_Click);
             // 
             // Stats
             // 
@@ -378,16 +379,16 @@
             this.Text = "Stats";
             this.Load += new System.EventHandler(this.Stats_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

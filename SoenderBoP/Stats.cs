@@ -21,11 +21,8 @@ namespace SoenderBoP
         }
 
         private void Stats_Load(object sender, EventArgs e)
-        {
-            string sqlcom = "SELECT email FROM Medlem";
-            statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
-
-            sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret;";
+        {            
+            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret;";
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
@@ -78,6 +75,12 @@ namespace SoenderBoP
             }
             writer.Close();
             MessageBox.Show("Exported");
+        }
+
+        private void statsCBX_Click(object sender, EventArgs e)
+        {
+            string sqlcom = "SELECT email FROM Medlem";
+            statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
     }
 }
