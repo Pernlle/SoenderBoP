@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MedlemNavn = new System.Windows.Forms.ComboBox();
-            this.leaseDate = new System.Windows.Forms.DateTimePicker();
-            this.CreateLease = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.leaseDGV = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CreateLease = new System.Windows.Forms.Button();
+            this.leaseDate = new System.Windows.Forms.DateTimePicker();
+            this.MedlemNavn = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leaseDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,20 +56,52 @@
             this.panel1.Size = new System.Drawing.Size(222, 450);
             this.panel1.TabIndex = 0;
             // 
-            // MedlemNavn
+            // panel2
             // 
-            this.MedlemNavn.FormattingEnabled = true;
-            this.MedlemNavn.Location = new System.Drawing.Point(11, 99);
-            this.MedlemNavn.Name = "MedlemNavn";
-            this.MedlemNavn.Size = new System.Drawing.Size(183, 28);
-            this.MedlemNavn.TabIndex = 5;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(524, 450);
+            this.panel2.TabIndex = 1;
             // 
-            // leaseDate
+            // dataGridView1
             // 
-            this.leaseDate.Location = new System.Drawing.Point(15, 205);
-            this.leaseDate.Name = "leaseDate";
-            this.leaseDate.Size = new System.Drawing.Size(179, 26);
-            this.leaseDate.TabIndex = 4;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(524, 450);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Opret lejekontrakt";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Navn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Dato";
             // 
             // CreateLease
             // 
@@ -81,59 +113,20 @@
             this.CreateLease.UseVisualStyleBackColor = true;
             this.CreateLease.Click += new System.EventHandler(this.CreateLease_Click);
             // 
-            // label3
+            // leaseDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Dato";
+            this.leaseDate.Location = new System.Drawing.Point(15, 205);
+            this.leaseDate.Name = "leaseDate";
+            this.leaseDate.Size = new System.Drawing.Size(179, 26);
+            this.leaseDate.TabIndex = 4;
             // 
-            // label2
+            // MedlemNavn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Navn";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Opret lejekontrakt";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.leaseDGV);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(524, 450);
-            this.panel2.TabIndex = 1;
-            // 
-            // leaseDGV
-            // 
-            this.leaseDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.leaseDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.leaseDGV.BackgroundColor = System.Drawing.Color.Linen;
-            this.leaseDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.leaseDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.leaseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.leaseDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leaseDGV.GridColor = System.Drawing.Color.Linen;
-            this.leaseDGV.Location = new System.Drawing.Point(0, 0);
-            this.leaseDGV.Name = "leaseDGV";
-            this.leaseDGV.RowHeadersVisible = false;
-            this.leaseDGV.RowHeadersWidth = 62;
-            this.leaseDGV.RowTemplate.Height = 28;
-            this.leaseDGV.Size = new System.Drawing.Size(524, 450);
-            this.leaseDGV.TabIndex = 0;
+            this.MedlemNavn.FormattingEnabled = true;
+            this.MedlemNavn.Location = new System.Drawing.Point(11, 99);
+            this.MedlemNavn.Name = "MedlemNavn";
+            this.MedlemNavn.Size = new System.Drawing.Size(183, 28);
+            this.MedlemNavn.TabIndex = 5;
             // 
             // Lease
             // 
@@ -147,7 +140,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.leaseDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,7 +153,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView leaseDGV;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox MedlemNavn;
         private System.Windows.Forms.DateTimePicker leaseDate;
     }

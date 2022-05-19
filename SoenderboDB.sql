@@ -108,5 +108,3 @@ INSERT INTO Ressource (rId, rType, rNr) VALUES
 ('28','Vaskemaskine','8'),
 ('29','Vaskemaskine','9'),
 ('30','Vaskemaskine','10')
-
-SELECT * FROM Reserveret
