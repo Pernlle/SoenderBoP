@@ -24,6 +24,9 @@ namespace SoenderBoP
         {
             string sqlcom = "SELECT email FROM Medlem";
             statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
+
+            sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret;";
+            showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -60,6 +63,7 @@ namespace SoenderBoP
             string medlem = statsCBX.Text;
 
             TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\Resourceforbrug_{medlem}.Txt");
+            writer.WriteLine("\t\t\tEmail \t\t   Res ID\t Løbenummer \t Startdato \t\t Slutdato");
             for (int i = 0; i < showStatsDGV.Rows.Count - 1; i++) // rows
             {
                 for (int j = 0; j < showStatsDGV.Columns.Count; j++) // columns
