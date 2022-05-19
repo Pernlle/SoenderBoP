@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.leaseDGV = new System.Windows.Forms.DataGridView();
+            this.mId = new System.Windows.Forms.TextBox();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -47,6 +49,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.refreshBtn);
+            this.panel1.Controls.Add(this.mId);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.emailCBX);
             this.panel1.Controls.Add(this.leaseDTP);
@@ -88,7 +92,7 @@
             this.emailCBX.Location = new System.Drawing.Point(15, 97);
             this.emailCBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailCBX.Name = "emailCBX";
-            this.emailCBX.Size = new System.Drawing.Size(180, 28);
+            this.emailCBX.Size = new System.Drawing.Size(127, 28);
             this.emailCBX.TabIndex = 5;
             this.emailCBX.Click += new System.EventHandler(this.emailCBX_Click);
             // 
@@ -159,7 +163,7 @@
             this.leaseDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.leaseDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.leaseDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.leaseDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.leaseDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.leaseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.leaseDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leaseDGV.Location = new System.Drawing.Point(0, 0);
@@ -170,6 +174,23 @@
             this.leaseDGV.RowTemplate.Height = 28;
             this.leaseDGV.Size = new System.Drawing.Size(559, 518);
             this.leaseDGV.TabIndex = 0;
+            // 
+            // mId
+            // 
+            this.mId.Location = new System.Drawing.Point(149, 98);
+            this.mId.Name = "mId";
+            this.mId.Size = new System.Drawing.Size(61, 26);
+            this.mId.TabIndex = 7;
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Location = new System.Drawing.Point(194, 0);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(28, 32);
+            this.refreshBtn.TabIndex = 8;
+            this.refreshBtn.Text = "R";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // Lease
             // 
@@ -203,5 +224,7 @@
         private System.Windows.Forms.DateTimePicker leaseDTP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button leasePrintbtn;
+        private System.Windows.Forms.TextBox mId;
+        private System.Windows.Forms.Button refreshBtn;
     }
 }
