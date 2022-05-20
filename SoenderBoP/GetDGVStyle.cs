@@ -19,8 +19,7 @@ namespace SoenderBoP
             //
             DGV.BackgroundColor = Color.FromKnownColor(KnownColor.Linen); // baggrunden bag ved dgv
             DGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen); //celle farve :)
-            DGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            DGV.GridColor = Color.FromKnownColor(KnownColor.SlateGray);
+            DGV.GridColor = Color.FromKnownColor(KnownColor.Gainsboro);
 
 
             /*
@@ -31,7 +30,7 @@ namespace SoenderBoP
             DGV.DefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
             DGV.DefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.Linen);
             DGV.DefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            DGV.DefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 12);
+            DGV.DefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 11);
             DGV.DefaultCellStyle.Padding = new Padding(2);
             DGV.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -44,7 +43,7 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
             DGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.ControlLight);
             DGV.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            DGV.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 12);
+            DGV.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 11);
             DGV.ColumnHeadersDefaultCellStyle.Padding = new Padding(2);
             DGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -60,16 +59,12 @@ namespace SoenderBoP
             
             DGV.RowHeadersVisible = false;
             DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DGV.MultiSelect = false;
             DGV.Dock = DockStyle.Fill;
+            DGV.BorderStyle = BorderStyle.FixedSingle;
+          
 
-        
-            //Allow User to:
-            DGV.AllowDrop = false;
-            DGV.AllowUserToAddRows = false;
-            DGV.AllowUserToResizeRows = false;
-            DGV.AllowUserToResizeColumns = false;
-            DGV.AllowUserToDeleteRows = false;
+            DGV.CellBorderStyle = DataGridViewCellBorderStyle.RaisedVertical;
+
 
             return DGV;
         }

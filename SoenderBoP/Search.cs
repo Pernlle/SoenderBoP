@@ -70,26 +70,9 @@ namespace SoenderBoP
         {
             searchPanel.Controls.Add(SearchDGV);
 
-            //Color.FromKnownColor(KnownColor.IndianRed)
-
-            SearchDGV.BackgroundColor = Color.FromKnownColor(KnownColor.SeaShell); // baggrunden bag ved dgv
-            SearchDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.SeaShell); //celle farve :)
-
-            SearchDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed);
-            SearchDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            SearchDGV.ColumnHeadersDefaultCellStyle.Font = new Font(SearchDGV.Font, FontStyle.Regular);
-            SearchDGV.Name = "SearchDGV";
-            SearchDGV.Location = new Point(8, 8);
-            SearchDGV.Size = new Size(500, 250);
-            SearchDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            SearchDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            SearchDGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            SearchDGV.GridColor = Color.Black;
+            DataGridView DGV = SearchDGV;
+            GetDGVStyle.GetStyle(DGV);
             SearchDGV.RowHeadersVisible = false;
-
-            SearchDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            SearchDGV.MultiSelect = false;
-            SearchDGV.Dock = DockStyle.Fill;
         }
     }
 }

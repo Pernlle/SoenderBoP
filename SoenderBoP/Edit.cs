@@ -84,7 +84,9 @@ namespace SoenderBoP
         {
             string sqlcom = "SELECT mId AS 'Medlem ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',lNr AS 'Løbenummer' FROM Medlem";
             editMedlemDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            editMedlemDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridView DGV = editMedlemDGV;
+            GetDGVStyle.GetStyle(DGV);
+            editMedlemDGV.RowHeadersVisible = false;
         }
 
         private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)

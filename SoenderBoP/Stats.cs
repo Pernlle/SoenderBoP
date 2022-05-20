@@ -24,6 +24,9 @@ namespace SoenderBoP
         {            
             string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE lId = lNr;"; // lId IS NOT NULL
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DataGridView DGV = showStatsDGV;
+            GetDGVStyle.GetStyle(DGV);
+            showStatsDGV.RowHeadersVisible = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
