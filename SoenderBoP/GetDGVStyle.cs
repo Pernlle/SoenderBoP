@@ -3,29 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace SoenderBoP
 {
-    internal class DGVStyle
+    internal class GetDGVStyle
     {
-
         public static DataGridView GetStyle(DataGridView DGV)
         {
 
             //
             DGV.BackgroundColor = Color.FromKnownColor(KnownColor.Linen); // baggrunden bag ved dgv
             DGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen); //celle farve :)
-
-            //
-            DGV.ColumnHeadersDefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.IndianRed);
-            DGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-            DGV.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.Font, FontStyle.Regular);
-            DGV.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Transparent;
 
             /*
                 Cells style:
@@ -48,7 +41,7 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
             DGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.ControlLight);
             DGV.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            DGV.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 14);
+            DGV.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 12);
             DGV.ColumnHeadersDefaultCellStyle.Padding = new Padding(2);
             DGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -71,9 +64,7 @@ namespace SoenderBoP
             DGV.MultiSelect = false;
             DGV.Dock = DockStyle.Fill;
 
-            DGV.ColumnHeadersDefaultCellStyle.BackColor = Color.Linen;
-            DGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            DGV.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.Font, FontStyle.Bold);
+         
 
             //Allow User to:
             DGV.AllowDrop = false;
@@ -81,7 +72,7 @@ namespace SoenderBoP
             DGV.AllowUserToResizeRows = false;
             DGV.AllowUserToResizeColumns = false;
             DGV.AllowUserToDeleteRows = false;
-   
+
             return DGV;
         }
     }

@@ -72,6 +72,7 @@
     <Compile Include="Forside.Designer.cs">
       <DependentUpon>Forside.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetDGVStyle.cs" />
     <Compile Include="Lease.cs">
       <SubType>Form</SubType>
     </Compile>

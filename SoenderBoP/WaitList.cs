@@ -22,10 +22,24 @@ namespace SoenderBoP
         {
             string sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Lejlighed ORDER BY opskrevet ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DataGridView DGV = lejlighedDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+            lejlighedDGV.AllowUserToOrderColumns = false;
+
             sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = ungdomsDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+            ungdomsDGV.AllowUserToOrderColumns = false;
+
             sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Seniorbolig ORDER BY opskrevet ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = seniorDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+            seniorDGV.AllowUserToOrderColumns = false;
 
         }
 
