@@ -13,8 +13,6 @@ namespace SoenderBoP
 {
     public partial class WaitList : Form
     {
-        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
         public WaitList()
         {
             InitializeComponent();
@@ -22,11 +20,11 @@ namespace SoenderBoP
 
         private void WaitList_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT * FROM Lejlighed ORDER BY opskrevet ASC";
+            string sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Lejlighed ORDER BY opskrevet ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            sqlcom = "SELECT * FROM Ungdomsbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            sqlcom = "SELECT * FROM Seniorbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Seniorbolig ORDER BY opskrevet ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
 
         }
@@ -69,6 +67,21 @@ namespace SoenderBoP
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void waitlistPrintSBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void waitlistPrintUBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void waitlistPrintLbtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

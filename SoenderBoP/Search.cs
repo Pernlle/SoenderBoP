@@ -32,7 +32,7 @@ namespace SoenderBoP
             {
                 SearchDGV.Controls.Clear();
 
-                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig " +
                 $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }
@@ -43,7 +43,7 @@ namespace SoenderBoP
         {
             SetupDataGridView();
 
-            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig";
+            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig";
             SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
@@ -59,7 +59,7 @@ namespace SoenderBoP
             {
                 SearchDGV.Controls.Clear();
 
-                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNr AS 'Løbenummer' FROM Bolig " +
+                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig " +
                 $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }

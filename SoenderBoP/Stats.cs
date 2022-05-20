@@ -22,7 +22,7 @@ namespace SoenderBoP
 
         private void Stats_Load(object sender, EventArgs e)
         {            
-            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret;";
+            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', lId AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE lId = lNr;"; // lId IS NOT NULL
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 

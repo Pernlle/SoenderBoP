@@ -6,8 +6,13 @@ INSERT INTO Lejekontrakt (indflytter) VALUES
 INSERT INTO Medlem (fNavn, eNavn, tlf, email, lNr) VALUES
 	('Seamus', 'Finnigan', '93337866', 'seamusfinnigan@gmail.com', NULL),
 	('Petunia','Dursley', '32465067','petuniadursley@gmail.com', 1),
-	('Karen', 'Manager', '93337866', 'kaman@gmail.com', NULL)
-
+	('Karen', 'Manager', '93337866', 'kaman@gmail.com', NULL),
+	('Fie', 'Potter', '54629374', 'potterfie@gamil.com', NULL),
+	('Pernille', 'Heidi', '91026401', 'heidipernille@gmail.com', NULL),
+	('Arsim', 'Thor', '35648138', 'thorarsim@gmail.com', NULL),
+	('Tim', 'Jensen', '293401849', 'jensentim@gmail.com', NULL),
+	('Maya', 'Fjord', '927462048', 'fjordmaya@gmail.com', NULL),
+	('Thorbjørn', 'Perregaard', '756491026', 'perregaardthorbjørn@gmail.com', NULL)
 
 INSERT INTO Venteliste (medlemId, boligType, opskrevet) VALUES
 (2, 1, '3-1-2022'),
