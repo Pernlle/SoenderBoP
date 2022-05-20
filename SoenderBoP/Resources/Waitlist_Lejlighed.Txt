@@ -1,0 +1,3 @@
+Dato  | Fornavn | Efternavn | Medlems ID | 
+  1  |1-4-2022|Karen|Manager|  3  
+  2  |1-4-2022|Seamus|Finnigan|  1  

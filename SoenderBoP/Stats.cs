@@ -59,28 +59,17 @@ namespace SoenderBoP
         {
             string medlem = statsCBX.Text;
 
-            TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\Resourceforbrug_{medlem}.Txt");
-            writer.WriteLine("\t\t\tEmail \t\t   Res ID\t Løbenummer \t Startdato \t\t Slutdato");
-            for (int i = 0; i < showStatsDGV.Rows.Count - 1; i++) // rows
-            {
-                for (int j = 0; j < showStatsDGV.Columns.Count; j++) // columns
-                {
-                    if (j == showStatsDGV.Columns.Count - 1) // if last column
-                    {
-                        writer.WriteLine("\t" + showStatsDGV.Rows[i].Cells[j].Value.ToString());
-                    }
-                    else
-                        writer.Write("\t" + showStatsDGV.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
-                }
-            }
-            writer.Close();
-            MessageBox.Show("Exported");
+            string writerName = $"Resourceforbrug_{medlem}";
+            string[] headersarr = new string[] { "Email",  "Res", "ID", "Løbenummer", "Startdato", "Slutdato" };
+            DataGridView dgv = showStatsDGV;
+
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
         private void statsCBX_Click(object sender, EventArgs e)
         {
             string sqlcom = "SELECT email FROM Medlem";
             statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
-        }
+        }       
     }
 }
