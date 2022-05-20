@@ -45,7 +45,9 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.Padding = new Padding(2);
             DGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-
+            DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            DGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            DGV.GridColor = Color.Black;
 
             DGV.Location = new Point(8, 8);
             DGV.Size = new Size(500, 250);
@@ -53,19 +55,13 @@ namespace SoenderBoP
             DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            DGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-
-            DGV.GridColor = Color.Black;
-
+            
             DGV.RowHeadersVisible = false;
-
             DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DGV.MultiSelect = false;
             DGV.Dock = DockStyle.Fill;
 
-         
-
+        
             //Allow User to:
             DGV.AllowDrop = false;
             DGV.AllowUserToAddRows = false;
