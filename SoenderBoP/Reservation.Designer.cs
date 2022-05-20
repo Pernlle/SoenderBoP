@@ -66,12 +66,16 @@
             this.dSlutMaane1d = new System.Windows.Forms.MaskedTextBox();
             this.dSlutM1inut = new System.Windows.Forms.MaskedTextBox();
             this.dSlu1tTime = new System.Windows.Forms.MaskedTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // reserveBtn
             // 
-            this.reserveBtn.Location = new System.Drawing.Point(216, 346);
+            this.reserveBtn.Location = new System.Drawing.Point(20, 329);
             this.reserveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reserveBtn.Name = "reserveBtn";
             this.reserveBtn.Size = new System.Drawing.Size(345, 32);
@@ -107,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(212, 169);
+            this.label1.Location = new System.Drawing.Point(16, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 4;
@@ -116,7 +120,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 215);
+            this.label2.Location = new System.Drawing.Point(16, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 5;
@@ -125,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 262);
+            this.label3.Location = new System.Drawing.Point(16, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 6;
@@ -134,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(212, 299);
+            this.label4.Location = new System.Drawing.Point(16, 282);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 7;
@@ -172,17 +176,18 @@
             this.panel1.Controls.Add(this.kl);
             this.panel1.Controls.Add(this.reserveBtn);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(61, 38);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(667, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 473);
+            this.panel1.Size = new System.Drawing.Size(376, 573);
             this.panel1.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(277, 99);
+            this.label11.Location = new System.Drawing.Point(81, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(224, 29);
             this.label11.TabIndex = 23;
@@ -190,7 +195,7 @@
             // 
             // dSlutMinut
             // 
-            this.dSlutMinut.Location = new System.Drawing.Point(532, 296);
+            this.dSlutMinut.Location = new System.Drawing.Point(336, 279);
             this.dSlutMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMinut.MaxLength = 2;
             this.dSlutMinut.Name = "dSlutMinut";
@@ -200,7 +205,7 @@
             // 
             // dSlutTime
             // 
-            this.dSlutTime.Location = new System.Drawing.Point(483, 295);
+            this.dSlutTime.Location = new System.Drawing.Point(287, 278);
             this.dSlutTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutTime.MaxLength = 2;
             this.dSlutTime.Name = "dSlutTime";
@@ -210,7 +215,7 @@
             // 
             // dSlutAar
             // 
-            this.dSlutAar.Location = new System.Drawing.Point(404, 295);
+            this.dSlutAar.Location = new System.Drawing.Point(208, 278);
             this.dSlutAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutAar.MaxLength = 4;
             this.dSlutAar.Name = "dSlutAar";
@@ -220,7 +225,7 @@
             // 
             // dSlutMaaned
             // 
-            this.dSlutMaaned.Location = new System.Drawing.Point(374, 295);
+            this.dSlutMaaned.Location = new System.Drawing.Point(178, 278);
             this.dSlutMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMaaned.MaxLength = 2;
             this.dSlutMaaned.Name = "dSlutMaaned";
@@ -230,7 +235,7 @@
             // 
             // dSlutDag
             // 
-            this.dSlutDag.Location = new System.Drawing.Point(343, 295);
+            this.dSlutDag.Location = new System.Drawing.Point(147, 278);
             this.dSlutDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutDag.MaxLength = 2;
             this.dSlutDag.Name = "dSlutDag";
@@ -241,7 +246,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(513, 299);
+            this.label9.Location = new System.Drawing.Point(317, 282);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(13, 20);
             this.label9.TabIndex = 22;
@@ -250,7 +255,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(451, 299);
+            this.label10.Location = new System.Drawing.Point(255, 282);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 20);
             this.label10.TabIndex = 21;
@@ -258,7 +263,7 @@
             // 
             // dStartMinut
             // 
-            this.dStartMinut.Location = new System.Drawing.Point(532, 259);
+            this.dStartMinut.Location = new System.Drawing.Point(336, 242);
             this.dStartMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMinut.MaxLength = 2;
             this.dStartMinut.Name = "dStartMinut";
@@ -268,7 +273,7 @@
             // 
             // dStartTime
             // 
-            this.dStartTime.Location = new System.Drawing.Point(483, 259);
+            this.dStartTime.Location = new System.Drawing.Point(287, 242);
             this.dStartTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartTime.MaxLength = 2;
             this.dStartTime.Name = "dStartTime";
@@ -278,7 +283,7 @@
             // 
             // dStartAar
             // 
-            this.dStartAar.Location = new System.Drawing.Point(404, 257);
+            this.dStartAar.Location = new System.Drawing.Point(208, 240);
             this.dStartAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartAar.MaxLength = 4;
             this.dStartAar.Name = "dStartAar";
@@ -288,7 +293,7 @@
             // 
             // dStartMaaned
             // 
-            this.dStartMaaned.Location = new System.Drawing.Point(374, 257);
+            this.dStartMaaned.Location = new System.Drawing.Point(178, 240);
             this.dStartMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMaaned.MaxLength = 2;
             this.dStartMaaned.Name = "dStartMaaned";
@@ -298,7 +303,7 @@
             // 
             // loebeNr
             // 
-            this.loebeNr.Location = new System.Drawing.Point(343, 169);
+            this.loebeNr.Location = new System.Drawing.Point(147, 152);
             this.loebeNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loebeNr.Name = "loebeNr";
             this.loebeNr.Size = new System.Drawing.Size(100, 26);
@@ -306,7 +311,7 @@
             // 
             // rId
             // 
-            this.rId.Location = new System.Drawing.Point(343, 212);
+            this.rId.Location = new System.Drawing.Point(147, 195);
             this.rId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rId.Name = "rId";
             this.rId.Size = new System.Drawing.Size(100, 26);
@@ -314,7 +319,7 @@
             // 
             // dStartDag
             // 
-            this.dStartDag.Location = new System.Drawing.Point(343, 257);
+            this.dStartDag.Location = new System.Drawing.Point(147, 240);
             this.dStartDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartDag.MaxLength = 2;
             this.dStartDag.Name = "dStartDag";
@@ -325,7 +330,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(513, 262);
+            this.label6.Location = new System.Drawing.Point(317, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(13, 20);
             this.label6.TabIndex = 8;
@@ -334,7 +339,7 @@
             // kl
             // 
             this.kl.AutoSize = true;
-            this.kl.Location = new System.Drawing.Point(451, 262);
+            this.kl.Location = new System.Drawing.Point(255, 245);
             this.kl.Name = "kl";
             this.kl.Size = new System.Drawing.Size(26, 20);
             this.kl.TabIndex = 5;
@@ -434,11 +439,34 @@
             this.dSlu1tTime.TabIndex = 0;
             this.dSlu1tTime.Text = "00";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rDGV);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(667, 573);
+            this.panel2.TabIndex = 13;
+            // 
+            // rDGV
+            // 
+            this.rDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rDGV.Location = new System.Drawing.Point(162, 38);
+            this.rDGV.Name = "rDGV";
+            this.rDGV.RowHeadersWidth = 62;
+            this.rDGV.RowTemplate.Height = 28;
+            this.rDGV.Size = new System.Drawing.Size(451, 500);
+            this.rDGV.TabIndex = 0;
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 573);
+            this.ClientSize = new System.Drawing.Size(1043, 573);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dSlutM1inut);
@@ -458,8 +486,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Reservation";
             this.Text = "Reservation";
+            this.Load += new System.EventHandler(this.Reservation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +536,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView rDGV;
     }
 }

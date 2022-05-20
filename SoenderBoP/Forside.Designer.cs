@@ -45,6 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sloganLabel = new System.Windows.Forms.Label();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
+            this.lboligBtn = new System.Windows.Forms.Button();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.sloganPanel.SuspendLayout();
@@ -54,6 +55,7 @@
             // manuPanel
             // 
             this.manuPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.manuPanel.Controls.Add(this.lboligBtn);
             this.manuPanel.Controls.Add(this.loginBtn);
             this.manuPanel.Controls.Add(this.reservationBtn);
             this.manuPanel.Controls.Add(this.statsBtn);
@@ -304,6 +306,17 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
+            // lboligBtn
+            // 
+            this.lboligBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lboligBtn.Location = new System.Drawing.Point(0, 837);
+            this.lboligBtn.Name = "lboligBtn";
+            this.lboligBtn.Size = new System.Drawing.Size(264, 46);
+            this.lboligBtn.TabIndex = 5;
+            this.lboligBtn.Text = "Ledig";
+            this.lboligBtn.UseVisualStyleBackColor = true;
+            this.lboligBtn.Click += new System.EventHandler(this.lboligBtn_Click);
+            // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -344,6 +357,7 @@
         private System.Windows.Forms.Label sloganLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
+        private System.Windows.Forms.Button lboligBtn;
     }
 }
 

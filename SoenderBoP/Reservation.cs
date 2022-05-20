@@ -18,6 +18,42 @@ namespace SoenderBoP
             InitializeComponent();
         }
 
+        private void Reservation_Load(object sender, EventArgs e)
+        {
+            string sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            rDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            rDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            rDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            /*
+                Cells style:
+             */
+
+            rDGV.CellBorderStyle = DataGridViewCellBorderStyle.RaisedVertical;
+            rDGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen);
+            rDGV.DefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
+            rDGV.DefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.Linen);
+            rDGV.DefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
+            rDGV.DefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 11);
+            rDGV.DefaultCellStyle.Padding = new Padding(2);
+            rDGV.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            rDGV.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            /*
+                Header cells style:
+             */
+
+            rDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen);
+            rDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
+            rDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.ControlLight);
+            rDGV.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
+            rDGV.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 11);
+            rDGV.ColumnHeadersDefaultCellStyle.Padding = new Padding(1);
+            rDGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            rDGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            rDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+        }
+
         private void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
@@ -63,5 +99,7 @@ namespace SoenderBoP
             //}
             //else MessageBox.Show("Du skal udfylde skemaet korrekt :)");
         }
+
+        
     }
 }

@@ -157,5 +157,16 @@ namespace SoenderBoP
         {
             _thread.Abort();
         }
+
+        private void lboligBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Available frm = new Available() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+
+            this.panel1.Controls.Add(frm);
+
+            frm.Show();
+        }
     }
 }

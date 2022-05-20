@@ -52,6 +52,12 @@
     <Compile Include="AMenu.Designer.cs">
       <DependentUpon>AMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Available.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Available.Designer.cs">
+      <DependentUpon>Available.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="AMenu.resx">
       <DependentUpon>AMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Available.resx">
+      <DependentUpon>Available.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
