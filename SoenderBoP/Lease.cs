@@ -18,8 +18,11 @@ namespace SoenderBoP
             InitializeComponent();
             string sqlcom = $"SELECT loebeNr AS 'Løbenummer', adr AS 'Adresse',  indflytter AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Medlem, Lejekontrakt, Bolig, BoligType WHERE loebeNr = lNr";
             leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DataGridView DGV = leaseDGV;
+            GetDGVStyle.GetStyle(DGV);
+            leaseDGV.RowHeadersVisible = false;
 
-            
+
         }
 
         private void CreateLease_Click(object sender, EventArgs e)

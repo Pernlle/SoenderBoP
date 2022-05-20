@@ -24,6 +24,8 @@ namespace SoenderBoP
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
+            lejlighedDGV.RowHeadersVisible = false;
+
 
             lejlighedDGV.AllowUserToOrderColumns = false;
 
@@ -32,14 +34,10 @@ namespace SoenderBoP
             DGV = ungdomsDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            ungdomsDGV.AllowUserToOrderColumns = false;
-
             sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Seniorbolig ORDER BY opskrevet ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
-
-            seniorDGV.AllowUserToOrderColumns = false;
 
         }
 
