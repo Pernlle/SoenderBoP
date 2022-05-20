@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.tlfMTxt = new System.Windows.Forms.MaskedTextBox();
             this.eNavnMTxt = new System.Windows.Forms.MaskedTextBox();
             this.fNavnMTxt = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,19 +54,30 @@
             this.panel1.Controls.Add(this.tlfMTxt);
             this.panel1.Controls.Add(this.eNavnMTxt);
             this.panel1.Controls.Add(this.fNavnMTxt);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(565, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(335, 562);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(49, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(245, 40);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Opret medlem";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(262, 275);
+            this.label4.Location = new System.Drawing.Point(50, 358);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 25);
+            this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Email";
             // 
@@ -74,9 +85,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(262, 227);
+            this.label3.Location = new System.Drawing.Point(50, 298);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.Size = new System.Drawing.Size(96, 29);
             this.label3.TabIndex = 7;
             this.label3.Text = "Telefon";
             // 
@@ -84,9 +95,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(262, 180);
+            this.label2.Location = new System.Drawing.Point(50, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.Size = new System.Drawing.Size(113, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Efternavn";
             // 
@@ -94,17 +105,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(262, 132);
+            this.label1.Location = new System.Drawing.Point(50, 179);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.Size = new System.Drawing.Size(100, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Fornavn";
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(322, 321);
+            this.createBtn.Location = new System.Drawing.Point(117, 415);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(75, 23);
+            this.createBtn.Size = new System.Drawing.Size(84, 29);
             this.createBtn.TabIndex = 4;
             this.createBtn.Text = "Opret";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -112,48 +124,43 @@
             // 
             // emailMTxt
             // 
-            this.emailMTxt.Location = new System.Drawing.Point(376, 275);
+            this.emailMTxt.Location = new System.Drawing.Point(178, 358);
+            this.emailMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailMTxt.Name = "emailMTxt";
-            this.emailMTxt.Size = new System.Drawing.Size(100, 22);
+            this.emailMTxt.Size = new System.Drawing.Size(112, 26);
             this.emailMTxt.TabIndex = 3;
             // 
             // tlfMTxt
             // 
-            this.tlfMTxt.Location = new System.Drawing.Point(376, 227);
+            this.tlfMTxt.Location = new System.Drawing.Point(178, 298);
+            this.tlfMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tlfMTxt.Name = "tlfMTxt";
-            this.tlfMTxt.Size = new System.Drawing.Size(100, 22);
+            this.tlfMTxt.Size = new System.Drawing.Size(112, 26);
             this.tlfMTxt.TabIndex = 2;
             // 
             // eNavnMTxt
             // 
-            this.eNavnMTxt.Location = new System.Drawing.Point(376, 180);
+            this.eNavnMTxt.Location = new System.Drawing.Point(178, 239);
+            this.eNavnMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eNavnMTxt.Name = "eNavnMTxt";
-            this.eNavnMTxt.Size = new System.Drawing.Size(100, 22);
+            this.eNavnMTxt.Size = new System.Drawing.Size(112, 26);
             this.eNavnMTxt.TabIndex = 1;
             // 
             // fNavnMTxt
             // 
-            this.fNavnMTxt.Location = new System.Drawing.Point(376, 132);
+            this.fNavnMTxt.Location = new System.Drawing.Point(178, 179);
+            this.fNavnMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fNavnMTxt.Name = "fNavnMTxt";
-            this.fNavnMTxt.Size = new System.Drawing.Size(100, 22);
+            this.fNavnMTxt.Size = new System.Drawing.Size(112, 26);
             this.fNavnMTxt.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(261, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 36);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Opert medlem";
             // 
             // Create
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Create";
             this.Text = "Create";
             this.panel1.ResumeLayout(false);
