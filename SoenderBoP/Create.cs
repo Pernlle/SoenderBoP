@@ -38,5 +38,7 @@ namespace SoenderBoP
 
             CRUD.Create(insertInto, add, values, data);
         }
+        private string fNameMTxt;
+        public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }
     }
 }
