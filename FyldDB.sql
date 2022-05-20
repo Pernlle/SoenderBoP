@@ -22,7 +22,7 @@ INSERT INTO Venteliste (medlemId, boligType, opskrevet) VALUES
 (1, 1, '1-4-2022'),
 (1, 2, '1-2-2022')
 
-INSERT INTO Bolig (mndPris, adr, kvm, bType, loebeNr) VALUES 
+INSERT INTO Bolig (mndPris, adr, kvm, bType, loebenummer) VALUES 
 ('6000', 'Ligustervænget 4', '72', '1', NULL),
 ('4000', 'Ligustervænget 11', '50', '2', NULL),
 ('3000', 'Ligustervænget 3', '45', '3', '1'),
