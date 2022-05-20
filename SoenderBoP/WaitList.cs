@@ -69,5 +69,20 @@ namespace SoenderBoP
             }
 
         }
+
+        private void waitlistPrintSBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void waitlistPrintUBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void waitlistPrintLbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
