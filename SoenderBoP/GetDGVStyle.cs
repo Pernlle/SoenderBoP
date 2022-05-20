@@ -19,6 +19,9 @@ namespace SoenderBoP
             //
             DGV.BackgroundColor = Color.FromKnownColor(KnownColor.Linen); // baggrunden bag ved dgv
             DGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen); //celle farve :)
+            DGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            DGV.GridColor = Color.FromKnownColor(KnownColor.SlateGray);
+
 
             /*
                 Cells style:
@@ -26,9 +29,9 @@ namespace SoenderBoP
 
             DGV.DefaultCellStyle.BackColor = Color.FromKnownColor(KnownColor.Linen);
             DGV.DefaultCellStyle.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            DGV.DefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.ControlLight);
+            DGV.DefaultCellStyle.SelectionBackColor = Color.FromKnownColor(KnownColor.Linen);
             DGV.DefaultCellStyle.SelectionForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            DGV.DefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 14);
+            DGV.DefaultCellStyle.Font = new Font("Microsoft JhengHei UI", 12);
             DGV.DefaultCellStyle.Padding = new Padding(2);
             DGV.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -46,8 +49,7 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            DGV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            DGV.GridColor = Color.Black;
+            
 
             DGV.Location = new Point(8, 8);
             DGV.Size = new Size(500, 250);
