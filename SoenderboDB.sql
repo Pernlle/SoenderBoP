@@ -32,7 +32,7 @@ CREATE TABLE Bolig(
 	adr VARCHAR(60),
 	kvm INT,
 	bType INT FOREIGN KEY REFERENCES BoligType(id),
-	loebeNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
+	loebenummer INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
 );
 
 /*FM - LøbeNr fra Lejekontrakt - Kan være NULL uden lejekontrakt.

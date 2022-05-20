@@ -16,7 +16,7 @@ namespace SoenderBoP
         public Lease()
         {
             InitializeComponent();
-            string sqlcom = $"SELECT loebeNr AS 'Løbenummer', adr AS 'Adresse',  indflytter AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Medlem, Lejekontrakt, Bolig, BoligType WHERE loebeNr = lNr;";
+            string sqlcom = $"SELECT loebeNr AS 'Løbenummer', adr AS 'Adresse',  indflytter AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Medlem, Lejekontrakt, Bolig, BoligType WHERE loebeNr = lNr";
             leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
 
             
@@ -33,16 +33,22 @@ namespace SoenderBoP
 
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
+            conn.Open();
 
-            //Sql sætning
+            ////Sql sætning
             string sqlCom = $"INSERT INTO Lejekontrakt VALUES ({dato});";
-
+            
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            cmd.ExecuteNonQuery();
+
+            sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
 
             //EFTER ny lejekontrakt oprettes henter vi seneste løbeNr.
-            sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
+
             var loebeNr = (Int32)cmd.ExecuteScalar();
+
+            
 
             //Test om de rigtige værdier kan puttes i db
             MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
@@ -53,17 +59,32 @@ namespace SoenderBoP
             SqlCommand cmd2 = new SqlCommand(sqlCom, conn);
             cmd2.Parameters.AddWithValue("@lNr", loebeNr);
 
-            // Fjerner medlemmet fra Venteliste(n/erne) denne er på
-            sqlCom = $"DELETE FROM Venteliste WHERE medlemId = {mId}";
+            //Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
+            sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
+            SqlCommand cmd3 = new SqlCommand(sqlCom, conn);
+            cmd3.Parameters.AddWithValue("@lNr", loebeNr);
 
+            // Fjerner medlemmet fra Venteliste(n/erne) denne er på
+            sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
+            SqlCommand cmd4 = new SqlCommand(sqlCom, conn);
+
+
+            conn.Close();
 
             try
             {
                 conn.Open();
-                cmd.ExecuteNonQuery();
+                
+                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
+                cmd4.ExecuteNonQuery();
                 conn.Close();
+
+
                 MessageBox.Show($"oprettet");
                 //MessageBox.Show(sqlCom);
+                this.leaseDGV.Refresh();
+                this.leaseDGV.Update();
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
