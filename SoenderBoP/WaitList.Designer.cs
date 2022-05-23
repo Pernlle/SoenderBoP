@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lejlighedDGV = new System.Windows.Forms.DataGridView();
             this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.createLBTN = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.waitlistPrintLbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.ungdomsDGV = new System.Windows.Forms.DataGridView();
             this.ungdomsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.createUBTN = new System.Windows.Forms.Button();
             this.waitlistPrintUBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +56,10 @@
             this.seniorDGV = new System.Windows.Forms.DataGridView();
             this.seniorNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.smIdTXT = new System.Windows.Forms.TextBox();
+            this.wsCBX = new System.Windows.Forms.ComboBox();
+            this.sDTP = new System.Windows.Forms.DateTimePicker();
+            this.createSBTN = new System.Windows.Forms.Button();
             this.waitlistPrintSBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,15 +71,16 @@
             this.lejlighedTableAdapter = new SoenderBoP.waitListViewsTableAdapters.LejlighedTableAdapter();
             this.ungdomsboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.UngdomsboligTableAdapter();
             this.seniorboligTableAdapter = new SoenderBoP.waitListViewsTableAdapters.SeniorboligTableAdapter();
-            this.createAbtn = new System.Windows.Forms.Button();
-            this.createBbtn = new System.Windows.Forms.Button();
-            this.createCbtn = new System.Windows.Forms.Button();
+            this.lDTP = new System.Windows.Forms.DateTimePicker();
+            this.lCBX = new System.Windows.Forms.ComboBox();
+            this.lmIdTXT = new System.Windows.Forms.TextBox();
+            this.uDTP = new System.Windows.Forms.DateTimePicker();
+            this.umIdTXT = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.lejlighed.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.ungdomsbolig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).BeginInit();
             this.panel2.SuspendLayout();
@@ -98,18 +105,18 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 5);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(846, 460);
+            this.tabControl1.Size = new System.Drawing.Size(1002, 575);
             this.tabControl1.TabIndex = 0;
             // 
             // lejlighed
             // 
             this.lejlighed.Controls.Add(this.panel4);
             this.lejlighed.Controls.Add(this.panel1);
-            this.lejlighed.Location = new System.Drawing.Point(4, 35);
+            this.lejlighed.Location = new System.Drawing.Point(4, 38);
             this.lejlighed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lejlighed.Name = "lejlighed";
             this.lejlighed.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lejlighed.Size = new System.Drawing.Size(838, 421);
+            this.lejlighed.Size = new System.Drawing.Size(994, 533);
             this.lejlighed.TabIndex = 0;
             this.lejlighed.Text = "Lejlighed";
             this.lejlighed.UseVisualStyleBackColor = true;
@@ -117,11 +124,12 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.lejlighedDGV);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(532, 417);
+            this.panel4.Size = new System.Drawing.Size(650, 529);
             this.panel4.TabIndex = 2;
             // 
             // lejlighedDGV
@@ -138,15 +146,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle10;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -158,7 +166,7 @@
             this.lejlighedDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.lejlighedDGV.RowTemplate.Height = 28;
             this.lejlighedDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.lejlighedDGV.Size = new System.Drawing.Size(532, 417);
+            this.lejlighedDGV.Size = new System.Drawing.Size(650, 529);
             this.lejlighedDGV.TabIndex = 0;
             this.lejlighedDGV.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.lejlighedDGV_RowPostPaint);
             // 
@@ -171,53 +179,77 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.createAbtn);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.lmIdTXT);
+            this.panel1.Controls.Add(this.lCBX);
+            this.panel1.Controls.Add(this.lDTP);
+            this.panel1.Controls.Add(this.waitlistPrintLbtn);
+            this.panel1.Controls.Add(this.createLBTN);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(535, 2);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(653, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 417);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(338, 529);
+            this.panel1.TabIndex = 0;
+            // 
+            // createLBTN
+            // 
+            this.createLBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.createLBTN.FlatAppearance.BorderSize = 0;
+            this.createLBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createLBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createLBTN.ForeColor = System.Drawing.Color.White;
+            this.createLBTN.Location = new System.Drawing.Point(12, 326);
+            this.createLBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.createLBTN.Name = "createLBTN";
+            this.createLBTN.Size = new System.Drawing.Size(310, 50);
+            this.createLBTN.TabIndex = 4;
+            this.createLBTN.Text = "TILFØJ";
+            this.createLBTN.UseVisualStyleBackColor = false;
+            this.createLBTN.Click += new System.EventHandler(this.createLBTN_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.waitlistPrintLbtn);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 317);
+            this.panel5.Location = new System.Drawing.Point(275, 353);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 100);
+            this.panel5.Size = new System.Drawing.Size(338, 10);
             this.panel5.TabIndex = 3;
             // 
             // waitlistPrintLbtn
             // 
+            this.waitlistPrintLbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.waitlistPrintLbtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.waitlistPrintLbtn.Location = new System.Drawing.Point(0, 70);
+            this.waitlistPrintLbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.waitlistPrintLbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waitlistPrintLbtn.ForeColor = System.Drawing.Color.White;
+            this.waitlistPrintLbtn.Location = new System.Drawing.Point(0, 485);
+            this.waitlistPrintLbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintLbtn.Name = "waitlistPrintLbtn";
-            this.waitlistPrintLbtn.Size = new System.Drawing.Size(300, 30);
-            this.waitlistPrintLbtn.TabIndex = 0;
+            this.waitlistPrintLbtn.Size = new System.Drawing.Size(338, 44);
+            this.waitlistPrintLbtn.TabIndex = 5;
             this.waitlistPrintLbtn.Text = "Print";
-            this.waitlistPrintLbtn.UseVisualStyleBackColor = true;
+            this.waitlistPrintLbtn.UseVisualStyleBackColor = false;
             this.waitlistPrintLbtn.Click += new System.EventHandler(this.waitlistPrintLbtn_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 142);
+            this.label3.Location = new System.Drawing.Point(6, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 22);
+            this.label3.Size = new System.Drawing.Size(70, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Dato:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 66);
+            this.label2.Location = new System.Drawing.Point(6, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 22);
+            this.label2.Size = new System.Drawing.Size(108, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Medlem:";
             // 
@@ -227,7 +259,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 22);
+            this.label1.Size = new System.Drawing.Size(204, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tilføj til venteliste";
             // 
@@ -235,11 +267,11 @@
             // 
             this.ungdomsbolig.Controls.Add(this.ungdomsDGV);
             this.ungdomsbolig.Controls.Add(this.panel2);
-            this.ungdomsbolig.Location = new System.Drawing.Point(4, 35);
+            this.ungdomsbolig.Location = new System.Drawing.Point(4, 38);
             this.ungdomsbolig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ungdomsbolig.Name = "ungdomsbolig";
             this.ungdomsbolig.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ungdomsbolig.Size = new System.Drawing.Size(838, 421);
+            this.ungdomsbolig.Size = new System.Drawing.Size(994, 533);
             this.ungdomsbolig.TabIndex = 1;
             this.ungdomsbolig.Text = "Ungdomsbolig";
             this.ungdomsbolig.UseVisualStyleBackColor = true;
@@ -257,14 +289,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -273,7 +305,7 @@
             this.ungdomsDGV.RowHeadersVisible = false;
             this.ungdomsDGV.RowHeadersWidth = 62;
             this.ungdomsDGV.RowTemplate.Height = 28;
-            this.ungdomsDGV.Size = new System.Drawing.Size(531, 417);
+            this.ungdomsDGV.Size = new System.Drawing.Size(649, 529);
             this.ungdomsDGV.TabIndex = 1;
             this.ungdomsDGV.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.ungdomsDGV_RowPostPaint);
             // 
@@ -286,44 +318,68 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.createBbtn);
+            this.panel2.Controls.Add(this.umIdTXT);
+            this.panel2.Controls.Add(this.uDTP);
+            this.panel2.Controls.Add(this.createUBTN);
             this.panel2.Controls.Add(this.waitlistPrintUBtn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(534, 2);
+            this.panel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(652, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 417);
+            this.panel2.Size = new System.Drawing.Size(339, 529);
             this.panel2.TabIndex = 0;
+            // 
+            // createUBTN
+            // 
+            this.createUBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.createUBTN.FlatAppearance.BorderSize = 0;
+            this.createUBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createUBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createUBTN.ForeColor = System.Drawing.Color.Transparent;
+            this.createUBTN.Location = new System.Drawing.Point(18, 324);
+            this.createUBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.createUBTN.Name = "createUBTN";
+            this.createUBTN.Size = new System.Drawing.Size(302, 49);
+            this.createUBTN.TabIndex = 7;
+            this.createUBTN.Text = "TILFØJ";
+            this.createUBTN.UseVisualStyleBackColor = false;
+            this.createUBTN.Click += new System.EventHandler(this.createUBTN_Click);
             // 
             // waitlistPrintUBtn
             // 
+            this.waitlistPrintUBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.waitlistPrintUBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.waitlistPrintUBtn.Location = new System.Drawing.Point(0, 387);
+            this.waitlistPrintUBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.waitlistPrintUBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waitlistPrintUBtn.ForeColor = System.Drawing.Color.White;
+            this.waitlistPrintUBtn.Location = new System.Drawing.Point(0, 483);
+            this.waitlistPrintUBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintUBtn.Name = "waitlistPrintUBtn";
-            this.waitlistPrintUBtn.Size = new System.Drawing.Size(301, 30);
+            this.waitlistPrintUBtn.Size = new System.Drawing.Size(339, 46);
             this.waitlistPrintUBtn.TabIndex = 6;
             this.waitlistPrintUBtn.Text = "Print";
-            this.waitlistPrintUBtn.UseVisualStyleBackColor = true;
+            this.waitlistPrintUBtn.UseVisualStyleBackColor = false;
             this.waitlistPrintUBtn.Click += new System.EventHandler(this.waitlistPrintUBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 142);
+            this.label4.Location = new System.Drawing.Point(12, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.Size = new System.Drawing.Size(70, 32);
             this.label4.TabIndex = 5;
             this.label4.Text = "Dato:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 68);
+            this.label5.Location = new System.Drawing.Point(12, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 22);
+            this.label5.Size = new System.Drawing.Size(108, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "Medlem:";
             // 
@@ -333,7 +389,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 22);
+            this.label6.Size = new System.Drawing.Size(204, 32);
             this.label6.TabIndex = 3;
             this.label6.Text = "Tilføj til venteliste";
             // 
@@ -341,11 +397,11 @@
             // 
             this.seniorbolig.Controls.Add(this.seniorDGV);
             this.seniorbolig.Controls.Add(this.panel3);
-            this.seniorbolig.Location = new System.Drawing.Point(4, 35);
+            this.seniorbolig.Location = new System.Drawing.Point(4, 38);
             this.seniorbolig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seniorbolig.Name = "seniorbolig";
             this.seniorbolig.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seniorbolig.Size = new System.Drawing.Size(838, 421);
+            this.seniorbolig.Size = new System.Drawing.Size(994, 533);
             this.seniorbolig.TabIndex = 2;
             this.seniorbolig.Text = "Seniorbolig";
             this.seniorbolig.UseVisualStyleBackColor = true;
@@ -371,7 +427,7 @@
             this.seniorDGV.RowHeadersVisible = false;
             this.seniorDGV.RowHeadersWidth = 62;
             this.seniorDGV.RowTemplate.Height = 28;
-            this.seniorDGV.Size = new System.Drawing.Size(533, 417);
+            this.seniorDGV.Size = new System.Drawing.Size(652, 529);
             this.seniorDGV.TabIndex = 1;
             this.seniorDGV.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.seniorDGV_RowPostPaint);
             // 
@@ -384,44 +440,100 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.createCbtn);
+            this.panel3.Controls.Add(this.smIdTXT);
+            this.panel3.Controls.Add(this.wsCBX);
+            this.panel3.Controls.Add(this.sDTP);
+            this.panel3.Controls.Add(this.createSBTN);
             this.panel3.Controls.Add(this.waitlistPrintSBtn);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(536, 2);
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(655, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(299, 417);
+            this.panel3.Size = new System.Drawing.Size(336, 529);
             this.panel3.TabIndex = 0;
+            // 
+            // smIdTXT
+            // 
+            this.smIdTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.smIdTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.smIdTXT.Location = new System.Drawing.Point(252, 128);
+            this.smIdTXT.Name = "smIdTXT";
+            this.smIdTXT.Size = new System.Drawing.Size(64, 32);
+            this.smIdTXT.TabIndex = 10;
+            // 
+            // wsCBX
+            // 
+            this.wsCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.wsCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wsCBX.FormattingEnabled = true;
+            this.wsCBX.Location = new System.Drawing.Point(12, 120);
+            this.wsCBX.Name = "wsCBX";
+            this.wsCBX.Size = new System.Drawing.Size(234, 40);
+            this.wsCBX.TabIndex = 9;
+            // 
+            // sDTP
+            // 
+            this.sDTP.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sDTP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sDTP.Location = new System.Drawing.Point(12, 214);
+            this.sDTP.Name = "sDTP";
+            this.sDTP.Size = new System.Drawing.Size(305, 39);
+            this.sDTP.TabIndex = 8;
+            // 
+            // createSBTN
+            // 
+            this.createSBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.createSBTN.FlatAppearance.BorderSize = 0;
+            this.createSBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createSBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createSBTN.ForeColor = System.Drawing.Color.White;
+            this.createSBTN.Location = new System.Drawing.Point(13, 331);
+            this.createSBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.createSBTN.Name = "createSBTN";
+            this.createSBTN.Size = new System.Drawing.Size(304, 49);
+            this.createSBTN.TabIndex = 7;
+            this.createSBTN.TabStop = false;
+            this.createSBTN.Text = "TILFØJ";
+            this.createSBTN.UseVisualStyleBackColor = false;
+            this.createSBTN.Click += new System.EventHandler(this.createSBTN_Click);
             // 
             // waitlistPrintSBtn
             // 
+            this.waitlistPrintSBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.waitlistPrintSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitlistPrintSBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.waitlistPrintSBtn.Location = new System.Drawing.Point(0, 387);
+            this.waitlistPrintSBtn.FlatAppearance.BorderSize = 0;
+            this.waitlistPrintSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.waitlistPrintSBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waitlistPrintSBtn.ForeColor = System.Drawing.Color.White;
+            this.waitlistPrintSBtn.Location = new System.Drawing.Point(0, 478);
+            this.waitlistPrintSBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintSBtn.Name = "waitlistPrintSBtn";
-            this.waitlistPrintSBtn.Size = new System.Drawing.Size(299, 30);
+            this.waitlistPrintSBtn.Size = new System.Drawing.Size(336, 51);
             this.waitlistPrintSBtn.TabIndex = 6;
             this.waitlistPrintSBtn.Text = "Print";
-            this.waitlistPrintSBtn.UseVisualStyleBackColor = true;
+            this.waitlistPrintSBtn.UseVisualStyleBackColor = false;
             this.waitlistPrintSBtn.Click += new System.EventHandler(this.waitlistPrintSBtn_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 142);
+            this.label7.Location = new System.Drawing.Point(6, 178);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 22);
+            this.label7.Size = new System.Drawing.Size(70, 32);
             this.label7.TabIndex = 5;
             this.label7.Text = "Dato:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 67);
+            this.label8.Location = new System.Drawing.Point(6, 84);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
+            this.label8.Size = new System.Drawing.Size(108, 32);
             this.label8.TabIndex = 4;
             this.label8.Text = "Medlem:";
             // 
@@ -431,7 +543,7 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 22);
+            this.label9.Size = new System.Drawing.Size(204, 32);
             this.label9.TabIndex = 3;
             this.label9.Text = "Tilføj til venteliste";
             // 
@@ -467,38 +579,54 @@
             // 
             this.seniorboligTableAdapter.ClearBeforeFill = true;
             // 
-            // createAbtn
+            // lDTP
             // 
-            this.createAbtn.Location = new System.Drawing.Point(54, 259);
-            this.createAbtn.Name = "createAbtn";
-            this.createAbtn.Size = new System.Drawing.Size(212, 31);
-            this.createAbtn.TabIndex = 4;
-            this.createAbtn.Text = "Tilføj til venteliste";
-            this.createAbtn.UseVisualStyleBackColor = true;
+            this.lDTP.Location = new System.Drawing.Point(12, 214);
+            this.lDTP.Name = "lDTP";
+            this.lDTP.Size = new System.Drawing.Size(310, 39);
+            this.lDTP.TabIndex = 3;
             // 
-            // createBbtn
+            // lCBX
             // 
-            this.createBbtn.Location = new System.Drawing.Point(54, 259);
-            this.createBbtn.Name = "createBbtn";
-            this.createBbtn.Size = new System.Drawing.Size(203, 30);
-            this.createBbtn.TabIndex = 7;
-            this.createBbtn.Text = "Tilføj til venteliste";
-            this.createBbtn.UseVisualStyleBackColor = true;
+            this.lCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lCBX.FormattingEnabled = true;
+            this.lCBX.Location = new System.Drawing.Point(12, 118);
+            this.lCBX.Name = "lCBX";
+            this.lCBX.Size = new System.Drawing.Size(212, 40);
+            this.lCBX.TabIndex = 1;
             // 
-            // createCbtn
+            // lmIdTXT
             // 
-            this.createCbtn.Location = new System.Drawing.Point(54, 259);
-            this.createCbtn.Name = "createCbtn";
-            this.createCbtn.Size = new System.Drawing.Size(203, 30);
-            this.createCbtn.TabIndex = 7;
-            this.createCbtn.Text = "Tilføj til venteliste";
-            this.createCbtn.UseVisualStyleBackColor = true;
+            this.lmIdTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lmIdTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lmIdTXT.Location = new System.Drawing.Point(230, 121);
+            this.lmIdTXT.Name = "lmIdTXT";
+            this.lmIdTXT.Size = new System.Drawing.Size(92, 32);
+            this.lmIdTXT.TabIndex = 2;
+            // 
+            // uDTP
+            // 
+            this.uDTP.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uDTP.Location = new System.Drawing.Point(18, 214);
+            this.uDTP.Name = "uDTP";
+            this.uDTP.Size = new System.Drawing.Size(302, 39);
+            this.uDTP.TabIndex = 8;
+            // 
+            // umIdTXT
+            // 
+            this.umIdTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.umIdTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.umIdTXT.Location = new System.Drawing.Point(18, 122);
+            this.umIdTXT.Name = "umIdTXT";
+            this.umIdTXT.Size = new System.Drawing.Size(302, 32);
+            this.umIdTXT.TabIndex = 9;
             // 
             // WaitList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 460);
+            this.ClientSize = new System.Drawing.Size(1002, 575);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "WaitList";
@@ -510,7 +638,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.ungdomsbolig.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -563,8 +690,16 @@
         private System.Windows.Forms.Button waitlistPrintLbtn;
         private System.Windows.Forms.Button waitlistPrintUBtn;
         private System.Windows.Forms.Button waitlistPrintSBtn;
-        private System.Windows.Forms.Button createAbtn;
-        private System.Windows.Forms.Button createBbtn;
-        private System.Windows.Forms.Button createCbtn;
+        private System.Windows.Forms.Button createLBTN;
+        private System.Windows.Forms.Button createUBTN;
+        private System.Windows.Forms.Button createSBTN;
+        private System.Windows.Forms.TextBox smIdTXT;
+        private System.Windows.Forms.ComboBox wsCBX;
+        private System.Windows.Forms.DateTimePicker sDTP;
+        private System.Windows.Forms.TextBox lmIdTXT;
+        private System.Windows.Forms.ComboBox lCBX;
+        private System.Windows.Forms.DateTimePicker lDTP;
+        private System.Windows.Forms.TextBox umIdTXT;
+        private System.Windows.Forms.DateTimePicker uDTP;
     }
 }

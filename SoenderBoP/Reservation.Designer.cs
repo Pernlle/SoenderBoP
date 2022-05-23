@@ -84,10 +84,10 @@
             this.reserveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reserveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reserveBtn.ForeColor = System.Drawing.Color.White;
-            this.reserveBtn.Location = new System.Drawing.Point(54, 354);
+            this.reserveBtn.Location = new System.Drawing.Point(24, 424);
             this.reserveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reserveBtn.Name = "reserveBtn";
-            this.reserveBtn.Size = new System.Drawing.Size(352, 47);
+            this.reserveBtn.Size = new System.Drawing.Size(448, 47);
             this.reserveBtn.TabIndex = 13;
             this.reserveBtn.Text = "Reserver";
             this.reserveBtn.UseVisualStyleBackColor = false;
@@ -120,36 +120,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 160);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
+            this.label1.Size = new System.Drawing.Size(104, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Løbe Nr.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 206);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.Size = new System.Drawing.Size(150, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ressource ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 253);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 21);
+            this.label3.Size = new System.Drawing.Size(118, 32);
             this.label3.TabIndex = 6;
             this.label3.Text = "Dato start";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 299);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 357);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 21);
+            this.label4.Size = new System.Drawing.Size(110, 32);
             this.label4.TabIndex = 7;
             this.label4.Text = "Dato slut";
             // 
@@ -188,17 +192,17 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(595, 3);
+            this.panel1.Location = new System.Drawing.Point(571, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 526);
+            this.panel1.Size = new System.Drawing.Size(484, 526);
             this.panel1.TabIndex = 0;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(48, 96);
+            this.label11.Location = new System.Drawing.Point(20, 59);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(212, 32);
             this.label11.TabIndex = 23;
@@ -208,11 +212,12 @@
             // 
             this.dSlutMinut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutMinut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dSlutMinut.Location = new System.Drawing.Point(373, 291);
+            this.dSlutMinut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSlutMinut.Location = new System.Drawing.Point(434, 283);
             this.dSlutMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMinut.MaxLength = 2;
             this.dSlutMinut.Name = "dSlutMinut";
-            this.dSlutMinut.Size = new System.Drawing.Size(26, 22);
+            this.dSlutMinut.Size = new System.Drawing.Size(38, 32);
             this.dSlutMinut.TabIndex = 12;
             this.dSlutMinut.Text = "00";
             this.dSlutMinut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -221,11 +226,12 @@
             // 
             this.dSlutTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dSlutTime.Location = new System.Drawing.Point(324, 291);
+            this.dSlutTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSlutTime.Location = new System.Drawing.Point(369, 357);
             this.dSlutTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutTime.MaxLength = 2;
             this.dSlutTime.Name = "dSlutTime";
-            this.dSlutTime.Size = new System.Drawing.Size(26, 22);
+            this.dSlutTime.Size = new System.Drawing.Size(38, 32);
             this.dSlutTime.TabIndex = 11;
             this.dSlutTime.Text = "00";
             this.dSlutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -234,11 +240,12 @@
             // 
             this.dSlutAar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutAar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dSlutAar.Location = new System.Drawing.Point(242, 291);
+            this.dSlutAar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSlutAar.Location = new System.Drawing.Point(252, 357);
             this.dSlutAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutAar.MaxLength = 4;
             this.dSlutAar.Name = "dSlutAar";
-            this.dSlutAar.Size = new System.Drawing.Size(49, 22);
+            this.dSlutAar.Size = new System.Drawing.Size(66, 32);
             this.dSlutAar.TabIndex = 10;
             this.dSlutAar.Text = "2022";
             this.dSlutAar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -247,43 +254,47 @@
             // 
             this.dSlutMaaned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutMaaned.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dSlutMaaned.Location = new System.Drawing.Point(212, 291);
+            this.dSlutMaaned.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSlutMaaned.Location = new System.Drawing.Point(214, 357);
             this.dSlutMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMaaned.MaxLength = 2;
             this.dSlutMaaned.Name = "dSlutMaaned";
-            this.dSlutMaaned.Size = new System.Drawing.Size(25, 22);
+            this.dSlutMaaned.Size = new System.Drawing.Size(32, 32);
             this.dSlutMaaned.TabIndex = 9;
-            this.dSlutMaaned.Text = "00";
+            this.dSlutMaaned.Text = "12";
             this.dSlutMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutDag
             // 
             this.dSlutDag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutDag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dSlutDag.Location = new System.Drawing.Point(181, 291);
+            this.dSlutDag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSlutDag.Location = new System.Drawing.Point(176, 357);
             this.dSlutDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutDag.MaxLength = 2;
             this.dSlutDag.Name = "dSlutDag";
-            this.dSlutDag.Size = new System.Drawing.Size(25, 22);
+            this.dSlutDag.Size = new System.Drawing.Size(31, 32);
             this.dSlutDag.TabIndex = 8;
-            this.dSlutDag.Text = "00";
+            this.dSlutDag.Text = "31";
             this.dSlutDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(356, 295);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(413, 357);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 21);
+            this.label9.Size = new System.Drawing.Size(19, 32);
             this.label9.TabIndex = 22;
             this.label9.Text = ":";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(297, 294);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(324, 357);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 21);
+            this.label10.Size = new System.Drawing.Size(39, 32);
             this.label10.TabIndex = 21;
             this.label10.Text = "Kl.";
             // 
@@ -291,11 +302,12 @@
             // 
             this.dStartMinut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dStartMinut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dStartMinut.Location = new System.Drawing.Point(373, 250);
+            this.dStartMinut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dStartMinut.Location = new System.Drawing.Point(434, 356);
             this.dStartMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMinut.MaxLength = 2;
             this.dStartMinut.Name = "dStartMinut";
-            this.dStartMinut.Size = new System.Drawing.Size(26, 22);
+            this.dStartMinut.Size = new System.Drawing.Size(38, 32);
             this.dStartMinut.TabIndex = 7;
             this.dStartMinut.Text = "00";
             this.dStartMinut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -304,11 +316,12 @@
             // 
             this.dStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dStartTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dStartTime.Location = new System.Drawing.Point(324, 250);
+            this.dStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dStartTime.Location = new System.Drawing.Point(369, 283);
             this.dStartTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartTime.MaxLength = 2;
             this.dStartTime.Name = "dStartTime";
-            this.dStartTime.Size = new System.Drawing.Size(26, 22);
+            this.dStartTime.Size = new System.Drawing.Size(38, 32);
             this.dStartTime.TabIndex = 6;
             this.dStartTime.Text = "00";
             this.dStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -317,11 +330,12 @@
             // 
             this.dStartAar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dStartAar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dStartAar.Location = new System.Drawing.Point(242, 248);
+            this.dStartAar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dStartAar.Location = new System.Drawing.Point(251, 283);
             this.dStartAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartAar.MaxLength = 4;
             this.dStartAar.Name = "dStartAar";
-            this.dStartAar.Size = new System.Drawing.Size(49, 22);
+            this.dStartAar.Size = new System.Drawing.Size(66, 32);
             this.dStartAar.TabIndex = 5;
             this.dStartAar.Text = "2022";
             this.dStartAar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -330,63 +344,69 @@
             // 
             this.dStartMaaned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dStartMaaned.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dStartMaaned.Location = new System.Drawing.Point(212, 248);
+            this.dStartMaaned.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dStartMaaned.Location = new System.Drawing.Point(213, 283);
             this.dStartMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMaaned.MaxLength = 2;
             this.dStartMaaned.Name = "dStartMaaned";
-            this.dStartMaaned.Size = new System.Drawing.Size(25, 22);
+            this.dStartMaaned.Size = new System.Drawing.Size(32, 32);
             this.dStartMaaned.TabIndex = 4;
-            this.dStartMaaned.Text = "00";
+            this.dStartMaaned.Text = "12";
             this.dStartMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // loebeNr
             // 
             this.loebeNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loebeNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loebeNr.Location = new System.Drawing.Point(181, 159);
+            this.loebeNr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loebeNr.Location = new System.Drawing.Point(175, 132);
             this.loebeNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loebeNr.Name = "loebeNr";
-            this.loebeNr.Size = new System.Drawing.Size(100, 22);
+            this.loebeNr.Size = new System.Drawing.Size(63, 32);
             this.loebeNr.TabIndex = 1;
             // 
             // rId
             // 
             this.rId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rId.Location = new System.Drawing.Point(181, 203);
+            this.rId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rId.Location = new System.Drawing.Point(176, 207);
             this.rId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rId.Name = "rId";
-            this.rId.Size = new System.Drawing.Size(100, 22);
+            this.rId.Size = new System.Drawing.Size(62, 32);
             this.rId.TabIndex = 2;
             // 
             // dStartDag
             // 
             this.dStartDag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dStartDag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dStartDag.Location = new System.Drawing.Point(181, 248);
+            this.dStartDag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dStartDag.Location = new System.Drawing.Point(175, 283);
             this.dStartDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartDag.MaxLength = 2;
             this.dStartDag.Name = "dStartDag";
-            this.dStartDag.Size = new System.Drawing.Size(25, 22);
+            this.dStartDag.Size = new System.Drawing.Size(32, 32);
             this.dStartDag.TabIndex = 3;
-            this.dStartDag.Text = "00";
+            this.dStartDag.Text = "31";
             this.dStartDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(356, 253);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(413, 283);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 21);
+            this.label6.Size = new System.Drawing.Size(19, 32);
             this.label6.TabIndex = 8;
             this.label6.Text = ":";
             // 
             // kl
             // 
             this.kl.AutoSize = true;
-            this.kl.Location = new System.Drawing.Point(297, 253);
+            this.kl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kl.Location = new System.Drawing.Point(324, 283);
             this.kl.Name = "kl";
-            this.kl.Size = new System.Drawing.Size(26, 21);
+            this.kl.Size = new System.Drawing.Size(39, 32);
             this.kl.TabIndex = 5;
             this.kl.Text = "Kl.";
             // 
@@ -490,7 +510,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 526);
+            this.panel2.Size = new System.Drawing.Size(568, 526);
             this.panel2.TabIndex = 13;
             // 
             // rDGV
@@ -508,7 +528,7 @@
             this.rDGV.RowHeadersVisible = false;
             this.rDGV.RowHeadersWidth = 62;
             this.rDGV.RowTemplate.Height = 28;
-            this.rDGV.Size = new System.Drawing.Size(592, 526);
+            this.rDGV.Size = new System.Drawing.Size(568, 526);
             this.rDGV.TabIndex = 0;
             // 
             // tabControl1
@@ -519,7 +539,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1043, 573);
+            this.tabControl1.Size = new System.Drawing.Size(1066, 573);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPage1
@@ -529,7 +549,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1035, 532);
+            this.tabPage1.Size = new System.Drawing.Size(1058, 532);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Reservation";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -538,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 573);
+            this.ClientSize = new System.Drawing.Size(1066, 573);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dSlutM1inut);
