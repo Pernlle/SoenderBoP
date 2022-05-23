@@ -42,7 +42,7 @@ namespace SoenderBoP
         {
             waitListBtn.Visible = false;
             editBtn.Visible = false;
-            leaseBtn.Visible = false;
+            //leaseBtn.Visible = false;
 
 
 

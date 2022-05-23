@@ -30,11 +30,10 @@ namespace SoenderBoP
             DGV = readBoligDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            sqlcom = "SELECT * FROM Reserveret";
+            sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
             readReserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = readMedlemDGV;
+            DGV = readReserveDGV;
             GetDGVStyle.GetStyle(DGV);
-            readReserveDGV.RowHeadersVisible = false;
         }
     }
 }

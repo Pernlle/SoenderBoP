@@ -42,6 +42,16 @@
             this.readBoligDGV = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.readReserveDGV = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ventelister = new System.Windows.Forms.TabControl();
+            this.lejlighed = new System.Windows.Forms.TabPage();
+            this.lejlighedDGV = new System.Windows.Forms.DataGridView();
+            this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ungdomsbolig = new System.Windows.Forms.TabPage();
+            this.ungdomsDGV = new System.Windows.Forms.DataGridView();
+            this.ungdomsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seniorbolig = new System.Windows.Forms.TabPage();
             this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reserveretBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
@@ -50,16 +60,7 @@
             this.reserveretTableAdapter = new SoenderBoP.soenderbodbDataSet1TableAdapters.ReserveretTableAdapter();
             this.reserveretBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reserveretTableAdapter1 = new SoenderBoP.soenderbodbDataSetTableAdapters.ReserveretTableAdapter();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.ventelister = new System.Windows.Forms.TabControl();
-            this.lejlighed = new System.Windows.Forms.TabPage();
-            this.Ungdomsbolig = new System.Windows.Forms.TabPage();
-            this.lejlighedDGV = new System.Windows.Forms.DataGridView();
-            this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ungdomsDGV = new System.Windows.Forms.DataGridView();
-            this.ungdomsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seniorbolig = new System.Windows.Forms.TabPage();
+            this.lDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.readMedlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
@@ -71,16 +72,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.readBoligDGV)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.ventelister.SuspendLayout();
+            this.lejlighed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).BeginInit();
+            this.Ungdomsbolig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource1)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            this.ventelister.SuspendLayout();
-            this.lejlighed.SuspendLayout();
-            this.Ungdomsbolig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // readMedlemDGV
@@ -204,44 +207,9 @@
             this.readReserveDGV.Size = new System.Drawing.Size(786, 401);
             this.readReserveDGV.TabIndex = 0;
             // 
-            // boligBindingSource
-            // 
-            this.boligBindingSource.DataMember = "Bolig";
-            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
-            // 
-            // reserveretBindingSource
-            // 
-            this.reserveretBindingSource.DataMember = "Reserveret";
-            this.reserveretBindingSource.DataSource = this.soenderbodbDataSet1;
-            // 
-            // soenderbodbDataSet1
-            // 
-            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
-            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // boligTableAdapter
-            // 
-            this.boligTableAdapter.ClearBeforeFill = true;
-            // 
-            // medlemTableAdapter
-            // 
-            this.medlemTableAdapter.ClearBeforeFill = true;
-            // 
-            // reserveretTableAdapter
-            // 
-            this.reserveretTableAdapter.ClearBeforeFill = true;
-            // 
-            // reserveretBindingSource1
-            // 
-            this.reserveretBindingSource1.DataMember = "Reserveret";
-            this.reserveretBindingSource1.DataSource = this.soenderbodbDataSet;
-            // 
-            // reserveretTableAdapter1
-            // 
-            this.reserveretTableAdapter1.ClearBeforeFill = true;
-            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lDGV);
             this.tabPage4.Location = new System.Drawing.Point(4, 37);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -283,17 +251,6 @@
             this.lejlighed.TabIndex = 0;
             this.lejlighed.Text = "Lejlighed";
             this.lejlighed.UseVisualStyleBackColor = true;
-            // 
-            // Ungdomsbolig
-            // 
-            this.Ungdomsbolig.Controls.Add(this.ungdomsDGV);
-            this.Ungdomsbolig.Location = new System.Drawing.Point(4, 37);
-            this.Ungdomsbolig.Name = "Ungdomsbolig";
-            this.Ungdomsbolig.Padding = new System.Windows.Forms.Padding(3);
-            this.Ungdomsbolig.Size = new System.Drawing.Size(778, 362);
-            this.Ungdomsbolig.TabIndex = 1;
-            this.Ungdomsbolig.Text = "Ungdomsbolig";
-            this.Ungdomsbolig.UseVisualStyleBackColor = true;
             // 
             // lejlighedDGV
             // 
@@ -338,6 +295,17 @@
             this.lejlighedNr.MinimumWidth = 8;
             this.lejlighedNr.Name = "lejlighedNr";
             this.lejlighedNr.ReadOnly = true;
+            // 
+            // Ungdomsbolig
+            // 
+            this.Ungdomsbolig.Controls.Add(this.ungdomsDGV);
+            this.Ungdomsbolig.Location = new System.Drawing.Point(4, 37);
+            this.Ungdomsbolig.Name = "Ungdomsbolig";
+            this.Ungdomsbolig.Padding = new System.Windows.Forms.Padding(3);
+            this.Ungdomsbolig.Size = new System.Drawing.Size(778, 362);
+            this.Ungdomsbolig.TabIndex = 1;
+            this.Ungdomsbolig.Text = "Ungdomsbolig";
+            this.Ungdomsbolig.UseVisualStyleBackColor = true;
             // 
             // ungdomsDGV
             // 
@@ -388,6 +356,55 @@
             this.seniorbolig.Text = "tabPage6";
             this.seniorbolig.UseVisualStyleBackColor = true;
             // 
+            // boligBindingSource
+            // 
+            this.boligBindingSource.DataMember = "Bolig";
+            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
+            // 
+            // reserveretBindingSource
+            // 
+            this.reserveretBindingSource.DataMember = "Reserveret";
+            this.reserveretBindingSource.DataSource = this.soenderbodbDataSet1;
+            // 
+            // soenderbodbDataSet1
+            // 
+            this.soenderbodbDataSet1.DataSetName = "soenderbodbDataSet1";
+            this.soenderbodbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boligTableAdapter
+            // 
+            this.boligTableAdapter.ClearBeforeFill = true;
+            // 
+            // medlemTableAdapter
+            // 
+            this.medlemTableAdapter.ClearBeforeFill = true;
+            // 
+            // reserveretTableAdapter
+            // 
+            this.reserveretTableAdapter.ClearBeforeFill = true;
+            // 
+            // reserveretBindingSource1
+            // 
+            this.reserveretBindingSource1.DataMember = "Reserveret";
+            this.reserveretBindingSource1.DataSource = this.soenderbodbDataSet;
+            // 
+            // reserveretTableAdapter1
+            // 
+            this.reserveretTableAdapter1.ClearBeforeFill = true;
+            // 
+            // lDGV
+            // 
+            this.lDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.lDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lDGV.Location = new System.Drawing.Point(3, 3);
+            this.lDGV.Name = "lDGV";
+            this.lDGV.RowHeadersWidth = 62;
+            this.lDGV.RowTemplate.Height = 28;
+            this.lDGV.Size = new System.Drawing.Size(786, 403);
+            this.lDGV.TabIndex = 0;
+            // 
             // Read
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -410,16 +427,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.readBoligDGV)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.ventelister.ResumeLayout(false);
+            this.lejlighed.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).EndInit();
+            this.Ungdomsbolig.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource1)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.ventelister.ResumeLayout(false);
-            this.lejlighed.ResumeLayout(false);
-            this.Ungdomsbolig.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lejlighedDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ungdomsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,5 +476,6 @@
         private System.Windows.Forms.DataGridView ungdomsDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ungdomsNr;
         private System.Windows.Forms.TabPage seniorbolig;
+        private System.Windows.Forms.DataGridView lDGV;
     }
 }
