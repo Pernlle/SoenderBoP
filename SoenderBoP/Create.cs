@@ -26,7 +26,7 @@ namespace SoenderBoP
             string email = emailMTxt.Text;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { fName, eName, phone, email };
+            object[] data = { fName, eName, phone, email};
 
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Medlem";
@@ -36,7 +36,7 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@fNavn,@eNavn,@tlf,@email";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUD.CreateMedlem(insertInto, add, values, data);
         }
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }
