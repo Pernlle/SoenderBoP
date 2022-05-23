@@ -34,24 +34,25 @@ namespace SoenderBoP
             string insertInto = "Lejekontrakt";
             object[] data = { dato };
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "dato";
+            string add = "indflytter";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@dato";
+            string values = "@inflytter";
 
             CRUD.Create(insertInto, add, values, data);
 
-
-            string sqlcom = $"SELECT loebeNr FROM Lejekontrakt";
-
-            //EFTER ny lejekontrakt oprettes -henter vi seneste løbeNr.
-
-            //string loebeNr = FillDataSource.GetDataSource(sqlcom);
-
-            
-
-            //Test om de rigtige værdier kan puttes i db
-           // MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
-
+            SqlConnection conn = new SqlConnection(strconn);
+            //Sql Command
+            string sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
+            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            try
+            {
+                conn.Open();
+                var loebeNr = (Int32)cmd.ExecuteScalar();
+                //Test om de rigtige værdier kan puttes i db
+                MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
+            }
+            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
             //string where = "";
 
             //Update(insertInto, add, where, values, data);
