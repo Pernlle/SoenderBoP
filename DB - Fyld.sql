@@ -14,19 +14,24 @@ INSERT INTO Medlem (fNavn, eNavn, tlf, email, mLNr) VALUES
 	('Thorbjørn', 'Perregaard', '756491026', 'perregaardthorbjørn@gmail.com', NULL)
 
 INSERT INTO Venteliste (vMid, boligType, vDato) VALUES
-(2, 1, '03-01-2022'),
-(2, 2, '03-01-2022'),
+(4, 1, '03-01-2022'),
+(4, 2, '03-01-2022'),
 (3, 1, '01-04-2022'),
 (3, 3, '04-01-2022'),
 (1, 1, '01-04-2022'),
-(1, 2, '01-02-2022')
+(1, 2, '01-02-2022'),
+(5, 1, '07-06-2022'),
+(6, 1, '18-07-2022'),
+(7, 1, '12-03-2022'),
+(8, 1, '15-03-2022'),
+(9, 1, '17-08-2022')
 
 INSERT INTO Bolig (mndPris, adr, kvm, bType, bLNr) VALUES 
 ('6000', 'Ligustervænget 4', '72', '1', NULL),
 ('4000', 'Ligustervænget 11', '50', '2', NULL),
 ('3000', 'Ligustervænget 3', '45', '3', '1'),
 ('6000', 'Ligustervænget 6', '72', '1', NULL),
-('4000', 'Ligustervænget 13', '50', '2', 2),
+('4000', 'Ligustervænget 13', '50', '2', '2'),
 ('3000', 'Ligustervænget 32', '45', '3', NULL)
 
 INSERT INTO Reserveret(rId, rLNr, dStart, dSlut) VALUES 
