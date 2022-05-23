@@ -60,7 +60,6 @@ namespace SoenderBoP
         {
             try
             {
-                this.lejlighedTableAdapter.FillBy(this.waitListViews.Lejlighed);
             }
             catch (System.Exception ex)
             {
@@ -73,7 +72,6 @@ namespace SoenderBoP
         {
             try
             {
-                this.lejlighedTableAdapter.lejlighedQ(this.waitListViews.Lejlighed);
             }
             catch (System.Exception ex)
             {
