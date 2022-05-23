@@ -126,9 +126,9 @@ namespace SoenderBoP
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "medlemId,opskrevet,boligType";
+            string add = "vMid,vDato,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@medlemId,@opskrevet,@boligType";
+            string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
         }
@@ -136,19 +136,19 @@ namespace SoenderBoP
         private void createUBTN_Click(object sender, EventArgs e)
         {
             string mId = this.umIdTXT.Text;
-            string opskrevet = uDTP.Value.ToString("mm-dd-yyyy");
+            string dato = uDTP.Value.ToString("mm-dd-yyyy");
             int boligType = 2;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { mId, opskrevet, boligType };
+            object[] data = { mId, dato, boligType };
 
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "medlemId,opskrevet,boligType";
+            string add = "vMid,vDato,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@medlemId,@opskrevet,@boligType";
+            string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
         }
@@ -166,9 +166,9 @@ namespace SoenderBoP
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "medlemId,opskrevet,boligType";
+            string add = "vMid,vDato,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@medlemId,@opskrevet,@boligType";
+            string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
 

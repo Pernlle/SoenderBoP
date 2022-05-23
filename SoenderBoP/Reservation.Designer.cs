@@ -233,7 +233,7 @@
             this.dSlutTime.Name = "dSlutTime";
             this.dSlutTime.Size = new System.Drawing.Size(38, 32);
             this.dSlutTime.TabIndex = 11;
-            this.dSlutTime.Text = "00";
+            this.dSlutTime.Text = "12";
             this.dSlutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutAar
@@ -323,7 +323,7 @@
             this.dStartTime.Name = "dStartTime";
             this.dStartTime.Size = new System.Drawing.Size(38, 32);
             this.dStartTime.TabIndex = 6;
-            this.dStartTime.Text = "00";
+            this.dStartTime.Text = "12";
             this.dStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dStartAar

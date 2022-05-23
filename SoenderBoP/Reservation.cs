@@ -54,7 +54,7 @@ namespace SoenderBoP
 
                 string sqlCom = "INSERT INTO Reserveret(lId,rId,dStart,dSlut) VALUES (@lId, @rId, @dStart, @dSlut);";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
-                cmd.Parameters.AddWithValue("@lId", loebeNr);
+                cmd.Parameters.AddWithValue("@rLNr", loebeNr);
                 cmd.Parameters.AddWithValue("@rId", rId);
                 cmd.Parameters.AddWithValue("@dStart", dStart);
                 cmd.Parameters.AddWithValue("@dSlut", dSlut);
