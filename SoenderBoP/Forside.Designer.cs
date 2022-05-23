@@ -74,8 +74,8 @@
             this.manuPanel.Controls.Add(this.createBtn);
             this.manuPanel.Controls.Add(this.leaseBtn);
             this.manuPanel.Controls.Add(this.waitListBtn);
-            this.manuPanel.Controls.Add(this.searchBtn);
             this.manuPanel.Controls.Add(this.readBtn);
+            this.manuPanel.Controls.Add(this.searchBtn);
             this.manuPanel.Controls.Add(this.loginBtn);
             this.manuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.manuPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -133,7 +133,7 @@
             this.readBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.readBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readBtn.ForeColor = System.Drawing.Color.White;
-            this.readBtn.Location = new System.Drawing.Point(0, 68);
+            this.readBtn.Location = new System.Drawing.Point(0, 136);
             this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readBtn.Name = "readBtn";
             this.readBtn.Size = new System.Drawing.Size(251, 68);
@@ -228,7 +228,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(0, 136);
+            this.searchBtn.Location = new System.Drawing.Point(0, 68);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(251, 68);
@@ -300,9 +300,9 @@
             this.panel1.Controls.Add(this.passLabel);
             this.panel1.Controls.Add(this.idLabel);
             this.panel1.Controls.Add(this.passBox);
-            this.panel1.Controls.Add(this.lBTN);
             this.panel1.Controls.Add(this.idBox);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lBTN);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -386,43 +386,56 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(80, 138);
+            this.passLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLabel.Location = new System.Drawing.Point(190, 272);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(78, 20);
+            this.passLabel.Size = new System.Drawing.Size(111, 32);
             this.passLabel.TabIndex = 9;
             this.passLabel.Text = "Password";
             // 
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(80, 68);
+            this.idLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(190, 197);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(26, 20);
+            this.idLabel.Size = new System.Drawing.Size(37, 32);
             this.idLabel.TabIndex = 8;
             this.idLabel.Text = "ID";
             // 
             // passBox
             // 
-            this.passBox.Location = new System.Drawing.Point(173, 135);
+            this.passBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passBox.Location = new System.Drawing.Point(309, 272);
             this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(173, 26);
+            this.passBox.Size = new System.Drawing.Size(173, 32);
             this.passBox.TabIndex = 7;
             // 
             // lBTN
             // 
-            this.lBTN.Location = new System.Drawing.Point(173, 213);
+            this.lBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lBTN.FlatAppearance.BorderSize = 0;
+            this.lBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lBTN.ForeColor = System.Drawing.Color.White;
+            this.lBTN.Location = new System.Drawing.Point(196, 340);
             this.lBTN.Name = "lBTN";
-            this.lBTN.Size = new System.Drawing.Size(173, 42);
+            this.lBTN.Size = new System.Drawing.Size(286, 58);
             this.lBTN.TabIndex = 5;
             this.lBTN.Text = "Login";
-            this.lBTN.UseVisualStyleBackColor = true;
+            this.lBTN.UseVisualStyleBackColor = false;
             this.lBTN.Click += new System.EventHandler(this.lBTN_Click);
             // 
             // idBox
             // 
-            this.idBox.Location = new System.Drawing.Point(173, 62);
+            this.idBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.idBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.idBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idBox.Location = new System.Drawing.Point(309, 197);
             this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(173, 26);
+            this.idBox.Size = new System.Drawing.Size(173, 32);
             this.idBox.TabIndex = 6;
             // 
             // Forside

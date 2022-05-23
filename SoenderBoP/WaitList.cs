@@ -24,7 +24,6 @@ namespace SoenderBoP
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
-            lejlighedDGV.RowHeadersVisible = false;
 
 
             sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";

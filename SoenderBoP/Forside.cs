@@ -43,10 +43,15 @@ namespace SoenderBoP
             waitListBtn.Visible = false;
             editBtn.Visible = false;
             //leaseBtn.Visible = false;
+            reservationBtn.Visible = false;
 
 
 
+        }
 
+        private void Forside_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _thread.Abort();
         }
 
         private void createBtn_Click(object sender, EventArgs e)
@@ -144,18 +149,9 @@ namespace SoenderBoP
         private void loginBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            Login frm = new Login() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-
-            this.panel1.Controls.Add(frm);
-
-            frm.Show();
         }
 
-        private void Forside_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _thread.Abort();
-        }
+        
 
         private void lboligBtn_Click(object sender, EventArgs e)
         {
@@ -185,6 +181,10 @@ namespace SoenderBoP
             if (id_ok && pass_ok)
             {
                 MessageBox.Show("Du er logget ind som adminstrator");
+                waitListBtn.Visible = true;
+                editBtn.Visible = true;
+                leaseBtn.Visible = true;
+                reservationBtn.Visible = true;
             }
             else { MessageBox.Show("Prøv igen du"); }
         }

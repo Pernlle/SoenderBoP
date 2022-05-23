@@ -34,6 +34,48 @@ namespace SoenderBoP
             readReserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = readReserveDGV;
             GetDGVStyle.GetStyle(DGV);
+
+            sqlcom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            lDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = lDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
+            lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = lejlighedDGV;
+            GetDGVStyle.GetStyle(DGV);
+            lejlighedDGV.RowHeadersVisible = false;
+
+
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
+            ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = ungdomsDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
+            seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = seniorDGV;
+            GetDGVStyle.GetStyle(DGV);
+        }
+
+
+        private void seniorDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+           
+                this.seniorDGV.Rows[e.RowIndex].Cells["seniorNr"].Value = (e.RowIndex + 1).ToString();
+            
+        }
+
+        private void ungdomsDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.ungdomsDGV.Rows[e.RowIndex].Cells["ungdomsNr"].Value = (e.RowIndex + 1).ToString();
+
+        }
+
+        private void lejlighedDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.lejlighedDGV.Rows[e.RowIndex].Cells["lejlighedNr"].Value = (e.RowIndex + 1).ToString();
+
         }
     }
 }
