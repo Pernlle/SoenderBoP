@@ -41,7 +41,7 @@ namespace SoenderBoP
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
             string medlem = statsCBX.Text;
-            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', mLNr AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE email = '{medlem}';";
+            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', mLNr AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE email = '{medlem}' AND mLNr = rLNr;";
 
             // sqlcom bliver sendt over i GetDataSource, som ligger i FillDataSource, som så vises i DGV
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom); 
