@@ -28,6 +28,8 @@ namespace SoenderBoP
 
             // Call metoden 'Yes_No'
             Yes_no(cellValue, insertInto);
+            this.editMedlemDGV.Refresh();
+            this.editMedlemDGV.Update();
         }
         public void Yes_no(string cellValue, string insertInto)
         {
@@ -78,6 +80,9 @@ namespace SoenderBoP
             //Opdater det medlem som er corresponding til den valgte celle i DGV
             string where = $"mId={cellValue}"; 
             CRUD.Update(insertInto, add, where, values, data);
+
+            this.editMedlemDGV.Refresh();
+            this.editMedlemDGV.Update();
         }
 
         private void Edit_Load(object sender, EventArgs e)

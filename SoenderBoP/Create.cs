@@ -37,6 +37,8 @@ namespace SoenderBoP
             string values = "@fNavn,@eNavn,@tlf,@email";
 
             CRUD.CreateMedlem(insertInto, add, values, data);
+            this.mDGV.Refresh();
+            this.mDGV.Update();
         }
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }

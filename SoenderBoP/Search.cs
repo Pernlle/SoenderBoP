@@ -34,6 +34,8 @@ namespace SoenderBoP
                 string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+                this.SearchDGV.Refresh();
+                this.SearchDGV.Update();
             }
             else MessageBox.Show("kvm fejl");
         }
@@ -58,6 +60,8 @@ namespace SoenderBoP
                 string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+                this.SearchDGV.Refresh();
+                this.SearchDGV.Update();
             }
             else MessageBox.Show("Pris fejl");
         }
@@ -74,6 +78,8 @@ namespace SoenderBoP
             SetupDataGridView();
             string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig";
             SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            this.SearchDGV.Refresh();
+            this.SearchDGV.Update();
         }
 
         private void saBTN_Click(object sender, EventArgs e)
@@ -81,6 +87,8 @@ namespace SoenderBoP
             SetupDataGridView();
             string sqlcom = "SELECT * FROM Bolig WHERE bLNr IS NULL";
             SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            this.SearchDGV.Refresh();
+            this.SearchDGV.Update();
         }
     }
 }
