@@ -27,8 +27,10 @@ namespace SoenderBoP
 
         private void CreateLease_Click(object sender, EventArgs e)
         {
-            string mId = this.mIdTxt.Text;
-            string bId = this.bIdTxt.Text;
+            SqlConnection conn = new SqlConnection(strconn);
+
+            string mId = mIdTxt.Text; //Få den til at ændre det til mmid når email er valgt :)
+            string bId = bIdTxt.Text; // få den til at vælge bid når adresse er valgt :)
             string dato = leaseDTP.Value.ToString("dd-MM-yyyy");
 
             string insertInto = "Lejekontrakt";
@@ -40,7 +42,6 @@ namespace SoenderBoP
 
             CRUD.Create(insertInto, add, values, data);
 
-            SqlConnection conn = new SqlConnection(strconn);
             //Sql Command
             string sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY lNr DESC";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
@@ -55,13 +56,11 @@ namespace SoenderBoP
                 cmd.Parameters.AddWithValue("@mLNr", loebeNr);
                 cmd.ExecuteNonQuery();
 
-
                 sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
                 cmd.Parameters.AddWithValue("@bLNr", loebeNr);
                 cmd.ExecuteNonQuery();
-
                 
-                sqlCom = $"DELETE vMid FROM Venteliste WHERE vMid = {mId}";
+                sqlCom = $"DELETE vMid FROM Venteliste WHERE mId = {mId}";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
