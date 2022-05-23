@@ -116,19 +116,19 @@ namespace SoenderBoP
         private void createLBTN_Click(object sender, EventArgs e)
         {
             string mId = this.lmIdTXT.Text;
-            string dato = lDTP.Value.ToString("dd-MM-yyyy");
+            string opskrevet = lDTP.Value.ToString("mm-dd-yyyy");
             int boligType = 1;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { mId, dato, boligType };
+            object[] data = { mId, opskrevet, boligType };
 
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "mId, dato, boligType";
+            string add = "medlemId,opskrevet,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@mId, @dato, @boligType";
+            string values = "@medlemId,@opskrevet,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
         }
@@ -136,19 +136,19 @@ namespace SoenderBoP
         private void createUBTN_Click(object sender, EventArgs e)
         {
             string mId = this.umIdTXT.Text;
-            string dato = uDTP.Value.ToString("dd-MM-yyyy");
+            string opskrevet = uDTP.Value.ToString("mm-dd-yyyy");
             int boligType = 2;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { mId, dato, boligType };
+            object[] data = { mId, opskrevet, boligType };
 
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "mId, dato, boligType";
+            string add = "medlemId,opskrevet,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@mId, @dato, @boligType";
+            string values = "@medlemId,@opskrevet,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
         }
@@ -156,21 +156,23 @@ namespace SoenderBoP
         private void createSBTN_Click(object sender, EventArgs e)
         {
             string mId = this.smIdTXT.Text;
-            string dato = sDTP.Value.ToString("dd-MM-yyyy");
+            string opskrevet = sDTP.Value.ToString("mm-dd-yyyy");
             int boligType = 3;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { mId, dato, boligType };
+            object[] data = { mId, opskrevet, boligType };
 
             //hvilken tabel i db som skal arbejdes med
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "mId, dato, boligType";
+            string add = "medlemId,opskrevet,boligType";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@mId, @dato, @boligType";
+            string values = "@medlemId,@opskrevet,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
+
+            
         }
     }
 }

@@ -1,15 +1,8 @@
-CREATE TABLE Adminstrator(
-	aId INT PRIMARY KEY,
-	pass VARCHAR(12)
-);
-
-INSERT INTO Adminstrator(aid, pass) VALUES ('1', 'root')
-
 /*Lejekontrakt forbinder Medlem og Bolig, den bliver kaldet i begge tabeller, men kalder ikke nogle af tabellerne*/
 /*SQL tager ikke højde for hvornår lejer underskriver kontrakt og kommer af venteliste, kun hvornår lejer indflytter*/
 CREATE TABLE Lejekontrakt(
-	loebeNr INT IDENTITY (1,1) PRIMARY KEY,
-	indflytter VARCHAR(10),
+	lNr INT IDENTITY (1,1) PRIMARY KEY,
+	lDato VARCHAR(10),
 );
 
 
@@ -32,7 +25,7 @@ CREATE TABLE Bolig(
 	adr VARCHAR(60),
 	kvm INT,
 	bType INT FOREIGN KEY REFERENCES BoligType(id),
-	loebenummer INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
+	bLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr)
 );
 
 /*FM - LøbeNr fra Lejekontrakt - Kan være NULL uden lejekontrakt.
@@ -46,16 +39,16 @@ CREATE TABLE Medlem(
 	eNavn VARCHAR(50),
 	tlf INT,
 	email VARCHAR(50),
-	lNr INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr)
+	mLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr)
 );
 
 /*Ventelisten 'generer' i databasen en dato, i koden bestemmes venteliste nr. efter dato. */ 
 /*Potentielle ufleksible elementer i SQL: Man kan ikke bestemme bolig og hvis man registreres samme dato får man samme nr.*/
 
 CREATE TABLE Venteliste(
-	medlemId INT FOREIGN KEY REFERENCES Medlem(mId),
+	vMid INT FOREIGN KEY REFERENCES Medlem(mId),
 	boligType INT FOREIGN KEY REFERENCES BoligType(id),
-	opskrevet VARCHAR(50),
+	vDato VARCHAR(50),
 );
 
 CREATE TABLE Ressource(
@@ -66,7 +59,7 @@ CREATE TABLE Ressource(
 
 CREATE TABLE Reserveret(
 	rId INT FOREIGN KEY REFERENCES Ressource(rId),
-	lId INT FOREIGN KEY REFERENCES Lejekontrakt(loebeNr),
+	rLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr),
 	dStart VARCHAR(50),
 	dSlut VARCHAR(50)
 	/*
