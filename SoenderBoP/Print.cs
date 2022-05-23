@@ -17,7 +17,7 @@ namespace SoenderBoP
             string headers = "";
             for (int i = 0; i < headersarr.Length; i++)
             {
-                headers += PadBoth(headersarr[i], 5) + " | ";
+                headers += PadBoth(headersarr[i], 50) + " | ";
             }
 
             TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\{writerName}.Txt");
@@ -28,10 +28,10 @@ namespace SoenderBoP
                 {
                     if (j == dgv.Columns.Count - 1) // if last column
                     {
-                        writer.WriteLine(PadBoth(dgv.Rows[i].Cells[j].Value.ToString(), 5));
+                        writer.WriteLine(PadBoth(dgv.Rows[i].Cells[j].Value.ToString(), 50));
                     }
                     else
-                        writer.Write(PadBoth(dgv.Rows[i].Cells[j].Value.ToString(), 5) + "|");
+                        writer.Write(PadBoth(dgv.Rows[i].Cells[j].Value.ToString(), 50) + "|");
                 }
             }
             writer.Close();
