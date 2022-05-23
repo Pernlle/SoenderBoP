@@ -38,9 +38,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.readBoligDGV = new System.Windows.Forms.DataGridView();
-            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.readReserveDGV = new System.Windows.Forms.DataGridView();
+            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reserveretBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
             this.boligTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.BoligTableAdapter();
@@ -57,9 +57,9 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readBoligDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource1)).BeginInit();
@@ -67,15 +67,17 @@
             // 
             // readMedlemDGV
             // 
+            this.readMedlemDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.readMedlemDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.readMedlemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.readMedlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.readMedlemDGV.Location = new System.Drawing.Point(3, 3);
+            this.readMedlemDGV.Location = new System.Drawing.Point(3, 4);
             this.readMedlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readMedlemDGV.Name = "readMedlemDGV";
             this.readMedlemDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.readMedlemDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.readMedlemDGV.RowTemplate.Height = 28;
-            this.readMedlemDGV.Size = new System.Drawing.Size(697, 325);
+            this.readMedlemDGV.Size = new System.Drawing.Size(786, 401);
             this.readMedlemDGV.TabIndex = 0;
             // 
             // medlemBindingSource1
@@ -95,11 +97,13 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 360);
+            this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
             // 
             // tabControl1
@@ -108,19 +112,22 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(711, 360);
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.readMedlemDGV);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(703, 331);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(792, 409);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Medlem";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -128,51 +135,59 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.readBoligDGV);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(703, 331);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(792, 409);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Bolig";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // readBoligDGV
             // 
+            this.readBoligDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.readBoligDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.readBoligDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.readBoligDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.readBoligDGV.Location = new System.Drawing.Point(3, 3);
+            this.readBoligDGV.Location = new System.Drawing.Point(3, 4);
+            this.readBoligDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.readBoligDGV.Name = "readBoligDGV";
             this.readBoligDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.readBoligDGV.RowTemplate.Height = 24;
-            this.readBoligDGV.Size = new System.Drawing.Size(697, 325);
+            this.readBoligDGV.Size = new System.Drawing.Size(786, 401);
             this.readBoligDGV.TabIndex = 0;
-            // 
-            // boligBindingSource
-            // 
-            this.boligBindingSource.DataMember = "Bolig";
-            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.readReserveDGV);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 37);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(703, 331);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage3.Size = new System.Drawing.Size(792, 409);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reservationer";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // readReserveDGV
             // 
+            this.readReserveDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.readReserveDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.readReserveDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.readReserveDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.readReserveDGV.Location = new System.Drawing.Point(3, 3);
+            this.readReserveDGV.Location = new System.Drawing.Point(3, 4);
+            this.readReserveDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.readReserveDGV.Name = "readReserveDGV";
             this.readReserveDGV.RowHeadersWidth = 51;
             this.readReserveDGV.RowTemplate.Height = 24;
-            this.readReserveDGV.Size = new System.Drawing.Size(697, 325);
+            this.readReserveDGV.Size = new System.Drawing.Size(786, 401);
             this.readReserveDGV.TabIndex = 0;
+            // 
+            // boligBindingSource
+            // 
+            this.boligBindingSource.DataMember = "Bolig";
+            this.boligBindingSource.DataSource = this.soenderbodbDataSet;
             // 
             // reserveretBindingSource
             // 
@@ -207,9 +222,10 @@
             // 
             // Read
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Read";
@@ -224,9 +240,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.readBoligDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserveretBindingSource1)).EndInit();
