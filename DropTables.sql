@@ -1,4 +1,4 @@
-DROP TABLE Adminstrator
+
 DROP TABLE Bolig
 DROP TABLE Venteliste
 DROP TABLE BoligType
