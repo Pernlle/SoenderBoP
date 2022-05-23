@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.loginBox = new System.Windows.Forms.GroupBox();
             this.passLabel = new System.Windows.Forms.Label();
+            this.loginBox = new System.Windows.Forms.GroupBox();
             this.idLabel = new System.Windows.Forms.Label();
             this.passBox = new System.Windows.Forms.MaskedTextBox();
-            this.idBox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.idBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.Linen;
             this.panel1.Controls.Add(this.passLabel);
             this.panel1.Controls.Add(this.loginBox);
             this.panel1.Controls.Add(this.idLabel);
@@ -53,15 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(362, 338);
             this.panel1.TabIndex = 0;
             // 
-            // loginBox
-            // 
-            this.loginBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.loginBox.Location = new System.Drawing.Point(769, 413);
-            this.loginBox.Name = "loginBox";
-            this.loginBox.Size = new System.Drawing.Size(10, 10);
-            this.loginBox.TabIndex = 0;
-            this.loginBox.TabStop = false;
-            // 
             // passLabel
             // 
             this.passLabel.AutoSize = true;
@@ -70,6 +61,15 @@
             this.passLabel.Size = new System.Drawing.Size(78, 20);
             this.passLabel.TabIndex = 4;
             this.passLabel.Text = "Password";
+            // 
+            // loginBox
+            // 
+            this.loginBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.loginBox.Location = new System.Drawing.Point(769, 413);
+            this.loginBox.Name = "loginBox";
+            this.loginBox.Size = new System.Drawing.Size(10, 10);
+            this.loginBox.TabIndex = 0;
+            this.loginBox.TabStop = false;
             // 
             // idLabel
             // 
@@ -87,13 +87,6 @@
             this.passBox.Size = new System.Drawing.Size(149, 26);
             this.passBox.TabIndex = 2;
             // 
-            // idBox
-            // 
-            this.idBox.Location = new System.Drawing.Point(125, 65);
-            this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(149, 26);
-            this.idBox.TabIndex = 1;
-            // 
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(125, 216);
@@ -103,6 +96,13 @@
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // idBox
+            // 
+            this.idBox.Location = new System.Drawing.Point(125, 65);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(149, 26);
+            this.idBox.TabIndex = 1;
             // 
             // Login
             // 

@@ -18,7 +18,7 @@ namespace SoenderBoP
         public Lease()
         {
             InitializeComponent();
-            string sqlcom = $"SELECT loebeNr AS 'Løbenummer', adr AS 'Adresse',  indflytter AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE loebeNr = lNr AND loebeNr = loebeNummer";
+            string sqlcom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = leaseDGV;
             GetDGVStyle.GetStyle(DGV);
@@ -42,7 +42,7 @@ namespace SoenderBoP
 
             SqlConnection conn = new SqlConnection(strconn);
             //Sql Command
-            string sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
+            string sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY lNr DESC";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
             try
             {
@@ -52,7 +52,7 @@ namespace SoenderBoP
                 MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
                 sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
-                cmd.Parameters.AddWithValue("@lNr", loebeNr);
+                cmd.Parameters.AddWithValue("@mLNr", loebeNr);
                 cmd.ExecuteNonQuery();
 
 
