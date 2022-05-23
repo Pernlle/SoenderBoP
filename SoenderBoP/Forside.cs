@@ -149,6 +149,8 @@ namespace SoenderBoP
         private void loginBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+
+            panel1.Show();
         }
 
         
