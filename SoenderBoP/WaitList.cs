@@ -20,7 +20,7 @@ namespace SoenderBoP
 
         private void WaitList_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY opskrevet ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
@@ -29,12 +29,12 @@ namespace SoenderBoP
 
             lejlighedDGV.AllowUserToOrderColumns = false;
 
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = ungdomsDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
