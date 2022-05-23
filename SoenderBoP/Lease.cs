@@ -34,9 +34,9 @@ namespace SoenderBoP
             string insertInto = "Lejekontrakt";
             object[] data = { dato };
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "indflytter";
+            string add = "lDato";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@inflytter";
+            string values = "@lDato";
 
             CRUD.Create(insertInto, add, values, data);
 
@@ -57,11 +57,11 @@ namespace SoenderBoP
 
 
                 sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
-                cmd.Parameters.AddWithValue("@lNr", loebeNr);
+                cmd.Parameters.AddWithValue("@bLNr", loebeNr);
                 cmd.ExecuteNonQuery();
 
-
-                sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
+                
+                sqlCom = $"DELETE vMid FROM Venteliste WHERE vMid = {mId}";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
