@@ -45,12 +45,12 @@ namespace SoenderBoP
 
             //EFTER ny lejekontrakt oprettes -henter vi seneste løbeNr.
 
-            string loebeNr = FillDataSource.GetDataSource(sqlcom).ToString();
+            //string loebeNr = FillDataSource.GetDataSource(sqlcom);
 
             
 
             //Test om de rigtige værdier kan puttes i db
-            MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
+           // MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
             //string where = "";
 
