@@ -19,6 +19,7 @@ namespace SoenderBoP
             {
                 headers += PadBoth(headersarr[i], 30) + "|";
             }
+            headers = headers.Remove(headers.Length - 1);
 
             TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\{writerName}.Txt");
             writer.WriteLine(headers);
