@@ -5,7 +5,6 @@ CREATE TABLE Lejekontrakt(
 	lDato VARCHAR(10),
 );
 
-
 /*BoligType bliver fastsat så bruger ikke laver stavefejl i forbindelse med registrering. Kan evt. vælges gennem dropdown menu*/
 CREATE TABLE BoligType(
 	id INT PRIMARY KEY NOT NULL,

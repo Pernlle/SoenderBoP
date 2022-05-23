@@ -52,26 +52,23 @@ namespace SoenderBoP
 
                 SqlConnection conn = new SqlConnection(strconn);
 
-                string sqlCom = "INSERT INTO Reserveret(lId,rId,dStart,dSlut) VALUES (@lId, @rId, @dStart, @dSlut);";
+                string sqlCom = "INSERT INTO Reserveret(rLNr,rId,dStart,dSlut) VALUES (@rLNr, @rId, @dStart, @dSlut);";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
                 cmd.Parameters.AddWithValue("@rLNr", loebeNr);
                 cmd.Parameters.AddWithValue("@rId", rId);
                 cmd.Parameters.AddWithValue("@dStart", dStart);
                 cmd.Parameters.AddWithValue("@dSlut", dSlut);
 
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Reserveret");
-                    //MessageBox.Show(sqlCom);
-                }
-                catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
-            //}
-            //else MessageBox.Show("Du skal udfylde skemaet korrekt :)");
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Reserveret");
+                //MessageBox.Show(sqlCom);
+            }
+            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            
         }
-
-        
     }
 }
