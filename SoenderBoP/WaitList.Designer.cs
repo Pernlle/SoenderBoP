@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -113,6 +113,7 @@
             // 
             // lejlighed
             // 
+            this.lejlighed.BackColor = System.Drawing.Color.Linen;
             this.lejlighed.Controls.Add(this.panel4);
             this.lejlighed.Controls.Add(this.panel1);
             this.lejlighed.Location = new System.Drawing.Point(4, 38);
@@ -122,7 +123,6 @@
             this.lejlighed.Size = new System.Drawing.Size(994, 533);
             this.lejlighed.TabIndex = 0;
             this.lejlighed.Text = "Lejlighed";
-            this.lejlighed.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -149,15 +149,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -190,6 +190,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lmIdTXT);
             this.panel1.Controls.Add(this.lCBX);
@@ -244,18 +245,17 @@
             // 
             // waitlistPrintLbtn
             // 
-            this.waitlistPrintLbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.waitlistPrintLbtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waitlistPrintLbtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitlistPrintLbtn.FlatAppearance.BorderSize = 0;
             this.waitlistPrintLbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitlistPrintLbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitlistPrintLbtn.ForeColor = System.Drawing.Color.White;
-            this.waitlistPrintLbtn.Location = new System.Drawing.Point(0, 485);
+            this.waitlistPrintLbtn.Location = new System.Drawing.Point(12, 397);
             this.waitlistPrintLbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintLbtn.Name = "waitlistPrintLbtn";
-            this.waitlistPrintLbtn.Size = new System.Drawing.Size(338, 44);
+            this.waitlistPrintLbtn.Size = new System.Drawing.Size(310, 56);
             this.waitlistPrintLbtn.TabIndex = 5;
-            this.waitlistPrintLbtn.Text = "Print";
+            this.waitlistPrintLbtn.Text = "PRINT";
             this.waitlistPrintLbtn.UseVisualStyleBackColor = false;
             this.waitlistPrintLbtn.Click += new System.EventHandler(this.waitlistPrintLbtn_Click);
             // 
@@ -306,6 +306,7 @@
             // 
             // ungdomsbolig
             // 
+            this.ungdomsbolig.BackColor = System.Drawing.Color.Linen;
             this.ungdomsbolig.Controls.Add(this.ungdomsDGV);
             this.ungdomsbolig.Controls.Add(this.panel2);
             this.ungdomsbolig.Location = new System.Drawing.Point(4, 38);
@@ -315,7 +316,6 @@
             this.ungdomsbolig.Size = new System.Drawing.Size(994, 533);
             this.ungdomsbolig.TabIndex = 1;
             this.ungdomsbolig.Text = "Ungdomsbolig";
-            this.ungdomsbolig.UseVisualStyleBackColor = true;
             // 
             // ungdomsDGV
             // 
@@ -330,14 +330,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle10;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -359,6 +359,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.umIdTXT);
             this.panel2.Controls.Add(this.uDTP);
@@ -408,7 +409,7 @@
             this.createUBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createUBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUBTN.ForeColor = System.Drawing.Color.Transparent;
-            this.createUBTN.Location = new System.Drawing.Point(18, 324);
+            this.createUBTN.Location = new System.Drawing.Point(18, 327);
             this.createUBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createUBTN.Name = "createUBTN";
             this.createUBTN.Size = new System.Drawing.Size(302, 53);
@@ -419,18 +420,17 @@
             // 
             // waitlistPrintUBtn
             // 
-            this.waitlistPrintUBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.waitlistPrintUBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waitlistPrintUBtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitlistPrintUBtn.FlatAppearance.BorderSize = 0;
             this.waitlistPrintUBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitlistPrintUBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitlistPrintUBtn.ForeColor = System.Drawing.Color.White;
-            this.waitlistPrintUBtn.Location = new System.Drawing.Point(0, 483);
+            this.waitlistPrintUBtn.Location = new System.Drawing.Point(18, 410);
             this.waitlistPrintUBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintUBtn.Name = "waitlistPrintUBtn";
-            this.waitlistPrintUBtn.Size = new System.Drawing.Size(339, 46);
+            this.waitlistPrintUBtn.Size = new System.Drawing.Size(302, 53);
             this.waitlistPrintUBtn.TabIndex = 6;
-            this.waitlistPrintUBtn.Text = "Print";
+            this.waitlistPrintUBtn.Text = "PRINT";
             this.waitlistPrintUBtn.UseVisualStyleBackColor = false;
             this.waitlistPrintUBtn.Click += new System.EventHandler(this.waitlistPrintUBtn_Click);
             // 
@@ -465,6 +465,7 @@
             // 
             // seniorbolig
             // 
+            this.seniorbolig.BackColor = System.Drawing.Color.Linen;
             this.seniorbolig.Controls.Add(this.seniorDGV);
             this.seniorbolig.Controls.Add(this.panel3);
             this.seniorbolig.Location = new System.Drawing.Point(4, 38);
@@ -474,7 +475,6 @@
             this.seniorbolig.Size = new System.Drawing.Size(994, 533);
             this.seniorbolig.TabIndex = 2;
             this.seniorbolig.Text = "Seniorbolig";
-            this.seniorbolig.UseVisualStyleBackColor = true;
             // 
             // seniorDGV
             // 
@@ -510,6 +510,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.smIdTXT);
             this.panel3.Controls.Add(this.wsCBX);
@@ -583,19 +584,18 @@
             // 
             // waitlistPrintSBtn
             // 
-            this.waitlistPrintSBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.waitlistPrintSBtn.BackColor = System.Drawing.Color.IndianRed;
             this.waitlistPrintSBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.waitlistPrintSBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.waitlistPrintSBtn.FlatAppearance.BorderSize = 0;
             this.waitlistPrintSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitlistPrintSBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitlistPrintSBtn.ForeColor = System.Drawing.Color.White;
-            this.waitlistPrintSBtn.Location = new System.Drawing.Point(0, 478);
+            this.waitlistPrintSBtn.Location = new System.Drawing.Point(13, 404);
             this.waitlistPrintSBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.waitlistPrintSBtn.Name = "waitlistPrintSBtn";
-            this.waitlistPrintSBtn.Size = new System.Drawing.Size(336, 51);
+            this.waitlistPrintSBtn.Size = new System.Drawing.Size(305, 62);
             this.waitlistPrintSBtn.TabIndex = 6;
-            this.waitlistPrintSBtn.Text = "Print";
+            this.waitlistPrintSBtn.Text = "PRINT";
             this.waitlistPrintSBtn.UseVisualStyleBackColor = false;
             this.waitlistPrintSBtn.Click += new System.EventHandler(this.waitlistPrintSBtn_Click);
             // 
@@ -664,7 +664,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1002, 575);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
