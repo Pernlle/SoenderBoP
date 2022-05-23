@@ -99,7 +99,7 @@
             this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
             this.reservationBtn.Size = new System.Drawing.Size(251, 68);
-            this.reservationBtn.TabIndex = 0;
+            this.reservationBtn.TabIndex = 8;
             this.reservationBtn.Text = "Reserver ressource";
             this.reservationBtn.UseVisualStyleBackColor = false;
             this.reservationBtn.Click += new System.EventHandler(this.reservationBtn_Click);
@@ -118,7 +118,7 @@
             this.statsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statsBtn.Name = "statsBtn";
             this.statsBtn.Size = new System.Drawing.Size(251, 68);
-            this.statsBtn.TabIndex = 3;
+            this.statsBtn.TabIndex = 7;
             this.statsBtn.Text = "Udtræk statistik";
             this.statsBtn.UseVisualStyleBackColor = false;
             this.statsBtn.Click += new System.EventHandler(this.statsBtn_Click);
@@ -156,7 +156,7 @@
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(251, 68);
-            this.editBtn.TabIndex = 2;
+            this.editBtn.TabIndex = 6;
             this.editBtn.Text = "Rediger medlem";
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
@@ -175,7 +175,7 @@
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(251, 68);
-            this.createBtn.TabIndex = 1;
+            this.createBtn.TabIndex = 5;
             this.createBtn.Text = "Opret medlem";
             this.createBtn.UseVisualStyleBackColor = false;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
@@ -213,7 +213,8 @@
             this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
             this.waitListBtn.Size = new System.Drawing.Size(251, 68);
-            this.waitListBtn.TabIndex = 2;
+            this.waitListBtn.TabIndex = 3;
+            this.waitListBtn.TabStop = false;
             this.waitListBtn.Text = "Venteliste";
             this.waitListBtn.UseVisualStyleBackColor = false;
             this.waitListBtn.Click += new System.EventHandler(this.waitListBtn_Click);
@@ -232,7 +233,7 @@
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(251, 68);
-            this.searchBtn.TabIndex = 3;
+            this.searchBtn.TabIndex = 1;
             this.searchBtn.Text = "Søg boliger";
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
@@ -251,7 +252,7 @@
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(251, 68);
-            this.loginBtn.TabIndex = 1;
+            this.loginBtn.TabIndex = 0;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -387,7 +388,7 @@
             // 
             this.passLabel.AutoSize = true;
             this.passLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passLabel.Location = new System.Drawing.Point(190, 272);
+            this.passLabel.Location = new System.Drawing.Point(238, 258);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(111, 32);
             this.passLabel.TabIndex = 9;
@@ -397,7 +398,7 @@
             // 
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(190, 197);
+            this.idLabel.Location = new System.Drawing.Point(238, 183);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(37, 32);
             this.idLabel.TabIndex = 8;
@@ -408,10 +409,10 @@
             this.passBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passBox.Location = new System.Drawing.Point(309, 272);
+            this.passBox.Location = new System.Drawing.Point(357, 258);
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(173, 32);
-            this.passBox.TabIndex = 7;
+            this.passBox.TabIndex = 2;
             // 
             // lBTN
             // 
@@ -420,10 +421,10 @@
             this.lBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBTN.ForeColor = System.Drawing.Color.White;
-            this.lBTN.Location = new System.Drawing.Point(196, 340);
+            this.lBTN.Location = new System.Drawing.Point(244, 326);
             this.lBTN.Name = "lBTN";
             this.lBTN.Size = new System.Drawing.Size(286, 58);
-            this.lBTN.TabIndex = 5;
+            this.lBTN.TabIndex = 3;
             this.lBTN.Text = "Login";
             this.lBTN.UseVisualStyleBackColor = false;
             this.lBTN.Click += new System.EventHandler(this.lBTN_Click);
@@ -433,10 +434,10 @@
             this.idBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.idBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBox.Location = new System.Drawing.Point(309, 197);
+            this.idBox.Location = new System.Drawing.Point(357, 183);
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(173, 32);
-            this.idBox.TabIndex = 6;
+            this.idBox.TabIndex = 1;
             // 
             // Forside
             // 
