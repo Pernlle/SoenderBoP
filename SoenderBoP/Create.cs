@@ -43,7 +43,7 @@ namespace SoenderBoP
 
         private void Create_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',lNr AS 'Løbenummer' FROM Medlem";
+            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
             mDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = mDGV;
             GetDGVStyle.GetStyle(DGV);

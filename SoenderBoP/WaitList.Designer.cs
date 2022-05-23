@@ -297,9 +297,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 32);
+            this.label1.Size = new System.Drawing.Size(235, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tilføj til venteliste";
             // 
@@ -410,7 +411,7 @@
             this.createUBTN.Location = new System.Drawing.Point(18, 324);
             this.createUBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createUBTN.Name = "createUBTN";
-            this.createUBTN.Size = new System.Drawing.Size(302, 49);
+            this.createUBTN.Size = new System.Drawing.Size(302, 53);
             this.createUBTN.TabIndex = 7;
             this.createUBTN.Text = "TILFØJ";
             this.createUBTN.UseVisualStyleBackColor = false;
@@ -455,9 +456,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 32);
+            this.label6.Size = new System.Drawing.Size(235, 38);
             this.label6.TabIndex = 3;
             this.label6.Text = "Tilføj til venteliste";
             // 
@@ -569,10 +571,10 @@
             this.createSBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createSBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createSBTN.ForeColor = System.Drawing.Color.White;
-            this.createSBTN.Location = new System.Drawing.Point(13, 331);
+            this.createSBTN.Location = new System.Drawing.Point(13, 319);
             this.createSBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createSBTN.Name = "createSBTN";
-            this.createSBTN.Size = new System.Drawing.Size(304, 49);
+            this.createSBTN.Size = new System.Drawing.Size(304, 61);
             this.createSBTN.TabIndex = 7;
             this.createSBTN.TabStop = false;
             this.createSBTN.Text = "TILFØJ";
@@ -619,9 +621,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(204, 32);
+            this.label9.Size = new System.Drawing.Size(235, 38);
             this.label9.TabIndex = 3;
             this.label9.Text = "Tilføj til venteliste";
             // 
@@ -661,6 +664,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1002, 575);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

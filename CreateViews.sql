@@ -1,17 +1,17 @@
 ALTER VIEW Lejlighed AS
-SELECT opskrevet, fNavn, eNavn, medlemId
+SELECT vDato, fNavn, eNavn, mId
 FROM Venteliste, Medlem
-WHERE boligType = 1 AND medlemId = mId
+WHERE boligType = 1 AND vMid = mId
 
 
 SELECT * FROM Lejlighed ORDER BY opskrevet ASC
 
-CREATE VIEW Ungdomsbolig AS
-SELECT opskrevet, fNavn, eNavn, medlemId
+ALTER VIEW Ungdomsbolig AS
+SELECT vDato, fNavn, eNavn, mId
 FROM Venteliste, Medlem
-WHERE boligType = 2 AND medlemId = mId
+WHERE boligType = 2 AND vMid = mId
 
-CREATE VIEW Seniorbolig AS
-SELECT opskrevet, fNavn, eNavn, medlemId
+ALTER VIEW Seniorbolig AS
+SELECT vDato, fNavn, eNavn, mId
 FROM Venteliste, Medlem
-WHERE boligType = 3 AND medlemId = mId
+WHERE boligType = 3 AND vMid = mId

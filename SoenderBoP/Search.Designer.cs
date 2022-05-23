@@ -42,14 +42,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.saBTN = new System.Windows.Forms.Button();
+            this.sallBTN = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.searchKvmBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.sallBTN = new System.Windows.Forms.Button();
-            this.saBTN = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -192,6 +192,36 @@
             this.panel2.Size = new System.Drawing.Size(428, 641);
             this.panel2.TabIndex = 15;
             // 
+            // saBTN
+            // 
+            this.saBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.saBTN.FlatAppearance.BorderSize = 0;
+            this.saBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saBTN.ForeColor = System.Drawing.Color.White;
+            this.saBTN.Location = new System.Drawing.Point(253, 97);
+            this.saBTN.Name = "saBTN";
+            this.saBTN.Size = new System.Drawing.Size(157, 49);
+            this.saBTN.TabIndex = 18;
+            this.saBTN.Text = "Se ledige";
+            this.saBTN.UseVisualStyleBackColor = false;
+            this.saBTN.Click += new System.EventHandler(this.saBTN_Click);
+            // 
+            // sallBTN
+            // 
+            this.sallBTN.BackColor = System.Drawing.Color.IndianRed;
+            this.sallBTN.FlatAppearance.BorderSize = 0;
+            this.sallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sallBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sallBTN.ForeColor = System.Drawing.Color.White;
+            this.sallBTN.Location = new System.Drawing.Point(51, 97);
+            this.sallBTN.Name = "sallBTN";
+            this.sallBTN.Size = new System.Drawing.Size(156, 49);
+            this.sallBTN.TabIndex = 17;
+            this.sallBTN.Text = "Vis alle";
+            this.sallBTN.UseVisualStyleBackColor = false;
+            this.sallBTN.Click += new System.EventHandler(this.sallBTN_Click);
+            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -271,40 +301,11 @@
             this.tabPage1.Text = "Søg ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // sallBTN
-            // 
-            this.sallBTN.BackColor = System.Drawing.Color.IndianRed;
-            this.sallBTN.FlatAppearance.BorderSize = 0;
-            this.sallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sallBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sallBTN.ForeColor = System.Drawing.Color.White;
-            this.sallBTN.Location = new System.Drawing.Point(51, 97);
-            this.sallBTN.Name = "sallBTN";
-            this.sallBTN.Size = new System.Drawing.Size(156, 49);
-            this.sallBTN.TabIndex = 17;
-            this.sallBTN.Text = "Vis alle";
-            this.sallBTN.UseVisualStyleBackColor = false;
-            this.sallBTN.Click += new System.EventHandler(this.sallBTN_Click);
-            // 
-            // saBTN
-            // 
-            this.saBTN.BackColor = System.Drawing.Color.IndianRed;
-            this.saBTN.FlatAppearance.BorderSize = 0;
-            this.saBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saBTN.ForeColor = System.Drawing.Color.White;
-            this.saBTN.Location = new System.Drawing.Point(253, 97);
-            this.saBTN.Name = "saBTN";
-            this.saBTN.Size = new System.Drawing.Size(157, 49);
-            this.saBTN.TabIndex = 18;
-            this.saBTN.Text = "Se ledige";
-            this.saBTN.UseVisualStyleBackColor = false;
-            this.saBTN.Click += new System.EventHandler(this.saBTN_Click);
-            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1091, 688);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
