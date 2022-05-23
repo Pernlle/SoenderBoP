@@ -51,25 +51,26 @@
             this.leaseDGV = new System.Windows.Forms.DataGridView();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.boligTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.BoligTableAdapter();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leaseDGV)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.leasePrintbtn);
             this.panel1.Controls.Add(this.bIdTxt);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.leaseAdresseCBX);
-            this.panel1.Controls.Add(this.refreshBtn);
             this.panel1.Controls.Add(this.mIdTxt);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.emailCBX);
             this.panel1.Controls.Add(this.leaseDTP);
             this.panel1.Controls.Add(this.CreateLease);
@@ -77,39 +78,44 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(559, 0);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(615, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 518);
+            this.panel1.Size = new System.Drawing.Size(282, 564);
             this.panel1.TabIndex = 0;
             // 
             // bIdTxt
             // 
+            this.bIdTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bIdTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bIdTxt.Location = new System.Drawing.Point(148, 190);
             this.bIdTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bIdTxt.Name = "bIdTxt";
-            this.bIdTxt.Size = new System.Drawing.Size(61, 26);
+            this.bIdTxt.Size = new System.Drawing.Size(61, 32);
             this.bIdTxt.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 164);
+            this.label4.Location = new System.Drawing.Point(9, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(97, 32);
             this.label4.TabIndex = 10;
             this.label4.Text = "Adresse";
             // 
             // leaseAdresseCBX
             // 
+            this.leaseAdresseCBX.BackColor = System.Drawing.Color.IndianRed;
             this.leaseAdresseCBX.DataSource = this.boligBindingSource;
             this.leaseAdresseCBX.DisplayMember = "adr";
             this.leaseAdresseCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.leaseAdresseCBX.ForeColor = System.Drawing.Color.White;
             this.leaseAdresseCBX.FormattingEnabled = true;
-            this.leaseAdresseCBX.Location = new System.Drawing.Point(15, 190);
+            this.leaseAdresseCBX.Location = new System.Drawing.Point(17, 190);
             this.leaseAdresseCBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseAdresseCBX.Name = "leaseAdresseCBX";
-            this.leaseAdresseCBX.Size = new System.Drawing.Size(127, 28);
+            this.leaseAdresseCBX.Size = new System.Drawing.Size(127, 40);
             this.leaseAdresseCBX.TabIndex = 9;
             this.leaseAdresseCBX.ValueMember = "adr";
             this.leaseAdresseCBX.Click += new System.EventHandler(this.leaseAdresseCBX_Click);
@@ -131,7 +137,7 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(194, 0);
+            this.refreshBtn.Location = new System.Drawing.Point(344, 293);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(28, 32);
@@ -142,17 +148,17 @@
             // 
             // mIdTxt
             // 
+            this.mIdTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.mIdTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mIdTxt.Location = new System.Drawing.Point(148, 98);
             this.mIdTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mIdTxt.Name = "mIdTxt";
-            this.mIdTxt.Size = new System.Drawing.Size(61, 26);
+            this.mIdTxt.Size = new System.Drawing.Size(61, 32);
             this.mIdTxt.TabIndex = 7;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.leasePrintbtn);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 436);
+            this.panel3.Location = new System.Drawing.Point(241, 429);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(222, 82);
@@ -160,24 +166,31 @@
             // 
             // leasePrintbtn
             // 
-            this.leasePrintbtn.Location = new System.Drawing.Point(69, 24);
+            this.leasePrintbtn.BackColor = System.Drawing.Color.IndianRed;
+            this.leasePrintbtn.FlatAppearance.BorderSize = 0;
+            this.leasePrintbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.leasePrintbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leasePrintbtn.ForeColor = System.Drawing.Color.White;
+            this.leasePrintbtn.Location = new System.Drawing.Point(15, 426);
             this.leasePrintbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.leasePrintbtn.Name = "leasePrintbtn";
-            this.leasePrintbtn.Size = new System.Drawing.Size(84, 29);
+            this.leasePrintbtn.Size = new System.Drawing.Size(262, 50);
             this.leasePrintbtn.TabIndex = 0;
-            this.leasePrintbtn.Text = "Print";
-            this.leasePrintbtn.UseVisualStyleBackColor = true;
+            this.leasePrintbtn.Text = "PRINT";
+            this.leasePrintbtn.UseVisualStyleBackColor = false;
             // 
             // emailCBX
             // 
+            this.emailCBX.BackColor = System.Drawing.Color.IndianRed;
             this.emailCBX.DataSource = this.medlemBindingSource;
             this.emailCBX.DisplayMember = "email";
             this.emailCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.emailCBX.ForeColor = System.Drawing.Color.White;
             this.emailCBX.FormattingEnabled = true;
             this.emailCBX.Location = new System.Drawing.Point(15, 98);
             this.emailCBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailCBX.Name = "emailCBX";
-            this.emailCBX.Size = new System.Drawing.Size(127, 28);
+            this.emailCBX.Size = new System.Drawing.Size(127, 40);
             this.emailCBX.TabIndex = 5;
             this.emailCBX.ValueMember = "email";
             this.emailCBX.Click += new System.EventHandler(this.emailCBX_Click);
@@ -189,22 +202,27 @@
             // 
             // leaseDTP
             // 
-            this.leaseDTP.Location = new System.Drawing.Point(15, 271);
+            this.leaseDTP.Location = new System.Drawing.Point(17, 290);
             this.leaseDTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseDTP.Name = "leaseDTP";
-            this.leaseDTP.Size = new System.Drawing.Size(195, 26);
+            this.leaseDTP.Size = new System.Drawing.Size(262, 39);
             this.leaseDTP.TabIndex = 4;
             this.leaseDTP.Value = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
             // 
             // CreateLease
             // 
-            this.CreateLease.Location = new System.Drawing.Point(15, 329);
+            this.CreateLease.BackColor = System.Drawing.Color.IndianRed;
+            this.CreateLease.FlatAppearance.BorderSize = 0;
+            this.CreateLease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateLease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateLease.ForeColor = System.Drawing.Color.White;
+            this.CreateLease.Location = new System.Drawing.Point(15, 350);
             this.CreateLease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateLease.Name = "CreateLease";
-            this.CreateLease.Size = new System.Drawing.Size(195, 32);
+            this.CreateLease.Size = new System.Drawing.Size(262, 50);
             this.CreateLease.TabIndex = 3;
-            this.CreateLease.Text = "Opret";
-            this.CreateLease.UseVisualStyleBackColor = true;
+            this.CreateLease.Text = "OPRET";
+            this.CreateLease.UseVisualStyleBackColor = false;
             this.CreateLease.Click += new System.EventHandler(this.CreateLease_Click);
             // 
             // label3
@@ -212,36 +230,35 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(65, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Dato";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 75);
+            this.label2.Location = new System.Drawing.Point(9, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(71, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(279, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Opret lejekontrakt";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.leaseDGV);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(12, 493);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(559, 518);
+            this.panel2.Size = new System.Drawing.Size(431, 379);
             this.panel2.TabIndex = 1;
             // 
             // leaseDGV
@@ -257,13 +274,13 @@
             this.leaseDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.leaseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.leaseDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leaseDGV.Location = new System.Drawing.Point(0, 0);
+            this.leaseDGV.Location = new System.Drawing.Point(3, 3);
             this.leaseDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseDGV.Name = "leaseDGV";
             this.leaseDGV.ReadOnly = true;
             this.leaseDGV.RowHeadersWidth = 62;
             this.leaseDGV.RowTemplate.Height = 28;
-            this.leaseDGV.Size = new System.Drawing.Size(559, 518);
+            this.leaseDGV.Size = new System.Drawing.Size(612, 564);
             this.leaseDGV.TabIndex = 0;
             // 
             // medlemTableAdapter
@@ -274,13 +291,38 @@
             // 
             this.boligTableAdapter.ClearBeforeFill = true;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(908, 603);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.leaseDGV);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.panel3);
+            this.tabPage1.Controls.Add(this.refreshBtn);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(900, 570);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Opret Lejekontrakt";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // Lease
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 518);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(908, 603);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Lease";
             this.Text = "Lease";
@@ -290,10 +332,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet)).EndInit();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leaseDGV)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -322,5 +364,7 @@
         private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
         private System.Windows.Forms.BindingSource boligBindingSource;
         private soenderbodbDataSetTableAdapters.BoligTableAdapter boligTableAdapter;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

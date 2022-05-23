@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -120,7 +120,7 @@
             this.lejlighed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lejlighed.Name = "lejlighed";
             this.lejlighed.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lejlighed.Size = new System.Drawing.Size(994, 533);
+            this.lejlighed.Size = new System.Drawing.Size(1191, 526);
             this.lejlighed.TabIndex = 0;
             this.lejlighed.Text = "Lejlighed";
             // 
@@ -132,7 +132,7 @@
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(650, 529);
+            this.panel4.Size = new System.Drawing.Size(847, 522);
             this.panel4.TabIndex = 2;
             // 
             // lejlighedDGV
@@ -149,15 +149,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -169,7 +169,7 @@
             this.lejlighedDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.lejlighedDGV.RowTemplate.Height = 28;
             this.lejlighedDGV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.lejlighedDGV.Size = new System.Drawing.Size(650, 529);
+            this.lejlighedDGV.Size = new System.Drawing.Size(847, 522);
             this.lejlighedDGV.TabIndex = 0;
             this.lejlighedDGV.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.lejlighedDGV_RowPostPaint);
             // 
@@ -202,10 +202,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(653, 2);
+            this.panel1.Location = new System.Drawing.Point(850, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 529);
+            this.panel1.Size = new System.Drawing.Size(338, 522);
             this.panel1.TabIndex = 0;
             // 
             // label10
@@ -313,7 +313,7 @@
             this.ungdomsbolig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ungdomsbolig.Name = "ungdomsbolig";
             this.ungdomsbolig.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ungdomsbolig.Size = new System.Drawing.Size(994, 533);
+            this.ungdomsbolig.Size = new System.Drawing.Size(1191, 526);
             this.ungdomsbolig.TabIndex = 1;
             this.ungdomsbolig.Text = "Ungdomsbolig";
             // 
@@ -330,14 +330,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -346,7 +346,7 @@
             this.ungdomsDGV.RowHeadersVisible = false;
             this.ungdomsDGV.RowHeadersWidth = 62;
             this.ungdomsDGV.RowTemplate.Height = 28;
-            this.ungdomsDGV.Size = new System.Drawing.Size(649, 529);
+            this.ungdomsDGV.Size = new System.Drawing.Size(846, 522);
             this.ungdomsDGV.TabIndex = 1;
             this.ungdomsDGV.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.ungdomsDGV_RowPostPaint);
             // 
@@ -370,10 +370,10 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(652, 2);
+            this.panel2.Location = new System.Drawing.Point(849, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(339, 529);
+            this.panel2.Size = new System.Drawing.Size(339, 522);
             this.panel2.TabIndex = 0;
             // 
             // label11

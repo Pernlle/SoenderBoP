@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.passLabel = new System.Windows.Forms.Label();
             this.loginBox = new System.Windows.Forms.GroupBox();
-            this.idLabel = new System.Windows.Forms.Label();
-            this.passBox = new System.Windows.Forms.MaskedTextBox();
-            this.loginBtn = new System.Windows.Forms.Button();
             this.idBox = new System.Windows.Forms.TextBox();
+            this.loginBtn = new System.Windows.Forms.Button();
+            this.passBox = new System.Windows.Forms.MaskedTextBox();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,15 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(362, 338);
             this.panel1.TabIndex = 0;
             // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(32, 141);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(78, 20);
-            this.passLabel.TabIndex = 4;
-            this.passLabel.Text = "Password";
-            // 
             // loginBox
             // 
             this.loginBox.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -71,21 +62,12 @@
             this.loginBox.TabIndex = 0;
             this.loginBox.TabStop = false;
             // 
-            // idLabel
+            // idBox
             // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(32, 71);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(26, 20);
-            this.idLabel.TabIndex = 3;
-            this.idLabel.Text = "ID";
-            // 
-            // passBox
-            // 
-            this.passBox.Location = new System.Drawing.Point(125, 138);
-            this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(149, 26);
-            this.passBox.TabIndex = 2;
+            this.idBox.Location = new System.Drawing.Point(125, 65);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(149, 26);
+            this.idBox.TabIndex = 1;
             // 
             // loginBtn
             // 
@@ -97,12 +79,30 @@
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // idBox
+            // passBox
             // 
-            this.idBox.Location = new System.Drawing.Point(125, 65);
-            this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(149, 26);
-            this.idBox.TabIndex = 1;
+            this.passBox.Location = new System.Drawing.Point(125, 138);
+            this.passBox.Name = "passBox";
+            this.passBox.Size = new System.Drawing.Size(149, 26);
+            this.passBox.TabIndex = 2;
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(32, 71);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(26, 20);
+            this.idLabel.TabIndex = 3;
+            this.idLabel.Text = "ID";
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.Location = new System.Drawing.Point(32, 141);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(78, 20);
+            this.passLabel.TabIndex = 4;
+            this.passLabel.Text = "Password";
             // 
             // Login
             // 
@@ -121,11 +121,11 @@
 
         #endregion
         private System.Windows.Forms.GroupBox loginBox;
+        public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label passLabel;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.MaskedTextBox passBox;
-        private System.Windows.Forms.TextBox idBox;
         private System.Windows.Forms.Button loginBtn;
-        public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox idBox;
     }
 }

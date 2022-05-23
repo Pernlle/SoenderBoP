@@ -40,7 +40,13 @@ namespace SoenderBoP
         }
         private void Forside_Load(object sender, EventArgs e)
         {
-           
+            waitListBtn.Visible = false;
+            editBtn.Visible = false;
+            leaseBtn.Visible = false;
+
+
+
+
         }
 
         private void createBtn_Click(object sender, EventArgs e)
@@ -160,6 +166,27 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
 
             frm.Show();
+        }
+
+        private void lBTN_Click(object sender, EventArgs e)
+        {
+            //Login button
+
+            string id = idBox.Text;
+            string pass = passBox.Text;
+
+            // assumption: //double assumption dont assume anything
+            bool id_ok = true, pass_ok = true;
+
+            // length check:
+            if (id.Contains("1")) id_ok = true;
+            if (pass.Contains("root")) pass_ok = true;
+
+            if (id_ok && pass_ok)
+            {
+                MessageBox.Show("Du er logget ind som adminstrator");
+            }
+            else { MessageBox.Show("Prøv igen du"); }
         }
     }
 }
