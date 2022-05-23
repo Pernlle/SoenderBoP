@@ -41,7 +41,7 @@ namespace SoenderBoP
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
             string medlem = statsCBX.Text;
-            string sqlcom = $"SELECT email AS 'Email', rId AS 'Reservations ID', mLNr AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato' FROM Medlem, Reserveret WHERE email = '{medlem}' AND mLNr = rLNr;";
+            string sqlcom = $"SELECT rId AS 'Reservations ID', mLNr AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato', email AS 'Email' FROM Medlem, Reserveret WHERE email = '{medlem}' AND mLNr = rLNr;";
 
             // sqlcom bliver sendt over i GetDataSource, som ligger i FillDataSource, som så vises i DGV
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom); 
@@ -63,7 +63,7 @@ namespace SoenderBoP
             string medlem = statsCBX.Text;
 
             string writerName = $"Resourceforbrug_{medlem}";
-            string[] headersarr = new string[] {"Res", "ID", "Løbenummer", "Startdato", "Slutdato", "Email" };
+            string[] headersarr = new string[] {"Ressource ID", "Løbenummer", "Startdato", "Slutdato", "Email" };
             DataGridView dgv = showStatsDGV;
 
             Print.PrintIt(dgv, writerName, headersarr);
