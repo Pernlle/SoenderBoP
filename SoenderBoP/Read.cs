@@ -30,7 +30,7 @@ namespace SoenderBoP
             DGV = readBoligDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            sqlcom = "SELECT * FROM Reservationer";
             readReserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = readReserveDGV;
             GetDGVStyle.GetStyle(DGV);
