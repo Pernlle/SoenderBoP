@@ -68,20 +68,29 @@
             this.dSlu1tTime = new System.Windows.Forms.MaskedTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rDGV = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rDGV)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // reserveBtn
             // 
-            this.reserveBtn.Location = new System.Drawing.Point(20, 329);
+            this.reserveBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.reserveBtn.FlatAppearance.BorderSize = 0;
+            this.reserveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reserveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reserveBtn.ForeColor = System.Drawing.Color.White;
+            this.reserveBtn.Location = new System.Drawing.Point(54, 354);
             this.reserveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reserveBtn.Name = "reserveBtn";
-            this.reserveBtn.Size = new System.Drawing.Size(345, 32);
+            this.reserveBtn.Size = new System.Drawing.Size(352, 47);
             this.reserveBtn.TabIndex = 13;
             this.reserveBtn.Text = "Reserver";
-            this.reserveBtn.UseVisualStyleBackColor = true;
+            this.reserveBtn.UseVisualStyleBackColor = false;
             this.reserveBtn.Click += new System.EventHandler(this.reserveBtn_Click);
             // 
             // loebe1Nr
@@ -111,36 +120,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 152);
+            this.label1.Location = new System.Drawing.Point(50, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Løbe Nr.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 198);
+            this.label2.Location = new System.Drawing.Point(50, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ressource ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 245);
+            this.label3.Location = new System.Drawing.Point(50, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Dato start";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 282);
+            this.label4.Location = new System.Drawing.Point(50, 299);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Dato slut";
             // 
@@ -154,6 +163,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.dSlutMinut);
             this.panel1.Controls.Add(this.dSlutTime);
@@ -177,171 +187,206 @@
             this.panel1.Controls.Add(this.reserveBtn);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(667, 0);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(595, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 573);
-            this.panel1.TabIndex = 9;
+            this.panel1.Size = new System.Drawing.Size(437, 526);
+            this.panel1.TabIndex = 0;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(81, 82);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(48, 96);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(224, 29);
+            this.label11.Size = new System.Drawing.Size(212, 32);
             this.label11.TabIndex = 23;
             this.label11.Text = "Reserver ressource";
             // 
             // dSlutMinut
             // 
-            this.dSlutMinut.Location = new System.Drawing.Point(336, 279);
+            this.dSlutMinut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSlutMinut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dSlutMinut.Location = new System.Drawing.Point(373, 291);
             this.dSlutMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMinut.MaxLength = 2;
             this.dSlutMinut.Name = "dSlutMinut";
-            this.dSlutMinut.Size = new System.Drawing.Size(26, 26);
+            this.dSlutMinut.Size = new System.Drawing.Size(26, 22);
             this.dSlutMinut.TabIndex = 12;
             this.dSlutMinut.Text = "00";
+            this.dSlutMinut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutTime
             // 
-            this.dSlutTime.Location = new System.Drawing.Point(287, 278);
+            this.dSlutTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSlutTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dSlutTime.Location = new System.Drawing.Point(324, 291);
             this.dSlutTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutTime.MaxLength = 2;
             this.dSlutTime.Name = "dSlutTime";
-            this.dSlutTime.Size = new System.Drawing.Size(26, 26);
+            this.dSlutTime.Size = new System.Drawing.Size(26, 22);
             this.dSlutTime.TabIndex = 11;
             this.dSlutTime.Text = "00";
+            this.dSlutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutAar
             // 
-            this.dSlutAar.Location = new System.Drawing.Point(208, 278);
+            this.dSlutAar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSlutAar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dSlutAar.Location = new System.Drawing.Point(242, 291);
             this.dSlutAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutAar.MaxLength = 4;
             this.dSlutAar.Name = "dSlutAar";
-            this.dSlutAar.Size = new System.Drawing.Size(42, 26);
+            this.dSlutAar.Size = new System.Drawing.Size(49, 22);
             this.dSlutAar.TabIndex = 10;
-            this.dSlutAar.Text = "0000";
+            this.dSlutAar.Text = "2022";
+            this.dSlutAar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutMaaned
             // 
-            this.dSlutMaaned.Location = new System.Drawing.Point(178, 278);
+            this.dSlutMaaned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSlutMaaned.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dSlutMaaned.Location = new System.Drawing.Point(212, 291);
             this.dSlutMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMaaned.MaxLength = 2;
             this.dSlutMaaned.Name = "dSlutMaaned";
-            this.dSlutMaaned.Size = new System.Drawing.Size(24, 26);
+            this.dSlutMaaned.Size = new System.Drawing.Size(25, 22);
             this.dSlutMaaned.TabIndex = 9;
             this.dSlutMaaned.Text = "00";
+            this.dSlutMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutDag
             // 
-            this.dSlutDag.Location = new System.Drawing.Point(147, 278);
+            this.dSlutDag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSlutDag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dSlutDag.Location = new System.Drawing.Point(181, 291);
             this.dSlutDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutDag.MaxLength = 2;
             this.dSlutDag.Name = "dSlutDag";
-            this.dSlutDag.Size = new System.Drawing.Size(25, 26);
+            this.dSlutDag.Size = new System.Drawing.Size(25, 22);
             this.dSlutDag.TabIndex = 8;
             this.dSlutDag.Text = "00";
+            this.dSlutDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(317, 282);
+            this.label9.Location = new System.Drawing.Point(356, 295);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 20);
+            this.label9.Size = new System.Drawing.Size(13, 21);
             this.label9.TabIndex = 22;
             this.label9.Text = ":";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(255, 282);
+            this.label10.Location = new System.Drawing.Point(297, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 20);
+            this.label10.Size = new System.Drawing.Size(26, 21);
             this.label10.TabIndex = 21;
             this.label10.Text = "Kl.";
             // 
             // dStartMinut
             // 
-            this.dStartMinut.Location = new System.Drawing.Point(336, 242);
+            this.dStartMinut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dStartMinut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dStartMinut.Location = new System.Drawing.Point(373, 250);
             this.dStartMinut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMinut.MaxLength = 2;
             this.dStartMinut.Name = "dStartMinut";
-            this.dStartMinut.Size = new System.Drawing.Size(26, 26);
+            this.dStartMinut.Size = new System.Drawing.Size(26, 22);
             this.dStartMinut.TabIndex = 7;
             this.dStartMinut.Text = "00";
+            this.dStartMinut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dStartTime
             // 
-            this.dStartTime.Location = new System.Drawing.Point(287, 242);
+            this.dStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dStartTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dStartTime.Location = new System.Drawing.Point(324, 250);
             this.dStartTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartTime.MaxLength = 2;
             this.dStartTime.Name = "dStartTime";
-            this.dStartTime.Size = new System.Drawing.Size(26, 26);
+            this.dStartTime.Size = new System.Drawing.Size(26, 22);
             this.dStartTime.TabIndex = 6;
             this.dStartTime.Text = "00";
+            this.dStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dStartAar
             // 
-            this.dStartAar.Location = new System.Drawing.Point(208, 240);
+            this.dStartAar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dStartAar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dStartAar.Location = new System.Drawing.Point(242, 248);
             this.dStartAar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartAar.MaxLength = 4;
             this.dStartAar.Name = "dStartAar";
-            this.dStartAar.Size = new System.Drawing.Size(42, 26);
+            this.dStartAar.Size = new System.Drawing.Size(49, 22);
             this.dStartAar.TabIndex = 5;
-            this.dStartAar.Text = "0000";
+            this.dStartAar.Text = "2022";
+            this.dStartAar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dStartMaaned
             // 
-            this.dStartMaaned.Location = new System.Drawing.Point(178, 240);
+            this.dStartMaaned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dStartMaaned.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dStartMaaned.Location = new System.Drawing.Point(212, 248);
             this.dStartMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartMaaned.MaxLength = 2;
             this.dStartMaaned.Name = "dStartMaaned";
-            this.dStartMaaned.Size = new System.Drawing.Size(24, 26);
+            this.dStartMaaned.Size = new System.Drawing.Size(25, 22);
             this.dStartMaaned.TabIndex = 4;
             this.dStartMaaned.Text = "00";
+            this.dStartMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // loebeNr
             // 
-            this.loebeNr.Location = new System.Drawing.Point(147, 152);
+            this.loebeNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loebeNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loebeNr.Location = new System.Drawing.Point(181, 159);
             this.loebeNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loebeNr.Name = "loebeNr";
-            this.loebeNr.Size = new System.Drawing.Size(100, 26);
-            this.loebeNr.TabIndex = 2;
+            this.loebeNr.Size = new System.Drawing.Size(100, 22);
+            this.loebeNr.TabIndex = 1;
             // 
             // rId
             // 
-            this.rId.Location = new System.Drawing.Point(147, 195);
+            this.rId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rId.Location = new System.Drawing.Point(181, 203);
             this.rId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rId.Name = "rId";
-            this.rId.Size = new System.Drawing.Size(100, 26);
-            this.rId.TabIndex = 1;
+            this.rId.Size = new System.Drawing.Size(100, 22);
+            this.rId.TabIndex = 2;
             // 
             // dStartDag
             // 
-            this.dStartDag.Location = new System.Drawing.Point(147, 240);
+            this.dStartDag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dStartDag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dStartDag.Location = new System.Drawing.Point(181, 248);
             this.dStartDag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dStartDag.MaxLength = 2;
             this.dStartDag.Name = "dStartDag";
-            this.dStartDag.Size = new System.Drawing.Size(25, 26);
+            this.dStartDag.Size = new System.Drawing.Size(25, 22);
             this.dStartDag.TabIndex = 3;
             this.dStartDag.Text = "00";
+            this.dStartDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(317, 245);
+            this.label6.Location = new System.Drawing.Point(356, 253);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 20);
+            this.label6.Size = new System.Drawing.Size(13, 21);
             this.label6.TabIndex = 8;
             this.label6.Text = ":";
             // 
             // kl
             // 
             this.kl.AutoSize = true;
-            this.kl.Location = new System.Drawing.Point(255, 245);
+            this.kl.Location = new System.Drawing.Point(297, 253);
             this.kl.Name = "kl";
-            this.kl.Size = new System.Drawing.Size(26, 20);
+            this.kl.Size = new System.Drawing.Size(26, 21);
             this.kl.TabIndex = 5;
             this.kl.Text = "Kl.";
             // 
@@ -443,32 +488,59 @@
             // 
             this.panel2.Controls.Add(this.rDGV);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(667, 573);
+            this.panel2.Size = new System.Drawing.Size(592, 526);
             this.panel2.TabIndex = 13;
             // 
             // rDGV
             // 
-            this.rDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rDGV.AllowUserToAddRows = false;
+            this.rDGV.AllowUserToDeleteRows = false;
+            this.rDGV.AllowUserToResizeColumns = false;
+            this.rDGV.AllowUserToResizeRows = false;
+            this.rDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.rDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rDGV.Location = new System.Drawing.Point(162, 38);
+            this.rDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rDGV.Location = new System.Drawing.Point(0, 0);
             this.rDGV.Name = "rDGV";
+            this.rDGV.RowHeadersVisible = false;
             this.rDGV.RowHeadersWidth = 62;
             this.rDGV.RowTemplate.Height = 28;
-            this.rDGV.Size = new System.Drawing.Size(451, 500);
+            this.rDGV.Size = new System.Drawing.Size(592, 526);
             this.rDGV.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1043, 573);
+            this.tabControl1.TabIndex = 14;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1035, 532);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Reservation";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 573);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dSlutM1inut);
             this.Controls.Add(this.dSlutAar1);
             this.Controls.Add(this.dStartMaaned1);
@@ -491,6 +563,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rDGV)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,5 +612,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView rDGV;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

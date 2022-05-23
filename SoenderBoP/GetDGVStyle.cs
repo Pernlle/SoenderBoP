@@ -57,7 +57,9 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            
+
+            DGV.AllowUserToOrderColumns = false;
+
             return DGV;
         }
     }
