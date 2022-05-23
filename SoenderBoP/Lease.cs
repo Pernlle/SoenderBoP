@@ -50,48 +50,23 @@ namespace SoenderBoP
                 var loebeNr = (Int32)cmd.ExecuteScalar();
                 //Test om de rigtige værdier kan puttes i db
                 MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
+
+                sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
+                cmd.Parameters.AddWithValue("@lNr", loebeNr);
+                cmd.ExecuteNonQuery();
+
+
+                sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
+                cmd.Parameters.AddWithValue("@lNr", loebeNr);
+                cmd.ExecuteNonQuery();
+
+
+                sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
-            //string where = "";
-
-            //Update(insertInto, add, where, values, data);
-
-
-            ////Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
-            //sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
-            //SqlCommand cmd2 = new SqlCommand(sqlCom, conn);
-            //cmd2.Parameters.AddWithValue("@lNr", loebeNr);
-
-            ////Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
-            //sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
-            //SqlCommand cmd3 = new SqlCommand(sqlCom, conn);
-            //cmd3.Parameters.AddWithValue("@lNr", loebeNr);
-
-            //// Fjerner medlemmet fra Venteliste(n/erne) denne er på
-            //sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
-            //SqlCommand cmd4 = new SqlCommand(sqlCom, conn);
-
-
-            //conn.Close();
-
-            //try
-            //{
-            //    conn.Open();
-
-            //    cmd2.ExecuteNonQuery();
-            //    cmd3.ExecuteNonQuery();
-            //    cmd4.ExecuteNonQuery();
-            //    conn.Close();
-
-
-            //    MessageBox.Show($"oprettet");
-            //    //MessageBox.Show(sqlCom);
-            //    this.leaseDGV.Refresh();
-            //    this.leaseDGV.Update();
-            //}
-            //catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
-            //finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
+            
         }
 
         private void emailCBX_Click(object sender, EventArgs e)
