@@ -255,13 +255,13 @@
             this.dSlutMaaned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dSlutMaaned.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dSlutMaaned.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dSlutMaaned.Location = new System.Drawing.Point(213, 356);
+            this.dSlutMaaned.Location = new System.Drawing.Point(214, 357);
             this.dSlutMaaned.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSlutMaaned.MaxLength = 2;
             this.dSlutMaaned.Name = "dSlutMaaned";
             this.dSlutMaaned.Size = new System.Drawing.Size(32, 32);
             this.dSlutMaaned.TabIndex = 9;
-            this.dSlutMaaned.Text = "00";
+            this.dSlutMaaned.Text = "12";
             this.dSlutMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dSlutDag
@@ -275,7 +275,7 @@
             this.dSlutDag.Name = "dSlutDag";
             this.dSlutDag.Size = new System.Drawing.Size(31, 32);
             this.dSlutDag.TabIndex = 8;
-            this.dSlutDag.Text = "00";
+            this.dSlutDag.Text = "31";
             this.dSlutDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -351,7 +351,7 @@
             this.dStartMaaned.Name = "dStartMaaned";
             this.dStartMaaned.Size = new System.Drawing.Size(32, 32);
             this.dStartMaaned.TabIndex = 4;
-            this.dStartMaaned.Text = "00";
+            this.dStartMaaned.Text = "12";
             this.dStartMaaned.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // loebeNr
@@ -387,7 +387,7 @@
             this.dStartDag.Name = "dStartDag";
             this.dStartDag.Size = new System.Drawing.Size(32, 32);
             this.dStartDag.TabIndex = 3;
-            this.dStartDag.Text = "00";
+            this.dStartDag.Text = "31";
             this.dStartDag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
