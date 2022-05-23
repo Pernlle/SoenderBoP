@@ -13,6 +13,8 @@ namespace SoenderBoP
 {
     public partial class Lease : Form
     {
+        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
+
         public Lease()
         {
             InitializeComponent();
@@ -28,67 +30,67 @@ namespace SoenderBoP
             string mId = this.mIdTxt.Text;
             string bId = this.bIdTxt.Text;
             string dato = leaseDTP.Value.ToString("dd-MM-yyyy");
-            
 
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
+            string insertInto = "Lejekontrakt";
+            object[] data = { dato };
+            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
+            string add = "dato";
+            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+            string values = "@dato";
 
-            //Sql Connection
-            SqlConnection conn = new SqlConnection(strconn);
-            conn.Open();
+            CRUD.Create(insertInto, add, values, data);
 
-            ////Sql sætning
-            string sqlCom = $"INSERT INTO Lejekontrakt VALUES ({dato});";
-            
-            //Sql Command
-            SqlCommand cmd = new SqlCommand(sqlCom, conn);
-            cmd.ExecuteNonQuery();
 
-            sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY loebeNr DESC";
+            string sqlcom = $"SELECT loebeNr FROM Lejekontrakt";
 
-            //EFTER ny lejekontrakt oprettes henter vi seneste løbeNr.
+            //EFTER ny lejekontrakt oprettes -henter vi seneste løbeNr.
 
-            var loebeNr = (Int32)cmd.ExecuteScalar();
+            string loebeNr = FillDataSource.GetDataSource(sqlcom).ToString();
 
             
 
             //Test om de rigtige værdier kan puttes i db
             MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
+            //string where = "";
 
-            //Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
-            sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
-            SqlCommand cmd2 = new SqlCommand(sqlCom, conn);
-            cmd2.Parameters.AddWithValue("@lNr", loebeNr);
-
-            //Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
-            sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
-            SqlCommand cmd3 = new SqlCommand(sqlCom, conn);
-            cmd3.Parameters.AddWithValue("@lNr", loebeNr);
-
-            // Fjerner medlemmet fra Venteliste(n/erne) denne er på
-            sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
-            SqlCommand cmd4 = new SqlCommand(sqlCom, conn);
+            //Update(insertInto, add, where, values, data);
 
 
-            conn.Close();
+            ////Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
+            //sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
+            //SqlCommand cmd2 = new SqlCommand(sqlCom, conn);
+            //cmd2.Parameters.AddWithValue("@lNr", loebeNr);
 
-            try
-            {
-                conn.Open();
-                
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-                cmd4.ExecuteNonQuery();
-                conn.Close();
+            ////Opdatere medlem med loebeNr fra seneste Lejekontrakt (den der oprettes ovenfor)
+            //sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
+            //SqlCommand cmd3 = new SqlCommand(sqlCom, conn);
+            //cmd3.Parameters.AddWithValue("@lNr", loebeNr);
+
+            //// Fjerner medlemmet fra Venteliste(n/erne) denne er på
+            //sqlCom = $"DELETE {loebeNr} FROM Venteliste WHERE medlemId = {mId}";
+            //SqlCommand cmd4 = new SqlCommand(sqlCom, conn);
 
 
-                MessageBox.Show($"oprettet");
-                //MessageBox.Show(sqlCom);
-                this.leaseDGV.Refresh();
-                this.leaseDGV.Update();
-            }
-            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
-            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
+            //conn.Close();
+
+            //try
+            //{
+            //    conn.Open();
+
+            //    cmd2.ExecuteNonQuery();
+            //    cmd3.ExecuteNonQuery();
+            //    cmd4.ExecuteNonQuery();
+            //    conn.Close();
+
+
+            //    MessageBox.Show($"oprettet");
+            //    //MessageBox.Show(sqlCom);
+            //    this.leaseDGV.Refresh();
+            //    this.leaseDGV.Update();
+            //}
+            //catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            //finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
 
         private void emailCBX_Click(object sender, EventArgs e)

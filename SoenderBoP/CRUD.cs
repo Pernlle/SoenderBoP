@@ -21,11 +21,22 @@ namespace SoenderBoP
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
-            //Sql sætning
-            string sqlCom = $"INSERT INTO {insertInto}({add}, loebeNr) VALUES ({values}, @loebeNr);";
+            string sqlcom = "";
             //Sql Command
-            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            SqlCommand cmd = new SqlCommand(sqlcom, conn);
 
+            //Sql sætning
+            if (insertInto == "Medlem")
+            {
+                sqlcom = $"INSERT INTO {insertInto}({add}, loebeNr) VALUES ({values}, @loebeNr);";
+
+                cmd.Parameters.Add("@loebeNr", System.Data.SqlDbType.Int);
+                cmd.Parameters["@loebeNr"].Value = DBNull.Value;
+            }
+            else
+            {
+                sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values});";
+            }           
 
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
@@ -45,10 +56,6 @@ namespace SoenderBoP
             cmd.Parameters.Add("@tlf", System.Data.SqlDbType.Int);
             cmd.Parameters["@tlf"].Value = Convert.ToInt32(phone);
             */
-
-            cmd.Parameters.Add("@loebeNr", System.Data.SqlDbType.Int);
-            cmd.Parameters["@loebeNr"].Value = DBNull.Value;
-
 
             try
             {
