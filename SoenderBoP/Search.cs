@@ -31,8 +31,7 @@ namespace SoenderBoP
             if (minPris < maxPris)
             {
                 SearchDGV.Controls.Clear();
-
-                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig " +
+                string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE mndPris > {minPris} AND mndPris < {maxPris}; ";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }
@@ -42,8 +41,7 @@ namespace SoenderBoP
         private void Search_Load(object sender, EventArgs e)
         {
             SetupDataGridView();
-
-            string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig";
+            string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig";
             SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 
@@ -59,20 +57,18 @@ namespace SoenderBoP
             {
                 SearchDGV.Controls.Clear();
 
-                string sqlcom = "SELECT bId AS 'Id', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', loebeNummer AS 'Løbenummer' FROM Bolig " +
+                string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
                 $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
                 SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             }
-            else MessageBox.Show("pris fejl");
+            else MessageBox.Show("Pris fejl");
         }
 
         private void SetupDataGridView()
         {
             searchPanel.Controls.Add(SearchDGV);
-
             DataGridView DGV = SearchDGV;
             GetDGVStyle.GetStyle(DGV);
-            SearchDGV.RowHeadersVisible = false;
         }
     }
 }
