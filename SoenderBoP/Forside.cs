@@ -41,13 +41,6 @@ namespace SoenderBoP
         private void Forside_Load(object sender, EventArgs e)
         {
            
-
-
-            //sloganPanel.Controls.Clear();
-            //Slogan formme = new Slogan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //formme.FormBorderStyle = FormBorderStyle.None;
-            //this.sloganPanel.Controls.Add(formme);
-            //formme.Show();
         }
 
         private void createBtn_Click(object sender, EventArgs e)

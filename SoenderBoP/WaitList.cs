@@ -20,7 +20,7 @@ namespace SoenderBoP
 
         private void WaitList_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Lejlighed ORDER BY opskrevet ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY opskrevet ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
@@ -29,12 +29,12 @@ namespace SoenderBoP
 
             lejlighedDGV.AllowUserToOrderColumns = false;
 
-            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY opskrevet ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = ungdomsDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            sqlcom = "SELECT opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID' FROM Seniorbolig ORDER BY opskrevet ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY opskrevet ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
@@ -86,7 +86,7 @@ namespace SoenderBoP
         {
             string writerName = $"Waitlist_Senior";
             //opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID'
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "Medlems ID" };
+            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = seniorDGV;
 
             Print.PrintIt(dgv, writerName, headersarr);
@@ -95,7 +95,7 @@ namespace SoenderBoP
         private void waitlistPrintUBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Ungdom";
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "Medlems ID" };
+            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = ungdomsDGV;
 
             Print.PrintIt(dgv, writerName, headersarr);
@@ -104,7 +104,7 @@ namespace SoenderBoP
         private void waitlistPrintLbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Lejlighed";
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "Medlems ID" };
+            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = lejlighedDGV;
 
             Print.PrintIt(dgv, writerName, headersarr);

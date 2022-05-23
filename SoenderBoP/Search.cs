@@ -40,9 +40,7 @@ namespace SoenderBoP
 
         private void Search_Load(object sender, EventArgs e)
         {
-            SetupDataGridView();
-            string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig";
-            SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            
         }
 
         private void searchKvmBtn_Click(object sender, EventArgs e)
@@ -69,6 +67,20 @@ namespace SoenderBoP
             searchPanel.Controls.Add(SearchDGV);
             DataGridView DGV = SearchDGV;
             GetDGVStyle.GetStyle(DGV);
+        }
+
+        private void sallBTN_Click(object sender, EventArgs e)
+        {
+            SetupDataGridView();
+            string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig";
+            SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+        }
+
+        private void saBTN_Click(object sender, EventArgs e)
+        {
+            SetupDataGridView();
+            string sqlcom = "SELECT * FROM Bolig WHERE bLNr IS NULL";
+            SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
     }
 }
