@@ -19,13 +19,13 @@ namespace SoenderBoP
 
         private void Read_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT mId AS 'Medlem ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',lNr AS 'Løbenummer' FROM Medlem";
+            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
             readMedlemDGV.DataSource= FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = readMedlemDGV;
             GetDGVStyle.GetStyle(DGV);
    
 
-            sqlcom = "SELECT bId AS 'Bolig ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',loebeNummer AS 'Løbenummer' FROM Bolig";
+            sqlcom = "SELECT bId AS 'ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',bLNr AS 'Løbenummer' FROM Bolig";
             readBoligDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = readBoligDGV;
             GetDGVStyle.GetStyle(DGV);
