@@ -43,12 +43,12 @@
             this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.sloganPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sloganLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
@@ -63,7 +63,6 @@
             // manuPanel
             // 
             this.manuPanel.BackColor = System.Drawing.Color.Linen;
-            this.manuPanel.Controls.Add(this.loginBtn);
             this.manuPanel.Controls.Add(this.reservationBtn);
             this.manuPanel.Controls.Add(this.statsBtn);
             this.manuPanel.Controls.Add(this.readBtn);
@@ -72,6 +71,7 @@
             this.manuPanel.Controls.Add(this.leaseBtn);
             this.manuPanel.Controls.Add(this.waitListBtn);
             this.manuPanel.Controls.Add(this.searchBtn);
+            this.manuPanel.Controls.Add(this.loginBtn);
             this.manuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.manuPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.manuPanel.Location = new System.Drawing.Point(0, 0);
@@ -82,7 +82,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.loginBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
@@ -90,12 +90,12 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(0, 544);
+            this.loginBtn.Location = new System.Drawing.Point(0, 0);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(251, 68);
             this.loginBtn.TabIndex = 1;
-            this.loginBtn.Text = "LOG PÅ";
+            this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
@@ -109,7 +109,7 @@
             this.reservationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reservationBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservationBtn.ForeColor = System.Drawing.Color.White;
-            this.reservationBtn.Location = new System.Drawing.Point(0, 476);
+            this.reservationBtn.Location = new System.Drawing.Point(0, 544);
             this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
             this.reservationBtn.Size = new System.Drawing.Size(251, 68);
@@ -128,7 +128,7 @@
             this.statsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statsBtn.ForeColor = System.Drawing.Color.White;
-            this.statsBtn.Location = new System.Drawing.Point(0, 408);
+            this.statsBtn.Location = new System.Drawing.Point(0, 476);
             this.statsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statsBtn.Name = "statsBtn";
             this.statsBtn.Size = new System.Drawing.Size(251, 68);
@@ -147,7 +147,7 @@
             this.readBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.readBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readBtn.ForeColor = System.Drawing.Color.White;
-            this.readBtn.Location = new System.Drawing.Point(0, 340);
+            this.readBtn.Location = new System.Drawing.Point(0, 408);
             this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readBtn.Name = "readBtn";
             this.readBtn.Size = new System.Drawing.Size(251, 68);
@@ -166,7 +166,7 @@
             this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
-            this.editBtn.Location = new System.Drawing.Point(0, 272);
+            this.editBtn.Location = new System.Drawing.Point(0, 340);
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(251, 68);
@@ -185,7 +185,7 @@
             this.createBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(0, 204);
+            this.createBtn.Location = new System.Drawing.Point(0, 272);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(251, 68);
@@ -204,7 +204,7 @@
             this.leaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.leaseBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leaseBtn.ForeColor = System.Drawing.Color.White;
-            this.leaseBtn.Location = new System.Drawing.Point(0, 136);
+            this.leaseBtn.Location = new System.Drawing.Point(0, 204);
             this.leaseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leaseBtn.Name = "leaseBtn";
             this.leaseBtn.Size = new System.Drawing.Size(251, 68);
@@ -223,7 +223,7 @@
             this.waitListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitListBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitListBtn.ForeColor = System.Drawing.Color.White;
-            this.waitListBtn.Location = new System.Drawing.Point(0, 68);
+            this.waitListBtn.Location = new System.Drawing.Point(0, 136);
             this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
             this.waitListBtn.Size = new System.Drawing.Size(251, 68);
@@ -242,7 +242,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(0, 0);
+            this.searchBtn.Location = new System.Drawing.Point(0, 68);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(251, 68);
@@ -300,6 +300,19 @@
             this.panel1.Size = new System.Drawing.Size(683, 855);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Linen;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(472, 762);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 76);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.manuPanel);
@@ -355,19 +368,6 @@
             this.sloganLabel.TabIndex = 0;
             this.sloganLabel.Text = "SønderBo er søndme god";
             this.sloganLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Linen;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(472, 762);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 76);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // medlemTableAdapter
             // 

@@ -40,12 +40,17 @@
             this.eNavnMTxt = new System.Windows.Forms.MaskedTextBox();
             this.fNavnMTxt = new System.Windows.Forms.MaskedTextBox();
             this.mDGV = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mDGV)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -58,17 +63,17 @@
             this.panel1.Controls.Add(this.fNavnMTxt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(565, 0);
+            this.panel1.Location = new System.Drawing.Point(554, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 562);
+            this.panel1.Size = new System.Drawing.Size(335, 515);
             this.panel1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 92);
+            this.label5.Location = new System.Drawing.Point(52, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(197, 38);
             this.label5.TabIndex = 9;
@@ -78,7 +83,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 363);
+            this.label4.Location = new System.Drawing.Point(52, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 32);
             this.label4.TabIndex = 8;
@@ -88,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 303);
+            this.label3.Location = new System.Drawing.Point(52, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 32);
             this.label3.TabIndex = 7;
@@ -98,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 230);
+            this.label2.Location = new System.Drawing.Point(52, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 32);
             this.label2.TabIndex = 6;
@@ -108,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 166);
+            this.label1.Location = new System.Drawing.Point(52, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 32);
             this.label1.TabIndex = 5;
@@ -121,7 +126,7 @@
             this.createBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(55, 434);
+            this.createBtn.Location = new System.Drawing.Point(57, 386);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(235, 48);
@@ -134,7 +139,7 @@
             // 
             this.emailMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailMTxt.Location = new System.Drawing.Point(178, 363);
+            this.emailMTxt.Location = new System.Drawing.Point(180, 303);
             this.emailMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailMTxt.Name = "emailMTxt";
             this.emailMTxt.Size = new System.Drawing.Size(112, 32);
@@ -144,7 +149,7 @@
             // 
             this.tlfMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tlfMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tlfMTxt.Location = new System.Drawing.Point(178, 303);
+            this.tlfMTxt.Location = new System.Drawing.Point(180, 243);
             this.tlfMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tlfMTxt.Name = "tlfMTxt";
             this.tlfMTxt.Size = new System.Drawing.Size(112, 32);
@@ -154,7 +159,7 @@
             // 
             this.eNavnMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eNavnMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eNavnMTxt.Location = new System.Drawing.Point(178, 230);
+            this.eNavnMTxt.Location = new System.Drawing.Point(180, 182);
             this.eNavnMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eNavnMTxt.Name = "eNavnMTxt";
             this.eNavnMTxt.Size = new System.Drawing.Size(112, 32);
@@ -164,7 +169,7 @@
             // 
             this.fNavnMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.fNavnMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.fNavnMTxt.Location = new System.Drawing.Point(178, 166);
+            this.fNavnMTxt.Location = new System.Drawing.Point(180, 118);
             this.fNavnMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fNavnMTxt.Name = "fNavnMTxt";
             this.fNavnMTxt.Size = new System.Drawing.Size(112, 32);
@@ -176,20 +181,43 @@
             this.mDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mDGV.Location = new System.Drawing.Point(0, 0);
+            this.mDGV.Location = new System.Drawing.Point(3, 3);
             this.mDGV.Name = "mDGV";
             this.mDGV.RowHeadersWidth = 62;
             this.mDGV.RowTemplate.Height = 28;
-            this.mDGV.Size = new System.Drawing.Size(565, 562);
+            this.mDGV.Size = new System.Drawing.Size(551, 515);
             this.mDGV.TabIndex = 1;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(900, 562);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.mDGV);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(892, 521);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Opret Medlem";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(900, 562);
-            this.Controls.Add(this.mDGV);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Create";
             this.Text = "Create";
@@ -197,6 +225,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mDGV)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -215,5 +245,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView mDGV;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
