@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -146,15 +146,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle14;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -223,6 +223,7 @@
             // 
             this.waitlistPrintLbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.waitlistPrintLbtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waitlistPrintLbtn.FlatAppearance.BorderSize = 0;
             this.waitlistPrintLbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitlistPrintLbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitlistPrintLbtn.ForeColor = System.Drawing.Color.White;
@@ -289,14 +290,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle13;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -353,6 +354,7 @@
             // 
             this.waitlistPrintUBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.waitlistPrintUBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waitlistPrintUBtn.FlatAppearance.BorderSize = 0;
             this.waitlistPrintUBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.waitlistPrintUBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitlistPrintUBtn.ForeColor = System.Drawing.Color.White;
