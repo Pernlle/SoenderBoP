@@ -20,6 +20,7 @@ namespace SoenderBoP
             InitializeComponent();
             string sqlcom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+
             DataGridView DGV = leaseDGV;
             GetDGVStyle.GetStyle(DGV);
             leaseDGV.RowHeadersVisible = false;
