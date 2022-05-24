@@ -32,29 +32,29 @@
             this.manuPanel = new System.Windows.Forms.Panel();
             this.reservationBtn = new System.Windows.Forms.Button();
             this.statsBtn = new System.Windows.Forms.Button();
-            this.readBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
             this.leaseBtn = new System.Windows.Forms.Button();
             this.waitListBtn = new System.Windows.Forms.Button();
+            this.readBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.lboligBtn = new System.Windows.Forms.Button();
             this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.passBox = new System.Windows.Forms.MaskedTextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lBTN = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.sloganPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sloganLabel = new System.Windows.Forms.Label();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.idLabel = new System.Windows.Forms.Label();
-            this.passBox = new System.Windows.Forms.MaskedTextBox();
-            this.lBTN = new System.Windows.Forms.Button();
-            this.idBox = new System.Windows.Forms.TextBox();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -122,25 +122,6 @@
             this.statsBtn.Text = "Udtræk statistik";
             this.statsBtn.UseVisualStyleBackColor = false;
             this.statsBtn.Click += new System.EventHandler(this.statsBtn_Click);
-            // 
-            // readBtn
-            // 
-            this.readBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.readBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.readBtn.FlatAppearance.BorderSize = 3;
-            this.readBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.readBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readBtn.ForeColor = System.Drawing.Color.White;
-            this.readBtn.Location = new System.Drawing.Point(0, 136);
-            this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.readBtn.Name = "readBtn";
-            this.readBtn.Size = new System.Drawing.Size(251, 68);
-            this.readBtn.TabIndex = 2;
-            this.readBtn.Text = "Se info";
-            this.readBtn.UseVisualStyleBackColor = false;
-            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
             // 
             // editBtn
             // 
@@ -218,6 +199,25 @@
             this.waitListBtn.Text = "Venteliste";
             this.waitListBtn.UseVisualStyleBackColor = false;
             this.waitListBtn.Click += new System.EventHandler(this.waitListBtn_Click);
+            // 
+            // readBtn
+            // 
+            this.readBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.readBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.readBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.readBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.readBtn.FlatAppearance.BorderSize = 3;
+            this.readBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readBtn.ForeColor = System.Drawing.Color.White;
+            this.readBtn.Location = new System.Drawing.Point(0, 136);
+            this.readBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.readBtn.Name = "readBtn";
+            this.readBtn.Size = new System.Drawing.Size(251, 68);
+            this.readBtn.TabIndex = 2;
+            this.readBtn.Text = "Se info";
+            this.readBtn.UseVisualStyleBackColor = false;
+            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
             // 
             // searchBtn
             // 
@@ -311,6 +311,46 @@
             this.panel1.Size = new System.Drawing.Size(683, 855);
             this.panel1.TabIndex = 0;
             // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLabel.Location = new System.Drawing.Point(238, 258);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(111, 32);
+            this.passLabel.TabIndex = 9;
+            this.passLabel.Text = "Password";
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(238, 183);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(37, 32);
+            this.idLabel.TabIndex = 8;
+            this.idLabel.Text = "ID";
+            // 
+            // passBox
+            // 
+            this.passBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passBox.Location = new System.Drawing.Point(357, 258);
+            this.passBox.Name = "passBox";
+            this.passBox.Size = new System.Drawing.Size(173, 32);
+            this.passBox.TabIndex = 2;
+            // 
+            // idBox
+            // 
+            this.idBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.idBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.idBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idBox.Location = new System.Drawing.Point(357, 183);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(173, 32);
+            this.idBox.TabIndex = 1;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Linen;
@@ -323,6 +363,21 @@
             this.button1.Size = new System.Drawing.Size(225, 76);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lBTN
+            // 
+            this.lBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lBTN.FlatAppearance.BorderSize = 0;
+            this.lBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lBTN.ForeColor = System.Drawing.Color.White;
+            this.lBTN.Location = new System.Drawing.Point(244, 326);
+            this.lBTN.Name = "lBTN";
+            this.lBTN.Size = new System.Drawing.Size(286, 58);
+            this.lBTN.TabIndex = 3;
+            this.lBTN.Text = "Login";
+            this.lBTN.UseVisualStyleBackColor = false;
+            this.lBTN.Click += new System.EventHandler(this.lBTN_Click);
             // 
             // panel3
             // 
@@ -384,61 +439,6 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passLabel.Location = new System.Drawing.Point(238, 258);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(111, 32);
-            this.passLabel.TabIndex = 9;
-            this.passLabel.Text = "Password";
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(238, 183);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(37, 32);
-            this.idLabel.TabIndex = 8;
-            this.idLabel.Text = "ID";
-            // 
-            // passBox
-            // 
-            this.passBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passBox.Location = new System.Drawing.Point(357, 258);
-            this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(173, 32);
-            this.passBox.TabIndex = 2;
-            // 
-            // lBTN
-            // 
-            this.lBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lBTN.FlatAppearance.BorderSize = 0;
-            this.lBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBTN.ForeColor = System.Drawing.Color.White;
-            this.lBTN.Location = new System.Drawing.Point(244, 326);
-            this.lBTN.Name = "lBTN";
-            this.lBTN.Size = new System.Drawing.Size(286, 58);
-            this.lBTN.TabIndex = 3;
-            this.lBTN.Text = "Login";
-            this.lBTN.UseVisualStyleBackColor = false;
-            this.lBTN.Click += new System.EventHandler(this.lBTN_Click);
-            // 
-            // idBox
-            // 
-            this.idBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.idBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.idBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBox.Location = new System.Drawing.Point(357, 183);
-            this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(173, 32);
-            this.idBox.TabIndex = 1;
-            // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -471,15 +471,6 @@
         private System.Windows.Forms.Panel sloganPanel;
         public System.Windows.Forms.Panel manuPanel;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Button reservationBtn;
-        private System.Windows.Forms.Button statsBtn;
-        private System.Windows.Forms.Button editBtn;
-        private System.Windows.Forms.Button readBtn;
-        private System.Windows.Forms.Button createBtn;
-        private System.Windows.Forms.Button waitListBtn;
-        private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.Button leaseBtn;
         private System.Windows.Forms.Label sloganLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private soenderbodbDataSetTableAdapters.MedlemTableAdapter medlemTableAdapter;
@@ -493,6 +484,15 @@
         private System.Windows.Forms.MaskedTextBox passBox;
         private System.Windows.Forms.Button lBTN;
         private System.Windows.Forms.TextBox idBox;
+        public System.Windows.Forms.Button loginBtn;
+        public System.Windows.Forms.Button reservationBtn;
+        public System.Windows.Forms.Button statsBtn;
+        public System.Windows.Forms.Button editBtn;
+        public System.Windows.Forms.Button readBtn;
+        public System.Windows.Forms.Button createBtn;
+        public System.Windows.Forms.Button waitListBtn;
+        public System.Windows.Forms.Button searchBtn;
+        public System.Windows.Forms.Button leaseBtn;
     }
 }
 

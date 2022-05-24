@@ -17,10 +17,8 @@ namespace SoenderBoP
             InitializeComponent();
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
+        public void loginBtn_Click(object sender, EventArgs e)
         {
-            //Login button
-
             string id = idBox.Text;
             string pass = passBox.Text;
 
@@ -34,6 +32,10 @@ namespace SoenderBoP
             if (id_ok && pass_ok)
             {
                 MessageBox.Show("Du er logget ind som adminstrator");
+                //waitListBtn.Visible = true;
+                //editBtn.Visible = true;
+                //leaseBtn.Visible = true;
+                //reservationBtn.Visible = true;
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
