@@ -38,7 +38,7 @@ namespace SoenderBoP
                     this.SearchDGV.Refresh();
                     this.SearchDGV.Update();
                 }
-                else MessageBox.Show("kvm fejl");
+                else MessageBox.Show("Fejl i prisen");
             }
             else
             {
@@ -51,7 +51,7 @@ namespace SoenderBoP
                     this.SearchDGV.Refresh();
                     this.SearchDGV.Update();
                 }
-                else MessageBox.Show("kvm fejl");
+                else MessageBox.Show("Fejl i prisen");
             }
            
         }
@@ -68,18 +68,34 @@ namespace SoenderBoP
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
             
             MessageBox.Show(Convert.ToString(minKvm));
-
-            if (minKvm < maxKvm)
+            if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
-                SearchDGV.Controls.Clear();
+                if (minKvm < maxKvm)
+                {
+                    SearchDGV.Controls.Clear();
 
-                string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
-                $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
-                SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-                this.SearchDGV.Refresh();
-                this.SearchDGV.Update();
+                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+                    $"WHERE bLNr IS NULL AND kvm > {minKvm} AND kvm < {maxKvm};";
+                    SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+                    this.SearchDGV.Refresh();
+                    this.SearchDGV.Update();
+                }
+                else MessageBox.Show("Fejl i kvm");
             }
-            else MessageBox.Show("Pris fejl");
+            else
+            {
+                if (minKvm < maxKvm)
+                {
+                    SearchDGV.Controls.Clear();
+
+                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+                    $"WHERE kvm > {minKvm} AND kvm < {maxKvm};";
+                    SearchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+                    this.SearchDGV.Refresh();
+                    this.SearchDGV.Update();
+                }
+                else MessageBox.Show("Fejl i kvm");
+            }
         }
 
         private void SetupDataGridView()

@@ -51,6 +51,7 @@ namespace SoenderBoP
 
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Husk altid at lukke thread'en, ellers kører programmet stadig.
             thread.Abort();
         }
 
