@@ -22,8 +22,7 @@ namespace SoenderBoP
             string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
             readMedlemDGV.DataSource= FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = readMedlemDGV;
-            GetDGVStyle.GetStyle(DGV);
-   
+            GetDGVStyle.GetStyle(DGV);   
 
             sqlcom = "SELECT bId AS 'ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',bLNr AS 'Løbenummer' FROM Bolig";
             readBoligDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
@@ -45,7 +44,6 @@ namespace SoenderBoP
             DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
             lejlighedDGV.RowHeadersVisible = false;
-
 
             sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
