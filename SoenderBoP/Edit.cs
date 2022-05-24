@@ -45,6 +45,8 @@ namespace SoenderBoP
                 {
                     string delete = "mId = " + cellValue;
                     CRUD.Delete(insertInto, delete, cellValue);
+                    this.editMedlemDGV.Refresh();
+                    this.editMedlemDGV.Update();
                 }
                 else
                 {

@@ -48,7 +48,7 @@ namespace SoenderBoP
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
 
-            //Interaktion med 
+            //Interaktion med DataGridView'et
             DGV.AllowUserToAddRows=false;
             DGV.AllowUserToOrderColumns = false;
             foreach (DataGridViewColumn column in DGV.Columns)
