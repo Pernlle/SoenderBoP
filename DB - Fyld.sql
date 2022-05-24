@@ -9,9 +9,9 @@ INSERT INTO Medlem (fNavn, eNavn, tlf, email, mLNr) VALUES
 	('Fie', 'Potter', '54629374', 'potterfie@gamil.com', NULL),
 	('Pernille', 'Heidi', '91026401', 'heidipernille@gmail.com', NULL),
 	('Arsim', 'Thor', '35648138', 'thorarsim@gmail.com', 2),
-	('Tim', 'Jensen', '293401849', 'jensentim@gmail.com', NULL),
-	('Maya', 'Fjord', '927462048', 'fjordmaya@gmail.com', NULL),
-	('Thorbjørn', 'Perregaard', '756491026', 'perregaardthorbjørn@gmail.com', NULL)
+	('Tim', 'Jensen', '29340184', 'jensentim@gmail.com', NULL),
+	('Maya', 'Fjord', '92746204', 'fjordmaya@gmail.com', NULL),
+	('Thorbjørn', 'Perregaard', '75649102', 'perregaardthorbjørn@gmail.com', NULL)
 
 INSERT INTO Venteliste (vMid, boligType, vDato) VALUES
 (4, 1, '03-01-2022'),
