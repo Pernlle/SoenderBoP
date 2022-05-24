@@ -13,28 +13,31 @@ namespace SoenderBoP
 {
     public partial class Forside : Form
     {
-        private readonly Random _rnd = new Random();
-        private readonly List<string> _slogans = new List<string> { "SønderBo er søndme god", "Er det sønder god, er det Sønderbo", "Din tryghed kan vi bære, i SønderBo kan du være", "Mangler du en bolig? I Sønderbo kan du tage det helt rolig’", "Vores ventelister er helt tomme! Vent…",  "Foreningen SønderBo, forener vi forenet i forening", "Det sønder, sønder fedt, jeg melder mig om lidt" };
-        private readonly Thread _thread;
+        private readonly Random rnd = new Random();
+        private readonly List<string> slogans = new List<string> { "SønderBo er søndme god", "Er det sønder god, er det Sønderbo", "Din tryghed kan vi bære, i SønderBo kan du være", "Mangler du en bolig? I Sønderbo kan du tage det helt rolig’", "Vores ventelister er helt tomme! Vent…",  "Foreningen SønderBo, forener vi forenet i forening", "Det sønder, sønder fedt, jeg melder mig om lidt" };
+        private readonly Thread thread;
         public Forside()
         {
             InitializeComponent();
-            _thread = new Thread(UpdateSlogan);
-            
-            _thread.Start();
+            //lav en thread, som kører metoden Updateslogan
+            thread = new Thread(UpdateSlogan);  
+            //kør threaden
+            thread.Start();            
         }
-
+        //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut (som opgaven siger).
         private void UpdateSlogan()
         {
             while (true)
             {
+                //hvis der er en forside /er forsiden åben - lav da ... slogan ...  (Dette betyder at hvis ikke forsiden er åbnet, skal den 
+                //ikke lave det efterfølgende.) this. referer til selve forside forms'en. Det kræver derfor at forsiden kan åbne succesfuldt.
                 if (this.IsHandleCreated)
                 {
-                    var slogan = _slogans[_rnd.Next(_slogans.Count)];
+                    string slogan = slogans[rnd.Next(slogans.Count)];
+                    //sloganlabel, som er sat ind på forsiden på sloganpanel, skal indeholde tekst fra List -Gøres ved invoke
                     sloganLabel.BeginInvoke(new Action(() => sloganLabel.Text = slogan));
                 }
-
-
+                //slogan skal skifte hvert 3. minut
                 Thread.Sleep(TimeSpan.FromMinutes(3));
             }
         }
@@ -44,14 +47,11 @@ namespace SoenderBoP
             editBtn.Visible = false;
             //leaseBtn.Visible = false;
             reservationBtn.Visible = false;
-
-
-
         }
 
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _thread.Abort();
+            thread.Abort();
         }
 
         public void createBtn_Click(object sender, EventArgs e)
@@ -109,7 +109,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
 
             frm.Show();
-
         }
 
         public void waitListBtn_Click(object sender, EventArgs e)
@@ -143,7 +142,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
 
             frm.Show();
-
         }
 
         public void loginBtn_Click(object sender, EventArgs e)
