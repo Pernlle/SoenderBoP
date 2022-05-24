@@ -77,7 +77,7 @@ namespace SoenderBoP
             frm.Show();
 
         }
-
+        
         public void editBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -145,16 +145,29 @@ namespace SoenderBoP
             frm.Show();
         }
 
+        public bool open = true;
         public void loginBtn_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Login frm = new Login() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState = FormWindowState.Maximized;
+            if (open == false)
+            {
+                panel5.Show();
+                //this.panel5.BringToFront();
+                //this.sloganPanel.BringToFront();
+                open = true;
+            }
+            else if (open == true)
+            {
+                panel5.Hide();
+                open = false;
+            }
+            //panel1.Controls.Clear();
+            //Login frm = new Login() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //frm.FormBorderStyle = FormBorderStyle.None;
+            //frm.WindowState = FormWindowState.Maximized;
 
-            this.panel1.Controls.Add(frm);
+            //this.panel1.Controls.Add(frm);
 
-            frm.Show();
+            //frm.Show();
         }
 
         
@@ -170,7 +183,7 @@ namespace SoenderBoP
             frm.Show();
         }
 
-        private void lBTN_Click(object sender, EventArgs e)
+        public void lBTN_Click(object sender, EventArgs e)
         {
             //Login button
 

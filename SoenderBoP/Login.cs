@@ -19,10 +19,14 @@ namespace SoenderBoP
 
         public void loginBtn_Click(object sender, EventArgs e)
         {
+            
+            Forside forside = new Forside();
+
             string id = idBox.Text;
             string pass = passBox.Text;
 
-            // assumption: //double assumption dont assume anything
+
+            //double assumption dont assume anything
             bool id_ok = true, pass_ok = true;
 
             // length check:
@@ -32,10 +36,11 @@ namespace SoenderBoP
             if (id_ok && pass_ok)
             {
                 MessageBox.Show("Du er logget ind som adminstrator");
-                //waitListBtn.Visible = true;
-                //editBtn.Visible = true;
-                //leaseBtn.Visible = true;
-                //reservationBtn.Visible = true;
+                forside.Update();
+                forside.waitListBtn.Visible = true;
+                forside.editBtn.Visible = true;
+                forside.leaseBtn.Visible = true;
+                forside.reservationBtn.Visible = true;
             }
             else { MessageBox.Show("Prøv igen du"); }
         }

@@ -116,7 +116,7 @@ namespace SoenderBoP
 
         //If btn for kun ledige boliger er trykket på -Vis da kun ledige boliger
         //Bruges når vi skal søge på pris og kvm, så vi søger på de ledige kun -ellers søger vi på alle boligere :)
-        private bool BtnClicked = false;
+        private bool BtnClicked = false; //feltvariabel
 
         private void saBTN_Click(object sender, EventArgs e)
         {
