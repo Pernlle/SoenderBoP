@@ -55,6 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sloganLabel = new System.Windows.Forms.Label();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -63,6 +64,7 @@
             this.panel2.SuspendLayout();
             this.sloganPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // manuPanel
@@ -282,7 +284,7 @@
             this.BackgroundPanel.Location = new System.Drawing.Point(0, 0);
             this.BackgroundPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BackgroundPanel.Name = "BackgroundPanel";
-            this.BackgroundPanel.Size = new System.Drawing.Size(934, 960);
+            this.BackgroundPanel.Size = new System.Drawing.Size(1145, 960);
             this.BackgroundPanel.TabIndex = 1;
             // 
             // panel4
@@ -292,30 +294,26 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(251, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(683, 855);
+            this.panel4.Size = new System.Drawing.Size(894, 855);
             this.panel4.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Linen;
-            this.panel1.Controls.Add(this.passLabel);
-            this.panel1.Controls.Add(this.idLabel);
-            this.panel1.Controls.Add(this.passBox);
-            this.panel1.Controls.Add(this.idBox);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.lBTN);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 855);
+            this.panel1.Size = new System.Drawing.Size(894, 855);
             this.panel1.TabIndex = 0;
             // 
             // passLabel
             // 
             this.passLabel.AutoSize = true;
             this.passLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passLabel.Location = new System.Drawing.Point(238, 258);
+            this.passLabel.Location = new System.Drawing.Point(10, 181);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(111, 32);
             this.passLabel.TabIndex = 9;
@@ -325,7 +323,7 @@
             // 
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(238, 183);
+            this.idLabel.Location = new System.Drawing.Point(10, 106);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(37, 32);
             this.idLabel.TabIndex = 8;
@@ -336,7 +334,7 @@
             this.passBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passBox.Location = new System.Drawing.Point(357, 258);
+            this.passBox.Location = new System.Drawing.Point(129, 181);
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(173, 32);
             this.passBox.TabIndex = 2;
@@ -346,7 +344,7 @@
             this.idBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.idBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBox.Location = new System.Drawing.Point(357, 183);
+            this.idBox.Location = new System.Drawing.Point(129, 106);
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(173, 32);
             this.idBox.TabIndex = 1;
@@ -366,16 +364,16 @@
             // 
             // lBTN
             // 
-            this.lBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lBTN.BackColor = System.Drawing.Color.IndianRed;
             this.lBTN.FlatAppearance.BorderSize = 0;
             this.lBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBTN.ForeColor = System.Drawing.Color.White;
-            this.lBTN.Location = new System.Drawing.Point(244, 326);
+            this.lBTN.Location = new System.Drawing.Point(16, 272);
             this.lBTN.Name = "lBTN";
             this.lBTN.Size = new System.Drawing.Size(286, 58);
             this.lBTN.TabIndex = 3;
-            this.lBTN.Text = "Login";
+            this.lBTN.Text = "LOGIN";
             this.lBTN.UseVisualStyleBackColor = false;
             this.lBTN.Click += new System.EventHandler(this.lBTN_Click);
             // 
@@ -394,7 +392,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 855);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(934, 105);
+            this.panel2.Size = new System.Drawing.Size(1145, 105);
             this.panel2.TabIndex = 1;
             // 
             // sloganPanel
@@ -406,14 +404,14 @@
             this.sloganPanel.Location = new System.Drawing.Point(0, 0);
             this.sloganPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sloganPanel.Name = "sloganPanel";
-            this.sloganPanel.Size = new System.Drawing.Size(934, 105);
+            this.sloganPanel.Size = new System.Drawing.Size(1145, 105);
             this.sloganPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::SoenderBoP.Properties.Resources.Boligforeningen;
-            this.pictureBox1.Location = new System.Drawing.Point(826, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1037, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 105);
@@ -439,11 +437,25 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.lBTN);
+            this.panel5.Controls.Add(this.passLabel);
+            this.panel5.Controls.Add(this.idBox);
+            this.panel5.Controls.Add(this.idLabel);
+            this.panel5.Controls.Add(this.passBox);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(580, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(314, 855);
+            this.panel5.TabIndex = 10;
+            // 
             // Forside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 960);
+            this.ClientSize = new System.Drawing.Size(1145, 960);
             this.Controls.Add(this.BackgroundPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -456,12 +468,13 @@
             this.BackgroundPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.sloganPanel.ResumeLayout(false);
             this.sloganPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -493,6 +506,7 @@
         public System.Windows.Forms.Button waitListBtn;
         public System.Windows.Forms.Button searchBtn;
         public System.Windows.Forms.Button leaseBtn;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 
