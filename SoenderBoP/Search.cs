@@ -27,7 +27,7 @@ namespace SoenderBoP
             int minPris = Convert.ToInt32(minPrisBox.Text);
             int maxPris = Convert.ToInt32(maxPrisBox.Text);
 
-            if (BtnClicked)
+            if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
                 if (minPris < maxPris)
                 {
