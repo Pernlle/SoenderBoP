@@ -48,6 +48,7 @@ namespace SoenderBoP
             leaseBtn.Visible = false;
             reservationBtn.Visible = false;
             logoutBtn.Visible = false;
+            panel5.Visible=false;
         }
 
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
