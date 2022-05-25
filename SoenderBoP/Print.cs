@@ -23,7 +23,7 @@ namespace SoenderBoP
 
             TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\{writerName}.Txt");
             writer.WriteLine(headers);
-            for (int i = 0; i < dgv.Rows.Count - 1; i++) // rows
+            for (int i = 0; i < dgv.Rows.Count; i++) // rows
             {
                 for (int j = 0; j < dgv.Columns.Count; j++) // columns
                 {
