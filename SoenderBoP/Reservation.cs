@@ -26,13 +26,13 @@ namespace SoenderBoP
             GetDGVStyle.GetStyle(DGV);
 
 
-            sqlcom = "SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
+            sqlcom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
             reserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = reserveDGV;
             GetDGVStyle.GetStyle(DGV);
         }
 
-        private void reserveBtn_Click(object sender, EventArgs e)
+        public void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
             string loebeNr = this.loebeNr.Text;
@@ -58,10 +58,10 @@ namespace SoenderBoP
 
                 SqlConnection conn = new SqlConnection(strconn);
 
-                string sqlCom = "INSERT INTO Reserveret(rLNr,rId,dStart,dSlut) VALUES (@rLNr, @rId, @dStart, @dSlut);";
+                string sqlCom = "INSERT INTO Reserveret(rLNr,rRId,dStart,dSlut) VALUES (@rLNr, @rRId, @dStart, @dSlut);";
                 SqlCommand cmd = new SqlCommand(sqlCom, conn);
                 cmd.Parameters.AddWithValue("@rLNr", loebeNr);
-                cmd.Parameters.AddWithValue("@rId", rId);
+                cmd.Parameters.AddWithValue("@rRId", rId);
                 cmd.Parameters.AddWithValue("@dStart", dStart);
                 cmd.Parameters.AddWithValue("@dSlut", dSlut);
 
@@ -72,9 +72,22 @@ namespace SoenderBoP
                 conn.Close();
                 MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
+
+                string sqlcom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
+                ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+                DataGridView DGV = ressourceDGV;
+                GetDGVStyle.GetStyle(DGV);
             }
-            catch { MessageBox.Show("Ressourcen er booket af en anden"); }
+            catch { MessageBox.Show("Fejl"); }
             
+        }
+
+        private void seIdbtn_Click(object sender, EventArgs e)
+        {
+            string sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DataGridView DGV = ressourceDGV;
+            GetDGVStyle.GetStyle(DGV);
         }
     }
 }

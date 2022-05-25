@@ -71,8 +71,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.reserveDGV = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.seIdbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceDGV)).BeginInit();
@@ -173,6 +174,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.seIdbtn);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.dSlutMinut);
             this.panel1.Controls.Add(this.dSlutTime);
@@ -572,14 +574,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reservationer";
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(714, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(341, 526);
-            this.panel3.TabIndex = 0;
-            // 
             // reserveDGV
             // 
             this.reserveDGV.BackgroundColor = System.Drawing.Color.Linen;
@@ -591,6 +585,24 @@
             this.reserveDGV.RowTemplate.Height = 28;
             this.reserveDGV.Size = new System.Drawing.Size(711, 526);
             this.reserveDGV.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(714, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(341, 526);
+            this.panel3.TabIndex = 0;
+            // 
+            // seIdbtn
+            // 
+            this.seIdbtn.Location = new System.Drawing.Point(289, 205);
+            this.seIdbtn.Name = "seIdbtn";
+            this.seIdbtn.Size = new System.Drawing.Size(143, 35);
+            this.seIdbtn.TabIndex = 24;
+            this.seIdbtn.Text = "Se ressouce ID";
+            this.seIdbtn.UseVisualStyleBackColor = true;
+            this.seIdbtn.Click += new System.EventHandler(this.seIdbtn_Click);
             // 
             // Reservation
             // 
@@ -678,5 +690,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView reserveDGV;
+        private System.Windows.Forms.Button seIdbtn;
     }
 }

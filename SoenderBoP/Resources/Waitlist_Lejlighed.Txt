@@ -1,3 +1,9 @@
-Dato  | Fornavn | Efternavn | Medlems ID | 
-  1  |1-4-2022|Karen|Manager|  3  
-  2  |1-4-2022|Seamus|Finnigan|  1  
+             Dato             |           Fornavn            |          Efternavn           |              ID              
+              1               |          01-04-2022          |            Karen             |           Manager            |              3               
+              2               |          01-04-2022          |            Seamus            |           Finnigan           |              1               
+              3               |          03-01-2022          |             Fie              |            Potter            |              4               
+              4               |          07-06-2022          |           Pernille           |            Heidi             |              5               
+              5               |          12-03-2022          |             Tim              |            Jensen            |              7               
+              6               |          15-03-2022          |             Maya             |            Fjord             |              8               
+              7               |          17-08-2022          |          Thorbjørn           |          Perregaard          |              9               
+              8               |          18-07-2022          |            Arsim             |             Thor             |              6               
