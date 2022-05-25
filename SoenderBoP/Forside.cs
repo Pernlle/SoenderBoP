@@ -148,6 +148,7 @@ namespace SoenderBoP
         public bool open = true;
         public void loginBtn_Click(object sender, EventArgs e)
         {
+            //toggle
             if (open == false)
             {
                 panel5.Show();
