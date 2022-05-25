@@ -47,6 +47,7 @@ namespace SoenderBoP
             editBtn.Visible = false;
             leaseBtn.Visible = false;
             reservationBtn.Visible = false;
+            logoutBtn.Visible = false;
         }
 
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
@@ -199,8 +200,21 @@ namespace SoenderBoP
                 editBtn.Visible = true;
                 leaseBtn.Visible = true;
                 reservationBtn.Visible = true;
+                panel5.Hide();
+                loginBtn.Visible = false;
+                logoutBtn.Visible = true;
             }
             else { MessageBox.Show("Prøv igen du"); }
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            waitListBtn.Visible = false;
+            editBtn.Visible = false;
+            leaseBtn.Visible = false;
+            reservationBtn.Visible = false;
+            logoutBtn.Visible = false;
+            loginBtn.Visible = true;
         }
     }
 }
