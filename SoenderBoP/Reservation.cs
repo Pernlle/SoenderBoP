@@ -21,8 +21,14 @@ namespace SoenderBoP
         private void Reservation_Load(object sender, EventArgs e)
         {
             string sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
-            rDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = rDGV;
+            ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DataGridView DGV = ressourceDGV;
+            GetDGVStyle.GetStyle(DGV);
+
+
+            sqlcom = "SELECT fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID', dStart AS 'Fra', dSlut AS 'Til', rType AS 'Ressource', rNr AS 'Nr' FROM Reserveret, Medlem, Ressource WHERE lNr = mLNr AND rId = rId AND lNr = rLNr ";
+            reserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            DGV = reserveDGV;
             GetDGVStyle.GetStyle(DGV);
         }
 

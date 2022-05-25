@@ -67,19 +67,19 @@
             this.dSlutM1inut = new System.Windows.Forms.MaskedTextBox();
             this.dSlu1tTime = new System.Windows.Forms.MaskedTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rDGV = new System.Windows.Forms.DataGridView();
+            this.ressourceDGV = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.reserveDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ressourceDGV)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // reserveBtn
@@ -511,30 +511,30 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.rDGV);
+            this.panel2.Controls.Add(this.ressourceDGV);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(521, 526);
             this.panel2.TabIndex = 13;
             // 
-            // rDGV
+            // ressourceDGV
             // 
-            this.rDGV.AllowUserToAddRows = false;
-            this.rDGV.AllowUserToDeleteRows = false;
-            this.rDGV.AllowUserToResizeColumns = false;
-            this.rDGV.AllowUserToResizeRows = false;
-            this.rDGV.BackgroundColor = System.Drawing.Color.Linen;
-            this.rDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rDGV.Location = new System.Drawing.Point(0, 0);
-            this.rDGV.Name = "rDGV";
-            this.rDGV.RowHeadersVisible = false;
-            this.rDGV.RowHeadersWidth = 62;
-            this.rDGV.RowTemplate.Height = 28;
-            this.rDGV.Size = new System.Drawing.Size(521, 526);
-            this.rDGV.TabIndex = 0;
+            this.ressourceDGV.AllowUserToAddRows = false;
+            this.ressourceDGV.AllowUserToDeleteRows = false;
+            this.ressourceDGV.AllowUserToResizeColumns = false;
+            this.ressourceDGV.AllowUserToResizeRows = false;
+            this.ressourceDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.ressourceDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ressourceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ressourceDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ressourceDGV.Location = new System.Drawing.Point(0, 0);
+            this.ressourceDGV.Name = "ressourceDGV";
+            this.ressourceDGV.RowHeadersVisible = false;
+            this.ressourceDGV.RowHeadersWidth = 62;
+            this.ressourceDGV.RowTemplate.Height = 28;
+            this.ressourceDGV.Size = new System.Drawing.Size(521, 526);
+            this.ressourceDGV.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -563,7 +563,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Linen;
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.reserveDGV);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
@@ -580,17 +580,17 @@
             this.panel3.Size = new System.Drawing.Size(341, 526);
             this.panel3.TabIndex = 0;
             // 
-            // dataGridView1
+            // reserveDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(711, 526);
-            this.dataGridView1.TabIndex = 1;
+            this.reserveDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.reserveDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reserveDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reserveDGV.Location = new System.Drawing.Point(3, 3);
+            this.reserveDGV.Name = "reserveDGV";
+            this.reserveDGV.RowHeadersWidth = 62;
+            this.reserveDGV.RowTemplate.Height = 28;
+            this.reserveDGV.Size = new System.Drawing.Size(711, 526);
+            this.reserveDGV.TabIndex = 1;
             // 
             // Reservation
             // 
@@ -621,11 +621,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ressourceDGV)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,11 +672,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView rDGV;
+        private System.Windows.Forms.DataGridView ressourceDGV;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView reserveDGV;
     }
 }
