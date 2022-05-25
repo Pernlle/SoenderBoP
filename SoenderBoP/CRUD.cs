@@ -150,7 +150,7 @@ namespace SoenderBoP
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
 
             SqlConnection conn = new SqlConnection(strconn);
-            string sqlCom = $"DELETE Venteliste WHERE medlemId = {cellValue}; DELETE {insertInto} WHERE {delete};";
+            string sqlCom = $"DELETE Venteliste WHERE vMid = {cellValue}; DELETE {insertInto} WHERE {delete};";
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
