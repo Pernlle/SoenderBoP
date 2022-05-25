@@ -66,6 +66,7 @@
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
             this.panel2.SuspendLayout();
@@ -272,6 +273,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.printStatsBTN);
             this.panel2.Controls.Add(this.statsCBX);
@@ -300,7 +302,7 @@
             this.printStatsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printStatsBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printStatsBTN.ForeColor = System.Drawing.Color.White;
-            this.printStatsBTN.Location = new System.Drawing.Point(33, 334);
+            this.printStatsBTN.Location = new System.Drawing.Point(33, 402);
             this.printStatsBTN.Name = "printStatsBTN";
             this.printStatsBTN.Size = new System.Drawing.Size(240, 38);
             this.printStatsBTN.TabIndex = 5;
@@ -404,6 +406,21 @@
             this.tabPage1.Text = "Statistik";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(33, 326);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(240, 38);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "VIS ALLE";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,5 +505,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
     }
 }
