@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AMenu.Designer.cs">
-      <DependentUpon>AMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Available.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Available.Designer.cs">
-      <DependentUpon>Available.cs</DependentUpon>
-    </Compile>
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,19 +73,12 @@
     <Compile Include="Lease.Designer.cs">
       <DependentUpon>Lease.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FillPanel.cs" />
     <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,12 +133,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>waitListViews.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AMenu.resx">
-      <DependentUpon>AMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Available.resx">
-      <DependentUpon>Available.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lease.resx">
       <DependentUpon>Lease.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

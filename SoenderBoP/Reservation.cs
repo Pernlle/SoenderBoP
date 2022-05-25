@@ -67,7 +67,7 @@ namespace SoenderBoP
                 MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
             }
-            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            catch { MessageBox.Show("Ressourcen er booket af en anden"); }
             
         }
     }
