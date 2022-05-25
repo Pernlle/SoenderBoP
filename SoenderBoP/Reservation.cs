@@ -26,7 +26,7 @@ namespace SoenderBoP
             GetDGVStyle.GetStyle(DGV);
 
 
-            sqlcom = "SELECT fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID', dStart AS 'Fra', dSlut AS 'Til', rType AS 'Ressource', rNr AS 'Nr' FROM Reserveret, Medlem, Ressource WHERE lNr = mLNr AND rId = rId AND lNr = rLNr ";
+            sqlcom = "SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
             reserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = reserveDGV;
             GetDGVStyle.GetStyle(DGV);

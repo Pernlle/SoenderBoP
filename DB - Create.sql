@@ -57,7 +57,7 @@ CREATE TABLE Ressource(
 );
 
 CREATE TABLE Reserveret(
-	rId INT FOREIGN KEY REFERENCES Ressource(rId),
+	rRId INT FOREIGN KEY REFERENCES Ressource(rId),
 	rLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr),
 	dStart VARCHAR(50),
 	dSlut VARCHAR(50)

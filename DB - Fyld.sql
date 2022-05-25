@@ -34,7 +34,7 @@ INSERT INTO Bolig (mndPris, adr, kvm, bType, bLNr) VALUES
 ('4000', 'Ligustervænget 13', '50', '2', '2'),
 ('3000', 'Ligustervænget 32', '45', '3', NULL)
 
-INSERT INTO Reserveret(rId, rLNr, dStart, dSlut) VALUES 
+INSERT INTO Reserveret(rRId, rLNr, dStart, dSlut) VALUES 
 ('23', '1', '2022-05-05 12:00', '2022-06-05 12:00'),
 ('12', '2', '2022-05-05 12:00', '2022-06-05 12:00')
 
