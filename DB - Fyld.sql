@@ -45,4 +45,3 @@ SELECT * FROM Medlem
 SELECT * FROM Lejekontrakt
 SELECT * FROM Bolig
 
-
