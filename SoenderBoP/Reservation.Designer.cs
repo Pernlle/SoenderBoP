@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dSlutDa1g = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.seIdbtn = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.dSlutMinut = new System.Windows.Forms.TextBox();
             this.dSlutTime = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.reserveDGV = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.seIdbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ressourceDGV)).BeginInit();
@@ -95,7 +95,7 @@
             this.reserveBtn.Name = "reserveBtn";
             this.reserveBtn.Size = new System.Drawing.Size(448, 47);
             this.reserveBtn.TabIndex = 13;
-            this.reserveBtn.Text = "Reserver";
+            this.reserveBtn.Text = "RESERVER";
             this.reserveBtn.UseVisualStyleBackColor = false;
             this.reserveBtn.Click += new System.EventHandler(this.reserveBtn_Click);
             // 
@@ -204,6 +204,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(531, 526);
             this.panel1.TabIndex = 0;
+            // 
+            // seIdbtn
+            // 
+            this.seIdbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.seIdbtn.FlatAppearance.BorderSize = 0;
+            this.seIdbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seIdbtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seIdbtn.ForeColor = System.Drawing.Color.White;
+            this.seIdbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.seIdbtn.Location = new System.Drawing.Point(355, 208);
+            this.seIdbtn.Margin = new System.Windows.Forms.Padding(1);
+            this.seIdbtn.Name = "seIdbtn";
+            this.seIdbtn.Size = new System.Drawing.Size(150, 32);
+            this.seIdbtn.TabIndex = 24;
+            this.seIdbtn.Text = "Se ressouce ID";
+            this.seIdbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.seIdbtn.UseVisualStyleBackColor = false;
+            this.seIdbtn.Click += new System.EventHandler(this.seIdbtn_Click);
             // 
             // label11
             // 
@@ -369,7 +387,7 @@
             this.loebeNr.Location = new System.Drawing.Point(200, 133);
             this.loebeNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loebeNr.Name = "loebeNr";
-            this.loebeNr.Size = new System.Drawing.Size(63, 32);
+            this.loebeNr.Size = new System.Drawing.Size(143, 32);
             this.loebeNr.TabIndex = 1;
             // 
             // rId
@@ -380,7 +398,7 @@
             this.rId.Location = new System.Drawing.Point(201, 208);
             this.rId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rId.Name = "rId";
-            this.rId.Size = new System.Drawing.Size(62, 32);
+            this.rId.Size = new System.Drawing.Size(142, 32);
             this.rId.TabIndex = 2;
             // 
             // dStartDag
@@ -583,26 +601,15 @@
             this.reserveDGV.Name = "reserveDGV";
             this.reserveDGV.RowHeadersWidth = 62;
             this.reserveDGV.RowTemplate.Height = 28;
-            this.reserveDGV.Size = new System.Drawing.Size(711, 526);
+            this.reserveDGV.Size = new System.Drawing.Size(1052, 526);
             this.reserveDGV.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(714, 3);
+            this.panel3.Location = new System.Drawing.Point(836, 225);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(341, 526);
             this.panel3.TabIndex = 0;
-            // 
-            // seIdbtn
-            // 
-            this.seIdbtn.Location = new System.Drawing.Point(289, 205);
-            this.seIdbtn.Name = "seIdbtn";
-            this.seIdbtn.Size = new System.Drawing.Size(143, 35);
-            this.seIdbtn.TabIndex = 24;
-            this.seIdbtn.Text = "Se ressouce ID";
-            this.seIdbtn.UseVisualStyleBackColor = true;
-            this.seIdbtn.Click += new System.EventHandler(this.seIdbtn_Click);
             // 
             // Reservation
             // 
