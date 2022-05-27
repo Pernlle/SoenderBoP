@@ -16,6 +16,11 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+        public static string SetUpDataGridViewSql()
+        {
+            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
+            return sqlcom;
+        }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -28,8 +33,7 @@ namespace SoenderBoP
 
             // Call metoden 'Yes_No'
             Yes_no(cellValue, insertInto);
-            this.editMedlemDGV.Refresh();
-            this.editMedlemDGV.Update();
+            SetUpDataGridViews.SetUpDGV(editMedlemDGV, SetUpDataGridViewSql());
         }
         public void Yes_no(string cellValue, string insertInto)
         {
@@ -45,8 +49,7 @@ namespace SoenderBoP
                 {
                     string delete = "mId = " + cellValue;
                     CRUD.Delete(insertInto, delete, cellValue);
-                    this.editMedlemDGV.Refresh();
-                    this.editMedlemDGV.Update();
+                    SetUpDataGridViews.SetUpDGV(editMedlemDGV, SetUpDataGridViewSql());
                 }
                 else
                 {
@@ -83,16 +86,12 @@ namespace SoenderBoP
             string where = $"mId={cellValue}"; 
             CRUD.Update(insertInto, add, where, values, data);
 
-            this.editMedlemDGV.Refresh();
-            this.editMedlemDGV.Update();
+            SetUpDataGridViews.SetUpDGV(editMedlemDGV, SetUpDataGridViewSql());
         }
 
         private void Edit_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
-            editMedlemDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = editMedlemDGV;
-            GetDGVStyle.GetStyle(DGV);      
+            SetUpDataGridViews.SetUpDGV(editMedlemDGV, SetUpDataGridViewSql());
         }
 
         private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
