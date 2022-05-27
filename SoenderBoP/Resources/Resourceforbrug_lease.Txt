@@ -1,0 +1,4 @@
+          Løbenummer          |           Adresse            |          Indflytter          |           Fornavn            |          Efternavn           |            Email             
+              1               |       Ligustervænget 3       |          04-01-2022          |           Petunia            |           Dursley            |   petuniadursley@gmail.com   |              2               
+              2               |      Ligustervænget 13       |          04-01-2022          |            Arsim             |             Thor             |     thorarsim@gmail.com      |              6               
+              3               |       Ligustervænget 4       |          23-05-2022          |            Jørgen            |          Jørgensen           |      JørgenJør@mail.com      |              10              

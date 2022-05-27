@@ -114,5 +114,14 @@ namespace SoenderBoP
             string sqlcom = "SELECT adr FROM Bolig";
             leaseAdresseCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
+
+        private void leasePrintbtn_Click(object sender, EventArgs e)
+        {
+            string writerName = $"Resourceforbrug_lease";
+            string[] headersarr = new string[] { "Løbenummer", "Adresse", "Indflytter", "Fornavn", "Efternavn", "Email", "Medlem ID" };
+            DataGridView dgv = leaseDGV;
+
+            Print.PrintIt(dgv, writerName, headersarr);
+        }
     }
 }
