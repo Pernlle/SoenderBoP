@@ -35,14 +35,21 @@ namespace SoenderBoP
 
         private void printStatsBTN_Click(object sender, EventArgs e)
         {
-            string medlem = statsCBX.Text;
-            string title = $"{medlem}";
-            string writerName = $"Resourceforbrug_{medlem}";
-            
-            string[] headersarr = new string[] {"Ressource ID", "Løbenummer", "Startdato", "Slutdato", "Email" };
-            DataGridView dgv = showStatsDGV;
+            if (statsCBX.Text == "")
+            {
+                MessageBox.Show("hahahahaha taaaab-");
+            }
+            else
+            {
+                string medlem = statsCBX.Text;
+                string title = $"{medlem}";
+                string writerName = $"Resourceforbrug_{medlem}";
 
-            Print.PrintIt(dgv, writerName, headersarr, title);
+                string[] headersarr = new string[] { "Ressource", "Nr", "Løbenummer", "Startdato", "Slutdato" };
+                DataGridView dgv = showStatsDGV;
+
+                Print.PrintIt(dgv, writerName, headersarr, title);
+            }
         }
 
         private void cStatBtn_Click(object sender, EventArgs e)
