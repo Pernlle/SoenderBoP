@@ -52,13 +52,11 @@ namespace SoenderBoP
             logoutBtn.Visible = false;
             panel5.Visible=false;
         }
-
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Husk altid at lukke thread'en, ellers kører programmet stadig.
             thread.Abort();
         }
-
         public void createBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -67,7 +65,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void readBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -76,7 +73,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-        
         public void editBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -85,7 +81,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void statsBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -94,7 +89,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void reservationBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -103,7 +97,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void waitListBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -112,7 +105,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void leaseBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -121,7 +113,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public void searchBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -130,7 +121,6 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
-
         public bool open = true;
         public void loginBtn_Click(object sender, EventArgs e)
         {
@@ -146,14 +136,6 @@ namespace SoenderBoP
                 open = true;
             }
         }
-
-        
-
-        private void lboligBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         public void lBTN_Click(object sender, EventArgs e)
         {
             //Login button
@@ -181,7 +163,6 @@ namespace SoenderBoP
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
-
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             waitListBtn.Visible = false;
@@ -190,6 +171,9 @@ namespace SoenderBoP
             reservationBtn.Visible = false;
             logoutBtn.Visible = false;
             loginBtn.Visible = true;
+        }
+        private void lboligBtn_Click(object sender, EventArgs e)
+        {
         }
     }
 }
