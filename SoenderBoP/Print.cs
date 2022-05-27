@@ -12,7 +12,7 @@ namespace SoenderBoP
 {
     internal class Print
     {
-        public static void PrintIt(DataGridView dgv, string writerName, string[] headersarr)
+        public static void PrintIt(DataGridView dgv, string writerName, string[] headersarr, string title)
         {
             string headers = "";
             for (int i = 0; i < headersarr.Length; i++)
@@ -21,7 +21,8 @@ namespace SoenderBoP
             }
             headers = headers.Remove(headers.Length - 1);
 
-            TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Resources\{writerName}.Txt");
+            TextWriter writer = new StreamWriter($@"..\..\..\Udskrifter\{writerName}.Txt");
+            writer.WriteLine(title);
             writer.WriteLine(headers);
             for (int i = 0; i < dgv.Rows.Count; i++) // rows
             {
@@ -36,7 +37,7 @@ namespace SoenderBoP
                 }
             }
             writer.Close();
-            MessageBox.Show("Exported");
+            MessageBox.Show("Gemt til 'Udksrifter'");
         }
         public static string PadBoth(string source, int length)
         {

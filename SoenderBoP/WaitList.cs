@@ -82,29 +82,32 @@ namespace SoenderBoP
         private void waitlistPrintSBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Senior";
+            string title = $"NogetTredje";
             //opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID'
             string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = seniorDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr);
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
         private void waitlistPrintUBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Ungdom";
+            string title = $"NogetFjerde";
             string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = ungdomsDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr);
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
         private void waitlistPrintLbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Lejlighed";
+            string title = $"Noget andet";
             string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = lejlighedDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr);
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
         // Tilføj til venteliste

@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cStatsBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.printStatsBTN = new System.Windows.Forms.Button();
+            this.printStatBtn = new System.Windows.Forms.Button();
             this.statsCBX = new System.Windows.Forms.ComboBox();
             this.medlemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
@@ -108,21 +108,21 @@
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 2;
             // 
-            // button1
+            // cStatsBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(25, 314);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(328, 48);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "OPRET STATISTIK";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cStatsBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.cStatsBtn.FlatAppearance.BorderSize = 0;
+            this.cStatsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cStatsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cStatsBtn.ForeColor = System.Drawing.Color.White;
+            this.cStatsBtn.Location = new System.Drawing.Point(25, 314);
+            this.cStatsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cStatsBtn.Name = "cStatsBtn";
+            this.cStatsBtn.Size = new System.Drawing.Size(328, 48);
+            this.cStatsBtn.TabIndex = 3;
+            this.cStatsBtn.Text = "OPRET STATISTIK";
+            this.cStatsBtn.UseVisualStyleBackColor = false;
+            this.cStatsBtn.Click += new System.EventHandler(this.cStatBtn_Click);
             // 
             // label4
             // 
@@ -282,9 +282,9 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.printStatsBTN);
+            this.panel2.Controls.Add(this.printStatBtn);
             this.panel2.Controls.Add(this.statsCBX);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.cStatsBtn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(733, 2);
@@ -319,21 +319,21 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Sorter på medlem";
             // 
-            // printStatsBTN
+            // printStatBtn
             // 
-            this.printStatsBTN.BackColor = System.Drawing.Color.IndianRed;
-            this.printStatsBTN.FlatAppearance.BorderSize = 0;
-            this.printStatsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printStatsBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printStatsBTN.ForeColor = System.Drawing.Color.White;
-            this.printStatsBTN.Location = new System.Drawing.Point(25, 412);
-            this.printStatsBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.printStatsBTN.Name = "printStatsBTN";
-            this.printStatsBTN.Size = new System.Drawing.Size(328, 48);
-            this.printStatsBTN.TabIndex = 5;
-            this.printStatsBTN.Text = "PRINT";
-            this.printStatsBTN.UseVisualStyleBackColor = false;
-            this.printStatsBTN.Click += new System.EventHandler(this.printStatsBTN_Click);
+            this.printStatBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.printStatBtn.FlatAppearance.BorderSize = 0;
+            this.printStatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printStatBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printStatBtn.ForeColor = System.Drawing.Color.White;
+            this.printStatBtn.Location = new System.Drawing.Point(25, 412);
+            this.printStatBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.printStatBtn.Name = "printStatBtn";
+            this.printStatBtn.Size = new System.Drawing.Size(328, 48);
+            this.printStatBtn.TabIndex = 5;
+            this.printStatBtn.Text = "PRINT";
+            this.printStatBtn.UseVisualStyleBackColor = false;
+            this.printStatBtn.Click += new System.EventHandler(this.printStatsBTN_Click);
             // 
             // statsCBX
             // 
@@ -483,7 +483,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cStatsBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -513,7 +513,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView showStatsDGV;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button printStatsBTN;
+        private System.Windows.Forms.Button printStatBtn;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;

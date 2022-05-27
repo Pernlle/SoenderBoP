@@ -88,7 +88,7 @@
             this.reserveBtn.BackColor = System.Drawing.Color.IndianRed;
             this.reserveBtn.FlatAppearance.BorderSize = 0;
             this.reserveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reserveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reserveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reserveBtn.ForeColor = System.Drawing.Color.White;
             this.reserveBtn.Location = new System.Drawing.Point(49, 425);
             this.reserveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -210,16 +210,15 @@
             this.seIdbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.seIdbtn.FlatAppearance.BorderSize = 0;
             this.seIdbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.seIdbtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seIdbtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seIdbtn.ForeColor = System.Drawing.Color.White;
             this.seIdbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.seIdbtn.Location = new System.Drawing.Point(355, 198);
+            this.seIdbtn.Location = new System.Drawing.Point(355, 204);
             this.seIdbtn.Margin = new System.Windows.Forms.Padding(1);
             this.seIdbtn.Name = "seIdbtn";
             this.seIdbtn.Size = new System.Drawing.Size(150, 42);
             this.seIdbtn.TabIndex = 24;
-            this.seIdbtn.Text = "Se ressouce ID";
-            this.seIdbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.seIdbtn.Text = "Se ID\'er";
             this.seIdbtn.UseVisualStyleBackColor = false;
             this.seIdbtn.Click += new System.EventHandler(this.seIdbtn_Click);
             // 

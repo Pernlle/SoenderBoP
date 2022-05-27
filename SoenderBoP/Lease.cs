@@ -122,10 +122,11 @@ namespace SoenderBoP
         private void leasePrintbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Resourceforbrug_lease";
+            string title = $"Noget";
             string[] headersarr = new string[] { "Løbenummer", "Adresse", "Indflytter", "Fornavn", "Efternavn", "Email", "Medlem ID" };
             DataGridView dgv = leaseDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr);
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
     }
 }
