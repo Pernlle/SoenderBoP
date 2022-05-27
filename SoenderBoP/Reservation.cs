@@ -19,7 +19,7 @@ namespace SoenderBoP
         }
         public static string GetSqlCom()
         {
-            string sqlCom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            string sqlCom = "SELECT rId AS 'Ressource ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
             return sqlCom;
         }
         public static string GetSqlComi()
@@ -30,7 +30,7 @@ namespace SoenderBoP
         private void Reservation_Load(object sender, EventArgs e)
         {
             //ressource dgv fill
-            FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlComi());
 
             //reserveret dgv fill
             FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
@@ -77,7 +77,7 @@ namespace SoenderBoP
                 MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
 
-                FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
+                FillDataSource.SetUpDGV(ressourceDGV, GetSqlComi());
                 FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
 
             }
