@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.editMedlemDGV = new System.Windows.Forms.DataGridView();
             this.medlemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
@@ -43,15 +43,16 @@
             this.navnTxt = new System.Windows.Forms.TextBox();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.helpBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editMedlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
@@ -69,20 +70,20 @@
             this.editMedlemDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.editMedlemDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.editMedlemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.editMedlemDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.editMedlemDGV.DefaultCellStyle = dataGridViewCellStyle1;
             this.editMedlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editMedlemDGV.Location = new System.Drawing.Point(0, 0);
             this.editMedlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editMedlemDGV.Name = "editMedlemDGV";
             this.editMedlemDGV.RowHeadersWidth = 62;
-            this.editMedlemDGV.Size = new System.Drawing.Size(494, 475);
+            this.editMedlemDGV.Size = new System.Drawing.Size(504, 598);
             this.editMedlemDGV.TabIndex = 0;
             this.editMedlemDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medlemDGV_CellClick);
             // 
@@ -118,12 +119,12 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(19, 427);
+            this.deleteBtn.Location = new System.Drawing.Point(21, 534);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(224, 35);
+            this.deleteBtn.Size = new System.Drawing.Size(287, 44);
             this.deleteBtn.TabIndex = 1;
-            this.deleteBtn.Text = "Slet";
+            this.deleteBtn.Text = "SLET";
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
@@ -134,12 +135,12 @@
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(19, 366);
+            this.updateBtn.Location = new System.Drawing.Point(21, 458);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(224, 34);
+            this.updateBtn.Size = new System.Drawing.Size(287, 42);
             this.updateBtn.TabIndex = 2;
-            this.updateBtn.Text = "Opdater";
+            this.updateBtn.Text = "OPDATER";
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
@@ -147,28 +148,31 @@
             // 
             this.tlfMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tlfMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tlfMTxt.Location = new System.Drawing.Point(19, 232);
+            this.tlfMTxt.Location = new System.Drawing.Point(21, 290);
+            this.tlfMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tlfMTxt.Name = "tlfMTxt";
-            this.tlfMTxt.Size = new System.Drawing.Size(224, 27);
+            this.tlfMTxt.Size = new System.Drawing.Size(287, 32);
             this.tlfMTxt.TabIndex = 3;
             // 
             // emailMTxt
             // 
             this.emailMTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailMTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailMTxt.Location = new System.Drawing.Point(19, 307);
+            this.emailMTxt.Location = new System.Drawing.Point(21, 384);
+            this.emailMTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailMTxt.Name = "emailMTxt";
-            this.emailMTxt.Size = new System.Drawing.Size(224, 27);
+            this.emailMTxt.Size = new System.Drawing.Size(287, 32);
             this.emailMTxt.TabIndex = 4;
             // 
             // navnTxt
             // 
             this.navnTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.navnTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.navnTxt.Location = new System.Drawing.Point(19, 156);
+            this.navnTxt.Location = new System.Drawing.Point(21, 195);
+            this.navnTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navnTxt.Name = "navnTxt";
             this.navnTxt.ReadOnly = true;
-            this.navnTxt.Size = new System.Drawing.Size(224, 27);
+            this.navnTxt.Size = new System.Drawing.Size(287, 32);
             this.navnTxt.TabIndex = 5;
             this.navnTxt.TabStop = false;
             // 
@@ -190,26 +194,64 @@
             this.panel1.Controls.Add(this.tlfMTxt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(494, 0);
+            this.panel1.Location = new System.Drawing.Point(504, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 475);
+            this.panel1.Size = new System.Drawing.Size(335, 598);
             this.panel1.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(296, 32);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Vælg et medlem i tabellen";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 345);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 32);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 251);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 32);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Telefonnummer";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 32);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Navn";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 39);
+            this.label1.Location = new System.Drawing.Point(11, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 36);
+            this.label1.Size = new System.Drawing.Size(143, 40);
             this.label1.TabIndex = 6;
             this.label1.Text = "Rediger";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(10, 399);
+            this.panel2.Location = new System.Drawing.Point(11, 499);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 284);
+            this.panel2.Size = new System.Drawing.Size(141, 355);
             this.panel2.TabIndex = 7;
             // 
             // medlemTableAdapter1
@@ -225,7 +267,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(753, 511);
+            this.tabControl1.Size = new System.Drawing.Size(847, 639);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -233,57 +275,40 @@
             this.tabPage1.Controls.Add(this.editMedlemDGV);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Controls.Add(this.helpBTN);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(745, 475);
+            this.tabPage1.Size = new System.Drawing.Size(839, 598);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Rediger medlemmer";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // helpBTN
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 28);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Navn";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 28);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Telefonnummer";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 276);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 28);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 28);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Vælg et medlem i tabellen";
+            this.helpBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.helpBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.helpBTN.Cursor = System.Windows.Forms.Cursors.Help;
+            this.helpBTN.FlatAppearance.BorderSize = 0;
+            this.helpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBTN.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpBTN.ForeColor = System.Drawing.Color.White;
+            this.helpBTN.Location = new System.Drawing.Point(319, 517);
+            this.helpBTN.Margin = new System.Windows.Forms.Padding(0);
+            this.helpBTN.Name = "helpBTN";
+            this.helpBTN.Padding = new System.Windows.Forms.Padding(1);
+            this.helpBTN.Size = new System.Drawing.Size(82, 76);
+            this.helpBTN.TabIndex = 0;
+            this.helpBTN.Text = "?";
+            this.helpBTN.UseVisualStyleBackColor = false;
             // 
             // Edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(753, 511);
+            this.ClientSize = new System.Drawing.Size(847, 639);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Edit";
@@ -328,5 +353,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button helpBTN;
     }
 }
