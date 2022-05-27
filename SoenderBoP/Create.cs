@@ -22,25 +22,35 @@ namespace SoenderBoP
             //Values fra tekstboxe:
             string fName = fNavnMTxt.Text;
             string eName = eNavnMTxt.Text;
-            int phone = Convert.ToInt32(tlfMTxt.Text);
+            string phone = tlfMTxt.Text;
             string email = emailMTxt.Text;
 
-            // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { fName, eName, phone, email};
+            int num = -1;
+            if (!int.TryParse(phone, out num))
+            {
+                Console.WriteLine("tlf må kun indeholde numre");
+            }
+            else
+            {
+                int phoneN = Convert.ToInt32(phone);
 
-            //hvilken tabel i db som skal arbejdes med
-            string insertInto = "Medlem";
-            // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "fNavn,eNavn,tlf,email";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@fNavn,@eNavn,@tlf,@email";
+                // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
+                object[] data = { fName, eName, phoneN, email };
+
+                //hvilken tabel i db som skal arbejdes med
+                string insertInto = "Medlem";
+                // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+                //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
+                string add = "fNavn,eNavn,tlf,email";
+                // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+                string values = "@fNavn,@eNavn,@tlf,@email";
 
 
 
-            CRUD.CreateMedlem(insertInto, add, values, data);
-            this.mDGV.Refresh();
-            this.mDGV.Update();
+                CRUD.CreateMedlem(insertInto, add, values, data);
+                this.mDGV.Refresh();
+                this.mDGV.Update();
+            }
         }
 
        
