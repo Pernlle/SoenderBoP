@@ -21,7 +21,7 @@ namespace SoenderBoP
             }
             headers = headers.Remove(headers.Length - 1);
 
-            TextWriter writer = new StreamWriter($@"..\..\..\SoenderBoP\Udskrifter\{writerName}.Txt");
+            TextWriter writer = new StreamWriter($@"..\..\..\Udskrifter\{writerName}.Txt");
             writer.WriteLine(title);
             writer.WriteLine(headers);
             for (int i = 0; i < dgv.Rows.Count; i++) // rows
