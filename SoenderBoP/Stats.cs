@@ -57,11 +57,25 @@ namespace SoenderBoP
             // sqlcom bliver sendt over i GetDataSource, som ligger i FillDataSource, som så vises i DGV
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
-
-        private void showAllBtn_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer', email AS 'Email' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId"; // lNr IS NOT NULL
             FillDataSource.SetUpDGV(showStatsDGV, sqlcom);
+
         }
+
+        //
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }        
     }
 }

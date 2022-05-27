@@ -50,7 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.showStatsDGV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.showAllBtn = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.printStatBtn = new System.Windows.Forms.Button();
             this.statsCBX = new System.Windows.Forms.ComboBox();
@@ -280,7 +280,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.showAllBtn);
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.printStatBtn);
             this.panel2.Controls.Add(this.statsCBX);
@@ -293,21 +293,21 @@
             this.panel2.Size = new System.Drawing.Size(374, 720);
             this.panel2.TabIndex = 5;
             // 
-            // showAllBtn
+            // button5
             // 
-            this.showAllBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.showAllBtn.FlatAppearance.BorderSize = 0;
-            this.showAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAllBtn.ForeColor = System.Drawing.Color.White;
-            this.showAllBtn.Location = new System.Drawing.Point(25, 505);
-            this.showAllBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.showAllBtn.Name = "showAllBtn";
-            this.showAllBtn.Size = new System.Drawing.Size(328, 48);
-            this.showAllBtn.TabIndex = 7;
-            this.showAllBtn.Text = "VIS ALLE";
-            this.showAllBtn.UseVisualStyleBackColor = false;
-            this.showAllBtn.Click += new System.EventHandler(this.showAllBtn_Click);
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(25, 505);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(328, 48);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "VIS ALLE";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -517,6 +517,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button showAllBtn;
+        private System.Windows.Forms.Button button5;
     }
 }
