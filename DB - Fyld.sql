@@ -35,8 +35,8 @@ INSERT INTO Bolig (mndPris, adr, kvm, bType, bLNr) VALUES
 ('3000', 'Ligustervænget 32', '45', '3', NULL)
 
 INSERT INTO Reserveret(rRId, rLNr, dStart, dSlut) VALUES 
-('23', '1', '05-05-2022 12:00', '2022-06-05 12:00'),
-('12', '2', '05-05-2022 12:00', '2022-06-05 12:00')
+('23', '1', '05-05-2022 12:00', '05-06-2022 12:00'),
+('12', '2', '05-05-2022 12:00', '05-06-2022 12:00')
 
 SELECT * FROM Lejekontrakt
 SELECT * FROM Reserveret
