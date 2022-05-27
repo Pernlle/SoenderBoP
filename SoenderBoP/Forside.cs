@@ -129,8 +129,6 @@ namespace SoenderBoP
             if (open == true)
             {
                 panel5.Show();
-                //this.panel5.BringToFront();
-                //this.sloganPanel.BringToFront();
                 open = false;
             }
             else if (open == false)
