@@ -27,10 +27,6 @@ namespace SoenderBoP
 
         }
 
-
-
-        
-
         private void printStatsBTN_Click(object sender, EventArgs e)
         {
             string medlem = statsCBX.Text;
