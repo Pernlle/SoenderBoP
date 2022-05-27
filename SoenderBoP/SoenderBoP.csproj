@@ -73,12 +73,6 @@
     <Compile Include="Lease.Designer.cs">
       <DependentUpon>Lease.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,12 +93,6 @@
     </Compile>
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Slogan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Slogan.Designer.cs">
-      <DependentUpon>Slogan.cs</DependentUpon>
     </Compile>
     <Compile Include="soenderbodbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -145,9 +133,6 @@
     <EmbeddedResource Include="Lease.resx">
       <DependentUpon>Lease.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Slogan.resx">
-      <DependentUpon>Slogan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stats.resx">
       <DependentUpon>Stats.cs</DependentUpon>
