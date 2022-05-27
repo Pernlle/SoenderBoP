@@ -36,5 +36,12 @@ namespace SoenderBoP
                 }
             }
         }
+        public static DataGridView SetUpDGV(DataGridView dgvSource, string sqlcom)
+        {
+            DataGridView DGV = dgvSource;
+            DGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            GetDGVStyle.GetStyle(DGV);
+            return DGV;
+        }
     }
 }

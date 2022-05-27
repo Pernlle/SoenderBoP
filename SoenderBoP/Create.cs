@@ -16,6 +16,11 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
+        public static string GetSqlCom()
+        {
+            string sqlCom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
+            return sqlCom;
+        }
 
         private void createBtn_Click(object sender, EventArgs e)
         {
@@ -48,8 +53,8 @@ namespace SoenderBoP
 
 
                 CRUD.CreateMedlem(insertInto, add, values, data);
-                this.mDGV.Refresh();
-                this.mDGV.Update();
+
+                FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
         }
 
@@ -59,10 +64,7 @@ namespace SoenderBoP
 
         private void Create_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
-            mDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = mDGV;
-            GetDGVStyle.GetStyle(DGV);
+            FillDataSource.SetUpDGV(mDGV, GetSqlCom());
         }
     }
 }

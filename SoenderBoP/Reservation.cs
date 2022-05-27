@@ -17,19 +17,23 @@ namespace SoenderBoP
         {
             InitializeComponent();
         }
-
+        public static string GetSqlCom()
+        {
+            string sqlCom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            return sqlCom;
+        }
+        public static string GetSqlComi()
+        {
+            string sqlCom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
+            return sqlCom;
+        }        
         private void Reservation_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
-            ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = ressourceDGV;
-            GetDGVStyle.GetStyle(DGV);
+            //ressource dgv fill
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
 
-
-            sqlcom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
-            reserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = reserveDGV;
-            GetDGVStyle.GetStyle(DGV);
+            //reserveret dgv fill
+            FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
         }
 
         public void reserveBtn_Click(object sender, EventArgs e)
@@ -73,10 +77,9 @@ namespace SoenderBoP
                 MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
 
-                string sqlcom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
-                ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-                DataGridView DGV = ressourceDGV;
-                GetDGVStyle.GetStyle(DGV);
+                FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
+                FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
+
             }
             catch { MessageBox.Show("Fejl"); }
             
@@ -84,10 +87,7 @@ namespace SoenderBoP
 
         private void seIdbtn_Click(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT rId AS 'ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
-            ressourceDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = ressourceDGV;
-            GetDGVStyle.GetStyle(DGV);
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
         }
     }
 }

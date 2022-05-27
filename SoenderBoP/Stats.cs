@@ -23,10 +23,8 @@ namespace SoenderBoP
         private void Stats_Load(object sender, EventArgs e)
         {            
             string sqlcom = $"SELECT rrId AS 'Reservations ID', mLNr AS 'Løbenummer', dStart AS 'Start dato', dSlut AS 'Slut dato', email AS 'Email' FROM Reserveret, Medlem WHERE rLNr = mLNr;"; // lId IS NOT NULL
-            showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = showStatsDGV;
-            GetDGVStyle.GetStyle(DGV);
-            showStatsDGV.RowHeadersVisible = false;
+            FillDataSource.SetUpDGV(showStatsDGV, sqlcom);
+
         }
 
         private void label2_Click(object sender, EventArgs e)

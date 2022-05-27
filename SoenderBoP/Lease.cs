@@ -14,15 +14,17 @@ namespace SoenderBoP
     public partial class Lease : Form
     {
         string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
+        public static string GetSqlCom()
+        {
+            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            return sqlCom;
+        }
 
         public Lease()
         {
             InitializeComponent();
-            string sqlcom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
-            leaseDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
 
-            DataGridView DGV = leaseDGV;
-            GetDGVStyle.GetStyle(DGV);
         }
 
         private void CreateLease_Click(object sender, EventArgs e)
@@ -89,7 +91,10 @@ namespace SoenderBoP
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
-            
+
+            //Opdater dgv
+            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
+
         }
 
         private void emailCBX_Click(object sender, EventArgs e)
@@ -100,8 +105,7 @@ namespace SoenderBoP
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            this.leaseDGV.Refresh();
-            this.leaseDGV.Update();
+            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
         }
 
         private void Lease_Load(object sender, EventArgs e)
