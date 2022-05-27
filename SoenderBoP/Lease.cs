@@ -23,7 +23,6 @@ namespace SoenderBoP
 
             DataGridView DGV = leaseDGV;
             GetDGVStyle.GetStyle(DGV);
-            leaseDGV.RowHeadersVisible = false;
         }
 
         private void CreateLease_Click(object sender, EventArgs e)
@@ -34,35 +33,59 @@ namespace SoenderBoP
             string bId = bIdTxt.Text; // få den til at vælge bid når adresse er valgt :)
             string dato = leaseDTP.Value.ToString("dd-MM-yyyy");
 
-            string insertInto = "Lejekontrakt";
-            object[] data = { dato };
-            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "lDato";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@lDato";
+            //string insertInto = "Lejekontrakt";
+            //object[] data = { dato };
+            ////Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
+            //string add = "lDato";
+            //// lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+            //string values = "@lDato";
 
-            CRUD.Create(insertInto, add, values, data);
+            //CRUD.Create(insertInto, add, values, data);
+
+            string sqlCom = $"INSERT INTO Lejekontrakt(lDato) VALUES(@lDato)";
+
 
             //Sql Command
-            string sqlCom = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY lNr DESC";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
+
+            cmd.Parameters.AddWithValue("@lDato", dato);
             try
             {
                 conn.Open();
-                var loebeNr = (Int32)cmd.ExecuteScalar();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
+            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
+
+            try
+            {
+                conn.Open();
+                string sqlLoebeNr = $"SELECT TOP 1 * FROM Lejekontrakt ORDER BY lNr DESC";
+                SqlCommand cmdd = new SqlCommand(sqlLoebeNr, conn);
+
+
+                var loebeNr = (Int32)cmdd.ExecuteScalar();
                 //Test om de rigtige værdier kan puttes i db
                 MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
-                sqlCom = $"UPDATE Medlem SET {loebeNr} WHERE mId = {mId}";
-                cmd.Parameters.AddWithValue("@mLNr", loebeNr);
-                cmd.ExecuteNonQuery();
+                string sqlComUpdateM = $"UPDATE Medlem SET mLNr={loebeNr} WHERE mId = {mId}";
+                SqlCommand cmdUpdateM = new SqlCommand(sqlComUpdateM, conn);
 
-                sqlCom = $"UPDATE Bolig SET {loebeNr} WHERE bId = {bId}";
-                cmd.Parameters.AddWithValue("@bLNr", loebeNr);
-                cmd.ExecuteNonQuery();
-                
-                sqlCom = $"DELETE vMid FROM Venteliste WHERE mId = {mId}";
-                cmd.ExecuteNonQuery();
+                cmdUpdateM.Parameters.AddWithValue("@mLNr", loebeNr);
+                cmdUpdateM.ExecuteNonQuery();
+                MessageBox.Show("Update medlem done");
+
+                string sqlComUpdateB = $"UPDATE Bolig SET bLNr={loebeNr} WHERE bId = {bId}";
+                SqlCommand cmdUpdateB = new SqlCommand(sqlComUpdateB, conn);
+                cmdUpdateB.Parameters.AddWithValue("@bLNr", loebeNr);
+                cmdUpdateB.ExecuteNonQuery();
+                MessageBox.Show("Update bolig done");
+
+                string sqlComDeleteV = $"DELETE FROM Venteliste WHERE vMid = {mId}";
+                SqlCommand cmdDeleteV = new SqlCommand(sqlComDeleteV, conn);
+                cmdDeleteV.ExecuteNonQuery();
+                MessageBox.Show("Delete venteliste done");
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
