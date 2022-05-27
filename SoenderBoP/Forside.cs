@@ -19,20 +19,20 @@ namespace SoenderBoP
         public Forside()
         {
             InitializeComponent();
-            //lav en thread, som kører metoden Updateslogan
+            //lav en thread, som kører metoden UpdateSlogan
             thread = new Thread(UpdateSlogan);  
             //kør threaden
             thread.Start();
 
             panel5.Hide();
         }
-        //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut (som opgaven siger).
+        //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut.
         private void UpdateSlogan()
         {
             while (true)
             {
-                //hvis der er en forside /er forsiden åben - lav da ... slogan ...  (Dette betyder at hvis ikke forsiden er åbnet, skal den 
-                //ikke lave det efterfølgende.) this. referer til selve forside forms'en. Det kræver derfor at forsiden kan åbne succesfuldt.
+                //hvis der er en forside er forsiden åben - lav da ... slogan ...  (Dette betyder at hvis ikke forsiden er åbnet, skal den 
+                //ikke lave det efterfølgende.) this. referer til selve forside formen. Det kræver derfor at forsiden kan åbne succesfuldt.
                 if (this.IsHandleCreated)
                 {
                     string slogan = slogans[rnd.Next(slogans.Count)];

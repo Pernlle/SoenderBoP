@@ -213,10 +213,10 @@
             this.seIdbtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seIdbtn.ForeColor = System.Drawing.Color.White;
             this.seIdbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.seIdbtn.Location = new System.Drawing.Point(355, 208);
+            this.seIdbtn.Location = new System.Drawing.Point(355, 198);
             this.seIdbtn.Margin = new System.Windows.Forms.Padding(1);
             this.seIdbtn.Name = "seIdbtn";
-            this.seIdbtn.Size = new System.Drawing.Size(150, 32);
+            this.seIdbtn.Size = new System.Drawing.Size(150, 42);
             this.seIdbtn.TabIndex = 24;
             this.seIdbtn.Text = "Se ressouce ID";
             this.seIdbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
