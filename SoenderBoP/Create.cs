@@ -36,10 +36,14 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@fNavn,@eNavn,@tlf,@email";
 
+
+
             CRUD.CreateMedlem(insertInto, add, values, data);
             this.mDGV.Refresh();
             this.mDGV.Update();
         }
+
+       
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }
 

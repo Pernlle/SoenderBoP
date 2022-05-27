@@ -188,7 +188,7 @@ namespace SoenderBoP
             string pass = passBox.Text;
 
             // assumption: //double assumption dont assume anything
-            bool id_ok = true, pass_ok = true;
+            bool id_ok = false, pass_ok = false;
 
             // length check:
             if (id.Contains("1")) id_ok = true;
