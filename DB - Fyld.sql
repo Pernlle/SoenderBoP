@@ -21,8 +21,8 @@ INSERT INTO Venteliste (vMid, boligType, vDato) VALUES
 (1, 1, '01-04-2022'),
 (1, 2, '01-02-2022'),
 (5, 1, '07-06-2022'),
-(6, 1, '18-07-2022'),
-(7, 1, '12-03-2022'),
+(7, 1, '18-07-2022'),
+(7, 2, '12-03-2022'),
 (8, 1, '15-03-2022'),
 (9, 1, '17-08-2022')
 
@@ -45,3 +45,4 @@ SELECT * FROM Medlem
 SELECT * FROM Lejekontrakt
 SELECT * FROM Bolig
 
+DELETE FROM Venteliste WHERE vMid = 10
