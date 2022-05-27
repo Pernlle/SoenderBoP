@@ -22,7 +22,9 @@ namespace SoenderBoP
             //lav en thread, som kører metoden Updateslogan
             thread = new Thread(UpdateSlogan);  
             //kør threaden
-            thread.Start();            
+            thread.Start();   
+            
+            panel5.Hide();
         }
         //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut (som opgaven siger).
         private void UpdateSlogan()
@@ -62,9 +64,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Create frm = new Create() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -73,11 +73,8 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Read frm = new Read() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
-
         }
         
         public void editBtn_Click(object sender, EventArgs e)
@@ -85,10 +82,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Edit frm = new Edit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState= FormWindowState.Maximized;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -97,9 +91,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Stats frm = new Stats() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -108,9 +100,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Reservation frm = new Reservation() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -119,9 +109,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             WaitList frm = new WaitList() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -130,9 +118,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Lease frm = new Lease() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -141,9 +127,7 @@ namespace SoenderBoP
             panel1.Controls.Clear();
             Search frm = new Search() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
-
             this.panel1.Controls.Add(frm);
-
             frm.Show();
         }
 
@@ -151,26 +135,16 @@ namespace SoenderBoP
         public void loginBtn_Click(object sender, EventArgs e)
         {
             //toggle
-            if (open == false)
+            if (open == true)
             {
                 panel5.Show();
-                //this.panel5.BringToFront();
-                //this.sloganPanel.BringToFront();
-                open = true;
-            }
-            else if (open == true)
-            {
-                panel5.Hide();
                 open = false;
             }
-            //panel1.Controls.Clear();
-            //Login frm = new Login() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-
-            //this.panel1.Controls.Add(frm);
-
-            //frm.Show();
+            else if (open == false)
+            {
+                panel5.Hide();
+                open = true;
+            }
         }
 
         
@@ -187,7 +161,7 @@ namespace SoenderBoP
             string id = idBox.Text;
             string pass = passBox.Text;
 
-            // assumption: //double assumption dont assume anything
+            //assumption: //double assumption dont assume anything
             bool id_ok = false, pass_ok = false;
 
             // length check:
@@ -201,9 +175,9 @@ namespace SoenderBoP
                 editBtn.Visible = true;
                 leaseBtn.Visible = true;
                 reservationBtn.Visible = true;
-                panel5.Hide();
                 loginBtn.Visible = false;
                 logoutBtn.Visible = true;
+                panel5.Hide();
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
