@@ -171,7 +171,6 @@
             this.navnTxt.Location = new System.Drawing.Point(21, 195);
             this.navnTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navnTxt.Name = "navnTxt";
-            this.navnTxt.ReadOnly = true;
             this.navnTxt.Size = new System.Drawing.Size(287, 32);
             this.navnTxt.TabIndex = 5;
             this.navnTxt.TabStop = false;
