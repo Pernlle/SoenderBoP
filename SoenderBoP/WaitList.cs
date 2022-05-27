@@ -128,8 +128,8 @@ namespace SoenderBoP
             string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
-            this.lejlighedDGV.Refresh();
-            this.lejlighedDGV.Update();
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
+            FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
 
         private void createUBTN_Click(object sender, EventArgs e)
@@ -150,8 +150,10 @@ namespace SoenderBoP
             string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
-            this.ungdomsDGV.Refresh();
-            this.ungdomsDGV.Update();
+
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
+            FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
+
         }
 
         private void createSBTN_Click(object sender, EventArgs e)
@@ -172,9 +174,9 @@ namespace SoenderBoP
             string values = "@vMid,@vDato,@boligType";
 
             CRUD.Create(insertInto, add, values, data);
-            this.seniorDGV.Refresh();
-            this.seniorDGV.Update();
 
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
+            FillDataSource.SetUpDGV(seniorDGV, sqlcom);
 
         }
     }
