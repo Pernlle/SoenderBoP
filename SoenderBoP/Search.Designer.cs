@@ -281,6 +281,7 @@
             // 
             // searchDGV
             // 
+            this.searchDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.searchDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchDGV.Location = new System.Drawing.Point(0, 0);
