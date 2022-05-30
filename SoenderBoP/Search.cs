@@ -30,7 +30,7 @@ namespace SoenderBoP
                 if (minPris < maxPris)
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
-                    $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris}; "; 
+                    $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris}; ";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
                 else MessageBox.Show("Fejl i prisen");
@@ -45,12 +45,12 @@ namespace SoenderBoP
                 }
                 else MessageBox.Show("Fejl i prisen");
             }
-           
+
         }
 
         private void Search_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void searchKvmBtn_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace SoenderBoP
             // kvm søg klik
             int minKvm = Convert.ToInt32(minKvmBox.Text);
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
-            
+
             MessageBox.Show(Convert.ToString(minKvm));
             if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
