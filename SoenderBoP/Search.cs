@@ -43,7 +43,7 @@ namespace SoenderBoP
                 //    FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 //}
 
-                if (minPris < maxPris && minKvm < maxKvm)
+                if (minPris < maxPris) //&& minKvm < maxKvm
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
                     $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris} AND kvm >= {minKvm} AND kvm <= {maxKvm} ";
