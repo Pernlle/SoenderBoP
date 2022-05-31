@@ -1,17 +1,20 @@
 ALTER VIEW Lejlighed AS
-SELECT vDato, fNavn, eNavn, vMid
+SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
-WHERE boligType = 1 AND vMid = mId
-
-
-SELECT * FROM Lejlighed ORDER BY opskrevet ASC
+WHERE vTId = 1 AND vMId = mId
 
 ALTER VIEW Ungdomsbolig AS
-SELECT vDato, fNavn, eNavn, vMid
+SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
-WHERE boligType = 2 AND vMid = mId
+WHERE vTId = 2 AND vMId = mId
 
 ALTER VIEW Seniorbolig AS
-SELECT vDato, fNavn, eNavn, vMid
+SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
-WHERE boligType = 3 AND vMid = mId
+WHERE vTId = 3 AND vMId = mId
+
+SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC
+
+SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC
+
+SELECT email FROM Medlem WHERE mLNr IS NOT NULL

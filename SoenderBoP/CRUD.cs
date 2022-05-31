@@ -22,7 +22,7 @@ namespace SoenderBoP
             //Sql Connection
             SqlConnection conn = new SqlConnection(strconn);
             //Sql sætning
-            string sqlcom = $"INSERT INTO {insertInto}({add}, mLNr) VALUES ({values}, @mLNr);";
+            string sqlcom = $"INSERT INTO {insertInto}({add}, mLNr) VALUES ({values}, @mLNr)";
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlcom, conn);
 
@@ -30,6 +30,7 @@ namespace SoenderBoP
             cmd.Parameters.Add("@mLNr", System.Data.SqlDbType.Int);
             cmd.Parameters["@mLNr"].Value = DBNull.Value;
 
+            
 
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');

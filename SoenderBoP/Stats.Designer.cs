@@ -120,7 +120,7 @@
             this.cStatsBtn.Name = "cStatsBtn";
             this.cStatsBtn.Size = new System.Drawing.Size(328, 48);
             this.cStatsBtn.TabIndex = 3;
-            this.cStatsBtn.Text = "OPRET STATISTIK";
+            this.cStatsBtn.Text = "SE RESERVATIONER";
             this.cStatsBtn.UseVisualStyleBackColor = false;
             this.cStatsBtn.Click += new System.EventHandler(this.cStatBtn_Click);
             // 

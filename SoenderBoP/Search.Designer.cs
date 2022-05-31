@@ -67,10 +67,10 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(197, 60);
+            this.searchBtn.Location = new System.Drawing.Point(222, 75);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(98, 43);
+            this.searchBtn.Size = new System.Drawing.Size(110, 54);
             this.searchBtn.TabIndex = 13;
             this.searchBtn.Text = "Søg";
             this.searchBtn.UseVisualStyleBackColor = false;
@@ -78,105 +78,106 @@
             // 
             // minPrisBox
             // 
-            this.minPrisBox.Location = new System.Drawing.Point(78, 47);
+            this.minPrisBox.Location = new System.Drawing.Point(88, 59);
             this.minPrisBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minPrisBox.Name = "minPrisBox";
-            this.minPrisBox.Size = new System.Drawing.Size(89, 34);
+            this.minPrisBox.Size = new System.Drawing.Size(100, 39);
             this.minPrisBox.TabIndex = 1;
             // 
             // maxPrisBox
             // 
-            this.maxPrisBox.Location = new System.Drawing.Point(78, 100);
+            this.maxPrisBox.Location = new System.Drawing.Point(88, 125);
             this.maxPrisBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maxPrisBox.Name = "maxPrisBox";
-            this.maxPrisBox.Size = new System.Drawing.Size(89, 34);
+            this.maxPrisBox.Size = new System.Drawing.Size(100, 39);
             this.maxPrisBox.TabIndex = 2;
             // 
             // Kvm
             // 
             this.Kvm.AutoSize = true;
-            this.Kvm.Location = new System.Drawing.Point(20, 14);
+            this.Kvm.Location = new System.Drawing.Point(22, 18);
             this.Kvm.Name = "Kvm";
-            this.Kvm.Size = new System.Drawing.Size(50, 28);
+            this.Kvm.Size = new System.Drawing.Size(60, 32);
             this.Kvm.TabIndex = 3;
             this.Kvm.Text = "Kvm";
             // 
             // minKvmLabel
             // 
             this.minKvmLabel.AutoSize = true;
-            this.minKvmLabel.Location = new System.Drawing.Point(20, 57);
+            this.minKvmLabel.Location = new System.Drawing.Point(22, 71);
             this.minKvmLabel.Name = "minKvmLabel";
-            this.minKvmLabel.Size = new System.Drawing.Size(46, 28);
+            this.minKvmLabel.Size = new System.Drawing.Size(56, 32);
             this.minKvmLabel.TabIndex = 4;
             this.minKvmLabel.Text = "Min";
             // 
             // maxKvmLabel
             // 
             this.maxKvmLabel.AutoSize = true;
-            this.maxKvmLabel.Location = new System.Drawing.Point(20, 106);
+            this.maxKvmLabel.Location = new System.Drawing.Point(22, 132);
             this.maxKvmLabel.Name = "maxKvmLabel";
-            this.maxKvmLabel.Size = new System.Drawing.Size(49, 28);
+            this.maxKvmLabel.Size = new System.Drawing.Size(59, 32);
             this.maxKvmLabel.TabIndex = 5;
             this.maxKvmLabel.Text = "Max";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 100);
+            this.label1.Location = new System.Drawing.Point(20, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 28);
+            this.label1.Size = new System.Drawing.Size(59, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "Max";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 50);
+            this.label2.Location = new System.Drawing.Point(20, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 28);
+            this.label2.Size = new System.Drawing.Size(56, 32);
             this.label2.TabIndex = 7;
             this.label2.Text = "Min";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 7);
+            this.label3.Location = new System.Drawing.Point(20, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 28);
+            this.label3.Size = new System.Drawing.Size(133, 32);
             this.label3.TabIndex = 8;
             this.label3.Text = "Måned Pris";
             // 
             // minKvmBox
             // 
-            this.minKvmBox.Location = new System.Drawing.Point(78, 54);
+            this.minKvmBox.Location = new System.Drawing.Point(88, 68);
             this.minKvmBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minKvmBox.Name = "minKvmBox";
-            this.minKvmBox.Size = new System.Drawing.Size(89, 34);
+            this.minKvmBox.Size = new System.Drawing.Size(100, 39);
             this.minKvmBox.TabIndex = 9;
             // 
             // maxKvmBox
             // 
-            this.maxKvmBox.Location = new System.Drawing.Point(78, 103);
+            this.maxKvmBox.Location = new System.Drawing.Point(88, 129);
             this.maxKvmBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maxKvmBox.Name = "maxKvmBox";
-            this.maxKvmBox.Size = new System.Drawing.Size(89, 34);
+            this.maxKvmBox.Size = new System.Drawing.Size(100, 39);
             this.maxKvmBox.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 26);
+            this.label4.Location = new System.Drawing.Point(133, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 32);
+            this.label4.Size = new System.Drawing.Size(200, 38);
             this.label4.TabIndex = 11;
             this.label4.Text = "SØG BOLIG";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(32, 363);
+            this.panel1.Location = new System.Drawing.Point(36, 454);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1188, 69);
+            this.panel1.Size = new System.Drawing.Size(1336, 86);
             this.panel1.TabIndex = 14;
             // 
             // panel2
@@ -188,9 +189,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(579, 2);
+            this.panel2.Location = new System.Drawing.Point(652, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 510);
+            this.panel2.Size = new System.Drawing.Size(428, 643);
             this.panel2.TabIndex = 15;
             // 
             // saBTN
@@ -200,10 +202,10 @@
             this.saBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saBTN.ForeColor = System.Drawing.Color.White;
-            this.saBTN.Location = new System.Drawing.Point(225, 78);
+            this.saBTN.Location = new System.Drawing.Point(253, 98);
             this.saBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saBTN.Name = "saBTN";
-            this.saBTN.Size = new System.Drawing.Size(140, 39);
+            this.saBTN.Size = new System.Drawing.Size(158, 49);
             this.saBTN.TabIndex = 18;
             this.saBTN.Text = "Se ledige";
             this.saBTN.UseVisualStyleBackColor = false;
@@ -216,10 +218,10 @@
             this.sallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sallBTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sallBTN.ForeColor = System.Drawing.Color.White;
-            this.sallBTN.Location = new System.Drawing.Point(45, 78);
+            this.sallBTN.Location = new System.Drawing.Point(51, 98);
             this.sallBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sallBTN.Name = "sallBTN";
-            this.sallBTN.Size = new System.Drawing.Size(139, 39);
+            this.sallBTN.Size = new System.Drawing.Size(156, 49);
             this.sallBTN.TabIndex = 17;
             this.sallBTN.Text = "Vis alle";
             this.sallBTN.UseVisualStyleBackColor = false;
@@ -234,9 +236,10 @@
             this.panel4.Controls.Add(this.minKvmLabel);
             this.panel4.Controls.Add(this.maxKvmBox);
             this.panel4.Controls.Add(this.Kvm);
-            this.panel4.Location = new System.Drawing.Point(45, 331);
+            this.panel4.Location = new System.Drawing.Point(51, 414);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(319, 167);
+            this.panel4.Size = new System.Drawing.Size(359, 208);
             this.panel4.TabIndex = 16;
             // 
             // searchKvmBtn
@@ -246,10 +249,10 @@
             this.searchKvmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchKvmBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchKvmBtn.ForeColor = System.Drawing.Color.White;
-            this.searchKvmBtn.Location = new System.Drawing.Point(197, 69);
+            this.searchKvmBtn.Location = new System.Drawing.Point(222, 86);
             this.searchKvmBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchKvmBtn.Name = "searchKvmBtn";
-            this.searchKvmBtn.Size = new System.Drawing.Size(98, 43);
+            this.searchKvmBtn.Size = new System.Drawing.Size(110, 54);
             this.searchKvmBtn.TabIndex = 14;
             this.searchKvmBtn.Text = "Søg";
             this.searchKvmBtn.UseVisualStyleBackColor = false;
@@ -264,9 +267,10 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.maxPrisBox);
-            this.panel3.Location = new System.Drawing.Point(45, 138);
+            this.panel3.Location = new System.Drawing.Point(51, 172);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(319, 162);
+            this.panel3.Size = new System.Drawing.Size(359, 202);
             this.panel3.TabIndex = 15;
             // 
             // searchPanel
@@ -275,20 +279,23 @@
             this.searchPanel.Controls.Add(this.searchDGV);
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchPanel.Location = new System.Drawing.Point(3, 2);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(576, 510);
+            this.searchPanel.Size = new System.Drawing.Size(649, 643);
             this.searchPanel.TabIndex = 16;
             // 
             // searchDGV
             // 
             this.searchDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.searchDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchDGV.Location = new System.Drawing.Point(0, 0);
+            this.searchDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchDGV.Name = "searchDGV";
             this.searchDGV.RowHeadersWidth = 51;
             this.searchDGV.RowTemplate.Height = 24;
-            this.searchDGV.Size = new System.Drawing.Size(576, 510);
+            this.searchDGV.Size = new System.Drawing.Size(649, 643);
             this.searchDGV.TabIndex = 0;
             // 
             // tabControl1
@@ -300,28 +307,28 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(970, 550);
+            this.tabControl1.Size = new System.Drawing.Size(1091, 688);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.searchPanel);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(962, 514);
+            this.tabPage1.Size = new System.Drawing.Size(1083, 647);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Søg ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(970, 550);
+            this.ClientSize = new System.Drawing.Size(1091, 688);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

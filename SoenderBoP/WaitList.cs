@@ -20,18 +20,18 @@ namespace SoenderBoP
 
         private void WaitList_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
 
 
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = ungdomsDGV;
             GetDGVStyle.GetStyle(DGV);
 
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
+            sqlcom = "SELECT vDato AS 'Dato for opskrivelse',fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
@@ -84,7 +84,7 @@ namespace SoenderBoP
             string writerName = $"Waitlist_Senior";
             string title = $"NogetTredje";
             //opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID'
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
+            string[] headersarr = new string[] { "Dato", "Navn", "ID" };
             DataGridView dgv = seniorDGV;
 
             Print.PrintIt(dgv, writerName, headersarr, title);
@@ -126,12 +126,12 @@ namespace SoenderBoP
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "vMid,vDato,boligType";
+            string add = "vMId,vDato,vTId";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMid,@vDato,@boligType";
+            string values = "@vMId,@vDato,@vTId";
 
             CRUD.Create(insertInto, add, values, data);
-            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
 
@@ -148,13 +148,13 @@ namespace SoenderBoP
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "vMid,vDato,boligType";
+            string add = "vMId,vDato,vTId";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMid,@vDato,@boligType";
+            string values = "@vMId,@vDato,@vTId";
 
             CRUD.Create(insertInto, add, values, data);
 
-            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
 
         }
@@ -172,13 +172,13 @@ namespace SoenderBoP
             string insertInto = "Venteliste";
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "vMid,vDato,boligType";
+            string add = "vMid,vDato,vTId";
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMid,@vDato,@boligType";
+            string values = "@vMId,@vDato,@vTId";
 
             CRUD.Create(insertInto, add, values, data);
 
-            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
+            string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(seniorDGV, sqlcom);
 
         }

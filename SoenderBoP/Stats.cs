@@ -29,7 +29,7 @@ namespace SoenderBoP
 
         private void statsCBX_Click(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT email FROM Medlem";
+            string sqlcom = "SELECT email FROM Medlem WHERE mLNr IS NOT NULL";
             statsCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
         }
 

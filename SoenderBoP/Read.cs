@@ -15,65 +15,77 @@ namespace SoenderBoP
         public Read()
         {
             InitializeComponent();
+            FillDataSource.SetUpDGV(readMedlemDGV, GetSqlComM());
+            FillDataSource.SetUpDGV(readBoligDGV, GetSqlComB());
+            FillDataSource.SetUpDGV(readReserveDGV, GetSqlComR());
+            FillDataSource.SetUpDGV(readLeaseDGV, GetSqlComL());
+            FillDataSource.SetUpDGV(lejlighedDGV, GetSqlComWL());
+            FillDataSource.SetUpDGV(ungdomsDGV, GetSqlComWU());
+            FillDataSource.SetUpDGV(seniorDGV, GetSqlComWS());
         }
 
         private void Read_Load(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
-            readMedlemDGV.DataSource= FillDataSource.GetDataSource(sqlcom);
-            DataGridView DGV = readMedlemDGV;
-            GetDGVStyle.GetStyle(DGV);   
-
-            sqlcom = "SELECT bId AS 'ID', mndPris AS 'Måneds pris',adr AS 'Adresse',kvm AS 'Kvm',bType AS 'Bolig type',bLNr AS 'Løbenummer' FROM Bolig";
-            readBoligDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = readBoligDGV;
-            GetDGVStyle.GetStyle(DGV);
-
-            sqlcom = "SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn AS 'Fornavn', eNavn AS 'Efternavn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
-            readReserveDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = readReserveDGV;
-            GetDGVStyle.GetStyle(DGV);
-
-            sqlcom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
-            lDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = lDGV;
-            GetDGVStyle.GetStyle(DGV);
-
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
-            lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = lejlighedDGV;
-            GetDGVStyle.GetStyle(DGV);
-            lejlighedDGV.RowHeadersVisible = false;
-
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
-            ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = ungdomsDGV;
-            GetDGVStyle.GetStyle(DGV);
-
-            sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', vMid AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
-            seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
-            DGV = seniorDGV;
-            GetDGVStyle.GetStyle(DGV);
         }
 
 
         private void seniorDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-           
-                this.seniorDGV.Rows[e.RowIndex].Cells["seniorNr"].Value = (e.RowIndex + 1).ToString();
-            
+           this.seniorDGV.Rows[e.RowIndex].Cells["seniorNr"].Value = (e.RowIndex + 1).ToString();
         }
 
         private void ungdomsDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            this.ungdomsDGV.Rows[e.RowIndex].Cells["ungdomsNr"].Value = (e.RowIndex + 1).ToString();
-
+           this.ungdomsDGV.Rows[e.RowIndex].Cells["ungdomsNr"].Value = (e.RowIndex + 1).ToString();
         }
 
         private void lejlighedDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
-            this.lejlighedDGV.Rows[e.RowIndex].Cells["lejlighedNr"].Value = (e.RowIndex + 1).ToString();
+           this.lejlighedDGV.Rows[e.RowIndex].Cells["lejlighedNr"].Value = (e.RowIndex + 1).ToString();
+        }
 
+        private void readMedlemDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+                if (e.Value is int)
+                    e.Value = (int)e.Value == 0 ? "Medlem" : "Beboer";
+        }
+
+        public static string GetSqlComM()
+        {
+            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
+            return sqlCom;
+        }
+        public static string GetSqlComB()
+        {
+            string sqlCom = "SELECT bId AS 'ID', mndPris AS 'Måneds pris', adr AS 'Adresse',kvm AS 'Kvm', bType AS 'Type', bLNr AS 'Løbenummer' FROM Bolig, BoligType WHERE bTId = tId";
+            return sqlCom;
+        }
+        public static string GetSqlComR()
+        {
+            string sqlCom = "SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn + ' ' + eNavn AS 'Navn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
+            return sqlCom;
+        }
+
+        public static string GetSqlComL()
+        {
+            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse', lDato AS 'Indflytter', fNavn + ' ' + eNavn AS 'Navn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            return sqlCom;
+        }
+        public static string GetSqlComWL()
+        {
+            string sqlCom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
+            return sqlCom;
+        }
+        public static string GetSqlComWU()
+        {
+            string sqlCom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
+            return sqlCom;
+        }
+        public static string GetSqlComWS()
+        {
+            string sqlCom = "SELECT vDato AS 'Dato for opskrivelse',fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
+            return sqlCom;
         }
     }
 }

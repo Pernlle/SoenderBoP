@@ -187,6 +187,7 @@
             this.mDGV.RowTemplate.Height = 28;
             this.mDGV.Size = new System.Drawing.Size(551, 515);
             this.mDGV.TabIndex = 1;
+            this.mDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.mDGV_CellFormatting);
             // 
             // tabControl1
             // 

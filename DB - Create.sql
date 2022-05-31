@@ -7,11 +7,11 @@ CREATE TABLE Lejekontrakt(
 
 /*BoligType bliver fastsat så bruger ikke laver stavefejl i forbindelse med registrering.*/
 CREATE TABLE BoligType(
-	id INT PRIMARY KEY NOT NULL,
-	navn VARCHAR(12)
+	tId INT PRIMARY KEY NOT NULL,
+	bType VARCHAR(12)
 );
 
-INSERT INTO BoligType(id, navn) VALUES 
+INSERT INTO BoligType(tId, bType) VALUES 
 ('1','Lejlighed'),
 ('2','Ungdomsbolig'),
 ('3','Seniorbolig')
@@ -22,7 +22,7 @@ CREATE TABLE Bolig(
 	mndPris INT,
 	adr VARCHAR(60),
 	kvm INT,
-	bType INT FOREIGN KEY REFERENCES BoligType(id),
+	bTId INT FOREIGN KEY REFERENCES BoligType(tId),
 	bLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr)
 );
 
@@ -36,14 +36,16 @@ CREATE TABLE Medlem(
 	eNavn VARCHAR(50),
 	tlf INT,
 	email VARCHAR(50),
+	beboer INT,
+	/*INT BOOL = 0-False 1-True*/
 	mLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr)
 );
 
 /*Ventelisten 'generer' i databasen en dato, i koden bestemmes venteliste nr. efter dato. */ 
 /*Potentielle ufleksible elementer i SQL: Man kan ikke bestemme bolig og hvis man registreres samme dato får man samme nr.*/
 CREATE TABLE Venteliste(
-	vMid INT FOREIGN KEY REFERENCES Medlem(mId),
-	boligType INT FOREIGN KEY REFERENCES BoligType(id),
+	vMId INT FOREIGN KEY REFERENCES Medlem(mId),
+	vTId INT FOREIGN KEY REFERENCES BoligType(tId),
 	vDato VARCHAR(50),
 );
 
@@ -61,7 +63,6 @@ CREATE TABLE Reserveret(
 	rLNr INT FOREIGN KEY REFERENCES Lejekontrakt(lNr),
 	dStart VARCHAR(50),
 	dSlut VARCHAR(50)
-	
 );
 
 INSERT INTO Ressource (rId, rType, rNr) VALUES

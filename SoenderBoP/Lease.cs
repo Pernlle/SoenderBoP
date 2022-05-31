@@ -14,17 +14,15 @@ namespace SoenderBoP
     public partial class Lease : Form
     {
         string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-        public static string GetSqlCom()
-        {
-            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
-            return sqlCom;
-        }
+        
 
         public Lease()
         {
             InitializeComponent();
-            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
-
+            FillDataSource.SetUpDGV(leaseDGV, GetSqlComL());
+            FillDataSource.SetUpDGV(readBoligDGV, GetSqlComB());
+            FillDataSource.SetUpDGV(readMedlemDGV, GetSqlComM());
+            
         }
 
         private void CreateLease_Click(object sender, EventArgs e)
@@ -93,7 +91,7 @@ namespace SoenderBoP
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
 
             //Opdater dgv
-            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
+            FillDataSource.SetUpDGV(leaseDGV, GetSqlComL());
 
         }
 
@@ -101,16 +99,6 @@ namespace SoenderBoP
         {
             string sqlcom = "SELECT email FROM Medlem";
             emailCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
-        }
-
-        private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            FillDataSource.SetUpDGV(leaseDGV, GetSqlCom());
-        }
-
-        private void Lease_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void leaseAdresseCBX_Click(object sender, EventArgs e)
@@ -125,8 +113,26 @@ namespace SoenderBoP
             string title = $"Noget";
             string[] headersarr = new string[] { "Løbenummer", "Adresse", "Indflytter", "Fornavn", "Efternavn", "Email", "Medlem ID" };
             DataGridView dgv = leaseDGV;
-
             Print.PrintIt(dgv, writerName, headersarr, title);
         }
+        public static string GetSqlComL()
+        {
+            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            return sqlCom;
+        }
+        public static string GetSqlComM()
+        {
+            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
+            return sqlCom;
+        }
+        public static string GetSqlComB()
+        {
+            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            return sqlCom;
+        }
+
+        //Ubrugt kode, der ikke kan fjernes
+        private void refreshBtn_Click(object sender, EventArgs e){}
+        private void Lease_Load(object sender, EventArgs e){}
     }
 }

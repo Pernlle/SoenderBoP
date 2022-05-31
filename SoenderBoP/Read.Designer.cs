@@ -43,7 +43,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.readReserveDGV = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lDGV = new System.Windows.Forms.DataGridView();
+            this.readLeaseDGV = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.ventelister = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
@@ -75,7 +75,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readLeaseDGV)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.ventelister.SuspendLayout();
             this.lejlighed.SuspendLayout();
@@ -104,6 +104,7 @@
             this.readMedlemDGV.RowTemplate.Height = 28;
             this.readMedlemDGV.Size = new System.Drawing.Size(786, 401);
             this.readMedlemDGV.TabIndex = 0;
+            this.readMedlemDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.readMedlemDGV_CellFormatting);
             // 
             // medlemBindingSource1
             // 
@@ -213,7 +214,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.lDGV);
+            this.tabPage4.Controls.Add(this.readLeaseDGV);
             this.tabPage4.Location = new System.Drawing.Point(4, 37);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -222,18 +223,18 @@
             this.tabPage4.Text = "Lejekontrakter";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // lDGV
+            // readLeaseDGV
             // 
-            this.lDGV.BackgroundColor = System.Drawing.Color.Linen;
-            this.lDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lDGV.Location = new System.Drawing.Point(3, 3);
-            this.lDGV.Name = "lDGV";
-            this.lDGV.RowHeadersWidth = 62;
-            this.lDGV.RowTemplate.Height = 28;
-            this.lDGV.Size = new System.Drawing.Size(786, 403);
-            this.lDGV.TabIndex = 0;
+            this.readLeaseDGV.BackgroundColor = System.Drawing.Color.Linen;
+            this.readLeaseDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.readLeaseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.readLeaseDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.readLeaseDGV.Location = new System.Drawing.Point(3, 3);
+            this.readLeaseDGV.Name = "readLeaseDGV";
+            this.readLeaseDGV.RowHeadersWidth = 62;
+            this.readLeaseDGV.RowTemplate.Height = 28;
+            this.readLeaseDGV.Size = new System.Drawing.Size(786, 403);
+            this.readLeaseDGV.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -467,7 +468,7 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.readReserveDGV)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readLeaseDGV)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.ventelister.ResumeLayout(false);
             this.lejlighed.ResumeLayout(false);
@@ -517,7 +518,7 @@
         private System.Windows.Forms.DataGridView ungdomsDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ungdomsNr;
         private System.Windows.Forms.TabPage seniorbolig;
-        private System.Windows.Forms.DataGridView lDGV;
+        private System.Windows.Forms.DataGridView readLeaseDGV;
         private System.Windows.Forms.DataGridView seniorDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn seniorNr;
     }
