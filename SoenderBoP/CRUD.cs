@@ -12,25 +12,25 @@ using System.Runtime.InteropServices;
 
 namespace SoenderBoP
 {
-    internal class CRUD
+    public class StrConnProvider
     {
-        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.
-
+        private readonly static string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
+        public static string Getstrconn()
+        {
+            return strconn;
+        }
+    }
+    public class CRUDFacade
+    {
+        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.        
         public static void CreateMedlem(string insertInto, string add, string values, object[] data)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-            //Sql Connection
-            SqlConnection conn = new SqlConnection(strconn);
-            //Sql sætning
+            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
             string sqlcom = $"INSERT INTO {insertInto}({add}, mLNr) VALUES ({values}, @mLNr)";
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlcom, conn);
 
-
-            cmd.Parameters.Add("@mLNr", System.Data.SqlDbType.Int);
-            cmd.Parameters["@mLNr"].Value = DBNull.Value;
-
-            
+            cmd.Parameters.AddWithValue("@mLNr", DBNull.Value);
 
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
@@ -41,21 +41,11 @@ namespace SoenderBoP
             {
                 cmd.Parameters.AddWithValue(valuess[i], data[i]);
             }
-
-            // Parametre at sætte ind i databasen - De to metoder
-            /*
-            //indsæt parametre med values - her finder den selv ud af, via typen, om det er string int mm.
-            cmd.Parameters.AddWithValue("@navn", name);
-            // indsæt values hard coded - med valuetype 
-            cmd.Parameters.Add("@tlf", System.Data.SqlDbType.Int);
-            cmd.Parameters["@tlf"].Value = Convert.ToInt32(phone);
-            */
-
+            //execute query
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                conn.Close();
                 MessageBox.Show($"{insertInto} oprettet");
                 //MessageBox.Show(sqlCom);
             }
@@ -64,9 +54,7 @@ namespace SoenderBoP
         }
         public static void Create(string insertInto, string add, string values, object[] data)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-            //Sql Connection
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
             //Sql sætning
             string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values});";
             //Sql Command
@@ -104,9 +92,7 @@ namespace SoenderBoP
         }
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
-
+            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
             string[] valuess = values.Split(',');
             string[] adds = add.Split(',');
 
@@ -120,7 +106,6 @@ namespace SoenderBoP
             //Fjerner det sidste komma, fra sætningen. Da det er illegal SQL.
             set = set.Remove(set.Length - 1, 1);
 
-            SqlConnection conn = new SqlConnection(strconn);
             string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where};";
             //MessageBox.Show(sqlCom);
 
@@ -148,11 +133,8 @@ namespace SoenderBoP
         }
         public static void Delete(string insertInto, string delete, string cellValue)
         {
-            string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
             string sqlCom = $"DELETE Venteliste WHERE vMid = {cellValue}; DELETE {insertInto} WHERE {delete};";
-
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
             try
@@ -166,5 +148,10 @@ namespace SoenderBoP
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
+    }
+
+    internal class CRUD
+    {
+        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.
     }
 }

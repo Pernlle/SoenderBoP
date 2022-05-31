@@ -48,7 +48,7 @@ namespace SoenderBoP
                 if (cellValue != "" || cellValue == "0")
                 {
                     string delete = "mId = " + cellValue;
-                    CRUD.Delete(insertInto, delete, cellValue);
+                    CRUDFacade.Delete(insertInto, delete, cellValue);
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else
@@ -85,7 +85,7 @@ namespace SoenderBoP
 
             //Opdater det medlem som er corresponding til den valgte celle i DGV
             string where = $"mId={cellValue}"; 
-            CRUD.Update(insertInto, add, where, values, data);
+            CRUDFacade.Update(insertInto, add, where, values, data);
 
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 

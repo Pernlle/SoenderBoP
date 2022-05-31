@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace SoenderBoP
 {
     //Laver DataGridView style metode for at GUI er konsistent
-    internal class GetDGVStyle
+    public class GetDGVStyle
     {
         public static DataGridView GetStyle(DataGridView DGV)
         {

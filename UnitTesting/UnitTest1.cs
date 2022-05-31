@@ -16,6 +16,11 @@ namespace UnitTesting
             //s=
             ////Assert.Pass(); //skal være rigtigt (pass=gør intet?)
             //Assert.AreEqual(1000, kunde.Getpostnummer);
+            CRUDFacade cRUDFacade = new CRUDFacade();
+            StrConnProvider strConnProvider = new StrConnProvider();
+            Print print = new Print();
+            
+            
         }
         [TestMethod]
         public void Test2CreateNotNavn()
