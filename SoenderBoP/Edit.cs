@@ -47,8 +47,18 @@ namespace SoenderBoP
             {
                 if (cellValue != "" || cellValue == "0")
                 {
-                    string delete = "mId = " + cellValue;
-                    CRUDFacade.Delete(insertInto, delete, cellValue);
+                    //Gem insertinto, da der skal slettes flere ting.
+                    string insertInto_ = insertInto;
+                    insertInto = "Venteliste";
+                    string delete = "vMId = " + cellValue;
+                    //Slet Venteliste hvor mId = den valgte 
+                    CRUDFacade.Delete(insertInto, delete);
+
+                    //Slet Medlem hvor mId = den valgte 
+                    insertInto = insertInto_;
+                    delete = "mId = " + cellValue;
+                    CRUDFacade.Delete(insertInto, delete);
+
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else

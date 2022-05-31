@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace SoenderBoP
 {
@@ -35,6 +37,8 @@ namespace SoenderBoP
             string phone = tlfMTxt.Text;
             string email = emailMTxt.Text;
             int beboer = 0;
+            DBNull loebeNr = DBNull.Value;
+
             int num = -1;
             if (!int.TryParse(phone, out num))
             {
@@ -45,17 +49,17 @@ namespace SoenderBoP
                 int phoneN = Convert.ToInt32(phone);
 
                 // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-                object[] data = { fName, eName, phoneN, email, beboer };
+                object[] data = { fName, eName, phoneN, email, beboer, loebeNr };
 
                 //hvilken tabel i db som skal arbejdes med
                 string insertInto = "Medlem";
                 // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
                 //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-                string add = "fNavn,eNavn,tlf,email,beboer";
+                string add = "fNavn,eNavn,tlf,email,beboer,mLNr";
                 // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-                string values = "@fNavn,@eNavn,@tlf,@email,@beboer";
+                string values = "@fNavn,@eNavn,@tlf,@email,@beboer,@mLNr";
 
-                CRUDFacade.CreateMedlem(insertInto, add, values, data);
+                CRUDFacade.Create(insertInto, add, values, data);
 
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }

@@ -22,41 +22,12 @@ namespace SoenderBoP
     }
     public class CRUDFacade
     {
-        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.        
-        public static void CreateMedlem(string insertInto, string add, string values, object[] data)
-        {
-            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
-            string sqlcom = $"INSERT INTO {insertInto}({add}, mLNr) VALUES ({values}, @mLNr)";
-            //Sql Command
-            SqlCommand cmd = new SqlCommand(sqlcom, conn);
-
-            cmd.Parameters.AddWithValue("@mLNr", DBNull.Value);
-
-            //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
-            string[] valuess = values.Split(',');
-
-            //add parametre til sql commanden (for hver value i valuess lav en parameter.Add
-            //Parametrene finder selv ud af hvilken [string, int, mm.] som skal bruges
-            for (int i = 0; i < valuess.Length; i++)
-            {
-                cmd.Parameters.AddWithValue(valuess[i], data[i]);
-            }
-            //execute query
-            try
-            {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show($"{insertInto} oprettet");
-                //MessageBox.Show(sqlCom);
-            }
-            catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
-            finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
-        }
+        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
         public static void Create(string insertInto, string add, string values, object[] data)
         {
             SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
             //Sql sætning
-            string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values});";
+            string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values})";
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlcom, conn);
 
@@ -106,7 +77,7 @@ namespace SoenderBoP
             //Fjerner det sidste komma, fra sætningen. Da det er illegal SQL.
             set = set.Remove(set.Length - 1, 1);
 
-            string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where};";
+            string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where}";
             //MessageBox.Show(sqlCom);
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
@@ -131,10 +102,10 @@ namespace SoenderBoP
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
-        public static void Delete(string insertInto, string delete, string cellValue)
+        public static void Delete(string insertInto, string delete)
         {
             SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
-            string sqlCom = $"DELETE Venteliste WHERE vMid = {cellValue}; DELETE {insertInto} WHERE {delete};";
+            string sqlCom = $"DELETE {insertInto} WHERE {delete}";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
             try
