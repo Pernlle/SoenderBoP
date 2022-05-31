@@ -15,16 +15,15 @@ namespace SoenderBoP
     {
         string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
         
-
         public Lease()
         {
             InitializeComponent();
             FillDataSource.SetUpDGV(leaseDGV, GetSqlComL());
             FillDataSource.SetUpDGV(readBoligDGV, GetSqlComB());
             FillDataSource.SetUpDGV(readMedlemDGV, GetSqlComM());
-            
         }
 
+        //Knap = Opret
         private void CreateLease_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(strconn);
@@ -95,18 +94,7 @@ namespace SoenderBoP
 
         }
 
-        private void emailCBX_Click(object sender, EventArgs e)
-        {
-            string sqlcom = "SELECT email FROM Medlem";
-            emailCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
-        }
-
-        private void leaseAdresseCBX_Click(object sender, EventArgs e)
-        {
-            string sqlcom = "SELECT adr FROM Bolig";
-            leaseAdresseCBX.DataSource = FillDataSource.GetDataSource(sqlcom);
-        }
-
+        //Knap = Print
         private void leasePrintbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Resourceforbrug_lease";
@@ -115,16 +103,22 @@ namespace SoenderBoP
             DataGridView dgv = leaseDGV;
             Print.PrintIt(dgv, writerName, headersarr, title);
         }
+
+        //Hent sql til LeaseDGV
         public static string GetSqlComL()
         {
             string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             return sqlCom;
         }
+
+        //Hent sql til MedlemDGV
         public static string GetSqlComM()
         {
             string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
             return sqlCom;
         }
+
+        //Hent sql til BoligDGV
         public static string GetSqlComB()
         {
             string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
@@ -134,5 +128,7 @@ namespace SoenderBoP
         //Ubrugt kode, der ikke kan fjernes
         private void refreshBtn_Click(object sender, EventArgs e){}
         private void Lease_Load(object sender, EventArgs e){}
+        private void emailCBX_Click(object sender, EventArgs e) {}        
+        private void leaseAdresseCBX_Click(object sender, EventArgs e) {}
     }
 }

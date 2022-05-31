@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -128,6 +128,7 @@
             // 
             this.panel4.Controls.Add(this.lejlighedDGV);
             this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.lCBX);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,15 +150,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -193,7 +194,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lmIdTXT);
-            this.panel1.Controls.Add(this.lCBX);
             this.panel1.Controls.Add(this.lDTP);
             this.panel1.Controls.Add(this.waitlistPrintLbtn);
             this.panel1.Controls.Add(this.createLBTN);
@@ -211,7 +211,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 256);
+            this.label10.Location = new System.Drawing.Point(6, 273);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(231, 32);
             this.label10.TabIndex = 6;
@@ -221,9 +221,9 @@
             // 
             this.lmIdTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lmIdTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lmIdTXT.Location = new System.Drawing.Point(230, 121);
+            this.lmIdTXT.Location = new System.Drawing.Point(12, 117);
             this.lmIdTXT.Name = "lmIdTXT";
-            this.lmIdTXT.Size = new System.Drawing.Size(92, 32);
+            this.lmIdTXT.Size = new System.Drawing.Size(310, 32);
             this.lmIdTXT.TabIndex = 2;
             // 
             // lCBX
@@ -231,9 +231,9 @@
             this.lCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lCBX.FormattingEnabled = true;
-            this.lCBX.Location = new System.Drawing.Point(12, 118);
+            this.lCBX.Location = new System.Drawing.Point(629, 301);
             this.lCBX.Name = "lCBX";
-            this.lCBX.Size = new System.Drawing.Size(212, 40);
+            this.lCBX.Size = new System.Drawing.Size(212, 33);
             this.lCBX.TabIndex = 1;
             // 
             // lDTP
@@ -289,9 +289,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 32);
+            this.label2.Size = new System.Drawing.Size(133, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Medlem:";
+            this.label2.Text = "Medlem ID";
             // 
             // label1
             // 
@@ -330,14 +330,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -379,7 +379,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 256);
+            this.label11.Location = new System.Drawing.Point(12, 269);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(231, 32);
             this.label11.TabIndex = 10;
@@ -448,9 +448,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 32);
+            this.label5.Size = new System.Drawing.Size(133, 32);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Medlem:";
+            this.label5.Text = "Medlem ID";
             // 
             // label6
             // 
@@ -468,6 +468,7 @@
             this.seniorbolig.BackColor = System.Drawing.Color.Linen;
             this.seniorbolig.Controls.Add(this.seniorDGV);
             this.seniorbolig.Controls.Add(this.panel3);
+            this.seniorbolig.Controls.Add(this.wsCBX);
             this.seniorbolig.Location = new System.Drawing.Point(4, 38);
             this.seniorbolig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seniorbolig.Name = "seniorbolig";
@@ -513,7 +514,6 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.smIdTXT);
-            this.panel3.Controls.Add(this.wsCBX);
             this.panel3.Controls.Add(this.sDTP);
             this.panel3.Controls.Add(this.createSBTN);
             this.panel3.Controls.Add(this.waitlistPrintSBtn);
@@ -531,7 +531,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 256);
+            this.label12.Location = new System.Drawing.Point(7, 272);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(231, 32);
             this.label12.TabIndex = 11;
@@ -541,9 +541,9 @@
             // 
             this.smIdTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.smIdTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.smIdTXT.Location = new System.Drawing.Point(252, 128);
+            this.smIdTXT.Location = new System.Drawing.Point(13, 119);
             this.smIdTXT.Name = "smIdTXT";
-            this.smIdTXT.Size = new System.Drawing.Size(64, 32);
+            this.smIdTXT.Size = new System.Drawing.Size(304, 32);
             this.smIdTXT.TabIndex = 10;
             // 
             // wsCBX
@@ -551,9 +551,9 @@
             this.wsCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.wsCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wsCBX.FormattingEnabled = true;
-            this.wsCBX.Location = new System.Drawing.Point(12, 120);
+            this.wsCBX.Location = new System.Drawing.Point(612, 215);
             this.wsCBX.Name = "wsCBX";
-            this.wsCBX.Size = new System.Drawing.Size(234, 40);
+            this.wsCBX.Size = new System.Drawing.Size(234, 33);
             this.wsCBX.TabIndex = 9;
             // 
             // sDTP
@@ -613,9 +613,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 84);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 32);
+            this.label8.Size = new System.Drawing.Size(133, 32);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Medlem:";
+            this.label8.Text = "Medlem ID";
             // 
             // label9
             // 

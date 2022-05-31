@@ -15,13 +15,11 @@ namespace SoenderBoP
         public Edit()
         {
             InitializeComponent();
-        }
-        public static string GetSqlCom()
-        {
-            string sqlCom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
-            return sqlCom;
+            FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
+
         }
 
+        //DELETE
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             //hvilken tabel i db som skal arbejdes med
@@ -35,6 +33,8 @@ namespace SoenderBoP
             Yes_no(cellValue, insertInto);
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
         }
+
+        //Messagebox med Yes/No
         public void Yes_no(string cellValue, string insertInto)
         {
             string box_msg = $"Er du sikker på at du vil slette {insertInto}";
@@ -60,6 +60,7 @@ namespace SoenderBoP
             else if (selectedOption == DialogResult.No) { MessageBox.Show("Godt valg "); }
         }
 
+        //UPDATE
         private void updateBtn_Click(object sender, EventArgs e)
         {
             //disse text vil blive udfyldt når man trykker på dgv og kan herefter kunne ændres, hvis man ønsker at opdatere dem (UPDATE KNAP)
@@ -90,11 +91,7 @@ namespace SoenderBoP
 
         }
 
-        private void Edit_Load(object sender, EventArgs e)
-        {
-            FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
-        }
-
+        //Hent værdier fra DGV
         private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -105,5 +102,15 @@ namespace SoenderBoP
                 emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
             }
         }
+
+        //Henter SQL til DGV
+        public static string GetSqlCom()
+        {
+            string sqlCom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
+            return sqlCom;
+        }
+
+        //Ubrugt kode der ikke kan fjernes
+        private void Edit_Load(object sender, EventArgs e){}
     }
 }

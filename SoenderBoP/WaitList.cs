@@ -16,15 +16,10 @@ namespace SoenderBoP
         public WaitList()
         {
             InitializeComponent();
-        }
-
-        private void WaitList_Load(object sender, EventArgs e)
-        {
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             lejlighedDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DataGridView DGV = lejlighedDGV;
             GetDGVStyle.GetStyle(DGV);
-
 
             sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             ungdomsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
@@ -35,50 +30,49 @@ namespace SoenderBoP
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
-
         }
 
+        //Event = Nr til venteliste
         private void lejlighedDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             this.lejlighedDGV.Rows[e.RowIndex].Cells["lejlighedNr"].Value = (e.RowIndex + 1).ToString();
         }
 
+        //Event = Nr til venteliste
         private void ungdomsDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             this.ungdomsDGV.Rows[e.RowIndex].Cells["ungdomsNr"].Value = (e.RowIndex + 1).ToString();
         }
 
+        //Event = Nr til venteliste
         private void seniorDGV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             this.seniorDGV.Rows[e.RowIndex].Cells["seniorNr"].Value=(e.RowIndex+1).ToString();
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        //Knap = Print lejlighed
+        private void waitlistPrintLbtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.lejlighedTableAdapter.FillBy(this.waitListViews.Lejlighed);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            string writerName = $"Waitlist_Lejlighed";
+            string title = $"Venteliste til lejlighed";
+            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
+            DataGridView dgv = lejlighedDGV;
 
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
-        private void lejlighedQToolStripButton_Click(object sender, EventArgs e)
+        //Knap = Print ungdoms
+        private void waitlistPrintUBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.lejlighedTableAdapter.lejlighedQ(this.waitListViews.Lejlighed);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            string writerName = $"Waitlist_Ungdom";
+            string title = $"Venteliste til ungdomsbolig";
+            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
+            DataGridView dgv = ungdomsDGV;
 
+            Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
+        //Knap = Print senior
         private void waitlistPrintSBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Senior";
@@ -90,29 +84,8 @@ namespace SoenderBoP
             Print.PrintIt(dgv, writerName, headersarr, title);
         }
 
-        private void waitlistPrintUBtn_Click(object sender, EventArgs e)
-        {
-            string writerName = $"Waitlist_Ungdom";
-            string title = $"NogetFjerde";
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
-            DataGridView dgv = ungdomsDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr, title);
-        }
-
-        private void waitlistPrintLbtn_Click(object sender, EventArgs e)
-        {
-            string writerName = $"Waitlist_Lejlighed";
-            string title = $"Noget andet";
-            string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
-            DataGridView dgv = lejlighedDGV;
-
-            Print.PrintIt(dgv, writerName, headersarr, title);
-        }
-
-        // Tilføj til venteliste
-
-        //Lejlighed
+        //Knap = Tilføj lejlighed
         private void createLBTN_Click(object sender, EventArgs e)
         {
             string mId = this.lmIdTXT.Text;
@@ -135,6 +108,7 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
 
+        //Knap = Tilføj ungdoms
         private void createUBTN_Click(object sender, EventArgs e)
         {
             string mId = this.umIdTXT.Text;
@@ -158,7 +132,8 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
 
         }
-
+        
+        //Knap = Tilføj Senior
         private void createSBTN_Click(object sender, EventArgs e)
         {
             string mId = this.smIdTXT.Text;
@@ -182,5 +157,11 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(seniorDGV, sqlcom);
 
         }
+
+        //Ubrugt kode
+        private void WaitList_Load(object sender, EventArgs e) {}
+        private void lejlighedQToolStripButton_Click(object sender, EventArgs e){try{this.lejlighedTableAdapter.lejlighedQ(this.waitListViews.Lejlighed);}catch (System.Exception ex){System.Windows.Forms.MessageBox.Show(ex.Message);}}
+        private void fillByToolStripButton_Click(object sender, EventArgs e) { try { this.lejlighedTableAdapter.FillBy(this.waitListViews.Lejlighed); } catch (System.Exception ex) { System.Windows.Forms.MessageBox.Show(ex.Message); } }
+
     }
 }

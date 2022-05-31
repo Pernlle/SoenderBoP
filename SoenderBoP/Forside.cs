@@ -24,11 +24,21 @@ namespace SoenderBoP
             //kør threaden
             thread.Start();
 
+            //Skjuler knapper
+            waitListBtn.Visible = false;
+            editBtn.Visible = false;
+            leaseBtn.Visible = false;
+            reservationBtn.Visible = false;
+            logoutBtn.Visible = false;
+            panel5.Visible = false;
             panel5.Hide();
         }
-        //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut.
+
+        // Slogan metode
         private void UpdateSlogan()
         {
+            //Updateslogan kører listen 'slogans' igennem randomly og skifter mellem dem hver 3. minut.
+
             while (true)
             {
                 //hvis der er en forside er forsiden åben - lav da ... slogan ...  (Dette betyder at hvis ikke forsiden er åbnet, skal den 
@@ -43,20 +53,15 @@ namespace SoenderBoP
                 Thread.Sleep(TimeSpan.FromMinutes(3));
             }
         }
-        private void Forside_Load(object sender, EventArgs e)
-        {
-            waitListBtn.Visible = false;
-            editBtn.Visible = false;
-            leaseBtn.Visible = false;
-            reservationBtn.Visible = false;
-            logoutBtn.Visible = false;
-            panel5.Visible=false;
-        }
+
+        // Form luk event
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Husk altid at lukke thread'en, ellers kører programmet stadig.
             thread.Abort();
         }
+
+        //Knap = Opret medlem
         public void createBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -65,6 +70,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Se info
         public void readBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -74,6 +81,8 @@ namespace SoenderBoP
             frm.Show();
 
         }
+
+        //Knap = Rediger
         public void editBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -82,6 +91,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Statistik
         public void statsBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -90,6 +101,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Reservation
         public void reservationBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -98,6 +111,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Venteliste
         public void waitListBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -106,6 +121,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Lejekontrakter
         public void leaseBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -114,6 +131,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Knap = Søg
         public void searchBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -122,6 +141,8 @@ namespace SoenderBoP
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        //Login vindue toggle
         public bool open = true;
         public void loginBtn_Click(object sender, EventArgs e)
         {
@@ -137,6 +158,8 @@ namespace SoenderBoP
                 open = true;
             }
         }
+
+        //Knap = Login
         public void lBTN_Click(object sender, EventArgs e)
         {
             //Login button
@@ -163,6 +186,8 @@ namespace SoenderBoP
             }
             else { MessageBox.Show("Prøv igen du"); }
         }
+
+        // Knap = Logout
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             waitListBtn.Visible = false;
@@ -172,8 +197,9 @@ namespace SoenderBoP
             logoutBtn.Visible = false;
             loginBtn.Visible = true;
         }
-        private void lboligBtn_Click(object sender, EventArgs e)
-        {
-        }
+
+        //Ubrugt kode der ikke kan fjernes
+        private void lboligBtn_Click(object sender, EventArgs e){}
+        private void Forside_Load(object sender, EventArgs e){}
     }
 }

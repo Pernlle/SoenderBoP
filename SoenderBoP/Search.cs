@@ -18,6 +18,7 @@ namespace SoenderBoP
             InitializeComponent();
         }
 
+        //Knap = Søg
         private void searchBtn_Click(object sender, EventArgs e)
         {
             //Pris søg klik
@@ -64,11 +65,7 @@ namespace SoenderBoP
 
         }
 
-        private void Search_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //Knap = Søg kvm
         private void searchKvmBtn_Click(object sender, EventArgs e)
         {
             // kvm søg klik
@@ -98,6 +95,8 @@ namespace SoenderBoP
                 else MessageBox.Show("Fejl i kvm");
             }
         }
+
+        //Knap = Vis alle
         private void sallBTN_Click(object sender, EventArgs e)
         {
             string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig";
@@ -108,11 +107,16 @@ namespace SoenderBoP
         //Bruges når vi skal søge på pris og kvm, så vi søger på de ledige kun -ellers søger vi på alle boligere :)
         private bool BtnClicked = false; //feltvariabel
 
+        //Knap = Vis ledige
         private void saBTN_Click(object sender, EventArgs e)
         {
             string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig WHERE bLNr IS NULL";
             FillDataSource.SetUpDGV(searchDGV, sqlcom);
             BtnClicked = true;
         }
+
+
+        //Ubrugt kode
+        private void Search_Load(object sender, EventArgs e) {}
     }
 }

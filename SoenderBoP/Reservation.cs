@@ -16,26 +16,19 @@ namespace SoenderBoP
         public Reservation()
         {
             InitializeComponent();
-        }
-        public static string GetSqlCom()
-        {
-            string sqlCom = "SELECT rId AS 'Ressource ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
-            return sqlCom;
-        }
-        public static string GetSqlComi()
-        {
-            string sqlCom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn + ' ' + eNavn AS 'Navn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
-            return sqlCom;
-        }        
-        private void Reservation_Load(object sender, EventArgs e)
-        {
             //ressource dgv fill
-            FillDataSource.SetUpDGV(ressourceDGV, GetSqlComi());
-
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlComR());
             //reserveret dgv fill
-            FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
+            FillDataSource.SetUpDGV(reserveDGV, GetSqlComR());
         }
 
+        //Knap = Se ID
+        private void seIdbtn_Click(object sender, EventArgs e)
+        {
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlComRR());
+        }
+
+        //Knap = Reserver
         public void reserveBtn_Click(object sender, EventArgs e)
         {
             string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
@@ -77,17 +70,29 @@ namespace SoenderBoP
                 MessageBox.Show("Reserveret");
                 //MessageBox.Show(sqlCom);
 
-                FillDataSource.SetUpDGV(ressourceDGV, GetSqlComi());
-                FillDataSource.SetUpDGV(reserveDGV, GetSqlComi());
+                FillDataSource.SetUpDGV(ressourceDGV, GetSqlComRR());
+                FillDataSource.SetUpDGV(reserveDGV, GetSqlComRR());
 
             }
             catch { MessageBox.Show("Fejl"); }
             
         }
 
-        private void seIdbtn_Click(object sender, EventArgs e)
+        //Henter sql
+        public static string GetSqlComRR()
         {
-            FillDataSource.SetUpDGV(ressourceDGV, GetSqlCom());
+            string sqlCom = "SELECT rId AS 'Ressource ID', rType AS 'Ressource', rNr AS 'Nr.' FROM Ressource";
+            return sqlCom;
         }
+
+        //Henter sql
+        public static string GetSqlComR()
+        {
+            string sqlCom = "SELECT lNr AS 'Løbenummer', rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Fra', dSlut AS 'Til', fNavn + ' ' + eNavn AS 'Navn', mId AS 'Medlem ID' FROM Reserveret, Medlem, Ressource, Lejekontrakt WHERE lNr = mLNr AND rRId = rId AND lNr = rLNr";
+            return sqlCom;
+        }
+
+        //Ubrugt kode
+        private void Reservation_Load(object sender, EventArgs e) {}
     }
 }

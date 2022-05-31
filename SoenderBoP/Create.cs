@@ -15,13 +15,18 @@ namespace SoenderBoP
         public Create()
         {
             InitializeComponent();
+            FillDataSource.SetUpDGV(mDGV, GetSqlCom());
+
         }
+
+        //Hent sql
         public static string GetSqlCom()
         {
             string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
             return sqlCom;
         }
 
+        //Knap = Opret
         private void createBtn_Click(object sender, EventArgs e)
         {
             //Values fra tekstboxe:
@@ -56,20 +61,19 @@ namespace SoenderBoP
             }
         }
 
-       
         private string fNameMTxt;
-        public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }
+        public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }        
 
-        private void Create_Load(object sender, EventArgs e)
-        {
-            FillDataSource.SetUpDGV(mDGV, GetSqlCom());
-        }
-
+        //Event = Ændrer 'Beboer' fra 0/1 til Medlem/Beboer 
         private void mDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 5)
                 if (e.Value is int)
                     e.Value = (int)e.Value == 0 ? "Medlem" : "Beboer";
         }
+
+        //Ubrugt kode, der ikke kan fjernes
+        private void Create_Load(object sender, EventArgs e) { }
+
     }
 }
