@@ -67,6 +67,7 @@
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
             this.panel2.SuspendLayout();
@@ -115,12 +116,12 @@
             this.cStatsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cStatsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cStatsBtn.ForeColor = System.Drawing.Color.White;
-            this.cStatsBtn.Location = new System.Drawing.Point(25, 314);
+            this.cStatsBtn.Location = new System.Drawing.Point(25, 297);
             this.cStatsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cStatsBtn.Name = "cStatsBtn";
             this.cStatsBtn.Size = new System.Drawing.Size(328, 48);
             this.cStatsBtn.TabIndex = 3;
-            this.cStatsBtn.Text = "SE RESERVATIONER";
+            this.cStatsBtn.Text = "VIS";
             this.cStatsBtn.UseVisualStyleBackColor = false;
             this.cStatsBtn.Click += new System.EventHandler(this.cStatBtn_Click);
             // 
@@ -280,6 +281,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.showAllBtn);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.printStatBtn);
@@ -300,7 +302,7 @@
             this.showAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showAllBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllBtn.ForeColor = System.Drawing.Color.White;
-            this.showAllBtn.Location = new System.Drawing.Point(25, 505);
+            this.showAllBtn.Location = new System.Drawing.Point(25, 385);
             this.showAllBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.showAllBtn.Name = "showAllBtn";
             this.showAllBtn.Size = new System.Drawing.Size(328, 48);
@@ -313,7 +315,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 184);
+            this.label8.Location = new System.Drawing.Point(19, 201);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(206, 32);
             this.label8.TabIndex = 6;
@@ -326,7 +328,7 @@
             this.printStatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printStatBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printStatBtn.ForeColor = System.Drawing.Color.White;
-            this.printStatBtn.Location = new System.Drawing.Point(25, 412);
+            this.printStatBtn.Location = new System.Drawing.Point(25, 538);
             this.printStatBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.printStatBtn.Name = "printStatBtn";
             this.printStatBtn.Size = new System.Drawing.Size(328, 48);
@@ -345,7 +347,7 @@
             this.statsCBX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statsCBX.ForeColor = System.Drawing.Color.White;
             this.statsCBX.FormattingEnabled = true;
-            this.statsCBX.Location = new System.Drawing.Point(25, 229);
+            this.statsCBX.Location = new System.Drawing.Point(25, 237);
             this.statsCBX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.statsCBX.Name = "statsCBX";
             this.statsCBX.Size = new System.Drawing.Size(328, 40);
@@ -433,6 +435,16 @@
             this.tabPage1.Text = "Statistik";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(165, 349);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 32);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "eller";
+            // 
             // Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -518,5 +530,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button showAllBtn;
+        private System.Windows.Forms.Label label9;
     }
 }
