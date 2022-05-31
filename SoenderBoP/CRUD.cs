@@ -64,6 +64,7 @@ namespace SoenderBoP
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
             SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
+            //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
             string[] adds = add.Split(',');
 
@@ -81,8 +82,6 @@ namespace SoenderBoP
             //MessageBox.Show(sqlCom);
 
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
-
-            //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
 
             //add parametre til sql commanden (for hver value i valuess lav en parameter.Add
             //Parametrene finder selv ud af hvilken [string, int, mm.] som skal bruges

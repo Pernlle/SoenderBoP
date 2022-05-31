@@ -18,7 +18,6 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
         }
-
         //DELETE
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,6 @@ namespace SoenderBoP
             Yes_no(cellValue, insertInto);
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
         }
-
         //Messagebox med Yes/No
         public void Yes_no(string cellValue, string insertInto)
         {
@@ -58,7 +56,6 @@ namespace SoenderBoP
                     insertInto = insertInto_;
                     delete = "mId = " + cellValue;
                     CRUDFacade.Delete(insertInto, delete);
-
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else
