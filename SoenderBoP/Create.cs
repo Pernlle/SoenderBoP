@@ -67,7 +67,7 @@ namespace SoenderBoP
         //Event = Ændrer 'Beboer' fra 0/1 til Medlem/Beboer 
         private void mDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 4)
                 if (e.Value is int)
                     e.Value = (int)e.Value == 0 ? "Medlem" : "Beboer";
         }

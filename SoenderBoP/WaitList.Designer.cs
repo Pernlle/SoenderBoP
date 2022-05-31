@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lejlighed = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lejlighedDGV = new System.Windows.Forms.DataGridView();
             this.lejlighedNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lCBX = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.lmIdTXT = new System.Windows.Forms.TextBox();
-            this.lCBX = new System.Windows.Forms.ComboBox();
             this.lDTP = new System.Windows.Forms.DateTimePicker();
             this.waitlistPrintLbtn = new System.Windows.Forms.Button();
             this.createLBTN = new System.Windows.Forms.Button();
@@ -65,13 +65,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.smIdTXT = new System.Windows.Forms.TextBox();
-            this.wsCBX = new System.Windows.Forms.ComboBox();
             this.sDTP = new System.Windows.Forms.DateTimePicker();
             this.createSBTN = new System.Windows.Forms.Button();
             this.waitlistPrintSBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.wsCBX = new System.Windows.Forms.ComboBox();
             this.ungdomsboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.waitListViews = new SoenderBoP.waitListViews();
             this.seniorboligBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -150,15 +150,15 @@
             this.lejlighedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lejlighedDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lejlighedNr});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.lejlighedDGV.DefaultCellStyle = dataGridViewCellStyle1;
             this.lejlighedDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lejlighedDGV.GridColor = System.Drawing.Color.Gainsboro;
             this.lejlighedDGV.Location = new System.Drawing.Point(0, 0);
@@ -188,6 +188,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(338, 10);
             this.panel5.TabIndex = 3;
+            // 
+            // lCBX
+            // 
+            this.lCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lCBX.FormattingEnabled = true;
+            this.lCBX.Location = new System.Drawing.Point(629, 301);
+            this.lCBX.Name = "lCBX";
+            this.lCBX.Size = new System.Drawing.Size(212, 33);
+            this.lCBX.TabIndex = 1;
             // 
             // panel1
             // 
@@ -225,16 +235,6 @@
             this.lmIdTXT.Name = "lmIdTXT";
             this.lmIdTXT.Size = new System.Drawing.Size(310, 32);
             this.lmIdTXT.TabIndex = 2;
-            // 
-            // lCBX
-            // 
-            this.lCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lCBX.FormattingEnabled = true;
-            this.lCBX.Location = new System.Drawing.Point(629, 301);
-            this.lCBX.Name = "lCBX";
-            this.lCBX.Size = new System.Drawing.Size(212, 33);
-            this.lCBX.TabIndex = 1;
             // 
             // lDTP
             // 
@@ -330,14 +330,14 @@
             this.ungdomsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ungdomsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ungdomsNr});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ungdomsDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.ungdomsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ungdomsDGV.Location = new System.Drawing.Point(3, 2);
             this.ungdomsDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -546,16 +546,6 @@
             this.smIdTXT.Size = new System.Drawing.Size(304, 32);
             this.smIdTXT.TabIndex = 10;
             // 
-            // wsCBX
-            // 
-            this.wsCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.wsCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wsCBX.FormattingEnabled = true;
-            this.wsCBX.Location = new System.Drawing.Point(612, 215);
-            this.wsCBX.Name = "wsCBX";
-            this.wsCBX.Size = new System.Drawing.Size(234, 33);
-            this.wsCBX.TabIndex = 9;
-            // 
             // sDTP
             // 
             this.sDTP.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -627,6 +617,16 @@
             this.label9.Size = new System.Drawing.Size(235, 38);
             this.label9.TabIndex = 3;
             this.label9.Text = "Tilføj til venteliste";
+            // 
+            // wsCBX
+            // 
+            this.wsCBX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.wsCBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wsCBX.FormattingEnabled = true;
+            this.wsCBX.Location = new System.Drawing.Point(612, 215);
+            this.wsCBX.Name = "wsCBX";
+            this.wsCBX.Size = new System.Drawing.Size(234, 33);
+            this.wsCBX.TabIndex = 9;
             // 
             // ungdomsboligBindingSource
             // 

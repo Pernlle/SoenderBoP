@@ -37,7 +37,7 @@ namespace SoenderBoP
                 }
             }
             writer.Close();
-            MessageBox.Show("Gemt til 'Udksrifter'");
+            MessageBox.Show("Gemt til 'Udskrifter'");
         }
         public static string PadBoth(string source, int length)
         {
