@@ -39,6 +39,7 @@
             this.readBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.lboligBtn = new System.Windows.Forms.Button();
             this.BackgroundPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@
             this.idLabel = new System.Windows.Forms.Label();
             this.passBox = new System.Windows.Forms.MaskedTextBox();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
-            this.logoutBtn = new System.Windows.Forms.Button();
+            this.addBoligBtn = new System.Windows.Forms.Button();
             this.manuPanel.SuspendLayout();
             this.BackgroundPanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -71,6 +72,7 @@
             // manuPanel
             // 
             this.manuPanel.BackColor = System.Drawing.Color.Linen;
+            this.manuPanel.Controls.Add(this.addBoligBtn);
             this.manuPanel.Controls.Add(this.reservationBtn);
             this.manuPanel.Controls.Add(this.statsBtn);
             this.manuPanel.Controls.Add(this.editBtn);
@@ -259,6 +261,25 @@
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.logoutBtn.FlatAppearance.BorderSize = 3;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(0, 0);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(223, 54);
+            this.logoutBtn.TabIndex = 9;
+            this.logoutBtn.Text = "Log ud";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // lboligBtn
             // 
@@ -460,24 +481,24 @@
             // 
             this.medlemTableAdapter.ClearBeforeFill = true;
             // 
-            // logoutBtn
+            // addBoligBtn
             // 
-            this.logoutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.logoutBtn.FlatAppearance.BorderSize = 3;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(0, 0);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(223, 54);
-            this.logoutBtn.TabIndex = 9;
-            this.logoutBtn.Text = "Log ud";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.addBoligBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.addBoligBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBoligBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addBoligBtn.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.addBoligBtn.FlatAppearance.BorderSize = 3;
+            this.addBoligBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBoligBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBoligBtn.ForeColor = System.Drawing.Color.White;
+            this.addBoligBtn.Location = new System.Drawing.Point(0, 540);
+            this.addBoligBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addBoligBtn.Name = "addBoligBtn";
+            this.addBoligBtn.Size = new System.Drawing.Size(223, 54);
+            this.addBoligBtn.TabIndex = 10;
+            this.addBoligBtn.Text = "Opret ny bolig";
+            this.addBoligBtn.UseVisualStyleBackColor = false;
+            this.addBoligBtn.Click += new System.EventHandler(this.addBoligBtn_Click);
             // 
             // Forside
             // 
@@ -536,6 +557,7 @@
         public System.Windows.Forms.Button leaseBtn;
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Button logoutBtn;
+        public System.Windows.Forms.Button addBoligBtn;
     }
 }
 

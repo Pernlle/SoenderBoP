@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBolig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBolig.Designer.cs">
+      <DependentUpon>AddBolig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>waitListViews.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBolig.resx">
+      <DependentUpon>AddBolig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
     </EmbeddedResource>

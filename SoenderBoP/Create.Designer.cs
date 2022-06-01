@@ -85,7 +85,7 @@
             // observeMCeckbx
             // 
             this.observeMCeckbx.AutoSize = true;
-            this.observeMCeckbx.Location = new System.Drawing.Point(310, 295);
+            this.observeMCeckbx.Location = new System.Drawing.Point(310, 293);
             this.observeMCeckbx.Name = "observeMCeckbx";
             this.observeMCeckbx.Size = new System.Drawing.Size(18, 17);
             this.observeMCeckbx.TabIndex = 10;

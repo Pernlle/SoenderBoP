@@ -30,6 +30,7 @@ namespace SoenderBoP
             leaseBtn.Visible = false;
             reservationBtn.Visible = false;
             logoutBtn.Visible = false;
+            addBoligBtn.Visible = false;
             panel5.Visible = false;
             panel5.Hide();
         }
@@ -182,6 +183,7 @@ namespace SoenderBoP
                 reservationBtn.Visible = true;
                 logoutBtn.Visible = true;
                 loginBtn.Visible = false;
+                addBoligBtn.Visible = true;
                 panel5.Hide();
             }
             else { MessageBox.Show("Prøv igen du"); }
@@ -196,10 +198,21 @@ namespace SoenderBoP
             reservationBtn.Visible = false;
             logoutBtn.Visible = false;
             loginBtn.Visible = true;
+            addBoligBtn.Visible=false;
+        }
+
+        private void addBoligBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AddBolig frm = new AddBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         //Ubrugt kode der ikke kan fjernes
         private void lboligBtn_Click(object sender, EventArgs e){}
         private void Forside_Load(object sender, EventArgs e){}
+
     }
 }
