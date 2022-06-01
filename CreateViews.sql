@@ -1,14 +1,14 @@
-ALTER VIEW Lejlighed AS
+CREATE VIEW Lejlighed AS
 SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
 WHERE vTId = 1 AND vMId = mId
 
-ALTER VIEW Ungdomsbolig AS
+CREATE VIEW Ungdomsbolig AS
 SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
 WHERE vTId = 2 AND vMId = mId
 
-ALTER VIEW Seniorbolig AS
+CREATE VIEW Seniorbolig AS
 SELECT vDato, fNavn, eNavn, vMId
 FROM Venteliste, Medlem
 WHERE vTId = 3 AND vMId = mId

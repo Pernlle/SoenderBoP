@@ -44,3 +44,5 @@ SELECT * FROM Venteliste
 SELECT * FROM Medlem
 SELECT * FROM Lejekontrakt
 SELECT * FROM Bolig
+
+
