@@ -63,6 +63,13 @@ namespace SoenderBoP
 
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
+
+            if (observeMCeckbx.Checked == true)
+            {
+                //ObserverPattern.Observe(observer==email);
+            }
+
+
         }
 
         private string fNameMTxt;

@@ -36,18 +36,17 @@ namespace SoenderBoP
         }
 
     }
-    //interface, 'IObservable', som indeholder en;
+    //interface, 'IObservable', som indeholder en notify;
     public interface IObservable
     {
-        void notify(string addresse);
+        void notify(string email);
     }
 
     public class Medlem : IObservable //kan hedde alt :)
     {
-        public void notify(string adresse)
+        public void notify(string email)
         {
-
-            throw new NotImplementedException();
+            //Noget 
         }
     }
 }
