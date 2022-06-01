@@ -18,7 +18,7 @@ namespace SoenderBoP
         {
             InitializeComponent();
             FillDataSource.SetUpDGV(mDGV, GetSqlCom());
-
+            
         }
 
         //Hent sql
