@@ -85,6 +85,8 @@
             // observeMCeckbx
             // 
             this.observeMCeckbx.AutoSize = true;
+            this.observeMCeckbx.Checked = true;
+            this.observeMCeckbx.CheckState = System.Windows.Forms.CheckState.Checked;
             this.observeMCeckbx.Location = new System.Drawing.Point(310, 293);
             this.observeMCeckbx.Name = "observeMCeckbx";
             this.observeMCeckbx.Size = new System.Drawing.Size(18, 17);
