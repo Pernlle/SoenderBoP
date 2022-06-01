@@ -16,7 +16,7 @@ namespace SoenderBoP
         public static DataTable GetDataSource(string sqlcom)
         {
             //Åbner forbindelsen med query'en fra strconn. Vi kalder den forbindelse for conn
-            using (SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn()))
+            using (SqlConnection conn = Database.Conn)
             {
                 //Kører derefter kommandoen med Sql query'en og forbindelsen. Vi kalden comm
                 using (SqlCommand cmd = new SqlCommand(sqlcom, conn))
@@ -27,7 +27,7 @@ namespace SoenderBoP
                         //Endelig laves DataTable.
                         DataTable dt = new DataTable();
                         //Den fyldes med SQL informationerne
-                            adapter.Fill(dt);
+                        adapter.Fill(dt);
                         //og returnes derefter
                         return dt;
                     }

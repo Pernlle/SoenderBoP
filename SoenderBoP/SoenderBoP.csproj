@@ -73,6 +73,7 @@
     <Compile Include="Lease.Designer.cs">
       <DependentUpon>Lease.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObserverPattern.cs" />
     <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,20 +12,30 @@ using System.Runtime.InteropServices;
 
 namespace SoenderBoP
 {
-    public class StrConnProvider
+    public class Database
     {
         private readonly static string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-        public static string Getstrconn()
+        private static SqlConnection conn = null;
+        //Singleton :)
+        public static SqlConnection Conn
         {
-            return strconn;
+            get
+            {
+                if (conn == null)
+                {
+                    conn = new SqlConnection(strconn);
+                }
+                return conn;
+            }
         }
+
     }
     public class CRUDFacade
     {
         // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
         public static void Create(string insertInto, string add, string values, object[] data)
         {
-            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
+            SqlConnection conn = Database.Conn;
             //Sql sætning
             string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values})";
             //Sql Command
@@ -63,7 +73,7 @@ namespace SoenderBoP
         }
         public static void Update(string insertInto, string add, string where, string values, object[] data)
         {
-            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
+            SqlConnection conn = Database.Conn;
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
             string[] adds = add.Split(',');
@@ -81,7 +91,7 @@ namespace SoenderBoP
             string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where}";
             //MessageBox.Show(sqlCom);
 
-            SqlCommand cmd = new SqlCommand(sqlCom, conn);
+            SqlCommand cmd = new SqlCommand(sqlCom, Database.Conn);
 
             //add parametre til sql commanden (for hver value i valuess lav en parameter.Add
             //Parametrene finder selv ud af hvilken [string, int, mm.] som skal bruges
@@ -103,7 +113,7 @@ namespace SoenderBoP
         }
         public static void Delete(string insertInto, string delete)
         {
-            SqlConnection conn = new SqlConnection(StrConnProvider.Getstrconn());
+            SqlConnection conn = Database.Conn;
             string sqlCom = $"DELETE {insertInto} WHERE {delete}";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 

@@ -17,7 +17,7 @@ namespace UnitTesting
             ////Assert.Pass(); //skal være rigtigt (pass=gør intet?)
             //Assert.AreEqual(1000, kunde.Getpostnummer);
             CRUDFacade cRUDFacade = new CRUDFacade();
-            StrConnProvider strConnProvider = new StrConnProvider();
+            Database strConnProvider = new Database();
             Print print = new Print();
             
             
