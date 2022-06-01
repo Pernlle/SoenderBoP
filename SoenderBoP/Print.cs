@@ -10,7 +10,7 @@ using System.Data;
 
 namespace SoenderBoP
 {
-    internal class Print
+    public class Print
     {
         public static void PrintIt(DataGridView dgv, string writerName, string[] headersarr, string title)
         {

@@ -103,7 +103,7 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUDFacade.Create(insertInto, add, values, data);
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
@@ -126,7 +126,7 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUDFacade.Create(insertInto, add, values, data);
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
@@ -151,7 +151,7 @@ namespace SoenderBoP
             // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUDFacade.Create(insertInto, add, values, data);
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(seniorDGV, sqlcom);

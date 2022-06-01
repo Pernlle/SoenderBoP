@@ -18,7 +18,6 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
         }
-
         //DELETE
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,6 @@ namespace SoenderBoP
             Yes_no(cellValue, insertInto);
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
         }
-
         //Messagebox med Yes/No
         public void Yes_no(string cellValue, string insertInto)
         {
@@ -47,8 +45,17 @@ namespace SoenderBoP
             {
                 if (cellValue != "" || cellValue == "0")
                 {
-                    string delete = "mId = " + cellValue;
-                    CRUD.Delete(insertInto, delete, cellValue);
+                    //Gem insertinto, da der skal slettes flere ting.
+                    string insertInto_ = insertInto;
+                    insertInto = "Venteliste";
+                    string delete = "vMId = " + cellValue;
+                    //Slet Venteliste hvor mId = den valgte 
+                    CRUDFacade.Delete(insertInto, delete);
+
+                    //Slet Medlem hvor mId = den valgte 
+                    insertInto = insertInto_;
+                    delete = "mId = " + cellValue;
+                    CRUDFacade.Delete(insertInto, delete);
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else
@@ -85,7 +92,7 @@ namespace SoenderBoP
 
             //Opdater det medlem som er corresponding til den valgte celle i DGV
             string where = $"mId={cellValue}"; 
-            CRUD.Update(insertInto, add, where, values, data);
+            CRUDFacade.Update(insertInto, add, where, values, data);
 
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
