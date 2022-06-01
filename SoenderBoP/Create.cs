@@ -64,12 +64,11 @@ namespace SoenderBoP
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
 
+            //tilføj medlem til observerpattern
             if (observeMCeckbx.Checked == true)
             {
-                //ObserverPattern.Observe(observer==email);
+                //ObserverPattern.Register(observer==email);
             }
-
-
         }
 
         private string fNameMTxt;

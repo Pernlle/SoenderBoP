@@ -31,6 +31,9 @@ namespace SoenderBoP
             // Call metoden 'Yes_No'
             Yes_no(cellValue, insertInto);
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
+
+            //Fjern fra observerpattern
+            //ObserverPattern.UnRegister(observer==email);
         }
         //Messagebox med Yes/No
         public void Yes_no(string cellValue, string insertInto)
@@ -96,6 +99,11 @@ namespace SoenderBoP
 
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
+            //fjern fra observerpattern
+            if (unObserveMcheckBx.Checked == true)
+            {
+                //ObserverPattern.UnRegister(observer==email);
+            }
         }
 
         //Hent værdier fra DGV

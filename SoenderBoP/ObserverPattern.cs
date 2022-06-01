@@ -10,29 +10,29 @@ namespace SoenderBoP
     public class ObserverPattern
     {
         // private observers array/list/stack som skal kunne opdateres
-        private static List<IObservable> observers = new List<IObservable>();
+        private static List<IObservable> recident = new List<IObservable>();
 
         //observe(observer) -Tilføj en observer til listen over observere
         //   observers.push(observer)
-        public static void Observe(IObservable observer)
+        public static void Register(IObservable recidence)
         {
-            observers.Add(observer);
+            recident.Add(recidence);
         }
 
         //unobserve -fjern medlemmer fra observer liste.
         //   observers.findAndDestroy(observer )
-        public static void UnObserve(IObservable observer)
+        public static void UnRegister(IObservable recidence)
         {
-            observers.Remove(observer);
+            recident.Remove(recidence);
         }
 
         //notify -Giv observere besked om eventuelle ændringer
         //   observers.foreach((observer) => observer.notify('Platanalle 47'))
         public static void Notify()
         {
-            foreach (IObservable observer in observers)
+            foreach (IObservable recidence in recident)
             {
-                observer.notify("Ny bolig tilgængelig");
+                recidence.notify("Ny bolig tilgængelig");
             }
         }
 
