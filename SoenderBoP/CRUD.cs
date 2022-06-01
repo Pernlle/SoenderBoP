@@ -16,6 +16,7 @@ namespace SoenderBoP
     {
         private readonly static string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
         private static SqlConnection conn = null;
+
         //Singleton :)
         public static SqlConnection Conn
         {

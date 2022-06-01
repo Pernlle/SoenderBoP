@@ -16,7 +16,7 @@ namespace SoenderBoP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forside());
+            Application.Run(new Forside()); //hvis programmet skal køre fra et andet forms, til at starte med, er det her det ændres :)
         }
     }
 }
