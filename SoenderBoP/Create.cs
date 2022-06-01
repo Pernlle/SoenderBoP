@@ -42,7 +42,7 @@ namespace SoenderBoP
             int num = -1;
             if (!int.TryParse(phone, out num))
             {
-                Console.WriteLine("Tlf må kun indeholde numre");
+                MessageBox.Show("Tlf må kun indeholde numre");
             }
             else
             {
