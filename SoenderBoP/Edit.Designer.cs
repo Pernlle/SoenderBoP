@@ -43,6 +43,8 @@
             this.navnTxt = new System.Windows.Forms.TextBox();
             this.medlemTableAdapter = new SoenderBoP.soenderbodbDataSetTableAdapters.MedlemTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.unObserveMcheckBx = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.helpBTN = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.editMedlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
@@ -180,7 +180,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.unObserveMcheckBx);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -198,6 +198,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 556);
             this.panel1.TabIndex = 6;
+            // 
+            // unObserveMcheckBx
+            // 
+            this.unObserveMcheckBx.AutoSize = true;
+            this.unObserveMcheckBx.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unObserveMcheckBx.Location = new System.Drawing.Point(265, 359);
+            this.unObserveMcheckBx.Name = "unObserveMcheckBx";
+            this.unObserveMcheckBx.Size = new System.Drawing.Size(18, 17);
+            this.unObserveMcheckBx.TabIndex = 12;
+            this.unObserveMcheckBx.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 350);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(236, 28);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Fjern medlem fra mailliste";
             // 
             // label5
             // 
@@ -300,25 +319,6 @@
             this.helpBTN.Text = "?";
             this.helpBTN.UseVisualStyleBackColor = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 350);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 28);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Fjern fra mailliste";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(193, 357);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,7 +371,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button helpBTN;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox unObserveMcheckBx;
         private System.Windows.Forms.Label label6;
     }
 }
