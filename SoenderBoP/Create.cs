@@ -67,9 +67,11 @@ namespace SoenderBoP
             //tilføj medlem til observerpattern
             if (observeMCeckbx.Checked == true)
             {
-                //ObserverPattern.Register(observer==email);
+               //ObserverPattern.Register(this.GetEmailMTxt);
             }
         }
+        private IObservable email;
+        public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
 
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }        

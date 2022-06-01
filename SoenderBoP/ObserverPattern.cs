@@ -35,7 +35,6 @@ namespace SoenderBoP
                 recidence.notify("Ny bolig tilgængelig");
             }
         }
-
     }
     //interface, 'IObservable', som indeholder en notify;
     public interface IObservable
