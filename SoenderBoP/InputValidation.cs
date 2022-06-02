@@ -24,7 +24,7 @@ namespace SoenderBoP
                     // "<" check for JS tags (ingen cross site scripting):
                     if (!data[i].ToString().Contains("<")) checkIfTrue= true; //input må ikke indholde <
                     // regulat expressions check:
-                    Regex regX = new Regex(@"(^[-a-å A-Å 0-9_.@]*$)"); //dk-hostmaster.dk -SKAL MAN KUNNE SKRIVE ÆØÅ? svar: IKKE I EMAIL, DA DET LATINSKE ALFABET ER DET MEST ACCEPTEREDE CROSS PLATFORM-
+                    Regex regX = new Regex(@"(^[-a-z æøå A-Z ÆØÅ 0-9_.@]*$)"); //dk-hostmaster.dk -SKAL MAN KUNNE SKRIVE ÆØÅ? svar: IKKE I EMAIL, DA DET LATINSKE ALFABET ER DET MEST ACCEPTEREDE CROSS PLATFORM-
                     if (regX.IsMatch(data[i].ToString())) checkIfTrue = true; //check for RegX
                 }
                 else if (data[i] is int)
