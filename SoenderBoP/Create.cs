@@ -50,6 +50,7 @@ namespace SoenderBoP
 
                 // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
                 object[] data = { fName, eName, phoneN, email, beboer, loebeNr };
+                InputValidation.InputValidate(data);
 
                 //hvilken tabel i db som skal arbejdes med
                 string insertInto = "Medlem";
@@ -67,9 +68,9 @@ namespace SoenderBoP
             {
                //ObserverPattern.Register(this.GetEmailMTxt);
             }
-        }
+        }        
         //private IObservable email;
-       // public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
+        // public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
 
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }        
