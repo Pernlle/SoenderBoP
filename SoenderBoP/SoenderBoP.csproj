@@ -73,6 +73,7 @@
       <DependentUpon>Forside.cs</DependentUpon>
     </Compile>
     <Compile Include="GetDGVStyle.cs" />
+    <Compile Include="InputValidation.cs" />
     <Compile Include="Lease.cs">
       <SubType>Form</SubType>
     </Compile>

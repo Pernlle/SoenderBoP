@@ -10,38 +10,42 @@ namespace UnitTesting
         [TestMethod]
         public void Test1CreateNavn()
         {
-            Create s = new Create();
-            s.GetFNameTxt = "navn";
-            Assert.AreEqual("", s.GetFNameTxt);
+            //Create s = new Create();
+            //s.GetFNameTxt = "navn";
+            //Assert.AreEqual("", s.GetFNameTxt);
             //s=
             ////Assert.Pass(); //skal være rigtigt (pass=gør intet?)
             //Assert.AreEqual(1000, kunde.Getpostnummer);
-            CRUDFacade cRUDFacade = new CRUDFacade();
-            Database strConnProvider = new Database();
-            Print print = new Print();
-            
-            
-        }
-        [TestMethod]
-        public void Test2CreateNotNavn()
-        {
-            Create s = new Create();
-            s.GetFNameTxt = "navn";
-            Assert.AreNotEqual("navn", s.GetFNameTxt);
+            //Database strConnProvider = new Database();
+            //Print print = new Print();
 
-            //kunde.Setpostnummer = 2000000;
-            ////Assert.Pass(); //skal være rigtigt (pass=gør intet?)
-            //Assert.AreNotEqual(2000000, kunde.Getpostnummer);
-        }
-        [TestMethod]
-        public void TestMethod3()
-        {
 
         }
+       
         [TestMethod]
-        public void TestMethod4()
+        public void TestCRUDCreateMethod()
         {
+            string t = "0";
+            string t1 = "1";
+            string t2 = "2";
+            string t3 = "3";
+            string n = "Medlem";
 
+            string[] s = { t, t1, t2, t3 };
+            string a= t + "," + t1 + "," + t2 + "," + t3;
+            string b = "@" + t + "," + "@" + t1 + "," + "@" + t2 + "," + "@" + t3;
+
+            CRUD.Create(n,a,b,s);
+            //Great success
+        }
+        [TestMethod]
+        public void TestCRUDUpdateMethod()
+        {
+            string n = "Venteliste";
+            string w = "vMId=9";
+
+
+            CRUD.Delete(n, w);
         }
     }
 }

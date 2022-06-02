@@ -50,16 +50,15 @@ namespace SoenderBoP
 
                 // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
                 object[] data = { fName, eName, phoneN, email, beboer, loebeNr };
+                InputValidation.InputValidate(data);
 
                 //hvilken tabel i db som skal arbejdes med
                 string insertInto = "Medlem";
                 // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
                 //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
                 string add = "fNavn,eNavn,tlf,email,beboer,mLNr";
-                // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-                string values = "@fNavn,@eNavn,@tlf,@email,@beboer,@mLNr";
 
-                CRUDFacade.Create(insertInto, add, values, data);
+                CRUD.Create(insertInto, add, data);
 
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
@@ -69,9 +68,9 @@ namespace SoenderBoP
             {
                //ObserverPattern.Register(this.GetEmailMTxt);
             }
-        }
-        private IObservable email;
-        public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
+        }        
+        //private IObservable email;
+        // public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
 
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }        

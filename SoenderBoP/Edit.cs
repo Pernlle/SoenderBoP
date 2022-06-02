@@ -53,12 +53,12 @@ namespace SoenderBoP
                     insertInto = "Venteliste";
                     string delete = "vMId = " + cellValue;
                     //Slet Venteliste hvor mId = den valgte 
-                    CRUDFacade.Delete(insertInto, delete);
+                    CRUD.Delete(insertInto, delete);
 
                     //Slet Medlem hvor mId = den valgte 
                     insertInto = insertInto_;
                     delete = "mId = " + cellValue;
-                    CRUDFacade.Delete(insertInto, delete);
+                    CRUD.Delete(insertInto, delete);
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else
@@ -95,7 +95,7 @@ namespace SoenderBoP
 
             //Opdater det medlem som er corresponding til den valgte celle i DGV
             string where = $"mId={cellValue}"; 
-            CRUDFacade.Update(insertInto, add, where, values, data);
+            CRUD.Update(insertInto, add, where, values, data);
 
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 

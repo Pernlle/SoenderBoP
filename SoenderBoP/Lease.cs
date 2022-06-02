@@ -13,7 +13,6 @@ namespace SoenderBoP
 {
     public partial class Lease : Form
     {
-        string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
         
         public Lease()
         {
@@ -26,23 +25,13 @@ namespace SoenderBoP
         //Knap = Opret
         private void CreateLease_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection conn = Database.Conn;
 
             string mId = mIdTxt.Text; //Få den til at ændre det til mmid når email er valgt :)
             string bId = bIdTxt.Text; // få den til at vælge bid når adresse er valgt :)
             string dato = leaseDTP.Value.ToString("dd-MM-yyyy");
 
-            //string insertInto = "Lejekontrakt";
-            //object[] data = { dato };
-            ////Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            //string add = "lDato";
-            //// lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            //string values = "@lDato";
-
-            //CRUD.Create(insertInto, add, values, data);
-
             string sqlCom = $"INSERT INTO Lejekontrakt(lDato) VALUES(@lDato)";
-
 
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
@@ -98,28 +87,27 @@ namespace SoenderBoP
         private void leasePrintbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Resourceforbrug_lease";
-            string title = $"Noget";
             string[] headersarr = new string[] { "Løbenummer", "Adresse", "Indflytter", "Fornavn", "Efternavn", "Email", "Medlem ID" };
             DataGridView dgv = leaseDGV;
-            Print.PrintIt(dgv, writerName, headersarr, title);
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
         //Hent sql til LeaseDGV
-        public static string GetSqlComL()
+        private static string GetSqlComL()
         {
             string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             return sqlCom;
         }
 
         //Hent sql til MedlemDGV
-        public static string GetSqlComM()
+        private static string GetSqlComM()
         {
             string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
             return sqlCom;
         }
 
         //Hent sql til BoligDGV
-        public static string GetSqlComB()
+        private static string GetSqlComB()
         {
             string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             return sqlCom;
