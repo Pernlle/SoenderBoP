@@ -99,6 +99,7 @@ namespace SoenderBoP
             string add = "vMId,vDato,vTId";
 
             CRUD.Create(insertInto, add, data);
+
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
@@ -123,7 +124,6 @@ namespace SoenderBoP
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
-
         }
         
         //Knap = Tilføj Senior
@@ -146,7 +146,6 @@ namespace SoenderBoP
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(seniorDGV, sqlcom);
-
         }
 
         //Ubrugt kode
