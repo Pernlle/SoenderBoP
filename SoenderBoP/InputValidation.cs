@@ -14,22 +14,6 @@ namespace SoenderBoP
     {
         public static bool InputValidate(object[] data)
         {
-            //// length check:
-            //if (Knavn.Length > 50) Knavn_ok = false;
-            //if (Kadresse.Length > 50) Kadresse_ok = false;
-
-            //// lower check:
-            //if (Knavn != Knavn.ToLower()) Knavn_ok = false;
-            //if (!(Kadresse == Kadresse.ToLower())) Kadresse_ok = false;
-
-            //// "<" check for JS tags ... NO cross site scripting here.:
-            //if (Knavn.Contains("<"))Knavn_ok = false;
-            //if (Kadresse.Contains("<")) Kadresse_ok = false;
-
-            //// regular expressions check:           
-            //Regex re = new Regex(@"(^[a-z ]*$)");
-            //if (!re.IsMatch(Knavn)) Knavn_ok = false;
-            //if (!re.IsMatch(Kadresse)) Kadresse_ok = false;
             bool checkIfTrue = false;
             for (int i = 0; i < data.Length; i++)
             {
@@ -37,23 +21,23 @@ namespace SoenderBoP
                 {
                     // lenght check:
                     if (data[i].ToString().Length <=60) checkIfTrue = true; //60 er det højeste antal i databasen (VARCHAR)
-
                     // "<" check for JS tags (ingen cross site scripting):
                     if (!data[i].ToString().Contains("<")) checkIfTrue= true; //input må ikke indholde <
-
                     // regulat expressions check:
                     Regex regX = new Regex(@"(^[-a-å A-Å 0-9_.@]*$)"); //dk-hostmaster.dk -SKAL MAN KUNNE SKRIVE ÆØÅ? svar: IKKE I EMAIL, DA DET LATINSKE ALFABET ER DET MEST ACCEPTEREDE CROSS PLATFORM-
                     if (regX.IsMatch(data[i].ToString())) checkIfTrue = true; //check for RegX
                 }
                 else if (data[i] is int)
                 {
-
+                    //try cattch for converttoint = tag ikke stilling til indholdet, kun om det er et tal?
+                    try { Convert.ToInt32(data); checkIfTrue = true; }catch { }
+                    //check på længde (hvor mange cifre)
+                    if (data[i].ToString().Length <= 10)
                     checkIfTrue = true;
                 }
                 else if (data[i] is DBNull)
                 {
-
-                    checkIfTrue = true;
+                    checkIfTrue = true; //Hvis data[i] er nået her ind er den højest sandsynligt rigtig (DATABASEN SIGER NEJ; HVIS DET IKKE KAN VÆRE EN NULL)
                 }
                 else { checkIfTrue = false; }
             }
