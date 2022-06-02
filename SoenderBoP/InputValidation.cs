@@ -24,6 +24,7 @@ namespace SoenderBoP
                     // "<" check for JS tags (ingen cross site scripting):
                     if (!data[i].ToString().Contains("<")) checkIfTrue= true; //input må ikke indholde <
                     // regulat expressions check:
+                    // kan skrives således også: [\w.@åøæÅØÆ ] \w svarer til expression [a-zA-Z0-9]
                     Regex regX = new Regex(@"(^[-a-z æøå A-Z ÆØÅ 0-9_.@]*$)"); //dk-hostmaster.dk -SKAL MAN KUNNE SKRIVE ÆØÅ? svar: IKKE I EMAIL, DA DET LATINSKE ALFABET ER DET MEST ACCEPTEREDE CROSS PLATFORM-
                     if (regX.IsMatch(data[i].ToString())) checkIfTrue = true; //check for RegX
                 }
