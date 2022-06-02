@@ -56,10 +56,8 @@ namespace SoenderBoP
                 // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
                 //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
                 string add = "fNavn,eNavn,tlf,email,beboer,mLNr";
-                // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-                string values = "@fNavn,@eNavn,@tlf,@email,@beboer,@mLNr";
 
-                CRUD.Create(insertInto, add, values, data);
+                CRUD.Create(insertInto, add, data);
 
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
@@ -70,8 +68,8 @@ namespace SoenderBoP
                //ObserverPattern.Register(this.GetEmailMTxt);
             }
         }
-        private IObservable email;
-        public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
+        //private IObservable email;
+       // public IObservable GetEmailMTxt { get { return email; } set {/* email = emailMTxt.Text; */} }
 
         private string fNameMTxt;
         public string GetFNameTxt { get { return fNameMTxt; } set { fNameMTxt = fNavnMTxt.Text; } }        

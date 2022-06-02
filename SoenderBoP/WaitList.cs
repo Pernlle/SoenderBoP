@@ -54,34 +54,31 @@ namespace SoenderBoP
         private void waitlistPrintLbtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Lejlighed";
-            string title = $"Venteliste til lejlighed";
             string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = lejlighedDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr, title);
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
         //Knap = Print ungdoms
         private void waitlistPrintUBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Ungdom";
-            string title = $"Venteliste til ungdomsbolig";
             string[] headersarr = new string[] { "Dato", "Fornavn", "Efternavn", "ID" };
             DataGridView dgv = ungdomsDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr, title);
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
         //Knap = Print senior
         private void waitlistPrintSBtn_Click(object sender, EventArgs e)
         {
             string writerName = $"Waitlist_Senior";
-            string title = $"NogetTredje";
             //opskrevet AS 'Dato for opskrivelse', fNavn AS 'Fornavn', eNavn AS 'Efternavn', medlemId AS 'Medlems ID'
             string[] headersarr = new string[] { "Dato", "Navn", "ID" };
             DataGridView dgv = seniorDGV;
 
-            Print.PrintIt(dgv, writerName, headersarr, title);
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
 
@@ -100,10 +97,8 @@ namespace SoenderBoP
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
             string add = "vMId,vDato,vTId";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUD.Create(insertInto, add, data);
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Lejlighed ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(lejlighedDGV, sqlcom);
         }
@@ -123,10 +118,8 @@ namespace SoenderBoP
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
             string add = "vMId,vDato,vTId";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUD.Create(insertInto, add, data);
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Ungdomsbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(ungdomsDGV, sqlcom);
@@ -148,10 +141,8 @@ namespace SoenderBoP
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
             string add = "vMid,vDato,vTId";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@vMId,@vDato,@vTId";
 
-            CRUD.Create(insertInto, add, values, data);
+            CRUD.Create(insertInto, add,  data);
 
             string sqlcom = "SELECT vDato AS 'Dato for opskrivelse', fNavn + ' ' + eNavn AS 'Navn', vMId AS 'ID' FROM Seniorbolig ORDER BY vDato ASC";
             FillDataSource.SetUpDGV(seniorDGV, sqlcom);

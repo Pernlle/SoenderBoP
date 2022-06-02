@@ -17,7 +17,7 @@ namespace SoenderBoP
         public Stats()
         {
             InitializeComponent();
-            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer', email AS 'Email' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId"; // lId IS NOT NULL
+            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Ressource nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer', email AS 'Email' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId"; // lId IS NOT NULL
             FillDataSource.SetUpDGV(showStatsDGV, sqlcom);
         }
 
@@ -36,42 +36,32 @@ namespace SoenderBoP
             // Statistikken skal kunne udskrives på en text-fil kaldet Resourceforbrug.txt.
 
             string medlem = statsCBX.Text;
-            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer', email AS 'Email' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId AND email = '{medlem}'";
-
+            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Ressource nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId AND email = '{medlem}'";
             // sqlcom bliver sendt over i GetDataSource, som ligger i FillDataSource, som så vises i DGV
             showStatsDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
+
+            //Print stats
+            string writerName = $"Resourceforbrug_{medlem}";
+            string[] headersarr = new string[] { "Ressource", "Ressource nr", "Startdato", "Slutdato", "Løbenummer" };
+            DataGridView dgv = showStatsDGV;
+            Print.PrintIt(dgv, writerName, headersarr);
         }
         
         // Knap = Vis alle
         private void showAllBtn_Click(object sender, EventArgs e)
         {
-            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId"; // lNr IS NOT NULL
+            string sqlcom = $"SELECT rType AS 'Ressource', rNr AS 'Ressource nr', dStart AS 'Start dato', dSlut AS 'Slut dato', mLNr AS 'Løbenummer', email AS 'Email' FROM Reserveret, Ressource, Medlem WHERE rLNr = mLNr AND rRId = rId"; // lNr IS NOT NULL
             FillDataSource.SetUpDGV(showStatsDGV, sqlcom);
-            statsCBX.Items.Clear();       
+
+            //Print alle stats
+            string writerName = $"Resourceforbrug_Alle";
+            string[] headersarr = new string[] { "Ressource", "Ressource nr", "Startdato", "Slutdato", "Løbenummer", "Email" };
+            DataGridView dgv = showStatsDGV;
+            Print.PrintIt(dgv, writerName, headersarr);
         }
 
-        // Knap = Print stats
-        private void printStatsBTN_Click(object sender, EventArgs e)
-        {
-            if (statsCBX.Text == "")
-            {
-                string medlem = statsCBX.Text;
-                string title = $"Reservationer";
-                string writerName = $"Resourceforbrug_Alle";
-                string[] headersarr = new string[] { "Ressource", "Nr", "Løbenummer", "Startdato", "Slutdato" };
-                DataGridView dgv = showStatsDGV;
-                Print.PrintIt(dgv, writerName, headersarr, title);
-            }
-            else
-            {
-                string medlem = statsCBX.Text;
-                string title = $"{medlem}";
-                string writerName = $"Resourceforbrug_{medlem}";
-                string[] headersarr = new string[] { "Ressource", "Nr", "Løbenummer", "Startdato", "Slutdato" };
-                DataGridView dgv = showStatsDGV;
-                Print.PrintIt(dgv, writerName, headersarr, title);
-            }
-        }
+        // Knap = Print stats - Bruges ikke mere
+        private void printStatsBTN_Click(object sender, EventArgs e) { }
 
         // Ubrugt kode
         private void label1_Click(object sender, EventArgs e) {}

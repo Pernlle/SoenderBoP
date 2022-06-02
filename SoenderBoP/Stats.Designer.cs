@@ -50,6 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.showStatsDGV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.showAllBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.printStatBtn = new System.Windows.Forms.Button();
@@ -67,7 +68,6 @@
             this.medlemTableAdapter1 = new SoenderBoP.soenderbodbDataSet1TableAdapters.MedlemTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showStatsDGV)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,9 +85,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 58);
+            this.label1.Location = new System.Drawing.Point(13, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 60);
+            this.label1.Size = new System.Drawing.Size(151, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Statistik";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -95,18 +95,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 129);
+            this.label2.Location = new System.Drawing.Point(20, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 1;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 182);
+            this.label3.Location = new System.Drawing.Point(20, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 2;
             // 
             // cStatsBtn
@@ -116,30 +116,29 @@
             this.cStatsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cStatsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cStatsBtn.ForeColor = System.Drawing.Color.White;
-            this.cStatsBtn.Location = new System.Drawing.Point(25, 297);
-            this.cStatsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cStatsBtn.Location = new System.Drawing.Point(22, 232);
             this.cStatsBtn.Name = "cStatsBtn";
-            this.cStatsBtn.Size = new System.Drawing.Size(328, 48);
+            this.cStatsBtn.Size = new System.Drawing.Size(292, 38);
             this.cStatsBtn.TabIndex = 3;
-            this.cStatsBtn.Text = "VIS";
+            this.cStatsBtn.Text = "VIS VALGTE OG PRINT";
             this.cStatsBtn.UseVisualStyleBackColor = false;
             this.cStatsBtn.Click += new System.EventHandler(this.cStatBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 92);
+            this.label4.Location = new System.Drawing.Point(20, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 20);
+            this.label4.Size = new System.Drawing.Size(33, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Alle ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(306, 92);
+            this.label5.Location = new System.Drawing.Point(272, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Parkering";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -147,47 +146,44 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(598, 92);
+            this.label6.Location = new System.Drawing.Point(532, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.Size = new System.Drawing.Size(51, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Festsal";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(857, 92);
+            this.label7.Location = new System.Drawing.Point(762, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 20);
+            this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Vaskemaskine";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(309, 244);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(275, 195);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 29);
+            this.button2.Size = new System.Drawing.Size(115, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Create Statistic";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(602, 244);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(535, 195);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 29);
+            this.button3.Size = new System.Drawing.Size(115, 23);
             this.button3.TabIndex = 9;
             this.button3.Text = "Create Statistic";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(861, 244);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(765, 195);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 29);
+            this.button4.Size = new System.Drawing.Size(115, 23);
             this.button4.TabIndex = 10;
             this.button4.Text = "Create Statistic";
             this.button4.UseVisualStyleBackColor = true;
@@ -195,72 +191,71 @@
             // Parkering1
             // 
             this.Parkering1.AutoSize = true;
-            this.Parkering1.Location = new System.Drawing.Point(309, 129);
+            this.Parkering1.Location = new System.Drawing.Point(275, 103);
             this.Parkering1.Name = "Parkering1";
-            this.Parkering1.Size = new System.Drawing.Size(51, 20);
+            this.Parkering1.Size = new System.Drawing.Size(44, 16);
             this.Parkering1.TabIndex = 11;
             this.Parkering1.Text = "label8";
             // 
             // Parkering2
             // 
             this.Parkering2.AutoSize = true;
-            this.Parkering2.Location = new System.Drawing.Point(309, 182);
+            this.Parkering2.Location = new System.Drawing.Point(275, 146);
             this.Parkering2.Name = "Parkering2";
-            this.Parkering2.Size = new System.Drawing.Size(51, 20);
+            this.Parkering2.Size = new System.Drawing.Size(44, 16);
             this.Parkering2.TabIndex = 12;
             this.Parkering2.Text = "label9";
             // 
             // Festsal1
             // 
             this.Festsal1.AutoSize = true;
-            this.Festsal1.Location = new System.Drawing.Point(598, 129);
+            this.Festsal1.Location = new System.Drawing.Point(532, 103);
             this.Festsal1.Name = "Festsal1";
-            this.Festsal1.Size = new System.Drawing.Size(60, 20);
+            this.Festsal1.Size = new System.Drawing.Size(51, 16);
             this.Festsal1.TabIndex = 13;
             this.Festsal1.Text = "label10";
             // 
             // Festsal2
             // 
             this.Festsal2.AutoSize = true;
-            this.Festsal2.Location = new System.Drawing.Point(598, 182);
+            this.Festsal2.Location = new System.Drawing.Point(532, 146);
             this.Festsal2.Name = "Festsal2";
-            this.Festsal2.Size = new System.Drawing.Size(60, 20);
+            this.Festsal2.Size = new System.Drawing.Size(51, 16);
             this.Festsal2.TabIndex = 14;
             this.Festsal2.Text = "label11";
             // 
             // Vaskemaskine1
             // 
             this.Vaskemaskine1.AutoSize = true;
-            this.Vaskemaskine1.Location = new System.Drawing.Point(857, 129);
+            this.Vaskemaskine1.Location = new System.Drawing.Point(762, 103);
             this.Vaskemaskine1.Name = "Vaskemaskine1";
-            this.Vaskemaskine1.Size = new System.Drawing.Size(60, 20);
+            this.Vaskemaskine1.Size = new System.Drawing.Size(51, 16);
             this.Vaskemaskine1.TabIndex = 15;
             this.Vaskemaskine1.Text = "label12";
             // 
             // Vaskemaskine2
             // 
             this.Vaskemaskine2.AutoSize = true;
-            this.Vaskemaskine2.Location = new System.Drawing.Point(857, 182);
+            this.Vaskemaskine2.Location = new System.Drawing.Point(762, 146);
             this.Vaskemaskine2.Name = "Vaskemaskine2";
-            this.Vaskemaskine2.Size = new System.Drawing.Size(60, 20);
+            this.Vaskemaskine2.Size = new System.Drawing.Size(51, 16);
             this.Vaskemaskine2.TabIndex = 16;
             this.Vaskemaskine2.Text = "label13";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(28, 206);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Controls.Add(this.printStatBtn);
+            this.panel1.Location = new System.Drawing.Point(25, 165);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 765);
+            this.panel1.Size = new System.Drawing.Size(994, 612);
             this.panel1.TabIndex = 17;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 620);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 496);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(775, 145);
+            this.panel3.Size = new System.Drawing.Size(689, 116);
             this.panel3.TabIndex = 6;
             // 
             // showStatsDGV
@@ -270,12 +265,11 @@
             this.showStatsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showStatsDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showStatsDGV.Location = new System.Drawing.Point(3, 2);
-            this.showStatsDGV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.showStatsDGV.Name = "showStatsDGV";
             this.showStatsDGV.RowHeadersVisible = false;
             this.showStatsDGV.RowHeadersWidth = 51;
             this.showStatsDGV.RowTemplate.Height = 24;
-            this.showStatsDGV.Size = new System.Drawing.Size(730, 720);
+            this.showStatsDGV.Size = new System.Drawing.Size(648, 572);
             this.showStatsDGV.TabIndex = 0;
             // 
             // panel2
@@ -283,17 +277,25 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.showAllBtn);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.printStatBtn);
-            this.panel2.Controls.Add(this.statsCBX);
             this.panel2.Controls.Add(this.cStatsBtn);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.statsCBX);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(733, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(651, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 720);
+            this.panel2.Size = new System.Drawing.Size(332, 572);
             this.panel2.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 311);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 28);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Print alle";
             // 
             // showAllBtn
             // 
@@ -302,12 +304,11 @@
             this.showAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showAllBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllBtn.ForeColor = System.Drawing.Color.White;
-            this.showAllBtn.Location = new System.Drawing.Point(25, 385);
-            this.showAllBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.showAllBtn.Location = new System.Drawing.Point(22, 350);
             this.showAllBtn.Name = "showAllBtn";
-            this.showAllBtn.Size = new System.Drawing.Size(328, 48);
+            this.showAllBtn.Size = new System.Drawing.Size(292, 38);
             this.showAllBtn.TabIndex = 7;
-            this.showAllBtn.Text = "VIS ALLE";
+            this.showAllBtn.Text = "VIS ALLE OG PRINT";
             this.showAllBtn.UseVisualStyleBackColor = false;
             this.showAllBtn.Click += new System.EventHandler(this.showAllBtn_Click);
             // 
@@ -315,11 +316,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 201);
+            this.label8.Location = new System.Drawing.Point(17, 154);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 32);
+            this.label8.Size = new System.Drawing.Size(245, 28);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Sorter på medlem";
+            this.label8.Text = "Sorter på medlem og print";
             // 
             // printStatBtn
             // 
@@ -328,10 +329,9 @@
             this.printStatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printStatBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printStatBtn.ForeColor = System.Drawing.Color.White;
-            this.printStatBtn.Location = new System.Drawing.Point(25, 538);
-            this.printStatBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.printStatBtn.Location = new System.Drawing.Point(676, 219);
             this.printStatBtn.Name = "printStatBtn";
-            this.printStatBtn.Size = new System.Drawing.Size(328, 48);
+            this.printStatBtn.Size = new System.Drawing.Size(292, 38);
             this.printStatBtn.TabIndex = 5;
             this.printStatBtn.Text = "PRINT";
             this.printStatBtn.UseVisualStyleBackColor = false;
@@ -347,10 +347,9 @@
             this.statsCBX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statsCBX.ForeColor = System.Drawing.Color.White;
             this.statsCBX.FormattingEnabled = true;
-            this.statsCBX.Location = new System.Drawing.Point(25, 237);
-            this.statsCBX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.statsCBX.Location = new System.Drawing.Point(22, 190);
             this.statsCBX.Name = "statsCBX";
-            this.statsCBX.Size = new System.Drawing.Size(328, 40);
+            this.statsCBX.Size = new System.Drawing.Size(292, 36);
             this.statsCBX.TabIndex = 4;
             this.statsCBX.ValueMember = "email";
             this.statsCBX.Click += new System.EventHandler(this.statsCBX_Click);
@@ -367,10 +366,9 @@
             // 
             // statsRichTextBox
             // 
-            this.statsRichTextBox.Location = new System.Drawing.Point(997, 244);
-            this.statsRichTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.statsRichTextBox.Location = new System.Drawing.Point(886, 195);
             this.statsRichTextBox.Name = "statsRichTextBox";
-            this.statsRichTextBox.Size = new System.Drawing.Size(120, 53);
+            this.statsRichTextBox.Size = new System.Drawing.Size(107, 43);
             this.statsRichTextBox.TabIndex = 5;
             this.statsRichTextBox.Text = "";
             // 
@@ -419,38 +417,28 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1118, 765);
+            this.tabControl1.Size = new System.Drawing.Size(994, 612);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.showStatsDGV);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1110, 724);
+            this.tabPage1.Size = new System.Drawing.Size(986, 576);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Statistik";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(165, 349);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 32);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "eller";
-            // 
             // Stats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1118, 765);
+            this.ClientSize = new System.Drawing.Size(994, 612);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Vaskemaskine2);

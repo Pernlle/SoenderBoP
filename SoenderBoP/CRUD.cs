@@ -15,7 +15,7 @@ namespace SoenderBoP
     public class Database
     {
         private readonly static string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-        public static SqlConnection conn = null;
+        private static SqlConnection conn = null;
 
         //Singleton :)
         public static SqlConnection Conn
@@ -34,8 +34,19 @@ namespace SoenderBoP
     public class CRUD
     {
         // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
-        public static void Create(string insertInto, string add, string values, object[] data)
+        public static void Create(string insertInto, string add, object[] data)
         {
+
+            string[] adds = add.Split(',');
+            // lav en values add for hver value, som er det samme add men med '@' på.
+            string values = "";
+
+            for (int i = 0; i < add.Length; i++)
+            {
+                // Tilføj til string set [ += ]
+                values += "@" + add[i];
+            }
+
             SqlConnection conn = Database.Conn;
             //Sql sætning
             string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values})";
