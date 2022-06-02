@@ -15,7 +15,7 @@ namespace SoenderBoP
     public class Database
     {
         private readonly static string strconn = @"Server=den1.mssql7.gear.host; Database=soenderbodb; User ID=soenderbodb; Password=password!";
-        private static SqlConnection conn = null;
+        public static SqlConnection conn = null;
 
         //Singleton :)
         public static SqlConnection Conn
@@ -31,7 +31,7 @@ namespace SoenderBoP
         }
 
     }
-    public class CRUDFacade
+    public class CRUD
     {
         // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
         public static void Create(string insertInto, string add, string values, object[] data)
@@ -129,10 +129,5 @@ namespace SoenderBoP
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
-    }
-
-    internal class CRUD
-    {
-        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.
     }
 }

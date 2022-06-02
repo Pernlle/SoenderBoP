@@ -59,7 +59,7 @@ namespace SoenderBoP
                 // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
                 string values = "@fNavn,@eNavn,@tlf,@email,@beboer,@mLNr";
 
-                CRUDFacade.Create(insertInto, add, values, data);
+                CRUD.Create(insertInto, add, values, data);
 
                 FillDataSource.SetUpDGV(mDGV, GetSqlCom());
             }
