@@ -35,27 +35,29 @@ namespace SoenderBoP
             {
                 if (data[i] is string)
                 {
+                    // lenght check:
                     if (data[i].ToString().Length <=60) checkIfTrue = true; //60 er det højeste antal i databasen (VARCHAR)
+
+                    // "<" check for JS tags (ingen cross site scripting):
                     if (!data[i].ToString().Contains("<")) checkIfTrue= true; //input må ikke indholde <
-                    Regex regX = new Regex(@"(^[-a-å A-Å 0-9_.@]*$)");
+
+                    // regulat expressions check:
+                    Regex regX = new Regex(@"(^[-a-å A-Å 0-9_.@]*$)"); //dk-hostmaster.dk -SKAL MAN KUNNE SKRIVE ÆØÅ? svar: IKKE I EMAIL, DA DET LATINSKE ALFABET ER DET MEST ACCEPTEREDE CROSS PLATFORM-
                     if (regX.IsMatch(data[i].ToString())) checkIfTrue = true; //check for RegX
                 }
                 else if (data[i] is int)
                 {
-
-
 
                     checkIfTrue = true;
                 }
                 else if (data[i] is DBNull)
                 {
 
-
-
                     checkIfTrue = true;
                 }
                 else { checkIfTrue = false; }
             }
+            //Return
             if (checkIfTrue == true)
             {
                 return true;
