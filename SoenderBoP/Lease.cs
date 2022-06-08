@@ -109,7 +109,7 @@ namespace SoenderBoP
         //Hent sql til BoligDGV
         private static string GetSqlComB()
         {
-            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            string sqlCom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig' FROM Bolig, BoligType WHERE bTId = tId AND bLNr IS NULL";
             return sqlCom;
         }
 
