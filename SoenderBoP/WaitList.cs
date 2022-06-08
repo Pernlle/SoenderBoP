@@ -86,7 +86,7 @@ namespace SoenderBoP
         private void createLBTN_Click(object sender, EventArgs e)
         {
             string mId = this.lmIdTXT.Text;
-            string opskrevet = lDTP.Value.ToString("mm-dd-yyyy");
+            string opskrevet = lDTP.Value.ToString("MM-dd-yyyy");
             int boligType = 1;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
@@ -108,7 +108,7 @@ namespace SoenderBoP
         private void createUBTN_Click(object sender, EventArgs e)
         {
             string mId = this.umIdTXT.Text;
-            string dato = uDTP.Value.ToString("mm-dd-yyyy");
+            string dato = uDTP.Value.ToString("MM-dd-yyyy");
             int boligType = 2;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
@@ -130,7 +130,7 @@ namespace SoenderBoP
         private void createSBTN_Click(object sender, EventArgs e)
         {
             string mId = this.smIdTXT.Text;
-            string opskrevet = sDTP.Value.ToString("mm-dd-yyyy");
+            string opskrevet = sDTP.Value.ToString("MM-dd-yyyy");
             int boligType = 3;
 
             // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
