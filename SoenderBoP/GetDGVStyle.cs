@@ -53,10 +53,7 @@ namespace SoenderBoP
             DGV.AllowUserToOrderColumns = true;
             DGV.AllowUserToResizeColumns = true;
 
-            foreach (DataGridViewColumn column in DGV.Columns)
-            {
-                column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
+            
             DGV.AllowUserToDeleteRows=false;
             DGV.AllowDrop = false;
             DGV.ReadOnly = true;

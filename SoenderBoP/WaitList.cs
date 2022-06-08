@@ -30,6 +30,13 @@ namespace SoenderBoP
             seniorDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
             DGV = seniorDGV;
             GetDGVStyle.GetStyle(DGV);
+
+
+
+            foreach (DataGridViewColumn column in DGV.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         //Event = Nr til venteliste
