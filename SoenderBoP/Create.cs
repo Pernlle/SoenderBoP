@@ -50,17 +50,21 @@ namespace SoenderBoP
 
                 // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
                 object[] data = { fName, eName, phoneN, email, beboer, loebeNr };
-                InputValidation.InputValidate(data);
 
-                //hvilken tabel i db som skal arbejdes med
-                string insertInto = "Medlem";
-                // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-                //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-                string add = "fNavn,eNavn,tlf,email,beboer,mLNr";
+                if (InputValidation.InputValidate(data)==true)
+                {
 
-                CRUD.Create(insertInto, add, data);
+                    //hvilken tabel i db som skal arbejdes med
+                    string insertInto = "Medlem";
+                    // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+                    //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
+                    string add = "fNavn,eNavn,tlf,email,beboer,mLNr";
 
-                FillDataSource.SetUpDGV(mDGV, GetSqlCom());
+                    CRUD.Create(insertInto, add, data);
+
+                    FillDataSource.SetUpDGV(mDGV, GetSqlCom());
+                }
+                else { MessageBox.Show("Der er en fejl i dit input"); }
             }
 
             //tilføj medlem til observerpattern
