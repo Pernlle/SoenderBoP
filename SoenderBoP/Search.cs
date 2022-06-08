@@ -110,7 +110,7 @@ namespace SoenderBoP
         //Knap = Vis ledige
         private void saBTN_Click(object sender, EventArgs e)
         {
-            string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType WHERE bLNr IS NULL AND AND bTId = tId";
+            string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig' FROM Bolig, BoligType WHERE bTId = tId AND bLNr IS NULL";
             FillDataSource.SetUpDGV(searchDGV, sqlcom);
             BtnClicked = true;
         }
