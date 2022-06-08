@@ -46,8 +46,8 @@ namespace SoenderBoP
             string daSlutTime = dSlutTime.Text;
             string daSlutMinut = dSlutMinut.Text;
 
-            string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + "-" + daStartTime + ":" + daStartMinut;
-            string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + "-" + daSlutTime + ":" + daSlutMinut;
+            string dStart = daStartDag + "-" + daStartMaaned + "-" + daStartAar + " " + daStartTime + ":" + daStartMinut;
+            string dSlut = daSlutDag + "-" + daSlutMaaned + "-" + daSlutAar + " " + daSlutTime + ":" + daSlutMinut;
 
             string insertInto = "Reserveret";
             object[] data = { loebeNr, rId, dStart, dSlut };
