@@ -542,7 +542,6 @@
             this.ressourceDGV.AllowUserToAddRows = false;
             this.ressourceDGV.AllowUserToDeleteRows = false;
             this.ressourceDGV.AllowUserToOrderColumns = true;
-            this.ressourceDGV.AllowUserToResizeColumns = false;
             this.ressourceDGV.AllowUserToResizeRows = false;
             this.ressourceDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.ressourceDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
