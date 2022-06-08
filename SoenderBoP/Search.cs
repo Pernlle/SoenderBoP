@@ -25,8 +25,6 @@ namespace SoenderBoP
             int minPris = Convert.ToInt32(minPrisBox.Text);
             int maxPris = Convert.ToInt32(maxPrisBox.Text);
             // kvm søg klik
-            int minKvm = Convert.ToInt32(minKvmBox.Text);
-            int maxKvm = Convert.ToInt32(maxKvmBox.Text);
 
             if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
@@ -46,7 +44,7 @@ namespace SoenderBoP
 
                 if (minPris < maxPris) //&& minKvm < maxKvm
                 {
-                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
                     $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris} AND  bTId = tId ";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
@@ -56,7 +54,7 @@ namespace SoenderBoP
             {
                 if (minPris < maxPris)
                 {
-                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
                     $"WHERE mndPris >= {minPris} AND mndPris <= {maxPris} AND bTId = tId; ";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
@@ -88,7 +86,7 @@ namespace SoenderBoP
             {
                 if (minKvm < maxKvm)
                 {
-                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+                    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
                     $"WHERE kvm >= {minKvm} AND kvm <= {maxKvm} AND bTId = tId";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
