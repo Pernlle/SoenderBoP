@@ -12,8 +12,7 @@ using System.Data.SqlClient;
 namespace SoenderBoP
 {
     public partial class Lease : Form
-    {
-        
+    {        
         public Lease()
         {
             InitializeComponent();
@@ -55,25 +54,25 @@ namespace SoenderBoP
 
                 var loebeNr = (Int32)cmdd.ExecuteScalar();
                 //Test om de rigtige værdier kan puttes i db
-                MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
+                //MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
                 string sqlComUpdateM = $"UPDATE Medlem SET mLNr={loebeNr} WHERE mId = {mId}";
                 SqlCommand cmdUpdateM = new SqlCommand(sqlComUpdateM, conn);
 
                 cmdUpdateM.Parameters.AddWithValue("@mLNr", loebeNr);
                 cmdUpdateM.ExecuteNonQuery();
-                MessageBox.Show("Update medlem done");
+                //MessageBox.Show("Update medlem done");
 
                 string sqlComUpdateB = $"UPDATE Bolig SET bLNr={loebeNr} WHERE bId = {bId}";
                 SqlCommand cmdUpdateB = new SqlCommand(sqlComUpdateB, conn);
                 cmdUpdateB.Parameters.AddWithValue("@bLNr", loebeNr);
                 cmdUpdateB.ExecuteNonQuery();
-                MessageBox.Show("Update bolig done");
+                //MessageBox.Show("Update bolig done");
 
                 string sqlComDeleteV = $"DELETE FROM Venteliste WHERE vMid = {mId}";
                 SqlCommand cmdDeleteV = new SqlCommand(sqlComDeleteV, conn);
                 cmdDeleteV.ExecuteNonQuery();
-                MessageBox.Show("Delete venteliste done");
+                MessageBox.Show("Lejekontrakt oprettet");
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
