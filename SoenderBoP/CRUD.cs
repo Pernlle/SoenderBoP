@@ -33,7 +33,6 @@ namespace SoenderBoP
     }
     public class CRUD
     {
-        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
         public static void Create(string insertInto, string add, object[] data)
         {
 
