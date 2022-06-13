@@ -82,12 +82,20 @@ namespace SoenderBoP
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
-        public static void Update(string insertInto, string add, string where, string values, object[] data)
+        public static void Update(string insertInto, string add, string where, object[] data)
         {
+            string[] adds = add.Split(',');
+            // lav en values add for hver value, som er det samme add men med '@' på.
+            string values = "";
+
+            for (int i = 0; i < add.Length; i++)
+            {
+                // Tilføj til string set [ += ]
+                values += "@" + add[i];
+            }
             SqlConnection conn = Database.Conn;
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
-            string[] adds = add.Split(',');
 
             string set = "";
 

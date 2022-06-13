@@ -85,8 +85,6 @@ namespace SoenderBoP
             // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
             //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
             string add = "tlf,email";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@tlf,@email";
 
             // valgte medlem i DGV, som skal opdateres (nuværende data vises i tekstboksene, og kan herefter ændres på.)
             int selectedRowIndex = editMedlemDGV.SelectedCells[0].RowIndex;
@@ -95,7 +93,7 @@ namespace SoenderBoP
 
             //Opdater det medlem som er corresponding til den valgte celle i DGV
             string where = $"mId={cellValue}"; 
-            CRUD.Update(insertInto, add, where, values, data);
+            CRUD.Update(insertInto, add, where, data);
 
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
