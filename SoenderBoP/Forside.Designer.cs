@@ -124,8 +124,8 @@
             this.reservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationBtn.Name = "reservationBtn";
             this.reservationBtn.Size = new System.Drawing.Size(251, 68);
-            this.reservationBtn.TabIndex = 8;
-            this.reservationBtn.Text = "Reserver ressource";
+            this.reservationBtn.TabIndex = 6;
+            this.reservationBtn.Text = "Opret bolig";
             this.reservationBtn.UseVisualStyleBackColor = false;
             this.reservationBtn.Click += new System.EventHandler(this.reservationBtn_Click);
             // 
@@ -162,8 +162,8 @@
             this.addBoligBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addBoligBtn.Name = "addBoligBtn";
             this.addBoligBtn.Size = new System.Drawing.Size(251, 68);
-            this.addBoligBtn.TabIndex = 6;
-            this.addBoligBtn.Text = "Opret bolig";
+            this.addBoligBtn.TabIndex = 8;
+            this.addBoligBtn.Text = "Reserver ressource";
             this.addBoligBtn.UseVisualStyleBackColor = false;
             this.addBoligBtn.Click += new System.EventHandler(this.addBoligBtn_Click);
             // 
@@ -200,9 +200,9 @@
             this.waitListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waitListBtn.Name = "waitListBtn";
             this.waitListBtn.Size = new System.Drawing.Size(251, 68);
-            this.waitListBtn.TabIndex = 4;
+            this.waitListBtn.TabIndex = 3;
             this.waitListBtn.TabStop = false;
-            this.waitListBtn.Text = "Venteliste";
+            this.waitListBtn.Text = "Rediger medlem";
             this.waitListBtn.UseVisualStyleBackColor = false;
             this.waitListBtn.Click += new System.EventHandler(this.waitListBtn_Click);
             // 
@@ -220,8 +220,8 @@
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(251, 68);
-            this.editBtn.TabIndex = 3;
-            this.editBtn.Text = "Rediger medlem";
+            this.editBtn.TabIndex = 4;
+            this.editBtn.Text = "Venteliste";
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 

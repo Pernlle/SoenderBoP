@@ -99,8 +99,10 @@ namespace SoenderBoP
             frm.Show();
         }
 
+        
+
         //Knap = Rediger
-        public void editBtn_Click(object sender, EventArgs e)
+        public void waitListBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             Edit frm = new Edit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -110,8 +112,9 @@ namespace SoenderBoP
         }
 
         //Knap = Venteliste
-        public void waitListBtn_Click(object sender, EventArgs e)
+        public void editBtn_Click(object sender, EventArgs e)
         {
+            
             panel1.Controls.Clear();
             WaitList frm = new WaitList() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -129,9 +132,11 @@ namespace SoenderBoP
             frm.Show();
         }
 
-        //Knap = Opret Bolig
-        private void addBoligBtn_Click(object sender, EventArgs e)
+        //Knap = Opret bolig
+        public void reservationBtn_Click(object sender, EventArgs e)
         {
+
+
             panel1.Controls.Clear();
             AddBolig frm = new AddBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -149,8 +154,8 @@ namespace SoenderBoP
             frm.Show();
         }
 
-        //Knap = Reservation
-        public void reservationBtn_Click(object sender, EventArgs e)
+        //Knap = Reserver
+        private void addBoligBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             Reservation frm = new Reservation() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
