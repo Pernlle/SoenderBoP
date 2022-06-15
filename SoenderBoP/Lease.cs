@@ -56,7 +56,7 @@ namespace SoenderBoP
                 //Test om de rigtige værdier kan puttes i db
                 //MessageBox.Show($"Værdier: Id: {mId} | Løbenummer: {loebeNr} | date: {dato}");
 
-                string sqlComUpdateM = $"UPDATE Medlem SET mLNr={loebeNr} WHERE mId = {mId}";
+                string sqlComUpdateM = $"UPDATE Medlem SET mLNr={loebeNr}, beboer = 1 WHERE mId = {mId}";
                 SqlCommand cmdUpdateM = new SqlCommand(sqlComUpdateM, conn);
 
                 cmdUpdateM.Parameters.AddWithValue("@mLNr", loebeNr);
@@ -94,14 +94,14 @@ namespace SoenderBoP
         //Hent sql til LeaseDGV
         private static string GetSqlComL()
         {
-            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter', fNavn AS 'Fornavn', eNavn AS 'Efternavn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
+            string sqlCom = $"SELECT lNr AS 'Løbenummer', adr AS 'Adresse',  lDato AS 'Indflytter',fNavn + ' ' + eNavn AS 'Navn', email AS 'Email', mId AS 'ID' FROM Lejekontrakt, Bolig, Medlem WHERE lNr = mLNr AND lNr = bLNr";
             return sqlCom;
         }
 
         //Hent sql til MedlemDGV
         private static string GetSqlComM()
         {
-            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem WHERE mLNr IS NULL";
+            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email' FROM Medlem WHERE mLNr IS NULL";
             return sqlCom;
         }
 
