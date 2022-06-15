@@ -49,12 +49,24 @@ namespace SoenderBoP
             thread.Start();
 
             //Skjuler knapper
-            waitListBtn.Visible = false;
-            editBtn.Visible = false;
-            leaseBtn.Visible = false;
-            reservationBtn.Visible = false;
             logoutBtn.Visible = false;
+            loginBtn.Visible = true;
+
+            readBtn.Visible = true;
+            createBtn.Visible = true;
+
+            editBtn.Visible = false;
+            waitListBtn.Visible = false;
+
+            searchBtn.Visible = true;
+
             addBoligBtn.Visible = false;
+            leaseBtn.Visible = false;
+
+            reservationBtn.Visible = false;
+            
+            statsBtn.Visible = true;
+
             panel5.Visible = false;
             panel5.Hide();
         }
@@ -64,16 +76,6 @@ namespace SoenderBoP
         {
             // Husk altid at lukke thread'en, ellers kører programmet stadig.
             thread.Abort();
-        }               
-
-        //Knap = Opret medlem
-        public void createBtn_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            Create frm = new Create() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
         }
 
         //Knap = Se info
@@ -87,31 +89,21 @@ namespace SoenderBoP
 
         }
 
+        //Knap = Opret medlem
+        public void createBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Create frm = new Create() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
         //Knap = Rediger
         public void editBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             Edit frm = new Edit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
-        }
-
-        //Knap = Statistik
-        public void statsBtn_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            Stats frm = new Stats() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
-        }
-
-        //Knap = Reservation
-        public void reservationBtn_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            Reservation frm = new Reservation() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Add(frm);
             frm.Show();
@@ -127,6 +119,26 @@ namespace SoenderBoP
             frm.Show();
         }
 
+        //Knap = Søg
+        public void searchBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Search frm = new Search() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        //Knap = Opret Bolig
+        private void addBoligBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AddBolig frm = new AddBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
         //Knap = Lejekontrakter
         public void leaseBtn_Click(object sender, EventArgs e)
         {
@@ -137,11 +149,21 @@ namespace SoenderBoP
             frm.Show();
         }
 
-        //Knap = Søg
-        public void searchBtn_Click(object sender, EventArgs e)
+        //Knap = Reservation
+        public void reservationBtn_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            Search frm = new Search() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            Reservation frm = new Reservation() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        //Knap = Statistik
+        public void statsBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Stats frm = new Stats() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Add(frm);
             frm.Show();
@@ -181,38 +203,51 @@ namespace SoenderBoP
             if (id_ok && pass_ok)
             {
                 MessageBox.Show("Du er logget ind som adminstrator");
-                waitListBtn.Visible = true;
+                loginBtn.Visible = false;
+                logoutBtn.Visible = true;
+
+                readBtn.Visible = true;
+                createBtn.Visible = true;
+
                 editBtn.Visible = true;
+                waitListBtn.Visible = true;
+
+                searchBtn.Visible = true;
+
+                addBoligBtn.Visible = true;
                 leaseBtn.Visible = true;
                 reservationBtn.Visible = true;
-                logoutBtn.Visible = true;
-                loginBtn.Visible = false;
-                addBoligBtn.Visible = true;
+
+                statsBtn.Visible = true;
+
                 panel5.Hide();
             }
-            else { MessageBox.Show("Prøv igen du"); }
+            else { MessageBox.Show("Forkert ID eller kodeord"); }
         }
 
         // Knap = Logout
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            waitListBtn.Visible = false;
-            editBtn.Visible = false;
-            leaseBtn.Visible = false;
-            reservationBtn.Visible = false;
             logoutBtn.Visible = false;
             loginBtn.Visible = true;
-            addBoligBtn.Visible=false;
+
+            readBtn.Visible = true;
+            createBtn.Visible = true;
+
+            editBtn.Visible = false;
+            waitListBtn.Visible = false;
+
+            searchBtn.Visible = true;
+
+            addBoligBtn.Visible = false;
+            leaseBtn.Visible = false;
+
+            reservationBtn.Visible = false;
+
+            statsBtn.Visible = true;
         }
 
-        private void addBoligBtn_Click(object sender, EventArgs e)
-        {
-            panel1.Controls.Clear();
-            AddBolig frm = new AddBolig() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(frm);
-            frm.Show();
-        }
+        
 
         //Ubrugt kode der ikke kan fjernes
         private void lboligBtn_Click(object sender, EventArgs e){}

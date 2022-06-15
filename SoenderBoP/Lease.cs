@@ -101,7 +101,7 @@ namespace SoenderBoP
         //Hent sql til MedlemDGV
         private static string GetSqlComM()
         {
-            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem";
+            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email', beboer AS 'Status', mLNr AS 'Løbenummer' FROM Medlem WHERE mLNr IS NULL";
             return sqlCom;
         }
 
