@@ -141,7 +141,7 @@ namespace SoenderBoP
                 conn.Open();
                 cmd.ExecuteNonQuery(); //SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
-                MessageBox.Show($"{tabel} slettet");
+                //MessageBox.Show($"{tabel} slettet");
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }

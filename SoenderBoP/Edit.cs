@@ -107,6 +107,7 @@ namespace SoenderBoP
                     insertInto = insertInto_;
                     delete = "mId = " + cellValue;
                     CRUD.Delete(insertInto, delete);
+                    MessageBox.Show("Medlem slettet");
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else

@@ -56,13 +56,13 @@ namespace SoenderBoP
             int minKvm = Convert.ToInt32(minKvmBox.Text);
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
 
-            MessageBox.Show(Convert.ToString(minKvm));
+            //MessageBox.Show(Convert.ToString(minKvm));
             if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
                 if (minKvm < maxKvm)
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
-                    $"WHERE bLNr IS NULL AND bTId = tId";
+                    $"WHERE kvm >= {minKvm} AND kvm <= {maxKvm} AND bLNr IS NULL AND bTId = tId";
                     searchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
