@@ -54,6 +54,8 @@ namespace SoenderBoP
             string add = "rLNr,rRId,dStart,dSlut";
 
             CRUD.Create(insertInto, add, data);
+
+            FillDataSource.SetUpDGV(ressourceDGV, GetSqlComR());
         }
 
         //Henter sql

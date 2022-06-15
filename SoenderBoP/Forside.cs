@@ -14,27 +14,11 @@ namespace SoenderBoP
     public partial class Forside : Form
     {
         private readonly Random rnd = new Random();
-        private readonly List<string> slogans = new List<string> { "SønderBo er søndme god", "Er det sønder god, er det Sønderbo", "Din tryghed kan vi bære, i SønderBo kan du være", "Mangler du en bolig? I Sønderbo kan du tage det helt rolig’", "Vores ventelister er helt tomme! Vent…",  "Foreningen SønderBo, forener vi forenet i forening", "Det sønder, sønder fedt, jeg melder mig om lidt" };
+        private readonly List<string> slogans = new List<string> { "SønderBo er søndme god", "Er det sønder god, er det Sønderbo", "Din tryghed kan vi bære, " +
+            "i SønderBo kan du være", "Mangler du en bolig? I Sønderbo kan du tage det helt rolig’", "Vores ventelister er helt tomme! Vent…",  
+            "Foreningen SønderBo, forener vi forenet i forening", "Det sønder, sønder fedt, jeg melder mig om lidt" };
         private readonly Thread thread;
-        public Forside()
-        {
-            InitializeComponent();
-            //lav en thread, som kører metoden UpdateSlogan
-            thread = new Thread(UpdateSlogan);  
-            //kør threaden
-            thread.Start();
-
-            //Skjuler knapper
-            waitListBtn.Visible = false;
-            editBtn.Visible = false;
-            leaseBtn.Visible = false;
-            reservationBtn.Visible = false;
-            logoutBtn.Visible = false;
-            addBoligBtn.Visible = false;
-            panel5.Visible = false;
-            panel5.Hide();
-        }
-
+      
         // Slogan metode
         private void UpdateSlogan()
         {
@@ -55,12 +39,32 @@ namespace SoenderBoP
             }
         }
 
+        //Load ting ind
+        public Forside()
+        {
+            InitializeComponent();
+            //lav en thread, som kører metoden UpdateSlogan
+            thread = new Thread(UpdateSlogan);
+            //kør threaden
+            thread.Start();
+
+            //Skjuler knapper
+            waitListBtn.Visible = false;
+            editBtn.Visible = false;
+            leaseBtn.Visible = false;
+            reservationBtn.Visible = false;
+            logoutBtn.Visible = false;
+            addBoligBtn.Visible = false;
+            panel5.Visible = false;
+            panel5.Hide();
+        }
+
         // Form luk event
         private void Forside_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Husk altid at lukke thread'en, ellers kører programmet stadig.
             thread.Abort();
-        }
+        }               
 
         //Knap = Opret medlem
         public void createBtn_Click(object sender, EventArgs e)

@@ -33,19 +33,19 @@ namespace UnitTesting
 
             string[] s = { t, t1, t2, t3 };
             string a= t + "," + t1 + "," + t2 + "," + t3;
-            string b = "@" + t + "," + "@" + t1 + "," + "@" + t2 + "," + "@" + t3;
 
-            CRUD.Create(n,a,b,s);
+            CRUD.Create(n,a,s);
             //Great success
         }
         [TestMethod]
-        public void TestCRUDUpdateMethod()
+        public void TestCRUDDeleteMethod()
         {
             string n = "Venteliste";
             string w = "vMId=9";
 
 
             CRUD.Delete(n, w);
+            
         }
     }
 }

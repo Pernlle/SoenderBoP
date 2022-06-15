@@ -33,8 +33,7 @@ namespace SoenderBoP
     }
     public class CRUD
     {
-        // Lige nu har vi meget memoryleak, da vi åbner en ny connection HVER evig eneste gang at vi laver/opdatere eller sletter fra databasen med disse input.               
-        public static void Create(string insertInto, string add, object[] data)
+        public static void Create(string tabel, string add, object[] data)
         {
 
             string[] adds = add.Split(',');
@@ -49,7 +48,7 @@ namespace SoenderBoP
 
             SqlConnection conn = Database.Conn;
             //Sql sætning
-            string sqlcom = $"INSERT INTO {insertInto}({add}) VALUES ({values})";
+            string sqlcom = $"INSERT INTO {tabel}({add}) VALUES ({values})";
             //Sql Command
             SqlCommand cmd = new SqlCommand(sqlcom, conn);
 
@@ -77,18 +76,26 @@ namespace SoenderBoP
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show($"{insertInto} oprettet");
+                MessageBox.Show($"{tabel} oprettet");
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
-        public static void Update(string insertInto, string add, string where, string values, object[] data)
+        public static void Update(string tabel, string add, string where, object[] data)
         {
+            string[] adds = add.Split(',');
+            // lav en values add for hver value, som er det samme add men med '@' på.
+            string values = "";
+
+            for (int i = 0; i < add.Length; i++)
+            {
+                // Tilføj til string set [ += ]
+                values += "@" + add[i];
+            }
             SqlConnection conn = Database.Conn;
             //Splitter values op, da values består af flere forskellige values, som i denne command skal findes individuelt
             string[] valuess = values.Split(',');
-            string[] adds = add.Split(',');
 
             string set = "";
 
@@ -100,7 +107,7 @@ namespace SoenderBoP
             //Fjerner det sidste komma, fra sætningen. Da det er illegal SQL.
             set = set.Remove(set.Length - 1, 1);
 
-            string sqlCom = $"UPDATE {insertInto} set {set} WHERE {where}";
+            string sqlCom = $"UPDATE {tabel} set {set} WHERE {where}";
             //MessageBox.Show(sqlCom);
 
             SqlCommand cmd = new SqlCommand(sqlCom, Database.Conn);
@@ -117,16 +124,16 @@ namespace SoenderBoP
                 conn.Open();
                 cmd.ExecuteNonQuery(); //SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
-                MessageBox.Show($"{insertInto} opdateret");
+                MessageBox.Show($"{tabel} opdateret");
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }
             finally { if (conn.State == ConnectionState.Open) { conn.Close(); } }
         }
-        public static void Delete(string insertInto, string delete)
+        public static void Delete(string tabel, string delete)
         {
             SqlConnection conn = Database.Conn;
-            string sqlCom = $"DELETE {insertInto} WHERE {delete}";
+            string sqlCom = $"DELETE {tabel} WHERE {delete}";
             SqlCommand cmd = new SqlCommand(sqlCom, conn);
 
             try
@@ -134,7 +141,7 @@ namespace SoenderBoP
                 conn.Open();
                 cmd.ExecuteNonQuery(); //SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
-                MessageBox.Show($"{insertInto} slettet");
+                //MessageBox.Show($"{tabel} slettet");
                 //MessageBox.Show(sqlCom);
             }
             catch (Exception ecx) { MessageBox.Show(ecx.ToString()); }

@@ -22,6 +22,9 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(lejlighedDGV, GetSqlComWL());
             FillDataSource.SetUpDGV(ungdomsDGV, GetSqlComWU());
             FillDataSource.SetUpDGV(seniorDGV, GetSqlComWS());
+
+            //Hvis vi gerne vil have programmet til at åbne Read hurtigere, kan man lave det til en event handle *click*
+            //Så programmet først loader det dgv man åbnber, da det ikke er sikert man skal se dem alle
         }
 
         //Event = Laver venteliste nr

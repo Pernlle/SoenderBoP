@@ -18,6 +18,53 @@ namespace SoenderBoP
             FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
 
         }
+
+        //Hent værdier fra DGV
+        private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = editMedlemDGV.Rows[e.RowIndex];
+                navnTxt.Text = dgvRow.Cells[1].Value.ToString() + " " + dgvRow.Cells[2].Value.ToString();
+                tlfMTxt.Text = dgvRow.Cells[3].Value.ToString();
+                emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
+            }
+        }
+
+        //UPDATE
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            //disse text vil blive udfyldt når man trykker på dgv og kan herefter kunne ændres, hvis man ønsker at opdatere dem (UPDATE KNAP)
+            int phone = Convert.ToInt32(tlfMTxt.Text);
+            string email = emailMTxt.Text;
+
+            // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
+            object[] data = { phone, email };
+
+            //hvilken tabel i db som skal arbejdes med
+            string insertInto = "Medlem";
+            // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
+            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
+            string add = "tlf,email";
+
+            // valgte medlem i DGV, som skal opdateres (nuværende data vises i tekstboksene, og kan herefter ændres på.)
+            int selectedRowIndex = editMedlemDGV.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = editMedlemDGV.Rows[selectedRowIndex];
+            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
+
+            //Opdater det medlem som er corresponding til den valgte celle i DGV
+            string where = $"mId={cellValue}";
+            CRUD.Update(insertInto, add, where, data);
+
+            FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
+
+            //fjern fra observerpattern
+            if (unObserveMcheckBx.Checked == true)
+            {
+                //ObserverPattern.UnRegister(observer==email);
+            }
+        }
+
         //DELETE
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -35,6 +82,7 @@ namespace SoenderBoP
             //Fjern fra observerpattern
             //ObserverPattern.UnRegister(observer==email);
         }
+
         //Messagebox med Yes/No
         public void Yes_no(string cellValue, string insertInto)
         {
@@ -59,6 +107,7 @@ namespace SoenderBoP
                     insertInto = insertInto_;
                     delete = "mId = " + cellValue;
                     CRUD.Delete(insertInto, delete);
+                    MessageBox.Show("Medlem slettet");
                     FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
                 }
                 else
@@ -68,54 +117,6 @@ namespace SoenderBoP
             }
             // Hvis du trykker nej til at slette kunde
             else if (selectedOption == DialogResult.No) { MessageBox.Show("Godt valg "); }
-        }
-
-        //UPDATE
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-            //disse text vil blive udfyldt når man trykker på dgv og kan herefter kunne ændres, hvis man ønsker at opdatere dem (UPDATE KNAP)
-            int phone = Convert.ToInt32(tlfMTxt.Text);
-            string email = emailMTxt.Text;
-
-            // Sætter values ind i en array, så de kan sendes over i metoderne (CRUD)
-            object[] data = { phone, email };
-
-            //hvilken tabel i db som skal arbejdes med
-            string insertInto = "Medlem";
-            // lav en add for hver parameter? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            //Det er vigtigt at disse er adskildt med [,] og ikke [, ] og at de står i samme rækkefølge i både object, add og value.
-            string add = "tlf,email";
-            // lav en values add for hver value? så det kun er add der skal bruges ovre i create via foreach - genbrugelighed.
-            string values = "@tlf,@email";
-
-            // valgte medlem i DGV, som skal opdateres (nuværende data vises i tekstboksene, og kan herefter ændres på.)
-            int selectedRowIndex = editMedlemDGV.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = editMedlemDGV.Rows[selectedRowIndex];
-            string cellValue = Convert.ToString(selectedRow.Cells[0].Value);
-
-            //Opdater det medlem som er corresponding til den valgte celle i DGV
-            string where = $"mId={cellValue}"; 
-            CRUD.Update(insertInto, add, where, values, data);
-
-            FillDataSource.SetUpDGV(editMedlemDGV, GetSqlCom());
-
-            //fjern fra observerpattern
-            if (unObserveMcheckBx.Checked == true)
-            {
-                //ObserverPattern.UnRegister(observer==email);
-            }
-        }
-
-        //Hent værdier fra DGV
-        private void medlemDGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                DataGridViewRow dgvRow = editMedlemDGV.Rows[e.RowIndex];
-                navnTxt.Text = dgvRow.Cells[1].Value.ToString() + " " + dgvRow.Cells[2].Value.ToString();
-                tlfMTxt.Text = dgvRow.Cells[3].Value.ToString();
-                emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
-            }
         }
 
         //Henter SQL til DGV

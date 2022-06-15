@@ -27,21 +27,7 @@ namespace SoenderBoP
             // kvm søg klik
 
             if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
-            {
-                //if (minPris < maxPris && minKvm.ToString().Length == 0 && maxKvm.ToString().Length == 0) 
-                //{
-                //    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
-                //    $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris}";
-                //    FillDataSource.SetUpDGV(searchDGV, sqlcom);
-                //}
-
-                //if (minPris.ToString().Length == 0 && maxPris.ToString().Length == 0 && minKvm < maxKvm)
-                //{
-                //    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
-                //    $"WHERE bLNr IS NULL AND kvm >= {minKvm} AND kvm <= {maxKvm} ";
-                //    FillDataSource.SetUpDGV(searchDGV, sqlcom);
-                //}
-
+            {               
                 if (minPris < maxPris) //&& minKvm < maxKvm
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
@@ -55,7 +41,7 @@ namespace SoenderBoP
                 if (minPris < maxPris)
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
-                    $"WHERE mndPris >= {minPris} AND mndPris <= {maxPris} AND bTId = tId; ";
+                    $"WHERE mndPris >= {minPris} AND mndPris <= {maxPris} AND  bTId = tId ";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
                 else MessageBox.Show("Fejl i prisen");
@@ -70,13 +56,13 @@ namespace SoenderBoP
             int minKvm = Convert.ToInt32(minKvmBox.Text);
             int maxKvm = Convert.ToInt32(maxKvmBox.Text);
 
-            MessageBox.Show(Convert.ToString(minKvm));
+            //MessageBox.Show(Convert.ToString(minKvm));
             if (BtnClicked) //BtnClicked er at finde længere nede - check for om man har klikket på "vis kun ledige boliger"
             {
                 if (minKvm < maxKvm)
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
-                    $"WHERE bLNr IS NULL AND bTId = tId";
+                    $"WHERE kvm >= {minKvm} AND kvm <= {maxKvm} AND bLNr IS NULL AND bTId = tId";
                     searchDGV.DataSource = FillDataSource.GetDataSource(sqlcom);
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
@@ -118,3 +104,16 @@ namespace SoenderBoP
         private void Search_Load(object sender, EventArgs e) {}
     }
 }
+//if (minPris < maxPris && minKvm.ToString().Length == 0 && maxKvm.ToString().Length == 0) 
+//{
+//    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+//    $"WHERE bLNr IS NULL AND mndPris >= {minPris} AND mndPris <= {maxPris}";
+//    FillDataSource.SetUpDGV(searchDGV, sqlcom);
+//}
+
+//if (minPris.ToString().Length == 0 && maxPris.ToString().Length == 0 && minKvm < maxKvm)
+//{
+//    string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig " +
+//    $"WHERE bLNr IS NULL AND kvm >= {minKvm} AND kvm <= {maxKvm} ";
+//    FillDataSource.SetUpDGV(searchDGV, sqlcom);
+//}
