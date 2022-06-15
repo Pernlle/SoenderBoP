@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.editMedlemDGV = new System.Windows.Forms.DataGridView();
             this.medlemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.soenderbodbDataSet1 = new SoenderBoP.soenderbodbDataSet1();
@@ -55,6 +55,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.helpBTN = new System.Windows.Forms.Button();
+            this.navnLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.editMedlemDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medlemBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soenderbodbDataSet1)).BeginInit();
@@ -72,14 +73,14 @@
             this.editMedlemDGV.BackgroundColor = System.Drawing.Color.Linen;
             this.editMedlemDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.editMedlemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.editMedlemDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.editMedlemDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.editMedlemDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editMedlemDGV.Location = new System.Drawing.Point(0, 0);
             this.editMedlemDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -168,9 +169,9 @@
             // 
             this.navnTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.navnTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.navnTxt.Location = new System.Drawing.Point(19, 156);
+            this.navnTxt.Location = new System.Drawing.Point(595, 158);
             this.navnTxt.Name = "navnTxt";
-            this.navnTxt.Size = new System.Drawing.Size(255, 27);
+            this.navnTxt.Size = new System.Drawing.Size(255, 15);
             this.navnTxt.TabIndex = 5;
             this.navnTxt.TabStop = false;
             // 
@@ -180,6 +181,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.navnLabel);
             this.panel1.Controls.Add(this.unObserveMcheckBx);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -187,7 +189,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.navnTxt);
             this.panel1.Controls.Add(this.updateBtn);
             this.panel1.Controls.Add(this.emailMTxt);
             this.panel1.Controls.Add(this.deleteBtn);
@@ -319,6 +320,16 @@
             this.helpBTN.Text = "?";
             this.helpBTN.UseVisualStyleBackColor = false;
             // 
+            // navnLabel
+            // 
+            this.navnLabel.AutoSize = true;
+            this.navnLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.navnLabel.Location = new System.Drawing.Point(16, 152);
+            this.navnLabel.Name = "navnLabel";
+            this.navnLabel.Size = new System.Drawing.Size(242, 28);
+            this.navnLabel.TabIndex = 13;
+            this.navnLabel.Text = "                                              ";
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,6 +338,7 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(753, 592);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.navnTxt);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Edit";
             this.Text = "Edit";
@@ -343,6 +355,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -373,5 +386,6 @@
         private System.Windows.Forms.Button helpBTN;
         private System.Windows.Forms.CheckBox unObserveMcheckBx;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label navnLabel;
     }
 }
