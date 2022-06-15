@@ -41,7 +41,7 @@ namespace SoenderBoP
                 if (minPris < maxPris)
                 {
                     string sqlcom = "SELECT bId AS 'ID', mndPris AS 'Pris pr måned', adr AS 'Adresse', kvm AS 'Kvm', bType AS 'Type af bolig', bLNr AS 'Løbenummer' FROM Bolig, BoligType " +
-                    $"WHERE mndPris >= {minPris} AND mndPris <= {maxPris} AND bTId = tId; ";
+                    $"WHERE mndPris >= {minPris} AND mndPris <= {maxPris} AND  bTId = tId ";
                     FillDataSource.SetUpDGV(searchDGV, sqlcom);
                 }
                 else MessageBox.Show("Fejl i prisen");
