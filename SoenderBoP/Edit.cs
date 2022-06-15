@@ -122,7 +122,7 @@ namespace SoenderBoP
         //Henter SQL til DGV
         public static string GetSqlCom()
         {
-            string sqlCom = "SELECT mId AS 'ID',fNavn AS 'Fornavn',eNavn AS 'Efternavn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
+            string sqlCom = "SELECT mId AS 'ID',fNavn + ' ' + eNavn AS 'Navn',tlf AS 'Telefonnummer',email AS 'Email',mLNr AS 'Løbenummer' FROM Medlem";
             return sqlCom;
         }
 
