@@ -1,0 +1,2 @@
+          Ressource           |         Ressource nr         |          Startdato           |           Slutdato           |          Løbenummer          
+         Vaskemaskine         |              4               |       11-06-2022 12:00       |       11-06-2022 14:00       |              20              

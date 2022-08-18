@@ -1,3 +1,17 @@
           Ressource           |         Ressource nr         |          Startdato           |           Slutdato           |          Løbenummer          |            Email             
+         Vaskemaskine         |              6               |       31-12-2022 10:00       |       31-12-2022 12:00       |              4               |   seamusfinnigan@gmail.com   
          Vaskemaskine         |              3               |       05-05-2022 12:00       |       05-06-2022 12:00       |              1               |   petuniadursley@gmail.com   
+           Festsal            |              10              |       31-12-2022 12:00       |       31-12-2023 12:00       |              1               |   petuniadursley@gmail.com   
+          Parkering           |              9               |       27-06-2022 12:00       |       29-06-2022 12:00       |              1               |   petuniadursley@gmail.com   
+          Parkering           |              10              |       31-12-2022 12:00       |       31-12-2023 12:00       |              3               |       kaman@gmail.com        
+         Vaskemaskine         |              9               |       01-07-2022 12:00       |       02-07-2022 12:00       |              3               |       kaman@gmail.com        
+           Festsal            |              5               |       28-11-2022 18:00       |       29-11-2022 20:00       |              3               |       kaman@gmail.com        
           Parkering           |              2               |       05-05-2022 12:00       |       05-06-2022 12:00       |              2               |     thorarsim@gmail.com      
+           Festsal            |              9               |       20-06-2022 12:00       |       21-06-2022 12:00       |              2               |     thorarsim@gmail.com      
+         Vaskemaskine         |              4               |       31-12-2022 10:00       |       31-12-2022 14:00       |              2               |     thorarsim@gmail.com      
+         Vaskemaskine         |              9               |       01-04-2022 12:00       |       31-05-2022 12:00       |              14              |    colins@creveypics.com     
+           Festsal            |              3               |       04-05-2022 12:00       |       06-05-2022 12:00       |              10              |     briiJonas@gmail.com      
+           Festsal            |              3               |       04-05-2022 12:00       |       06-05-2022 12:00       |              11              |    andrimloki@hotmail.com    
+          Parkering           |              5               |       20-06-2022 10:00       |       21-06-2022 10:00       |              7               |   anneovergaard@gmail.com    
+          Parkering           |              1               |       07-09-2022 12:00       |       17-12-2022 12:00       |              6               |   martinenghave@yahoo.com    
+         Vaskemaskine         |              4               |       11-06-2022 12:00       |       11-06-2022 14:00       |              20              |      Lorentzen@mail.com      

@@ -35,7 +35,7 @@ namespace SoenderBoP
                     sloganLabel.BeginInvoke(new Action(() => sloganLabel.Text = slogan));
                 }
                 //slogan skal skifte hvert 3. minut
-                Thread.Sleep(TimeSpan.FromMinutes(3));
+                Thread.Sleep(TimeSpan.FromMinutes(1));
             }
         }
 

@@ -25,9 +25,9 @@ namespace SoenderBoP
             if (e.RowIndex != -1)
             {
                 DataGridViewRow dgvRow = editMedlemDGV.Rows[e.RowIndex];
-                navnLabel.Text = dgvRow.Cells[1].Value.ToString() + " " + dgvRow.Cells[2].Value.ToString();
-                tlfMTxt.Text = dgvRow.Cells[3].Value.ToString();
-                emailMTxt.Text = dgvRow.Cells[4].Value.ToString();
+                navnLabel.Text = dgvRow.Cells[1].Value.ToString();
+                tlfMTxt.Text = dgvRow.Cells[2].Value.ToString();
+                emailMTxt.Text = dgvRow.Cells[3].Value.ToString();
             }
         }
 
